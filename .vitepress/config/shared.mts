@@ -20,9 +20,7 @@ export const shared = defineConfig({
   title: "API Docs",
   description: "Stardust API",
   rewrites: {
-    "en/index.md": "index.md",
-    "en/:dir/:file": ":dir/:file",
-    "en/:dir/:sub/:file": ":dir/:sub/:file",
+    "en/:rest*": ":rest*",
   },
 	ignoreDeadLinks: [
 		/get-task/
