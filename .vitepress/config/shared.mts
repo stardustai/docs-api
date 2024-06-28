@@ -32,6 +32,10 @@ export const shared = defineConfig({
       level: [2, 3],
     },
 
+		search: {
+			provider: "local",
+		},
+
     socialLinks: [{ icon: "github", link: "https://github.com/stardustai" }],
   },
 })
