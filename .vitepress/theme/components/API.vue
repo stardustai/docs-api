@@ -39,7 +39,7 @@
 			<div class="text-xs font-semibold">RESPONSES</div>
 			<div class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4">
 				<div v-for="[code, item] of Object.entries(results)">
-					<div class="bg-gray-200 dark:bg-[#161618] px-2 flex items-center">
+					<div class="bg-gray-200 dark:bg-[#161618] px-2 flex items-center text-sm">
 						<div :class="classnames(
 							'w-2 h-2 rounded-full mr-1',
 							code.startsWith('2') ? 'bg-green-500' : 'bg-red-500'

@@ -1,13 +1,13 @@
 ---
 title: "创建项目"
 slug: "create-project"
-description: "This page will help you get started with creating a project on Rosetta"
+description: "此页面将帮助您开始在 Rosetta 上创建项目"
 hidden: false
 createdAt: "Fri May 17 2024 07:45:50 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Fri May 17 2024 16:06:51 GMT+0000 (Coordinated Universal Time)"
 ---
 
-## Labeling tool config
+## 标签工具配置
 
 ::: code-group
 

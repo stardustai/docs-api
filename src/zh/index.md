@@ -10,7 +10,7 @@ updatedAt: "Fri May 17 2024 14:37:06 GMT+0000 (Coordinated Universal Time)"
 
 欢迎使用 Stardust API 文档
 
-This documentation will guide you through the seamless integration and customization of both <<glossary:MorningStar>> and <<glossary:Rosetta>>, our flagship products. We provide comprehensive and detailed API references to empower developers in effortlessly integrating their systems with Stardust.
+This documentation will guide you through the seamless integration and customization of both <Glossary title="MorningStar" /> and <Glossary title="Rosetta" />, our flagship products. We provide comprehensive and detailed API references to empower developers in effortlessly integrating their systems with Stardust.
 
 **Key Capabilities of the Stardust API**
 
