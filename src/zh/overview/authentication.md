@@ -1,5 +1,5 @@
 ---
-title: "Authentication"
+title: "认证"
 slug: "authentication"
 description: ""
 hidden: false

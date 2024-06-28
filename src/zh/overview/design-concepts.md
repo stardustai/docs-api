@@ -1,5 +1,5 @@
 ---
-title: "Design Concepts"
+title: "设计理念"
 slug: "design-concepts"
 description: ""
 hidden: false

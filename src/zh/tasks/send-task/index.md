@@ -1,5 +1,5 @@
 ---
-title: "Send Tasks"
+title: "发送任务"
 slug: "send-task"
 description: "This page will help you get started with send annotation tasks to a project."
 hidden: false

@@ -1,12 +1,6 @@
 ---
-title: "Send Tasks"
-slug: "send-task"
-description: "This page will help you get started with send annotation tasks to a project."
+title: "检查发送状态"
 hidden: false
-metadata:
-  image: []
-  keywords: "Send Annotation Task"
-  robots: "index"
 createdAt: "Thu May 16 2024 13:39:14 GMT+0000 (Coordinated Universal Time)"
 updatedAt: "Fri May 17 2024 16:22:02 GMT+0000 (Coordinated Universal Time)"
 ---

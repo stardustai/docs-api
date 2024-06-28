@@ -1,5 +1,5 @@
 ---
-title: "List Project"
+title: "项目列表"
 slug: "list-project"
 description: "This page will help you get started with list project."
 hidden: false

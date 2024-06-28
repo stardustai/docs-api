@@ -1,5 +1,5 @@
 ---
-title: "Get Task"
+title: "任务详情"
 slug: "get-task"
 description: ""
 hidden: false

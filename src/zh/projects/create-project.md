@@ -1,5 +1,5 @@
 ---
-title: "Create Project"
+title: "创建项目"
 slug: "create-project"
 description: "This page will help you get started with creating a project on Rosetta"
 hidden: false

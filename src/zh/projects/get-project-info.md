@@ -1,5 +1,5 @@
 ---
-title: "Get Project"
+title: "项目详情"
 slug: "get-project-info"
 description: "This page will help you get started with retrieve project information."
 hidden: false

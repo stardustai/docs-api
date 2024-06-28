@@ -158,65 +158,65 @@ export default defineConfig({
 								text: "核心功能",
 								link: "/overview/main-features",
 							},
-							{ text: "Design Concepts", link: "/overview/design-concepts" },
-							{ text: "Authentication", link: "/overview/authentication" },
-							{ text: "Errors", link: "/overview/errors" },
-							{ text: "Data Structure", link: "/overview/data-structure" },
+							{ text: "设计理念", link: "/overview/design-concepts" },
+							{ text: "认证", link: "/overview/authentication" },
+							{ text: "异常", link: "/overview/errors" },
+							{ text: "数据结构", link: "/overview/data-structure" },
 						],
 					},
 					{
-						text: "PROJECTS",
+						text: "项目",
 						items: [
 							{
-								text: "Create Project",
+								text: "创建项目",
 								link: "/projects/create-project",
 							},
 							{
-								text: "List Project",
+								text: "项目列表",
 								link: "/projects/list-project",
 							},
 							{
-								text: "Get Project",
+								text: "项目详情",
 								link: "/projects/get-project-info",
 							},
 						],
 					},
 					{
-						text: "TASKS",
+						text: "任务",
 						items: [
 							{
-								text: "List Task",
+								text: "任务列表",
 								link: "/tasks/list-task",
 							},
 							{
-								text: "Send Tasks",
+								text: "发送任务",
 								link: "/tasks/send-task",
 							},
 							{
-								text: "Check Send Status",
+								text: "检查发送状态",
 								link: "/tasks/check-send-status",
 							},
 							{
-								text: "Callbacks",
+								text: "回调",
 								link: "/tasks/callbacks",
 								items: [
 									{
-										text: "Re-sending a Callback",
+										text: "重新发送回调",
 										link: "/tasks/callbacks/re-sending",
 									},
 								],
 							},
 							{
-								text: "Get Task",
+								text: "任务详情",
 								link: "/tasks/get-task",
 							},
 						],
 					},
 					{
-						text: "EXPORT",
+						text: "导出",
 						items: [
 							{
-								text: "Export Tasks",
+								text: "导出任务",
 								link: "/export/export-tasks",
 							},
 						],

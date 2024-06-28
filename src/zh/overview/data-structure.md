@@ -1,5 +1,5 @@
 ---
-title: "Data Structure"
+title: "数据结构"
 slug: "data-structure"
 description: ""
 hidden: false

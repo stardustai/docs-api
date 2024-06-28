@@ -1,5 +1,5 @@
 ---
-title: "Export Task"
+title: "导出任务"
 slug: "export-task"
 description: "Export all data of the task, include annotation results, metadata, assets, etc."
 hidden: false
@@ -15,6 +15,8 @@ updatedAt: "Fri May 17 2024 16:01:31 GMT+0000 (Coordinated Universal Time)"
 />
 
 <script setup>
+import results from './results'
+
 const body = {
 	projectId: {
 		type: 'long',
@@ -36,166 +38,5 @@ const body = {
 		default: [],
 		description: 'Task Id List'
 	},
-}
-const results = {
-	200: {
-    "code": 200,
-    "message": "Success",
-    "data": {
-    	"annotationResultList": [
-      	{
-        	"annotations": [
-          	{
-            	"key": "string",
-            	"label": "string",
-            	"slots": [
-              	{
-                	"confidence": 0,
-                	"confirmed": true,
-                	"hintConfidence": "High",
-                	"hintStatus": "Unconfirmed",
-                	"id": "string",
-                	"label": "string",
-                	"length": 0,
-                	"source": "string",
-                	"start": 0,
-                	"text": "string",
-                	"type": "text"
-              	}
-            	],
-            	"type": "slot"
-          	}
-        	],
-        	"hints": [
-          	{
-            	"key": "string",
-            	"label": "string",
-            	"slots": [
-              	{
-                	"confidence": 0,
-                	"confirmed": true,
-                	"hintConfidence": "High",
-                	"hintStatus": "Unconfirmed",
-                	"id": "string",
-                	"label": "string",
-                	"length": 0,
-                	"source": "string",
-                	"start": 0,
-                	"text": "string",
-                	"type": "text"
-              	}
-            	],
-            	"type": "slot"
-          	}
-        	],
-        	"issues": [
-          	{
-            	"actions": [
-              	{
-                	"comments": [
-                  	"string"
-                	],
-                	"createdAt": "string",
-                	"note": "string",
-                	"pool": {
-                  	"id": 0,
-                  	"name": "string",
-                  	"operatorIDBlackList": [
-                    	"string"
-                  	],
-                  	"rejectTaskCountDown": {
-                    	"day": 0,
-                    	"hour": 0,
-                    	"minute": 0
-                  	},
-                  	"taskCountDown": {
-                    	"day": 0,
-                    	"hour": 0,
-                    	"minute": 0
-                  	},
-                  	"type": 0
-                	},
-                	"taskId": 0,
-                	"team": {
-                  	"id": 0,
-                  	"name": "string"
-                	},
-                	"type": "Create",
-                	"user": {
-                  	"id": 0,
-                  	"name": "string",
-                  	"phone": "string"
-                	}
-              	}
-            	],
-            	"annotationPath": [
-              	"string"
-            	],
-            	"id": "string",
-            	"location": {
-              	"position": 0,
-              	"source": "string",
-              	"type": "text"
-            	},
-            	"timeFrame": 0,
-            	"type": 0
-          	}
-        	],
-        	"metadata": {
-          	"imageRotateAngle": 0,
-          	"invalidFrame": [
-            	0
-          	],
-          	"noNeedToAnnotate": true
-        	},
-        	"notes": [
-          	{
-            	"createdAt": "string",
-            	"note": "string",
-            	"pool": {
-              	"id": 0,
-              	"name": "string",
-              	"operatorIDBlackList": [
-                	"string"
-              	],
-              	"rejectTaskCountDown": {
-                	"day": 0,
-                	"hour": 0,
-                	"minute": 0
-              	},
-              	"taskCountDown": {
-                	"day": 0,
-                	"hour": 0,
-                	"minute": 0
-              	},
-              	"type": 0
-            	},
-            	"taskId": 0,
-            	"team": {
-              	"id": 0,
-              	"name": "string"
-            	},
-            	"user": {
-              	"id": 0,
-              	"name": "string",
-              	"phone": "string"
-            	}
-          	}
-        	]
-      	}
-    	]
-  	},
-  	"date": "2024-05-17 17:45:50",
-  	"requestId": "77bdf4cd171593981208210031afb4",
-  	"success": true
-	},
-	400: {
-		"code": 400,
-		"data": null,
-		"date": "",
-		"message": "Invalid Parameter",
-		"requestId": "77bdf4cd171593981208210031afbv",
-		"success": false
-	}
 }
 </script>
