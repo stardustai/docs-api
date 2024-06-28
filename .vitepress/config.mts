@@ -15,6 +15,7 @@ const localizeLinks = (lang: string, data: SidebarItem[]) => {
 };
 
 export default defineConfig({
+	base: "/docs-api/",
   srcDir: "./src",
   title: "API Docs",
   description: "Stardust API",
