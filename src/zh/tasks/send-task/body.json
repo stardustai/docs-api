@@ -1,0 +1,12 @@
+{
+	"projectId": {
+		"type": "long",
+		"default": 2892,
+		"description": "project id"
+	},
+	"resourceUrl": {
+		"type": "string",
+		"default": "http://your-oss.your-site.com/image-sequence-1.jsonl",
+		"description": "Open url of the jsonline file with objects which are defined in Data Structure page"
+	}
+}

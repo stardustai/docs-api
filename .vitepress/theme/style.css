@@ -1,0 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/components';
+
+.vp-code-group > .blocks {
+ max-height: 500px;
+ overflow: auto;
+}

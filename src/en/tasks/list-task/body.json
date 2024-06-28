@@ -1,0 +1,32 @@
+{
+	"projectId": {
+		"type": "long",
+		"default": 128,
+		"description": "project id"
+	},
+	"status": {
+		"type": "integer",
+		"default": 1,
+		"description": "status"
+	},
+	"startTime": {
+		"type": "long",
+		"default": 1715957089000,
+		"description": "start time"
+	},
+	"endTime": {
+		"type": "long",
+		"default": 1715957100000,
+		"description": "end time"
+	},
+	"offset": {
+		"type": "integer",
+		"default": 1,
+		"description": "Start page number"
+	},
+	"limit": {
+		"type": "integer",
+		"default": 10,
+		"description": "Number of posts per page"
+	}
+}
