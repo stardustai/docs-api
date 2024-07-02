@@ -1,10 +1,10 @@
 ---
-title: "Data Structure"
-slug: "data-structure"
-description: ""
+title: 'Data Structure'
+slug: 'data-structure'
+description: ''
 hidden: false
-createdAt: "Thu May 16 2024 14:01:06 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 14:56:17 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Thu May 16 2024 14:01:06 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 14:56:17 GMT+0000 (Coordinated Universal Time)'
 ---
 
 This comprehensive data structure documentation provides detailed specifications and schemas for all data objects within the Stardust ecosystem. It serves as an essential reference for developers integrating with or extending Morningstar and Rosetta, ensuring seamless data exchange and compatibility. Whether you're working with projects, tasks, annotations, or any other data element, this resource offers the necessary guidance to understand, manipulate, and utilize the rich information available within Stardust's platforms.
@@ -17,18 +17,19 @@ This comprehensive data structure documentation provides detailed specifications
 
 ```json [SingleCamera]
 {
-    "attachmentType": "IMAGE",
-    "attachment": "oss://stardust-data/Production/xingchen_12_4119_city/20231110_1camera_1_4119/jc08_suz_Ew_0b_sunny_m_0_1699577442197.jpg",
-    "metadata": {
-        "uniqueIdentifier": "329345877854392320", // Task object ID in your platform
-        "preprocessedData":{},
-        "additionalInfo":{
-            "annotationResultUrl":""
-            // You can list any other parameter below
-        }
+  "attachmentType": "IMAGE",
+  "attachment": "oss://stardust-data/Production/xingchen_12_4119_city/20231110_1camera_1_4119/jc08_suz_Ew_0b_sunny_m_0_1699577442197.jpg",
+  "metadata": {
+    "uniqueIdentifier": "329345877854392320", // Task object ID in your platform
+    "preprocessedData": {},
+    "additionalInfo": {
+      "annotationResultUrl": ""
+      // You can list any other parameter below
     }
+  }
 }
 ```
+
 ```json [MultiCameras]
 {
   "attachmentType": "IMAGE_SET_SEQUENCE",
@@ -82,20 +83,21 @@ This comprehensive data structure documentation provides detailed specifications
 ```json [SingleCamera]
 {
   "attachmentType": "IMAGE_SEQUENCE",
-    "attachment": [
-      "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1678_bird_ml.png",
-      "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1679_bird_ml.png",
-      "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1706_bird_ml.png",
-    ],
-      "metadata": {
-        "uniqueIdentifier":"0b5e4671-452a-45ca-9779-1dc6e277150b", // Task object ID in your platform
-        "additionalInfo":{
-          "annotationResultUrl":""
-          // You can list any other parameter below
-        }
-      }
+  "attachment": [
+    "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1678_bird_ml.png",
+    "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1679_bird_ml.png",
+    "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1706_bird_ml.png"
+  ],
+  "metadata": {
+    "uniqueIdentifier": "0b5e4671-452a-45ca-9779-1dc6e277150b", // Task object ID in your platform
+    "additionalInfo": {
+      "annotationResultUrl": ""
+      // You can list any other parameter below
+    }
+  }
 }
 ```
+
 ```json [MultiCameras]
 {
   "attachmentType": "IMAGE_SET_SEQUENCE",
@@ -244,6 +246,7 @@ This comprehensive data structure documentation provides detailed specifications
   }
 }
 ```
+
 ```json [Sequence]
 {
   "attachmentType": "POINTCLOUD_SEQUENCE",
@@ -662,6 +665,7 @@ This comprehensive data structure documentation provides detailed specifications
   }
 }
 ```
+
 ```json [Sequence]
 {
     "attachmentType": "POINTCLOUD_SEQUENCE",
@@ -1140,7 +1144,6 @@ This comprehensive data structure documentation provides detailed specifications
 
 :::
 
-
 ### Audio Annotation
 
 ::: code-group
@@ -1229,17 +1232,13 @@ This comprehensive data structure documentation provides detailed specifications
     {
       "actions": [
         {
-          "comments": [
-            "string"
-          ],
+          "comments": ["string"],
           "createdAt": "string",
           "note": "string",
           "pool": {
             "id": 0,
             "name": "string",
-            "operatorIDBlackList": [
-              "string"
-            ],
+            "operatorIDBlackList": ["string"],
             "rejectTaskCountDown": {
               "day": 0,
               "hour": 0,
@@ -1265,9 +1264,7 @@ This comprehensive data structure documentation provides detailed specifications
           }
         }
       ],
-      "annotationPath": [
-        "string"
-      ],
+      "annotationPath": ["string"],
       "id": "string",
       "location": {
         "position": 0,
@@ -1280,9 +1277,7 @@ This comprehensive data structure documentation provides detailed specifications
   ],
   "metadata": {
     "imageRotateAngle": 0,
-    "invalidFrame": [
-      0
-    ],
+    "invalidFrame": [0],
     "noNeedToAnnotate": true
   },
   "notes": [
@@ -1292,9 +1287,7 @@ This comprehensive data structure documentation provides detailed specifications
       "pool": {
         "id": 0,
         "name": "string",
-        "operatorIDBlackList": [
-          "string"
-        ],
+        "operatorIDBlackList": ["string"],
         "rejectTaskCountDown": {
           "day": 0,
           "hour": 0,

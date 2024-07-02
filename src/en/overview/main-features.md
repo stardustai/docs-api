@@ -1,10 +1,10 @@
 ---
-title: "Main Features"
-slug: "main-features"
-description: ""
+title: 'Main Features'
+slug: 'main-features'
+description: ''
 hidden: false
-createdAt: "Fri May 17 2024 07:44:52 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 16:39:40 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Fri May 17 2024 07:44:52 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 16:39:40 GMT+0000 (Coordinated Universal Time)'
 ---
 
 You can connect existing user systems with Stardust products to implement secure user authentication through the openAuth protocol and support synchronization of user permissions and other information.

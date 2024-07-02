@@ -1,8 +1,8 @@
 ---
-title: "异常"
-slug: "errors"
-createdAt: "Thu May 16 2024 14:00:48 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 16:06:01 GMT+0000 (Coordinated Universal Time)"
+title: '异常'
+slug: 'errors'
+createdAt: 'Thu May 16 2024 14:00:48 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 16:06:01 GMT+0000 (Coordinated Universal Time)'
 ---
 
 ## API error code
@@ -22,32 +22,34 @@ Stardust's API uses the following HTTP code:
 
 ```json [400 Example]
 {
-	"code": 400,
-	"data": null,
-	"date": "",
-	"message": "Illegal Parameter",
-	"requestId": "",
-	"success": false
+  "code": 400,
+  "data": null,
+  "date": "",
+  "message": "Illegal Parameter",
+  "requestId": "",
+  "success": false
 }
 ```
+
 ```json [404 Example]
 {
-	"code": 404,
-	"data": null,
-	"date": "",
-	"message": "Not Found, the resource is missing",
-	"requestId": "",
-	"success": false
+  "code": 404,
+  "data": null,
+  "date": "",
+  "message": "Not Found, the resource is missing",
+  "requestId": "",
+  "success": false
 }
 ```
+
 ```json [500 Example]
 {
-	"code": 500,
-	"data": null,
-	"date": "",
-	"message": "Internal Error, please try again later",
-	"requestId": "",
-	"success": false
+  "code": 500,
+  "data": null,
+  "date": "",
+  "message": "Internal Error, please try again later",
+  "requestId": "",
+  "success": false
 }
 ```
 

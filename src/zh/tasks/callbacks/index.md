@@ -1,10 +1,10 @@
 ---
-title: "回调"
-slug: "callback"
-description: ""
+title: '回调'
+slug: 'callback'
+description: ''
 hidden: false
-createdAt: "Fri May 17 2024 15:20:48 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 16:36:39 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Fri May 17 2024 15:20:48 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 16:36:39 GMT+0000 (Coordinated Universal Time)'
 ---
 
 ```json Example Callback Body
@@ -13,7 +13,7 @@ updatedAt: "Fri May 17 2024 16:36:39 GMT+0000 (Coordinated Universal Time)"
   "attachment": "oss://stardust-data/Production/xingchen_12_4119_city/20231110_1camera_1_4119/jc08_suz_Ew_0b_sunny_m_0_1699577442197.jpg",
   "metadata": {
     "uniqueIdentifier": "329345877854392320", // Task object ID in your platform
-    "additionalInfo":{
+    "additionalInfo": {
       "callbackUrl": "http://www.example.com/callback"
       // You can list any other parameter below
     }
@@ -37,7 +37,7 @@ If you'd like to authenticate our callbacks, we set a X-STARDUST-KEY HTTP header
 | :------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | taskId   | string | The taskId is the unique identifier for the task. It is identical to task.taskId                                                                                  |
 | status   | string | The status of the task when it was completed. Normally completed, but can also be error in the case that a task failed to process. It is identical to task.status |
-| task     | object | The [full Task Object](/zh/tasks/get-task) for reference and convenience, include annotations                                                                    |
+| task     | object | The [full Task Object](/zh/tasks/get-task) for reference and convenience, include annotations                                                                     |
 
 ## Events that trigger a Callback
 

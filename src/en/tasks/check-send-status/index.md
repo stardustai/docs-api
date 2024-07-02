@@ -1,9 +1,9 @@
 ---
-title: "Check Send Status"
-slug: "send-task"
+title: 'Check Send Status'
+slug: 'send-task'
 hidden: false
-createdAt: "Thu May 16 2024 13:39:14 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 16:22:02 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Thu May 16 2024 13:39:14 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 16:22:02 GMT+0000 (Coordinated Universal Time)'
 ---
 
 <API

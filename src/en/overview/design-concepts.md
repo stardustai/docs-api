@@ -1,10 +1,10 @@
 ---
-title: "Design Concepts"
-slug: "design-concepts"
-description: ""
+title: 'Design Concepts'
+slug: 'design-concepts'
+description: ''
 hidden: false
-createdAt: "Fri May 17 2024 12:07:46 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 14:33:02 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Fri May 17 2024 12:07:46 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 14:33:02 GMT+0000 (Coordinated Universal Time)'
 ---
 
 ## Why Data-Centric
@@ -72,9 +72,9 @@ Rosetta supports a wide range of data types, including 3D point clouds, 2D image
 
 #### Unrivaled Data Coverage
 
-- **All-Encompassing:**  Handle projects involving point clouds, images, text, audio, video, and data collection with ease.
+- **All-Encompassing:** Handle projects involving point clouds, images, text, audio, video, and data collection with ease.
 - **Extensive Labeling Scenarios:** Choose from 100+ pre-built labeling scenarios to accelerate your projects.
-- **Granular Labeling:**  Hundreds of labeling functions cater to even the most intricate annotation details.
+- **Granular Labeling:** Hundreds of labeling functions cater to even the most intricate annotation details.
 
 #### Scalable and Efficient
 
@@ -86,8 +86,8 @@ Rosetta supports a wide range of data types, including 3D point clouds, 2D image
 #### Accelerated Labeling
 
 - **Rapid Project Setup:** Create projects and start labeling within minutes.
-- **AI-Powered Pre-labeling:**  Leverage OCR, ASR, semantic segmentation, and vehicle MOT algorithms to automate labeling with over 80% accuracy, significantly boosting efficiency.
-- **Real-Time Feedback:**  Receive immediate quality inspection feedback from algorithms and rules to correct errors promptly.
+- **AI-Powered Pre-labeling:** Leverage OCR, ASR, semantic segmentation, and vehicle MOT algorithms to automate labeling with over 80% accuracy, significantly boosting efficiency.
+- **Real-Time Feedback:** Receive immediate quality inspection feedback from algorithms and rules to correct errors promptly.
 - **High Throughput:** Generate over 100,000 qualified labels per hour.
 - **Seamless Integration:** Easily import and export data for model training using minimal code.
 

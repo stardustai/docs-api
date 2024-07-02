@@ -1,12 +1,12 @@
 {
-	"projectId": {
-		"type": "long",
-		"default": 2892,
-		"description": "project id"
-	},
-	"taskId": {
-		"type": "string",
-		"default": "363632502880997376",
-		"description": "Task Id"
-	}
+  "projectId": {
+    "type": "long",
+    "default": 2892,
+    "description": "project id"
+  },
+  "taskId": {
+    "type": "string",
+    "default": "363632502880997376",
+    "description": "Task Id"
+  }
 }

@@ -1,10 +1,10 @@
 ---
-title: "Authentication"
-slug: "authentication"
-description: ""
+title: 'Authentication'
+slug: 'authentication'
+description: ''
 hidden: false
-createdAt: "Thu May 16 2024 14:00:12 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 14:57:59 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Thu May 16 2024 14:00:12 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 14:57:59 GMT+0000 (Coordinated Universal Time)'
 ---
 
 Stardust uses AccessKey pair to allow access to the Stardust platform. An AccessKey pair consists of an AccessKey ID and an AccessKey secret.

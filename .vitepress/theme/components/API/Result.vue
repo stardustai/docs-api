@@ -1,0 +1,42 @@
+<template>
+  <div v-if="data">
+    <div class="text-xs font-semibold">{{ title }}</div>
+    <div
+      class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4"
+    >
+      <div v-for="[code, item] of Object.entries(data)">
+        <div
+          class="bg-gray-200 dark:bg-[#161618] px-2 flex items-center text-sm"
+        >
+          <div
+            :class="
+              classnames(
+                'w-2 h-2 rounded-full mr-1',
+                code.startsWith('2') ? 'bg-green-500' : 'bg-red-500'
+              )
+            "
+          />
+          {{ code }}
+        </div>
+        <div class="p-2 max-h-[500px] overflow-auto">
+          <vue-json-pretty
+            :data="item"
+            showIcon
+            :theme="isDark ? 'dark' : 'light'"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import classnames from 'classnames'
+import VueJsonPretty from 'vue-json-pretty'
+import 'vue-json-pretty/lib/styles.css'
+
+defineProps<{
+  title: string
+  data?: Record<string, Data>
+}>()
+</script>

@@ -1,10 +1,10 @@
 ---
-title: "认证"
-slug: "authentication"
-description: ""
+title: '认证'
+slug: 'authentication'
+description: ''
 hidden: false
-createdAt: "Thu May 16 2024 14:00:12 GMT+0000 (Coordinated Universal Time)"
-updatedAt: "Fri May 17 2024 14:57:59 GMT+0000 (Coordinated Universal Time)"
+createdAt: 'Thu May 16 2024 14:00:12 GMT+0000 (Coordinated Universal Time)'
+updatedAt: 'Fri May 17 2024 14:57:59 GMT+0000 (Coordinated Universal Time)'
 ---
 
 星尘使用 AccessKey 来允许访问星尘平台。AccessKey 由 AccessKey ID 和 AccessKey Secret 组成。
@@ -16,7 +16,7 @@ updatedAt: "Fri May 17 2024 14:57:59 GMT+0000 (Coordinated Universal Time)"
 
 您可以通过您的账号向[dev@stardust.ai](mailto:dev@stardust.ai)发送邮件，要求提供您的 AccessKey，例如：
 
-``` json AK/SK
+```json AK/SK
 {
   "accessKey": "U2FsdGVkX19WZI4YdvcVgQWFQVdhwrtKyFjTHb8I4HcgIGlrymzcdVv7cnsCfpox",
   "secretKey": "U2FsdGVkX18NunM9ru5v57kHgE5QZzPvnXP7AJYi6Wdmmqf3DY858gRBFSjSC123"
@@ -31,11 +31,11 @@ Stardust 使用“AccessKey 和非对称加密算法”对 API 调用进行认�
 
 下表描述了有效 API 请求所需的 HTTP 标头字段。您必须为字段指定键值对。这些值区分大小写。
 
-|字段 |描述 |示例 |
-|:------------- |:------------------------------------------------- |:----------------------------- |
-|X-星尘钥匙 |用户的AccessKey ID。 |U2FsdGVkX19WZI4YdvcVgQWFQVd... |
-|X-TS 系列 |HTTP 请求的标准时间戳标头。|整数（int64）： 1715948940207 |
-|X-SIGN标志 |签名。 |MD5 字符串 |
+| 字段       | 描述                        | 示例                           |
+| :--------- | :-------------------------- | :----------------------------- |
+| X-星尘钥匙 | 用户的AccessKey ID。        | U2FsdGVkX19WZI4YdvcVgQWFQVd... |
+| X-TS 系列  | HTTP 请求的标准时间戳标头。 | 整数（int64）： 1715948940207  |
+| X-SIGN标志 | 签名。                      | MD5 字符串                     |
 
 以下示例代码提供了签名的HTTP请求示例：
 

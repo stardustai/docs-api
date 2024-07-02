@@ -3,10 +3,10 @@
 @import 'tailwindcss/components';
 
 html.dark {
-	background-color: var(--vp-c-bg);
+  background-color: var(--vp-c-bg);
 }
 
 .vp-code-group > .blocks {
- max-height: 500px;
- overflow: auto;
+  max-height: 500px;
+  overflow: auto;
 }
