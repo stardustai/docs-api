@@ -1,13 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-const getApiTitle = (title: string, method: 'GET' | 'POST') => {
-  return `
-<div class="flex justify-between items-center">
-	<span>${title}</span>
-	<span class="text-[8px] w-9 h-4 rounded-xl text-white text-center leading-4 ${method === 'GET' ? 'bg-[#0e9b71]' : 'bg-[#0171c2]'}">${method}</span>
-</div>`
-}
-
 export const en = defineConfig({
   lang: 'en-US',
 
@@ -35,15 +27,15 @@ export const en = defineConfig({
         text: 'PROJECTS',
         items: [
           {
-            text: getApiTitle('Create Project', 'POST'),
+            text: 'Create Project',
             link: '/projects/create-project'
           },
           {
-            text: getApiTitle('List Project', 'POST'),
+            text: 'List Project',
             link: '/projects/list-project'
           },
           {
-            text: getApiTitle('Get Project', 'GET'),
+            text: 'Get Project',
             link: '/projects/get-project-info'
           }
         ]
@@ -52,15 +44,15 @@ export const en = defineConfig({
         text: 'TASKS',
         items: [
           {
-            text: getApiTitle('List Task', 'GET'),
+            text: 'List Task',
             link: '/tasks/list-task'
           },
           {
-            text: getApiTitle('Send Tasks', 'POST'),
+            text: 'Send Tasks',
             link: '/tasks/send-task'
           },
           {
-            text: getApiTitle('Check Send Status', 'POST'),
+            text: 'Check Send Status',
             link: '/tasks/check-send-status'
           },
           {
@@ -68,13 +60,13 @@ export const en = defineConfig({
             link: '/tasks/callbacks',
             items: [
               {
-                text: getApiTitle('Re-sending a Callback', 'POST'),
+                text: 'Re-sending a Callback',
                 link: '/tasks/callbacks/re-sending'
               }
             ]
           },
           {
-            text: getApiTitle('Get Task', 'GET'),
+            text: 'Get Task',
             link: '/tasks/get-task'
           }
         ]
@@ -83,7 +75,7 @@ export const en = defineConfig({
         text: 'EXPORT',
         items: [
           {
-            text: getApiTitle('Export Tasks', 'POST'),
+            text: 'Export Tasks',
             link: '/export/export-tasks'
           }
         ]
