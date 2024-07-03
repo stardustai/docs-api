@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import { useData } from 'vitepress'
 import List, { Data } from './List.vue'
 import Result from './Result.vue'
 
@@ -25,7 +24,5 @@ defineProps<{
   results?: Record<string, any>
 }>()
 
-const base = 'https://portal-dev.rosettalab.top/rosetta-open'
-
-const { isDark } = useData()
+const base = 'https://portal-prod.rosettalab.top/rosetta-open'
 </script>
