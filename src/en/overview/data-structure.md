@@ -1129,9 +1129,7 @@ This comprehensive data structure documentation provides detailed specifications
 
 ### Text Annotation
 
-::: code-group
-
-```json [Text]
+```json
 {
   "attachmentType": "TEXT",
   "attachment": "https://torbjorn.oss-cn-hangzhou.aliyuncs.com/b7853399-5d21-46ae-82e4-b58ea4c29a4d.txt?OSSAccessKeyId=LTAI4GHWdWdjGDE4Gx1Efbyt&Expires=3134147966&Signature=1XR%2BFlznusHAklbPJEauEM7%2FJYw%3D",
@@ -1142,13 +1140,9 @@ This comprehensive data structure documentation provides detailed specifications
 }
 ```
 
-:::
-
 ### Audio Annotation
 
-::: code-group
-
-```json [Audio]
+```json
 {
   "attachmentType": "AUDIO",
   "attachment": "https://torbjorn.oss-cn-hangzhou.aliyuncs.com/%E8%AF%AD%E9%9F%B3%20005_sd.m4a",
@@ -1159,13 +1153,9 @@ This comprehensive data structure documentation provides detailed specifications
 }
 ```
 
-:::
-
 ### Video Annotation
 
-::: code-group
-
-```json [Video]
+```json
 {
   "attachmentType": "VIDEO",
   "attachment": "https://torbjorn.oss-cn-hangzhou.aliyuncs.com/%E8%AF%AD%E9%9F%B3%20005_sd.mp4",
@@ -1176,13 +1166,9 @@ This comprehensive data structure documentation provides detailed specifications
 }
 ```
 
-:::
-
 ## Export
 
-::: code-group
-
-```json [Example]
+```json
 {
   "annotations": [
     {
@@ -1314,7 +1300,5 @@ This comprehensive data structure documentation provides detailed specifications
   ]
 }
 ```
-
-:::
 
 For more details about data structure, please visit our [SDK documentation page](https://sdk-docs.stardust.ai/overview.html).
