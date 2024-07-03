@@ -2,7 +2,7 @@
   <div>
     <h2>
       <span class="text-base">{{ method }}</span>
-      <span class="text-sm">{{ base }}{{ url }}</span>
+      <span class="text-sm ml-1">{{ base }}{{ url }}</span>
     </h2>
     <div>
       <List title="METADATA" :data="query" />

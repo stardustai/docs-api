@@ -220,7 +220,7 @@ updatedAt: 'Fri May 17 2024 16:06:51 GMT+0000 (Coordinated Universal Time)'
 :::
 
 <API
-	method="GET"
+	method="POST"
 	url="/project/get"
 	:body="body"
 	:results="results"
