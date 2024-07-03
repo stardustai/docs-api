@@ -21,6 +21,7 @@ export const shared = defineConfig({
   rewrites: {
     'en/:rest*': ':rest*'
   },
+  cleanUrls: true,
   ignoreDeadLinks: [/get-task/],
   themeConfig: {
     logo: '/favicon.ico',
