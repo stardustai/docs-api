@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./.vitepress/**/*.{js,ts,vue}', './**/*.md'],
+  content: ['./.vitepress/**/*.{js,mts,ts,vue}', './**/*.md'],
   darkMode: 'class',
   plugins: [require('daisyui')],
   daisyui: {
