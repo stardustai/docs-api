@@ -1,5 +1,14 @@
 import { defineConfig } from 'vitepress'
 
+const getApiTitle = (title: string, method: 'GET' | 'POST') => {
+  const bg = method === 'GET' ? 'bg-[#0e9b71]' : 'bg-[#0171c2]'
+  return `
+<span class="flex justify-between items-center">
+	<span>${title}</span>
+	<span class="text-[8px] w-9 h-4 rounded-xl text-white text-center leading-4 ${bg}">${method}</span>
+</span>`
+}
+
 export const en = defineConfig({
   lang: 'en-US',
 
@@ -27,15 +36,15 @@ export const en = defineConfig({
         text: 'PROJECTS',
         items: [
           {
-            text: 'Create Project',
+            text: getApiTitle('Create Project', 'POST'),
             link: '/projects/create-project'
           },
           {
-            text: 'List Project',
-            link: '/projects/list-project'
+            text: getApiTitle('List Project', 'POST'),
+            link: '/projects/list-project/'
           },
           {
-            text: 'Get Project',
+            text: getApiTitle('Get Project', 'GET'),
             link: '/projects/get-project-info'
           }
         ]
@@ -44,30 +53,30 @@ export const en = defineConfig({
         text: 'TASKS',
         items: [
           {
-            text: 'List Task',
-            link: '/tasks/list-task'
+            text: getApiTitle('List Task', 'GET'),
+            link: '/tasks/list-task/'
           },
           {
-            text: 'Send Tasks',
-            link: '/tasks/send-task'
+            text: getApiTitle('Send Tasks', 'POST'),
+            link: '/tasks/send-task/'
           },
           {
-            text: 'Check Send Status',
-            link: '/tasks/check-send-status'
+            text: getApiTitle('Check Send Status', 'POST'),
+            link: '/tasks/check-send-status/'
           },
           {
             text: 'Callbacks',
-            link: '/tasks/callbacks',
+            link: '/tasks/callbacks/',
             items: [
               {
-                text: 'Re-sending a Callback',
+                text: getApiTitle('Re-sending a Callback', 'POST'),
                 link: '/tasks/callbacks/re-sending'
               }
             ]
           },
           {
-            text: 'Get Task',
-            link: '/tasks/get-task'
+            text: getApiTitle('Get Task', 'GET'),
+            link: '/tasks/get-task/'
           }
         ]
       },
@@ -75,7 +84,7 @@ export const en = defineConfig({
         text: 'EXPORT',
         items: [
           {
-            text: 'Export Tasks',
+            text: getApiTitle('Export Tasks', 'POST'),
             link: '/export/export-tasks'
           }
         ]

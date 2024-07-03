@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2>
-      {{ method }} <span class="text-sm">{{ base }}{{ url }}</span>
+      <span class="text-base">{{ method }}</span>
+      <span class="text-sm">{{ base }}{{ url }}</span>
     </h2>
     <div>
       <List title="METADATA" :data="query" />
