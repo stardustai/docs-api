@@ -15,7 +15,6 @@ export const localizeLinks = (lang: string, data: SidebarItem[]) => {
 }
 
 export const shared = defineConfig({
-  base: '/docs-api/',
   srcDir: './src',
   title: 'API Docs',
   description: 'Stardust API',
