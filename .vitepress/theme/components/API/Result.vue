@@ -19,11 +19,13 @@
           {{ code }}
         </div>
         <div class="p-2 max-h-[500px] overflow-auto">
-          <vue-json-pretty
-            :data="item"
-            showIcon
-            :theme="isDark ? 'dark' : 'light'"
-          />
+          <ClientOnly>
+            <vue-json-pretty
+              :data="item"
+              showIcon
+              :theme="isDark ? 'dark' : 'light'"
+            />
+          </ClientOnly>
         </div>
       </div>
     </div>
@@ -32,11 +34,15 @@
 
 <script setup lang="ts">
 import classnames from 'classnames'
+import { useData } from 'vitepress'
 import VueJsonPretty from 'vue-json-pretty'
 import 'vue-json-pretty/lib/styles.css'
+import { Data } from './List.vue'
 
 defineProps<{
   title: string
   data?: Record<string, Data>
 }>()
+
+const { isDark } = useData()
 </script>
