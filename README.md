@@ -21,4 +21,4 @@ The Stardust API adheres to RESTful principles, guaranteeing cross-platform comp
 
 ## Contribution
 
-Please make sure to read the [Contributing Guide](https://github.com/vuejs/vitepress/blob/main/.github/contributing.md) before making a pull request.
+Please make sure to read the [Contributing Guide](.github/contributing.md) before making a pull request.
