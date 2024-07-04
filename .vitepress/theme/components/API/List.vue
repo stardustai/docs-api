@@ -2,7 +2,7 @@
   <div v-if="data">
     <div class="text-xs font-semibold">{{ title }}</div>
     <div
-      class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-2.5"
+      class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-3"
     >
       <div
         v-for="([key, item], index) of Object.entries(data)"
@@ -13,7 +13,12 @@
           })
         "
       >
-        <div class="flex items-center -mt-1">
+        <div class="flex items-baseline -mt-1">
+          <span
+            v-if="item.required !== false"
+            class="text-red-500 absolute -ml-1.5 mt-0.5 text-xs"
+            >*</span
+          >
           <span>{{ key }}</span>
           <span class="ml-2 text-xs text-gray-500">{{ item.type }}</span>
           <span v-if="item.default" class="ml-2 text-xs text-gray-500"

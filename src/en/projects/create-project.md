@@ -7,6 +7,61 @@ createdAt: 'Fri May 17 2024 07:45:50 GMT+0000 (Coordinated Universal Time)'
 updatedAt: 'Fri May 17 2024 16:06:51 GMT+0000 (Coordinated Universal Time)'
 ---
 
+<API
+	method="POST"
+	url="/project/get"
+	:body="body"
+	:results="results"
+/>
+
+<script setup>
+const body = {
+	name: {
+		type: 'string',
+		default: 'Lane line project',
+		description: 'project name'
+	},
+	dataType: {
+		type: 'integer',
+		default: 1,
+		description: 'project data type'
+	},
+	description: {
+		type: 'string',
+		default: 'project description',
+		description: 'description',
+		required: false
+	},
+	deadline: {
+		type: 'string',
+		default: '2024-04-22',
+		description: 'deadline'
+	},
+	operators: {
+		type: 'object[]',
+		description: 'label tool config'
+	},
+}
+const results = {
+	200: {
+		"code": 200,
+		"message": "Success",
+		"data": 12, // project id
+		"date": "2024-05-16 19:03:34",
+		"requestId": "864b70706a7349ea83e177a49800464f",
+		"success": true
+	},
+	400: {
+		"code": 400,
+		"data": null,
+		"date": "",
+		"message": "Illegal Parameter",
+		"requestId": "",
+		"success": false
+	}
+}
+</script>
+
 ## Labeling tool config
 
 ::: code-group
@@ -218,57 +273,3 @@ updatedAt: 'Fri May 17 2024 16:06:51 GMT+0000 (Coordinated Universal Time)'
 ```
 
 :::
-
-<API
-	method="POST"
-	url="/project/get"
-	:body="body"
-	:results="results"
-/>
-
-<script setup>
-const body = {
-	name: {
-		type: 'string',
-		default: 'Lane line project',
-		description: 'project name'
-	},
-	dataType: {
-		type: 'integer',
-		default: 1,
-		description: 'project data type'
-	},
-	description: {
-		type: 'string',
-		default: 'project description',
-		description: 'description'
-	},
-	deadline: {
-		type: 'string',
-		default: '2024-04-22',
-		description: 'deadline'
-	},
-	operators: {
-		type: 'object[]',
-		description: 'label tool config'
-	},
-}
-const results = {
-	200: {
-		"code": 200,
-		"message": "Success",
-		"data": 12, // project id
-		"date": "2024-05-16 19:03:34",
-		"requestId": "864b70706a7349ea83e177a49800464f",
-		"success": true
-	},
-	400: {
-		"code": 400,
-		"data": null,
-		"date": "",
-		"message": "Illegal Parameter",
-		"requestId": "",
-		"success": false
-	}
-}
-</script>
