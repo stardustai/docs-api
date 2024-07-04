@@ -20,8 +20,8 @@ Export annotation data to the path you need, and support data export selection t
 | PROJECTS | Create project              | /project/create         |
 |          | List project                | /project/list           |
 |          | Get project information     | /project/get            |
-|          | List task                   | /project/tasks          |
-| TASKS    | Send annotation task        | /task/send              |
+| TASKS    | List task                   | /project/tasks          |
+|          | Send annotation task        | /task/send              |
 |          | Re-sending a callback       | /task/{taskId}/callback |
 |          | Get task information        | /task/get               |
 | EXPORT   | Export tasks with condition | /tasks/export           |

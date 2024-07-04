@@ -38,16 +38,16 @@ export const en = defineConfig({
           {
             text: getApiTitle('Get Project', 'GET'),
             link: '/projects/get-project-info'
-          },
-          {
-            text: getApiTitle('List Task', 'POST'),
-            link: '/projects/list-task/'
           }
         ]
       },
       {
         text: 'TASKS',
         items: [
+          {
+            text: getApiTitle('List Task', 'POST'),
+            link: '/projects/list-task/'
+          },
           {
             text: getApiTitle('Send Tasks', 'POST'),
             link: '/tasks/send-task/'
