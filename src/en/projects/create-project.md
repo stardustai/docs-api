@@ -63,7 +63,7 @@ const results = {
 
 ::: code-group
 
-```json
+```json [nesting instance structure]
 {
   "key": "box3d-[1cbd2]",
   "type": "slotChildren",
@@ -98,7 +98,7 @@ const results = {
 }
 ```
 
-```json
+```json [instance structure]
 [
   {
     "key": "box3d-[ff05a]",
@@ -203,7 +203,7 @@ const results = {
 ]
 ```
 
-```json
+```json [attribute structure]
 [
   {
     "key": "text-[7aba5]",

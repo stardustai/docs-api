@@ -8,7 +8,7 @@ updatedAt: 'Fri May 17 2024 16:08:18 GMT+0000 (Coordinated Universal Time)'
 <API
 	method="POST"
 	url="/task/{taskId}/callback"
-    :path="path"
+	:path="path"
 	:results="results"
 />
 

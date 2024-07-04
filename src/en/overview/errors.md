@@ -9,20 +9,47 @@ updatedAt: 'Fri May 17 2024 16:06:01 GMT+0000 (Coordinated Universal Time)'
 
 Stardust's API uses the following HTTP codes and business-specific codes:
 
-| Error Code | Description                            |
-| :--------- | :------------------------------------- |
-| 400        | Illegal Parameter                      |
-| 401        | Wrong Signature                        |
-| 402        | Authentication Failed                  |
-| 403        | Signature Expired                      |
-| 404        | Not Found, the resource is missing     |
-| 500        | Internal Error, please try again later |
-|            |                                        |
-| 5801       | The project name already exists        |
+<table>
+	<tr>
+		<th>Error Code</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+	  <td>400</td>
+	  <td>Illegal Parameter</td>
+	</tr>
+	<tr>
+	  <td>401</td>
+	  <td>Wrong Signature</td>
+	</tr>
+	<tr>
+	  <td>402</td>
+	  <td>Authentication Failed</td>
+	</tr>
+	<tr>
+	  <td>403</td>
+	  <td>Signature Expired </td>
+	</tr>
+	<tr>
+	  <td>404</td>
+	  <td>Not Found, the resource is missing</td>
+	</tr>
+	<tr>
+	  <td>500</td>
+	  <td>Internal Error, please try again later</td>
+	</tr>
+	<tr>
+	  <td colspan="2"></td>
+	</tr>
+	<tr>
+	  <td>5801</td>
+	  <td rowspan="2">The project name already exists</td>
+	</tr>
+</table>
 
 ::: code-group
 
-```json
+```json [400 Example]
 {
   "code": 400,
   "data": null,
@@ -33,7 +60,7 @@ Stardust's API uses the following HTTP codes and business-specific codes:
 }
 ```
 
-```json
+```json [404 Example]
 {
   "code": 404,
   "data": null,
@@ -44,7 +71,7 @@ Stardust's API uses the following HTTP codes and business-specific codes:
 }
 ```
 
-```json
+```json [500 Example]
 {
   "code": 500,
   "data": null,
