@@ -7,20 +7,6 @@ createdAt: 'Fri May 17 2024 15:20:48 GMT+0000 (Coordinated Universal Time)'
 updatedAt: 'Fri May 17 2024 16:36:39 GMT+0000 (Coordinated Universal Time)'
 ---
 
-```json Example Callback Body
-{
-  "attachmentType": "IMAGE",
-  "attachment": "oss://stardust-data/Production/xingchen_12_4119_city/20231110_1camera_1_4119/jc08_suz_Ew_0b_sunny_m_0_1699577442197.jpg",
-  "metadata": {
-    "uniqueIdentifier": "329345877854392320", // Task object ID in your platform
-    "additionalInfo": {
-      "callbackUrl": "http://www.example.com/callback"
-      // You can list any other parameter below
-    }
-  }
-}
-```
-
 On your tasks, you can optionally supply a callbackUrl, a fully qualified URL that we will POST with the results of the task when completed. The data will be served as a JSON body (application/json).
 
 You should respond to the POST request with a 2xx status code. If we do not receive a 2xx status code, we will continue to retry up to 8 times over the course of the next 24 hours.
@@ -29,7 +15,7 @@ If we receive a 2xx status code, the task will be populated with a true value fo
 
 ## Authentication
 
-If you'd like to authenticate our callbacks, we set a X-STARDUST-KEY HTTP header on each of our callbacks. The value will be equal to your [AccessKey ID](/overview/authentication) from our platform. If this header is not set, or it is set incorrectly, the callback is not from Stardust.
+If you'd like to authenticate our callbacks, we use the same method which introduced in [Authentication](/overview/authentication#authentication-method), with the creator's AccessKey & SecretKey of the task. If the required header is not set, or it is set incorrectly, the callback is not from Stardust.
 
 ## POST Data
 

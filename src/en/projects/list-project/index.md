@@ -20,23 +20,23 @@ import results from './results.json'
 const body = {
 	status: {
 		type: 'integer',
-		default: 1,
 		description: 'status'
 	},
 	dataType: {
 		type: 'integer',
-		default: 1,
-		description: 'project data type'
+		description: 'project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D'
 	},
 	offset: {
 		type: 'integer',
 		default: 1,
-		description: 'Start page number'
+		description: 'Start page number',
+        required: false
 	},
 	limit: {
 		type: 'integer',
 		default: 10,
-		description: 'Number of posts per page'
+		description: 'Number of posts per page',
+        required: false
 	},
 }
 </script>

@@ -18,22 +18,18 @@ updatedAt: 'Fri May 17 2024 16:01:31 GMT+0000 (Coordinated Universal Time)'
 const body = {
 	projectId: {
 		type: 'long',
-		default: 2695,
 		description: 'project id'
 	},
 	completeTimeAfter: {
 		type: 'string',
-		default: '2023-04-01',
-		description: 'Complete time of task after the date, include the day'
+		description: 'Complete time of task after the date, include the day, such as 2024-05-01'
 	},
 	completeTimeBefore: {
 		type: 'string',
-		default: '2023-05-01',
-		description: 'Complete time of task before the date'
+		description: 'Complete time of task before the date, such as 2024-06-01'
 	},
 	taskIds: {
 		type: 'long[]',
-		default: [],
 		description: 'Task Id List'
 	},
 }

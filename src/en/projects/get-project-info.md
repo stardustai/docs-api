@@ -18,7 +18,6 @@ updatedAt: 'Fri May 17 2024 16:01:31 GMT+0000 (Coordinated Universal Time)'
 const query = {
 	projectId: {
 		type: 'long',
-		default: 128,
 		description: 'project id'
 	},
 }

@@ -9,7 +9,7 @@ updatedAt: 'Fri May 17 2024 16:06:51 GMT+0000 (Coordinated Universal Time)'
 
 <API
 	method="POST"
-	url="/project/get"
+	url="/project/create"
 	:body="body"
 	:results="results"
 />
@@ -18,13 +18,11 @@ updatedAt: 'Fri May 17 2024 16:06:51 GMT+0000 (Coordinated Universal Time)'
 const body = {
 	name: {
 		type: 'string',
-		default: 'Lane line project',
 		description: 'project name'
 	},
 	dataType: {
 		type: 'integer',
-		default: 1,
-		description: 'project data type'
+		description: 'project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D'
 	},
 	description: {
 		type: 'string',
@@ -34,8 +32,7 @@ const body = {
 	},
 	deadline: {
 		type: 'string',
-		default: '2024-04-22',
-		description: 'deadline'
+		description: 'deadline, a date for system notification, such as 2024-06-01'
 	},
 	operators: {
 		type: 'object[]',
@@ -66,7 +63,7 @@ const results = {
 
 ::: code-group
 
-```json [nesting instance structure]
+```json
 {
   "key": "box3d-[1cbd2]",
   "type": "slotChildren",
@@ -101,7 +98,7 @@ const results = {
 }
 ```
 
-```json [instance structure]
+```json
 [
   {
     "key": "box3d-[ff05a]",
@@ -206,7 +203,7 @@ const results = {
 ]
 ```
 
-```json [attribute structure]
+```json
 [
   {
     "key": "text-[7aba5]",

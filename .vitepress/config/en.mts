@@ -38,6 +38,10 @@ export const en = defineConfig({
           {
             text: getApiTitle('Get Project', 'GET'),
             link: '/projects/get-project-info'
+          },
+          {
+            text: getApiTitle('List Task', 'POST'),
+            link: '/projects/list-task/'
           }
         ]
       },
@@ -45,16 +49,8 @@ export const en = defineConfig({
         text: 'TASKS',
         items: [
           {
-            text: getApiTitle('List Task', 'GET'),
-            link: '/tasks/list-task/'
-          },
-          {
             text: getApiTitle('Send Tasks', 'POST'),
             link: '/tasks/send-task/'
-          },
-          {
-            text: getApiTitle('Check Send Status', 'POST'),
-            link: '/tasks/check-send-status/'
           },
           {
             text: 'Callbacks',
@@ -67,7 +63,7 @@ export const en = defineConfig({
             ]
           },
           {
-            text: getApiTitle('Get Task', 'GET'),
+            text: getApiTitle('Get Task', 'POST'),
             link: '/tasks/get-task/'
           }
         ]

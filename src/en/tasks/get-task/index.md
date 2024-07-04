@@ -12,7 +12,7 @@ updatedAt: 'Fri May 17 2024 15:43:31 GMT+0000 (Coordinated Universal Time)'
 ---
 
 <API
-	method="GET"
+	method="POST"
 	url="/task/get"
 	:body="body"
 	:results="results"

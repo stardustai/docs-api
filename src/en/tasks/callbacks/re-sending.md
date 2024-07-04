@@ -8,17 +8,16 @@ updatedAt: 'Fri May 17 2024 16:08:18 GMT+0000 (Coordinated Universal Time)'
 <API
 	method="POST"
 	url="/task/{taskId}/callback"
-	:body="body"
+    :path="path"
 	:results="results"
 />
 
 <script setup>
-const body = {
-	taskId: {
-		type: 'string',
-		default: '358183635595169792',
-		description: 'Task ID'
-	}
+const path = {
+  "taskId": {
+    "type": "string",
+    "description": "Task Id"
+  }
 }
 
 const results = {

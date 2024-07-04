@@ -7,7 +7,7 @@ updatedAt: 'Fri May 17 2024 16:06:01 GMT+0000 (Coordinated Universal Time)'
 
 ## API error code
 
-Stardust's API uses the following HTTP code:
+Stardust's API uses the following HTTP codes and business-specific codes:
 
 | Error Code | Description                            |
 | :--------- | :------------------------------------- |
@@ -17,10 +17,12 @@ Stardust's API uses the following HTTP code:
 | 403        | Signature Expired                      |
 | 404        | Not Found, the resource is missing     |
 | 500        | Internal Error, please try again later |
+|            |                                        |
+| 5801       | The project name already exists        |
 
 ::: code-group
 
-```json [400 Example]
+```json
 {
   "code": 400,
   "data": null,
@@ -31,7 +33,7 @@ Stardust's API uses the following HTTP code:
 }
 ```
 
-```json [404 Example]
+```json
 {
   "code": 404,
   "data": null,
@@ -42,7 +44,7 @@ Stardust's API uses the following HTTP code:
 }
 ```
 
-```json [500 Example]
+```json
 {
   "code": 500,
   "data": null,

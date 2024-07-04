@@ -1,32 +1,30 @@
 {
   "projectId": {
     "type": "long",
-    "default": 128,
     "description": "project id"
   },
   "status": {
     "type": "integer",
-    "default": 1,
-    "description": "status"
+    "description": "status, generally 1"
   },
   "startTime": {
     "type": "long",
-    "default": 1715957089000,
-    "description": "start time"
+    "description": "start time, ms"
   },
   "endTime": {
     "type": "long",
-    "default": 1715957100000,
-    "description": "end time"
+    "description": "end time, ms"
   },
   "offset": {
     "type": "integer",
     "default": 1,
-    "description": "Start page number"
+    "description": "Start page number",
+    "required": false
   },
   "limit": {
     "type": "integer",
     "default": 10,
-    "description": "Number of posts per page"
+    "description": "Number of posts per page",
+    "required": false
   }
 }
