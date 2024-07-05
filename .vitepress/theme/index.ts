@@ -18,6 +18,8 @@ export default {
     app.component('API', API)
     app.component('Glossary', Glossary)
 
+    if (import.meta.env.SSR) return
+
     const pathname = location.pathname.replace(/^\/|\/$/g, '')
     if (redirectRouteMap[pathname]) {
       router.go(redirectRouteMap[pathname])
