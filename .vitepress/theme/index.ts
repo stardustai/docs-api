@@ -1,5 +1,6 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
+import { withBase } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import API from './components/API/index.vue'
@@ -22,7 +23,8 @@ export default {
 
     const pathname = location.pathname.replace(/^\/|\/$/g, '')
     if (redirectRouteMap[pathname]) {
-      router.go(redirectRouteMap[pathname])
+      const target = withBase(`/${redirectRouteMap[pathname]}`)
+      router.go(target), location.replace(target)
     }
   }
 } satisfies Theme
