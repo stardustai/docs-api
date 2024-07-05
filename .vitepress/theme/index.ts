@@ -1,5 +1,6 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
+import { withBase } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import API from './components/API/index.vue'
@@ -14,7 +15,7 @@ export default {
     h(DefaultTheme.Layout, null, {
       'doc-before': () => h(DocInfo)
     }),
-  enhanceApp({ app, router }) {
+  enhanceApp({ app }) {
     app.component('API', API)
     app.component('Glossary', Glossary)
 
@@ -22,7 +23,7 @@ export default {
 
     const pathname = location.pathname.replace(/^\/|\/$/g, '')
     if (redirectRouteMap[pathname]) {
-      router.go(redirectRouteMap[pathname])
+      location.replace(withBase(`/${redirectRouteMap[pathname]}`))
     }
   }
 } satisfies Theme
