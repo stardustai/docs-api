@@ -15,7 +15,7 @@ export default {
     h(DefaultTheme.Layout, null, {
       'doc-before': () => h(DocInfo)
     }),
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
     app.component('API', API)
     app.component('Glossary', Glossary)
 
@@ -23,7 +23,8 @@ export default {
 
     const pathname = location.pathname.replace(/^\/|\/$/g, '')
     if (redirectRouteMap[pathname]) {
-      location.replace(withBase(`/${redirectRouteMap[pathname]}`))
+      const target = withBase(`/${redirectRouteMap[pathname]}`)
+      router.go(target), location.replace(target)
     }
   }
 } satisfies Theme
