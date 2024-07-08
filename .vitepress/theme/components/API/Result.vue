@@ -21,8 +21,8 @@
         <div class="p-2 max-h-[500px] overflow-auto">
           <ClientOnly>
             <vue-json-pretty
-              :data="item"
               showIcon
+              :data="item"
               :theme="isDark ? 'dark' : 'light'"
             />
           </ClientOnly>
