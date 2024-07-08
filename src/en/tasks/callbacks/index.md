@@ -1,10 +1,5 @@
 ---
 title: 'Callbacks'
-slug: 'callback'
-description: ''
-hidden: false
-createdAt: 'Fri May 17 2024 15:20:48 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 16:36:39 GMT+0000 (Coordinated Universal Time)'
 ---
 
 On your tasks, you can optionally supply a callbackUrl, a fully qualified URL that we will POST with the results of the task when completed. The data will be served as a JSON body (application/json).

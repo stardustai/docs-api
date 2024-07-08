@@ -1,8 +1,5 @@
 ---
 title: 'Errors'
-slug: 'errors'
-createdAt: 'Thu May 16 2024 14:00:48 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 16:06:01 GMT+0000 (Coordinated Universal Time)'
 ---
 
 ## API error code

@@ -1,10 +1,5 @@
 ---
 title: 'Data Structure'
-slug: 'data-structure'
-description: ''
-hidden: false
-createdAt: 'Thu May 16 2024 14:01:06 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 14:56:17 GMT+0000 (Coordinated Universal Time)'
 ---
 
 This comprehensive data structure documentation provides detailed specifications and schemas for all data objects within the Stardust ecosystem. It serves as an essential reference for developers integrating with or extending Morningstar and Rosetta, ensuring seamless data exchange and compatibility. Whether you're working with projects, tasks, annotations, or any other data element, this resource offers the necessary guidance to understand, manipulate, and utilize the rich information available within Stardust's platforms.

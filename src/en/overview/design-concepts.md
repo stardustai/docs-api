@@ -1,10 +1,5 @@
 ---
 title: 'Design Concepts'
-slug: 'design-concepts'
-description: ''
-hidden: false
-createdAt: 'Fri May 17 2024 12:07:46 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 14:33:02 GMT+0000 (Coordinated Universal Time)'
 ---
 
 ## Why Data-Centric

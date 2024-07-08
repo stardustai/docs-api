@@ -1,10 +1,6 @@
 ---
 title: 'Get Project'
-slug: 'get-project-info'
 description: 'This page will help you get started with retrieve project information.'
-hidden: false
-createdAt: 'Fri May 17 2024 08:08:23 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 16:01:31 GMT+0000 (Coordinated Universal Time)'
 ---
 
 <API

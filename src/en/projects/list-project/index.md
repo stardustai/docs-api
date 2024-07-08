@@ -1,10 +1,6 @@
 ---
 title: 'List Project'
-slug: 'list-project'
 description: 'This page will help you get started with list project.'
-hidden: false
-createdAt: 'Fri May 17 2024 08:03:01 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 16:07:06 GMT+0000 (Coordinated Universal Time)'
 ---
 
 <API

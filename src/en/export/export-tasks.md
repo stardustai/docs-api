@@ -1,10 +1,6 @@
 ---
 title: 'Export Task'
-slug: 'export-task'
 description: 'Export all data of the task, include annotation results, metadata, assets, etc.'
-hidden: false
-createdAt: 'Fri May 17 2024 08:08:23 GMT+0000 (Coordinated Universal Time)'
-updatedAt: 'Fri May 17 2024 16:01:31 GMT+0000 (Coordinated Universal Time)'
 ---
 
 <API
