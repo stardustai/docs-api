@@ -7,52 +7,52 @@ api:
 ---
 
 <Params
-	:body="body"
-	:results="results"
+  :body="body"
+  :results="results"
 />
 
 <script setup>
 const body = {
-	name: {
-		type: 'string',
-		description: 'project name'
-	},
-	dataType: {
-		type: 'integer',
-		description: 'project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D'
-	},
-	description: {
-		type: 'string',
-		default: 'project description',
-		description: 'description',
-		required: false
-	},
-	deadline: {
-		type: 'string',
-		description: 'deadline, a date for system notification, such as 2024-06-01'
-	},
-	operators: {
-		type: 'object[]',
-		description: 'label tool config'
-	},
+  name: {
+    type: 'string',
+    description: 'project name'
+  },
+  dataType: {
+    type: 'integer',
+    description: 'project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D'
+  },
+  description: {
+    type: 'string',
+    default: 'project description',
+    description: 'description',
+    required: false
+  },
+  deadline: {
+    type: 'string',
+    description: 'deadline, a date for system notification, such as 2024-06-01'
+  },
+  operators: {
+    type: 'object[]',
+    description: 'label tool config'
+  },
 }
 const results = {
-	200: {
-		"code": 200,
-		"message": "Success",
-		"data": 12, // project id
-		"date": "2024-05-16 19:03:34",
-		"requestId": "864b70706a7349ea83e177a49800464f",
-		"success": true
-	},
-	400: {
-		"code": 400,
-		"data": null,
-		"date": "",
-		"message": "Illegal Parameter",
-		"requestId": "",
-		"success": false
-	}
+  200: {
+    "code": 200,
+    "message": "Success",
+    "data": 12, // project id
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": true
+  },
+  400: {
+    "code": 400,
+    "data": null,
+    "date": "",
+    "message": "Illegal Parameter",
+    "requestId": "",
+    "success": false
+  }
 }
 </script>
 

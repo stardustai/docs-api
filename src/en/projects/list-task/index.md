@@ -7,8 +7,8 @@ api:
 ---
 
 <Params
-	:body="body"
-	:results="results"
+  :body="body"
+  :results="results"
 />
 
 <script setup>

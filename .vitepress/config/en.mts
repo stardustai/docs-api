@@ -36,8 +36,14 @@ export const en = defineConfig({
             text: 'Main Features',
             link: '/overview/main-features'
           },
-          { text: 'Design Concepts', link: '/overview/design-concepts' },
-          { text: 'Authentication', link: '/overview/authentication' },
+          {
+            text: 'Design Concepts',
+            link: '/overview/design-concepts'
+          },
+          {
+            text: 'Authentication',
+            link: '/overview/authentication'
+          },
           { text: 'Errors', link: '/overview/errors' },
           { text: 'Data Structure', link: '/overview/data-structure' }
         ]
