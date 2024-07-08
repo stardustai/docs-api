@@ -1,10 +1,11 @@
 ---
 title: 'Re-sending a Callback'
+api:
+  method: POST
+	url: /task/{taskId}/callback
 ---
 
-<API
-	method="POST"
-	url="/task/{taskId}/callback"
+<Params
 	:path="path"
 	:results="results"
 />

@@ -1,11 +1,12 @@
 ---
 title: 'List Task'
 description: 'This page will help you get started with list all tasks in a project.'
+api:
+  method: POST
+  url: /project/tasks
 ---
 
-<API
-	method="POST"
-	url="/project/tasks"
+<Params
 	:body="body"
 	:results="results"
 />

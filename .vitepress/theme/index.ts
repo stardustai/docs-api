@@ -2,7 +2,7 @@
 import { withBase } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import API from './components/API/index.vue'
+import Params from './components/Params/index.vue'
 import Glossary from './components/Glossary.vue'
 import { redirectRouteMap } from '../config/routes.mts'
 import Layout from './components/Layout.vue'
@@ -12,7 +12,7 @@ export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app, router }) {
-    app.component('API', API)
+    app.component('Params', Params)
     app.component('Glossary', Glossary)
 
     if (import.meta.env.SSR) return

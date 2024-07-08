@@ -1,11 +1,12 @@
 ---
 title: 'Create Project'
 description: 'This page will help you get started with creating a project on Rosetta'
+api:
+  method: POST
+  url: /project/create
 ---
 
-<API
-	method="POST"
-	url="/project/create"
+<Params
 	:body="body"
 	:results="results"
 />

@@ -1,11 +1,12 @@
 ---
 title: 'List Project'
 description: 'This page will help you get started with list project.'
+api:
+  method: POST
+  url: /project/list
 ---
 
-<API
-	method="POST"
-	url="/project/list"
+<Params
 	:body="body"
 	:results="results"
 />

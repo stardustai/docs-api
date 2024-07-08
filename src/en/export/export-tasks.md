@@ -1,11 +1,12 @@
 ---
 title: 'Export Task'
 description: 'Export all data of the task, include annotation results, metadata, assets, etc.'
+api:
+  method: POST
+  url: /tasks/export
 ---
 
-<API
-	method="POST"
-	url="/tasks/export"
+<Params
 	:body="body"
 	:results="results"
 />

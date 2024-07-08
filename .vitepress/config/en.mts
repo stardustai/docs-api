@@ -1,5 +1,23 @@
-import { defineConfig } from 'vitepress'
+import { ContentData, createContentLoader, defineConfig } from 'vitepress'
 import { getApiTitle } from './shared.mts'
+
+const docs = await createContentLoader('**/*.md').load()
+
+const docsMap = docs.reduce(
+  (map, doc) => map.set(doc.url, doc),
+  new Map<string, ContentData>()
+)
+
+const getApiConfig = (link: string) => {
+  const frontmatter = docsMap.get(`/en${link}`)?.frontmatter
+  if (!frontmatter || !frontmatter.api?.method) {
+    return { text: frontmatter?.title || link, link }
+  }
+  return {
+    text: getApiTitle(frontmatter.title, frontmatter.api.method),
+    link
+  }
+}
 
 export const en = defineConfig({
   lang: 'en-US',
@@ -27,55 +45,26 @@ export const en = defineConfig({
       {
         text: 'PROJECTS',
         items: [
-          {
-            text: getApiTitle('Create Project', 'POST'),
-            link: '/projects/create-project'
-          },
-          {
-            text: getApiTitle('List Project', 'POST'),
-            link: '/projects/list-project/'
-          },
-          {
-            text: getApiTitle('Get Project', 'GET'),
-            link: '/projects/get-project-info'
-          }
+          getApiConfig('/projects/create-project'),
+          getApiConfig('/projects/list-project/'),
+          getApiConfig('/projects/get-project-info')
         ]
       },
       {
         text: 'TASKS',
         items: [
+          getApiConfig('/projects/list-task/'),
+          getApiConfig('/tasks/send-task/'),
           {
-            text: getApiTitle('List Task', 'POST'),
-            link: '/projects/list-task/'
+            ...getApiConfig('/tasks/callbacks/'),
+            items: [getApiConfig('/tasks/callbacks/re-sending')]
           },
-          {
-            text: getApiTitle('Send Tasks', 'POST'),
-            link: '/tasks/send-task/'
-          },
-          {
-            text: 'Callbacks',
-            link: '/tasks/callbacks/',
-            items: [
-              {
-                text: getApiTitle('Re-sending a Callback', 'POST'),
-                link: '/tasks/callbacks/re-sending'
-              }
-            ]
-          },
-          {
-            text: getApiTitle('Get Task', 'POST'),
-            link: '/tasks/get-task/'
-          }
+          getApiConfig('/tasks/get-task/')
         ]
       },
       {
         text: 'EXPORT',
-        items: [
-          {
-            text: getApiTitle('Export Tasks', 'POST'),
-            link: '/export/export-tasks'
-          }
-        ]
+        items: [getApiConfig('/export/export-tasks')]
       }
     ]
   }

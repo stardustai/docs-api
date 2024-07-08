@@ -1,10 +1,11 @@
 ---
 title: 'Check Send Status'
+api:
+  method: POST
+	url: /task/send/status
 ---
 
-<API
-	method="POST"
-	url="/task/send/status"
+<Params
 	:body="body"
 	:results="results"
 />

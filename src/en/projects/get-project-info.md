@@ -1,11 +1,12 @@
 ---
 title: 'Get Project'
 description: 'This page will help you get started with retrieve project information.'
+api:
+  method: GET
+  url: /project/get
 ---
 
-<API
-	method="GET"
-	url="/project/get"
+<Params
 	:query="query"
 	:results="results"
 />

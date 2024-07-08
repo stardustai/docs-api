@@ -1,10 +1,11 @@
 ---
 title: 'Get Task'
+api:
+  method: POST
+  url: /task/get
 ---
 
-<API
-	method="POST"
-	url="/task/get"
+<Params
 	:body="body"
 	:results="results"
 />

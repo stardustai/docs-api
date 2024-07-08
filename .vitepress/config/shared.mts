@@ -23,14 +23,19 @@ export const getApiTitle = (title: string, method: 'GET' | 'POST') => {
 </span>`
 }
 
-export const shared = defineConfig({
+global.VITEPRESS_CONFIG = {
   srcDir: './src',
+  cleanUrls: true,
+  site: {}
+}
+
+export const shared = defineConfig({
+  ...global.VITEPRESS_CONFIG,
   title: 'API Docs',
   description: 'Stardust API',
   rewrites: {
     'en/:rest*': ':rest*'
   },
-  cleanUrls: true,
   ignoreDeadLinks: [/get-task/],
   themeConfig: {
     logo: '/favicon.ico',
