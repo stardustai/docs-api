@@ -12,7 +12,7 @@
         <div class="daisy-menu">
           <li>
             <details>
-              <summary>{{ currentVersion || 'Latest' }}</summary>
+              <summary>{{ currentVersion }}</summary>
             </details>
           </li>
         </div>
@@ -21,7 +21,7 @@
           className="daisy-dropdown-content daisy-menu bg-base-100 rounded-box z-[1] w-36 p-2 shadow"
         >
           <li
-            v-for="[version, link] of versions"
+            v-for="{ version, link } of versions"
             :key="version"
             @click="router.go(link)"
           >
@@ -29,7 +29,6 @@
           </li>
         </ul>
       </div>
-      <div v-else-if="frontmatter.versions">{{ currentVersion }}</div>
     </div>
     <div class="vp-doc">
       <p>{{ page.description }}</p>
@@ -37,25 +36,42 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
-import { useRouter } from 'vitepress'
+import { useData, useRouter, withBase } from 'vitepress'
+import { data as archive } from '../data/archive.data.mts'
 
-const { page, frontmatter } = useData()
 const router = useRouter()
+const { page, frontmatter } = useData()
 
-const currentVersion = computed(() => {
-  return router.route.path.match(/archive\/(.*?)\//)?.[1]
-})
+const parseUrl = (url: string): [version: string, path: string] => {
+  const matched = url.match(/^\/archive\/(.*?)(\/.*)/)
+  return matched ? [matched[1], matched[2]] : ['Latest', url]
+}
+
+const versionsMap = archive.reduce((result, current) => {
+  const [version, path] = parseUrl(current.url.replace(/^\/.*?\//, '/'))
+  return {
+    ...result,
+    [path]: result[path] ? result[path].concat(version) : [version]
+  }
+}, {})
 
 const versions = computed(() => {
-  if (!frontmatter.value.versions) return []
-  const result = Object.entries(frontmatter.value.versions)
-  if (!currentVersion.value) return result
-  const path = router.route.path.replace(/\/archive\/.*?\//, '/')
-  return [['Latest', path]]
-    .concat(result)
-    .filter(([version]) => version !== currentVersion.value)
+  const [version, path] = parseUrl(router.route.path)
+  if (!versionsMap[path]) return []
+  return versionsMap[path]
+    .reduce(
+      (result, version) => {
+        return result.concat({
+          version,
+          link: withBase(`/archive/${version}${path}`)
+        })
+      },
+      [{ version: 'Latest', link: withBase(path) }]
+    )
+    .filter((i) => i.version !== version)
 })
+
+const currentVersion = computed(() => parseUrl(router.route.path)?.[0])
 </script>
