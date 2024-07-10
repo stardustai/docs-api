@@ -13,7 +13,7 @@ This comprehensive data structure documentation provides detailed specifications
 ```json [SingleCamera]
 {
   "attachmentType": "IMAGE",
-  "attachment": "oss://stardust-data/Production/xingchen_12_4119_city/20231110_1camera_1_4119/jc08_suz_Ew_0b_sunny_m_0_1699577442197.jpg",
+  "attachment": "oss://your-bucket/xingchen_12_4119_city/20231110_1camera_1_4119/jc08_suz_Ew_0b_sunny_m_0_1699577442197.jpg",
   "metadata": {
     "uniqueIdentifier": "329345877854392320", // Task object ID in your platform
     "preprocessedData": {},
@@ -39,31 +39,31 @@ This comprehensive data structure documentation provides detailed specifications
   "attachment":[
       {
         "name": "merge_bev",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/merge_bev/1676636846086413.png"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/merge_bev/1676636846086413.png"
       },
       {
         "name": "rf_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rf_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rf_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "lf_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lf_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lf_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "lr_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lr_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lr_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "rr_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rr_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rr_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "front_middle_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_middle_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_middle_camera/1676636846086413.jpg"
       },
       {
         "name": "front_short_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_short_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_short_camera/1676636846086413.jpg"
       }
     ]
 }
@@ -79,9 +79,9 @@ This comprehensive data structure documentation provides detailed specifications
 {
   "attachmentType": "IMAGE_SEQUENCE",
   "attachment": [
-    "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1678_bird_ml.png",
-    "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1679_bird_ml.png",
-    "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Production/20211226/right/2021-12-26-11-22-04-00038_1706_bird_ml.png"
+    "https://yourwebsite.com20211226/right/2021-12-26-11-22-04-00038_1678_bird_ml.png",
+    "https://yourwebsite.com20211226/right/2021-12-26-11-22-04-00038_1679_bird_ml.png",
+    "https://yourwebsite.com20211226/right/2021-12-26-11-22-04-00038_1706_bird_ml.png"
   ],
   "metadata": {
     "uniqueIdentifier": "0b5e4671-452a-45ca-9779-1dc6e277150b", // Task object ID in your platform
@@ -108,31 +108,31 @@ This comprehensive data structure documentation provides detailed specifications
     [
       {
         "name": "merge_bev",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/merge_bev/1676636846086413.png"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/merge_bev/1676636846086413.png"
       },
       {
         "name": "rf_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rf_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rf_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "lf_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lf_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lf_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "lr_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lr_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/lr_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "rr_wide_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rr_wide_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/rr_wide_camera/1676636846086413.jpg"
       },
       {
         "name": "front_middle_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_middle_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_middle_camera/1676636846086413.jpg"
       },
       {
         "name": "front_short_camera",
-        "url": "oss://stardust-data/Production/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_short_camera/1676636846086413.jpg"
+        "url": "oss://your-bucket/642b96c1df6b00dd2d1282e5/HP-30-V71-AC-021_1676636840_1676636849/front_short_camera/1676636846086413.jpg"
       }
     ]
   ]
@@ -152,7 +152,7 @@ This comprehensive data structure documentation provides detailed specifications
     "uniqueIdentifier": "3c665b98-6594-45a7-8722-ecce0d225589"
   },
   "attachment": {
-    "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/pcd/1.pcd",
+    "url": "https://yourwebsite.com/projects/pandaset/pcd/1.pcd",
     "coordinate": {
       "camera_height": 2
     },
@@ -164,7 +164,7 @@ This comprehensive data structure documentation provides detailed specifications
     ],
     "imageSources": [
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/front_camera/1.png",
+        "url": "https://yourwebsite.com/projects/pandaset/front_camera/1.png",
         "name": "front_camera",
         "width": 1920,
         "height": 1080,
@@ -201,7 +201,7 @@ This comprehensive data structure documentation provides detailed specifications
         }
       },
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/back_camera/1.png",
+        "url": "https://yourwebsite.com/projects/pandaset/back_camera/1.png",
         "name": "back_camera",
         "width": 1920,
         "height": 1080,
@@ -250,7 +250,7 @@ This comprehensive data structure documentation provides detailed specifications
   },
   "attachment": [
     {
-      "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/pcd/1.pcd",
+      "url": "https://yourwebsite.com/projects/pandaset/pcd/1.pcd",
       "coordinate": {
         "camera_height": 2
       },
@@ -262,7 +262,7 @@ This comprehensive data structure documentation provides detailed specifications
       ],
       "imageSources": [
         {
-          "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/front_camera/1.png",
+          "url": "https://yourwebsite.com/projects/pandaset/front_camera/1.png",
           "name": "front_camera",
           "width": 1920,
           "height": 1080,
@@ -298,7 +298,7 @@ This comprehensive data structure documentation provides detailed specifications
           }
         },
         {
-          "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/back_camera/1.png",
+          "url": "https://yourwebsite.com/projects/pandaset/back_camera/1.png",
           "name": "back_camera",
           "width": 1920,
           "height": 1080,
@@ -336,7 +336,7 @@ This comprehensive data structure documentation provides detailed specifications
       ]
     },
     {
-      "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/pcd/1.pcd",
+      "url": "https://yourwebsite.com/projects/pandaset/pcd/1.pcd",
       "coordinate": {
         "camera_height": 2
       },
@@ -348,7 +348,7 @@ This comprehensive data structure documentation provides detailed specifications
       ],
       "imageSources": [
         {
-          "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/front_camera/1.png",
+          "url": "https://yourwebsite.com/projects/pandaset/front_camera/1.png",
           "name": "front_camera",
           "width": 1920,
           "height": 1080,
@@ -384,7 +384,7 @@ This comprehensive data structure documentation provides detailed specifications
           }
         },
         {
-          "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/projects/pandaset/back_camera/1.png",
+          "url": "https://yourwebsite.com/projects/pandaset/back_camera/1.png",
           "name": "back_camera",
           "width": 1920,
           "height": 1080,
@@ -435,10 +435,10 @@ This comprehensive data structure documentation provides detailed specifications
 {
   "attachmentType": "POINTCLOUD",
   "attachment": {
-    "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/center_128_lidar_scan_data/1665443107991098.pcd",
+    "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/center_128_lidar_scan_data/1665443107991098.pcd",
     "imageSources": [
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/front_short_camera/1665443107982972.jpg",
+        "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/front_short_camera/1665443107982972.jpg",
         "name": "front_short_camera",
         "height": 2160,
         "width": 3840,
@@ -474,7 +474,7 @@ This comprehensive data structure documentation provides detailed specifications
         }
       },
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/front_middle_camera/1665443107991208.jpg",
+        "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/front_middle_camera/1665443107991208.jpg",
         "name": "front_middle_camera",
         "height": 2160,
         "width": 3840,
@@ -510,7 +510,7 @@ This comprehensive data structure documentation provides detailed specifications
         }
       },
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/front_right_camera/1665443108016086.jpg",
+        "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/front_right_camera/1665443108016086.jpg",
         "name": "front_right_camera",
         "height": 1080,
         "width": 1920,
@@ -546,7 +546,7 @@ This comprehensive data structure documentation provides detailed specifications
         }
       },
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/rear_right_camera/1665443108041122.jpg",
+        "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/rear_right_camera/1665443108041122.jpg",
         "name": "rear_right_camera",
         "height": 1080,
         "width": 1920,
@@ -582,7 +582,7 @@ This comprehensive data structure documentation provides detailed specifications
         }
       },
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/rear_left_camera/1665443108066099.jpg",
+        "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/rear_left_camera/1665443108066099.jpg",
         "name": "rear_left_camera",
         "height": 1080,
         "width": 1920,
@@ -618,7 +618,7 @@ This comprehensive data structure documentation provides detailed specifications
         }
       },
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com/Clients/Production/20221116/63733abbaaaeeff2f84e77c0/front_left_camera/1665443108091107.jpg",
+        "url": "https://yourwebsite.com/Clients20221116/63733abbaaaeeff2f84e77c0/front_left_camera/1665443108091107.jpg",
         "name": "front_left_camera",
         "height": 1080,
         "width": 1920,
@@ -666,10 +666,10 @@ This comprehensive data structure documentation provides detailed specifications
     "attachmentType": "POINTCLOUD_SEQUENCE",
     "attachment": [
       {
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/center_128_lidar_scan_data/1651471600094546.pcd",
+        "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/center_128_lidar_scan_data/1651471600094546.pcd",
         "imageSources": [
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_middle_camera/49301522692967249.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_middle_camera/49301522692967249.jpg",
             "name": "front_middle_camera",
             "height": 1080,
             "width": 1920,
@@ -705,7 +705,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_right_camera/49301524421020497.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_right_camera/49301524421020497.jpg",
             "name": "front_right_camera",
             "height": 1080,
             "width": 1920,
@@ -741,7 +741,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_right_camera/49301525125663569.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_right_camera/49301525125663569.jpg",
             "name": "rear_right_camera",
             "height": 1080,
             "width": 1920,
@@ -777,7 +777,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_middle_camera/49301525192772433.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_middle_camera/49301525192772433.jpg",
             "name": "rear_middle_camera",
             "height": 1080,
             "width": 1920,
@@ -813,7 +813,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_left_camera/49301525243104081.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_left_camera/49301525243104081.jpg",
             "name": "rear_left_camera",
             "height": 1080,
             "width": 1920,
@@ -849,7 +849,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_left_camera/49301526887271249.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_left_camera/49301526887271249.jpg",
             "name": "front_left_camera",
             "height": 1080,
             "width": 1920,
@@ -893,10 +893,10 @@ This comprehensive data structure documentation provides detailed specifications
             "radius": 150
           }
         ],
-        "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/center_128_lidar_scan_data/1651471600285780.pcd",
+        "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/center_128_lidar_scan_data/1651471600285780.pcd",
         "imageSources": [
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_middle_camera/49301531165461329.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_middle_camera/49301531165461329.jpg",
             "name": "front_middle_camera",
             "height": 1080,
             "width": 1920,
@@ -932,7 +932,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_right_camera/49301531685555025.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_right_camera/49301531685555025.jpg",
             "name": "front_right_camera",
             "height": 1080,
             "width": 1920,
@@ -968,7 +968,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_right_camera/49301533682043729.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_right_camera/49301533682043729.jpg",
             "name": "rear_right_camera",
             "height": 1080,
             "width": 1920,
@@ -1004,7 +1004,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_middle_camera/49301533732375377.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_middle_camera/49301533732375377.jpg",
             "name": "rear_middle_camera",
             "height": 1080,
             "width": 1920,
@@ -1040,7 +1040,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_left_camera/49301533816261457.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/rear_left_camera/49301533816261457.jpg",
             "name": "rear_left_camera",
             "height": 1080,
             "width": 1920,
@@ -1076,7 +1076,7 @@ This comprehensive data structure documentation provides detailed specifications
             }
           },
           {
-            "url": "https://stardust-data.oss-cn-hangzhou.aliyuncs.com//Production/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_left_camera/49301535644978001.jpg",
+            "url": "https://yourwebsite.com/20221116/6374a67af4076cbb144b3093/HP-30-V71-AC-005_1651471600_1651471609/front_left_camera/49301535644978001.jpg",
             "name": "front_left_camera",
             "height": 1080,
             "width": 1920,
@@ -1127,7 +1127,7 @@ This comprehensive data structure documentation provides detailed specifications
 ```json
 {
   "attachmentType": "TEXT",
-  "attachment": "https://torbjorn.oss-cn-hangzhou.aliyuncs.com/b7853399-5d21-46ae-82e4-b58ea4c29a4d.txt?OSSAccessKeyId=LTAI4GHWdWdjGDE4Gx1Efbyt&Expires=3134147966&Signature=1XR%2BFlznusHAklbPJEauEM7%2FJYw%3D",
+  "attachment": "https://yourwebsite.com/b7853399-5d21-46ae-82e4-b58ea4c29a4d.txt?OSSAccessKeyId=LTAI4GHWdWdjGDE4Gx1Efbyt&Expires=3134147966&Signature=1XR%2BFlznusHAklbPJEauEM7%2FJYw%3D",
   "metadata": {
     "uniqueIdentifier": "d600977d-4c0d-401a-9cc6-3577f095e495",
     "title": "test"
@@ -1140,7 +1140,7 @@ This comprehensive data structure documentation provides detailed specifications
 ```json
 {
   "attachmentType": "AUDIO",
-  "attachment": "https://torbjorn.oss-cn-hangzhou.aliyuncs.com/%E8%AF%AD%E9%9F%B3%20005_sd.m4a",
+  "attachment": "https://yourwebsite.com/%E8%AF%AD%E9%9F%B3%20005_sd.m4a",
   "metadata": {
     "uniqueIdentifier": "d600977d-4c0d-401a-9cc6-3577f095e495",
     "title": "test"
@@ -1153,7 +1153,7 @@ This comprehensive data structure documentation provides detailed specifications
 ```json
 {
   "attachmentType": "VIDEO",
-  "attachment": "https://torbjorn.oss-cn-hangzhou.aliyuncs.com/%E8%AF%AD%E9%9F%B3%20005_sd.mp4",
+  "attachment": "https://yourwebsite.com/%E8%AF%AD%E9%9F%B3%20005_sd.mp4",
   "metadata": {
     "uniqueIdentifier": "d600977d-4c0d-401a-9cc6-3577f095e495",
     "title": "test"
