@@ -1,6 +1,6 @@
 ---
 title: 'Create Project'
-description: 'This page will help you get started with creating a project on Rosetta'
+description: 'This page will help you get started with creating a project on Rosetta, and set the status to 1 which represents <a href="/projects/list-project">START</a>.'
 api:
   method: POST
   url: /project/create

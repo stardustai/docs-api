@@ -17,7 +17,7 @@ import results from './results.json'
 const body = {
   status: {
     type: 'integer',
-    description: 'status'
+    description: 'status: 0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE'
   },
   dataType: {
     type: 'integer',

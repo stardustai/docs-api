@@ -50,7 +50,7 @@
     </div>
 
     <div class="vp-doc">
-      <p>{{ page.description }}</p>
+      <p v-html="page.description" />
     </div>
   </div>
 </template>
