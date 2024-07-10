@@ -37,7 +37,7 @@ import classnames from 'classnames'
 import { useData } from 'vitepress'
 import VueJsonPretty from 'vue-json-pretty'
 import 'vue-json-pretty/lib/styles.css'
-import { Data } from './List.vue'
+import type { Data } from './List.vue'
 
 defineProps<{
   title: string

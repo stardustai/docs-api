@@ -8,7 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import List, { Data } from './List.vue'
+import List from './List.vue'
+import type { Data } from './List.vue'
 import Result from './Result.vue'
 
 defineProps<{

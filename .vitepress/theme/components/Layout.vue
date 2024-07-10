@@ -15,7 +15,13 @@ import { watch } from 'vue'
 const { isDark } = useData()
 const { Layout } = DefaultTheme
 
-watch(isDark, (val) => {
-  document.documentElement.setAttribute('data-theme', val ? 'dark' : 'light')
-})
+watch(
+  isDark,
+  (val) => {
+    document.documentElement.setAttribute('data-theme', val ? 'dark' : 'light')
+  },
+  {
+    immediate: true
+  }
+)
 </script>
