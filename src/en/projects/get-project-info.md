@@ -9,7 +9,9 @@ api:
 ::: params
 
 ```json [query]
-{ "type": "long", "description": "project id" }
+{
+  "projectId": { "type": "long", "description": "project id" }
+}
 ```
 
 :::
