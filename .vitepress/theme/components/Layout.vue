@@ -7,21 +7,25 @@
 </template>
 
 <script setup lang="ts">
+import { watch } from 'vue'
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import DocInfo from './DocInfo.vue'
-import { watch } from 'vue'
+import DocInfo from './DocInfo/index.vue'
 
 const { isDark } = useData()
 const { Layout } = DefaultTheme
 
-watch(
-  isDark,
-  (val) => {
-    document.documentElement.setAttribute('data-theme', val ? 'dark' : 'light')
-  },
-  {
-    immediate: true
-  }
-)
+if (!import.meta.env.SSR) {
+  watch(
+    isDark,
+    (val) => {
+      const theme = val ? 'dark' : 'light'
+      const elem = document.documentElement
+      elem.setAttribute('data-theme', theme)
+    },
+    {
+      immediate: true
+    }
+  )
+}
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8 pt-8 border-t border-solid dark:border-[#2e2e32]">
+  <div>
     <List title="METADATA" :data="query" />
     <List title="BODY PARAMS" :data="body" />
     <List title="PATH PARAMS" :data="path" />

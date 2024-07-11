@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import Container from 'markdown-it-container'
 
 interface SidebarItem {
   text: string
@@ -49,5 +50,71 @@ export const shared = defineConfig({
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/stardustai' }]
+  },
+  markdown: {
+    config: (md) => {
+      interface Token {
+        info: string
+        type: string
+        tag: string
+        content: string
+        hidden: boolean
+      }
+      const getTokens = (tokens: Token[], name: string, start: number) => {
+        let end = false
+        return tokens.filter((token, i) => {
+          if (end) return false
+          if (i > start && token.type === `container_${name}_close`) {
+            end = true
+          }
+          return i > start && token.type === 'fence' && token.tag === 'code'
+        })
+      }
+      const getElements = (
+        tokens: Token[],
+        template: (data: { title: string; content: string }) => string
+      ) => {
+        const result = tokens.reduce((rst, token) => {
+          const { info, content } = token
+          token.content = ''
+          token.hidden = true
+          const title = info.match(/\[(.*)\]/)?.[1]?.toUpperCase() || ''
+          return rst + template({ title, content })
+        }, '<div>')
+        return result + '<div class="hidden">'
+      }
+      md.use(Container, 'params', {
+        validate: (params) => params.trim().match(/^params/),
+        render: (tokens, idx) => {
+          if (tokens[idx].nesting === 1) {
+            const codeTokens = getTokens(tokens, 'params', idx)
+            const template = ({ title, content }) => `
+              <api-params
+                title="${title + ' PARAMS'}"
+                data="${encodeURIComponent(content)}"
+              />
+            `
+            return getElements(codeTokens, template)
+          }
+          return '</div></div>\n'
+        }
+      })
+      md.use(Container, 'results', {
+        validate: (params) => params.trim().match(/^results/),
+        render: (tokens, idx) => {
+          if (tokens[idx].nesting === 1) {
+            const codeTokens = getTokens(tokens, 'results', idx)
+            const template = ({ title, content }) => `
+              <api-results
+                title="${title}"
+                data="${encodeURIComponent(content)}"
+              />
+            `
+            return getElements(codeTokens, template)
+          }
+          return '</div></div>\n'
+        }
+      })
+    }
   }
 })

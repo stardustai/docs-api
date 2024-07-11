@@ -1,11 +1,11 @@
 <template>
-  <div v-if="data">
+  <div v-if="result">
     <div class="text-xs font-semibold">{{ title }}</div>
     <div
       class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-3"
     >
       <div
-        v-for="([key, item], index) of Object.entries(data)"
+        v-for="([key, item], index) of Object.entries(result)"
         :class="
           classnames('py-2.5', {
             'border-t border-solid border-gray-300 dark:border-[#2e2e32] ':
@@ -33,6 +33,7 @@
 
 <script setup lang="ts">
 import classnames from 'classnames'
+import { computed } from 'vue'
 
 export interface Data {
   type: 'string' | 'number' | 'boolean' | 'object' | 'array' | 'null'
@@ -41,8 +42,13 @@ export interface Data {
   default?: string
 }
 
-defineProps<{
+const props = defineProps<{
   title: string
-  data?: Record<string, Data>
+  data?: string | Record<string, Data>
 }>()
+
+const result = computed(() => {
+  if (typeof props.data !== 'string') return props.data
+  return JSON.parse(decodeURIComponent(props.data))
+})
 </script>
