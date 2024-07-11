@@ -5,21 +5,24 @@ api:
   url: /task/{taskId}/callback
 ---
 
-<Params
-  :path="path"
-  :results="results"
-/>
+::: params
 
-<script setup>
-const path = {
+```json [path]
+{
   "taskId": {
     "type": "string",
     "description": "Task Id"
   }
 }
+```
 
-const results = {
-  200: {
+:::
+
+::: results
+
+```json [responses]
+{
+  "200": {
     "code": 200,
     "message": "Success",
     "data": null,
@@ -27,7 +30,7 @@ const results = {
     "requestId": "77bdf4cd171593981208210031afb4",
     "success": true
   },
-  400: {
+  "400": {
     "code": 400,
     "data": null,
     "date": "",
@@ -36,4 +39,6 @@ const results = {
     "success": false
   }
 }
-</script>
+```
+
+:::

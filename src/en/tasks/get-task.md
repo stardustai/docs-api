@@ -1,3 +1,30 @@
+---
+title: 'Get Task'
+api:
+  method: POST
+  url: /task/get
+---
+
+::: params
+
+```json [body]
+{
+  "projectId": {
+    "type": "long",
+    "description": "project id"
+  },
+  "taskId": {
+    "type": "string",
+    "description": "Task Id"
+  }
+}
+```
+
+:::
+
+::: results
+
+```json [responses]
 {
   "200": {
     "code": 2000,
@@ -283,3 +310,6 @@
     "success": false
   }
 }
+```
+
+:::
