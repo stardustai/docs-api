@@ -1,6 +1,0 @@
-{
-  "batchId": {
-    "type": "string",
-    "description": "The batch ID represents a batch of tasks, which is returned by API Send Tasks."
-  }
-}

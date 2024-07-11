@@ -1,3 +1,51 @@
+---
+title: 'List Task'
+description: 'This page will help you get started with list all tasks in a project.'
+api:
+  method: POST
+  url: /project/tasks
+---
+
+::: params
+
+```json [body]
+{
+  "projectId": {
+    "type": "long",
+    "description": "project id"
+  },
+  "status": {
+    "type": "integer",
+    "description": "status, generally 1"
+  },
+  "startTime": {
+    "type": "long",
+    "description": "start time, ms"
+  },
+  "endTime": {
+    "type": "long",
+    "description": "end time, ms"
+  },
+  "offset": {
+    "type": "integer",
+    "default": 1,
+    "description": "Start page number",
+    "required": false
+  },
+  "limit": {
+    "type": "integer",
+    "default": 10,
+    "description": "Number of posts per page",
+    "required": false
+  }
+}
+```
+
+:::
+
+::: results
+
+```json [responses]
 {
   "200": {
     "code": 200,
@@ -47,3 +95,6 @@
     "success": false
   }
 }
+```
+
+:::

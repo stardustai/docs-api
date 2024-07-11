@@ -1,51 +1,49 @@
 ---
 title: 'Create Project'
-description: 'This page will help you get started with creating a project on Rosetta, and set the status to 1 which represents <a href="/projects/list-project">START</a>.'
+description: 'This page will help you get started with creating a project on Rosetta, and set the status to 1 which represents [START](/projects/list-project).'
 api:
   method: POST
   url: /project/create
 ---
 
-<Params
-  :body="body"
-  :results="results"
-/>
+::: params
 
-<script setup>
-const body = {
-  name: {
-    type: 'string',
-    description: 'project name'
+```json [body]
+{
+  "name": { "type": "string", "description": "project name" },
+  "dataType": {
+    "type": "integer",
+    "description": "project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D"
   },
-  dataType: {
-    type: 'integer',
-    description: 'project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D'
+  "description": {
+    "type": "string",
+    "default": "project description",
+    "description": "description",
+    "required": false
   },
-  description: {
-    type: 'string',
-    default: 'project description',
-    description: 'description',
-    required: false
+  "deadline": {
+    "type": "string",
+    "description": "deadline, a date for system notification, such as 2024-06-01"
   },
-  deadline: {
-    type: 'string',
-    description: 'deadline, a date for system notification, such as 2024-06-01'
-  },
-  operators: {
-    type: 'object[]',
-    description: 'label tool config'
-  },
+  "operators": { "type": "object[]", "description": "label tool config" }
 }
-const results = {
-  200: {
+```
+
+:::
+
+::: results
+
+```json [responses]
+{
+  "200": {
     "code": 200,
     "message": "Success",
-    "data": 12, // project id
+    "data": 12,
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  400: {
+  "400": {
     "code": 400,
     "data": null,
     "date": "",
@@ -54,7 +52,9 @@ const results = {
     "success": false
   }
 }
-</script>
+```
+
+:::
 
 ## Labeling tool config
 

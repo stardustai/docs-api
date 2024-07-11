@@ -52,20 +52,20 @@ export const en = defineConfig({
         text: 'PROJECTS',
         items: [
           getApiConfig('/projects/create-project'),
-          getApiConfig('/projects/list-project/'),
+          getApiConfig('/projects/list-project'),
           getApiConfig('/projects/get-project-info')
         ]
       },
       {
         text: 'TASKS',
         items: [
-          getApiConfig('/projects/list-task/'),
-          getApiConfig('/tasks/send-task/'),
+          getApiConfig('/projects/list-task'),
+          getApiConfig('/tasks/send-task'),
           {
             ...getApiConfig('/tasks/callbacks/'),
             items: [getApiConfig('/tasks/callbacks/re-sending')]
           },
-          getApiConfig('/tasks/get-task/')
+          getApiConfig('/tasks/get-task')
         ]
       },
       {

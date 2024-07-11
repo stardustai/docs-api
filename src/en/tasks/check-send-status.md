@@ -1,3 +1,26 @@
+---
+title: 'Check Send Status'
+api:
+  method: POST
+  url: /task/send/status
+---
+
+::: params
+
+```json [body]
+{
+  "batchId": {
+    "type": "string",
+    "description": "The batch ID represents a batch of tasks, which is returned by API Send Tasks."
+  }
+}
+```
+
+:::
+
+::: results
+
+```json [responses]
 {
   "200": {
     "code": 200,
@@ -44,3 +67,6 @@
     "success": false
   }
 }
+```
+
+:::

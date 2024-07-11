@@ -6,32 +6,30 @@ api:
   url: /tasks/export
 ---
 
-<Params
-  :body="body"
-  :results="results"
-/>
+::: params
 
-<script setup>
-const body = {
-  projectId: {
-    type: 'long',
-    description: 'project id'
+```json [body]
+{
+  "projectId": { "type": "long", "description": "project id" },
+  "completeTimeAfter": {
+    "type": "string",
+    "description": "Complete time of task after the date, include the day, such as 2024-05-01"
   },
-  completeTimeAfter: {
-    type: 'string',
-    description: 'Complete time of task after the date, include the day, such as 2024-05-01'
+  "completeTimeBefore": {
+    "type": "string",
+    "description": "Complete time of task before the date, such as 2024-06-01"
   },
-  completeTimeBefore: {
-    type: 'string',
-    description: 'Complete time of task before the date, such as 2024-06-01'
-  },
-  taskIds: {
-    type: 'long[]',
-    description: 'Task Id List'
-  },
+  "taskIds": { "type": "long[]", "description": "Task Id List" }
 }
-const results = {
-  200: {
+```
+
+:::
+
+::: results
+
+```json [responses]
+{
+  "200": {
     "code": 200,
     "message": "Success",
     "data": {
@@ -85,60 +83,33 @@ const results = {
             {
               "actions": [
                 {
-                  "comments": [
-                    "string"
-                  ],
+                  "comments": ["string"],
                   "createdAt": "string",
                   "note": "string",
                   "pool": {
                     "id": 0,
                     "name": "string",
-                    "operatorIDBlackList": [
-                      "string"
-                    ],
-                    "rejectTaskCountDown": {
-                      "day": 0,
-                      "hour": 0,
-                      "minute": 0
-                    },
-                    "taskCountDown": {
-                      "day": 0,
-                      "hour": 0,
-                      "minute": 0
-                    },
+                    "operatorIDBlackList": ["string"],
+                    "rejectTaskCountDown": { "day": 0, "hour": 0, "minute": 0 },
+                    "taskCountDown": { "day": 0, "hour": 0, "minute": 0 },
                     "type": 0
                   },
                   "taskId": 0,
-                  "team": {
-                    "id": 0,
-                    "name": "string"
-                  },
+                  "team": { "id": 0, "name": "string" },
                   "type": "Create",
-                  "user": {
-                    "id": 0,
-                    "name": "string",
-                    "phone": "string"
-                  }
+                  "user": { "id": 0, "name": "string", "phone": "string" }
                 }
               ],
-              "annotationPath": [
-                "string"
-              ],
+              "annotationPath": ["string"],
               "id": "string",
-              "location": {
-                "position": 0,
-                "source": "string",
-                "type": "text"
-              },
+              "location": { "position": 0, "source": "string", "type": "text" },
               "timeFrame": 0,
               "type": 0
             }
           ],
           "metadata": {
             "imageRotateAngle": 0,
-            "invalidFrame": [
-              0
-            ],
+            "invalidFrame": [0],
             "noNeedToAnnotate": true
           },
           "notes": [
@@ -148,31 +119,14 @@ const results = {
               "pool": {
                 "id": 0,
                 "name": "string",
-                "operatorIDBlackList": [
-                  "string"
-                ],
-                "rejectTaskCountDown": {
-                  "day": 0,
-                  "hour": 0,
-                  "minute": 0
-                },
-                "taskCountDown": {
-                  "day": 0,
-                  "hour": 0,
-                  "minute": 0
-                },
+                "operatorIDBlackList": ["string"],
+                "rejectTaskCountDown": { "day": 0, "hour": 0, "minute": 0 },
+                "taskCountDown": { "day": 0, "hour": 0, "minute": 0 },
                 "type": 0
               },
               "taskId": 0,
-              "team": {
-                "id": 0,
-                "name": "string"
-              },
-              "user": {
-                "id": 0,
-                "name": "string",
-                "phone": "string"
-              }
+              "team": { "id": 0, "name": "string" },
+              "user": { "id": 0, "name": "string", "phone": "string" }
             }
           ]
         }
@@ -182,7 +136,7 @@ const results = {
     "requestId": "77bdf4cd171593981208210031afb4",
     "success": true
   },
-  400: {
+  "400": {
     "code": 400,
     "data": null,
     "date": "",
@@ -191,4 +145,6 @@ const results = {
     "success": false
   }
 }
-</script>
+```
+
+:::

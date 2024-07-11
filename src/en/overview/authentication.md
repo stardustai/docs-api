@@ -13,8 +13,8 @@ You can send email to [dev@stardust.ai](mailto:dev@stardust.ai) by your account 
 
 ```json AK/SK
 {
-  accessKey："U2FsdGVkX19WZI4YdvcVgQWFQVdhwrtKyFjTHb8I4HcgIGlrymzcdVv7cnsCfpox",
-  secretKey："U2FsdGVkX18NunM9ru5v57kHgE5QZzPvnXP7AJYi6Wdmmqf3DY858gRBFSjSC123"
+  "accessKey": "U2FsdGVkX19WZI4YdvcVgQWFQVdhwrtKyFjTHb8I4HcgIGlrymzcdVv7cnsCfpox",
+  "secretKey": "U2FsdGVkX18NunM9ru5v57kHgE5QZzPvnXP7AJYi6Wdmmqf3DY858gRBFSjSC123"
 }
 ```
 
