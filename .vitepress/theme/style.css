@@ -6,7 +6,7 @@ html.dark {
   background-color: var(--vp-c-bg);
 }
 
-.vp-code-group > .blocks {
+.vp-code {
   max-height: 500px;
   overflow: auto;
 }
