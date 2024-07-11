@@ -17,7 +17,7 @@ Beyond our robust API, we offer a Python SDK toolkit designed to simplify your m
 
 The Stardust API adheres to RESTful principles, guaranteeing cross-platform compatibility and ease of use across diverse development environments.
 
-![](https://files.readme.io/28b44b7-image.png)
+![](https://assets.stardust-ai.com/docs/api/28b44b7-image.png)
 
 ## Contribution
 

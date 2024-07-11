@@ -16,7 +16,7 @@ MorningStar emerges as a cutting-edge workspace designed specifically for data-c
 
 <br />
 
-![](https://files.readme.io/838d158-image.png)
+![](https://assets.stardust-ai.com/docs/api/838d158-image.png)
 
 <br />
 

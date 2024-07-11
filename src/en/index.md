@@ -1,5 +1,5 @@
-<img src="https://files.readme.io/1d920f1-image.png" width="200px" style="margin: 0 auto" />
-<img src="https://files.readme.io/1a52b24-image.png" width="200px" style="margin: 0 auto" />
+<img src="https://assets.stardust-ai.com/docs/api/1d920f1-image.png" width="200px" style="margin: 0 auto" />
+<img src="https://assets.stardust-ai.com/docs/api/1a52b24-image.png" width="200px" style="margin: 0 auto" />
 
 Welcome to the Stardust API Documentation
 
@@ -20,4 +20,4 @@ Beyond our robust API, we offer a Python SDK toolkit designed to simplify your m
 
 The Stardust API adheres to RESTful principles, guaranteeing cross-platform compatibility and ease of use across diverse development environments.
 
-![](https://files.readme.io/28b44b7-image.png)
+![](https://assets.stardust-ai.com/docs/api/28b44b7-image.png)
