@@ -51,6 +51,18 @@ export const shared = defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/stardustai' }]
   },
+  transformPageData(pageData) {
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'script',
+      { type: 'text/javascript' },
+      `(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "n5nncu2bkk");`
+    ])
+  },
   markdown: {
     config: (md) => {
       interface Token {
@@ -84,7 +96,7 @@ export const shared = defineConfig({
         return result + '<div class="hidden">'
       }
       md.use(Container, 'params', {
-        validate: (params) => params.trim().match(/^params/),
+        validate: (params) => params.trim().match(/^params$/),
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'params', idx)
@@ -100,7 +112,7 @@ export const shared = defineConfig({
         }
       })
       md.use(Container, 'results', {
-        validate: (params) => params.trim().match(/^results/),
+        validate: (params) => params.trim().match(/^results$/),
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'results', idx)
