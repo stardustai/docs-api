@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-8 pb-3 border-b border-solid dark:border-[#2e2e32]">
+  <div>
     <div class="flex items-baseline min-h-14">
       <div class="vp-doc">
         <h1 v-html="md.renderInline(page.title)" />
