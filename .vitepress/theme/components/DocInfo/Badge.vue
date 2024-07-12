@@ -17,6 +17,6 @@
 import classNames from 'classnames'
 
 defineProps<{
-  method: 'GET' | 'POST'
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE'
 }>()
 </script>
