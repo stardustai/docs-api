@@ -1,5 +1,9 @@
+import path from 'path'
+import { normalizePath } from 'vite'
 import { defineConfig } from 'vitepress'
 import Container from 'markdown-it-container'
+import topLevelAwait from 'vite-plugin-top-level-await'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 interface SidebarItem {
   text: string
@@ -24,6 +28,11 @@ export const getApiTitle = (title: string, method: 'GET' | 'POST') => {
 </span>`
 }
 
+const resolve = (p) => {
+  const basePath = path.join(__dirname, '../../node_modules')
+  return normalizePath(path.resolve(basePath, p))
+}
+
 global.VITEPRESS_CONFIG = {
   srcDir: './src',
   cleanUrls: true,
@@ -41,6 +50,15 @@ export const shared = defineConfig({
   themeConfig: {
     logo: '/favicon.ico',
 
+    api: {
+      base: 'https://portal-prod.rosettalab.top/rosetta-open',
+      authorization: {
+        'X-STARDUST-KEY': '<X-STARDUST-KEY>',
+        'X-TS': '<X-TS>',
+        'X-SIGN': '<X-SIGN>'
+      }
+    },
+
     outline: {
       level: [2, 3]
     },
@@ -50,6 +68,26 @@ export const shared = defineConfig({
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/stardustai' }]
+  },
+  vite: {
+    plugins: [
+      topLevelAwait({
+        promiseExportName: '__tla',
+        promiseImportName: (i) => `__tla_${i}`
+      }),
+      viteStaticCopy({
+        targets: [
+          {
+            src: resolve('web-tree-sitter/tree-sitter.wasm'),
+            dest: './'
+          },
+          {
+            src: resolve('curlconverter/dist/tree-sitter-bash.wasm'),
+            dest: './'
+          }
+        ]
+      })
+    ]
   },
   transformPageData(pageData) {
     pageData.frontmatter.head ??= []
@@ -86,14 +124,13 @@ export const shared = defineConfig({
         tokens: Token[],
         template: (data: { title: string; content: string }) => string
       ) => {
-        const result = tokens.reduce((rst, token) => {
+        return tokens.reduce((rst, token) => {
           const { info, content } = token
           token.content = ''
           token.hidden = true
           const title = info.match(/\[(.*)\]/)?.[1]?.toUpperCase() || ''
           return rst + template({ title, content })
-        }, '<div>')
-        return result + '<div class="hidden">'
+        }, '')
       }
       md.use(Container, 'params', {
         validate: (params) => params.trim().match(/^params$/),
@@ -101,12 +138,16 @@ export const shared = defineConfig({
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'params', idx)
             const template = ({ title, content }) => `
-              <api-params
-                title="${title + ' PARAMS'}"
-                data="${encodeURIComponent(content)}"
-              />
+              ["${title}",${content}],
             `
-            return getElements(codeTokens, template)
+            const dataStr = `[
+              ${getElements(codeTokens, template).trim().replace(/\,$/, '')}
+            ]`
+            return `
+              <div>
+                <API params=${encodeURIComponent(dataStr)} />
+                <div class="hidden">
+            `
           }
           return '</div></div>\n'
         }
@@ -122,7 +163,11 @@ export const shared = defineConfig({
                 data="${encodeURIComponent(content)}"
               />
             `
-            return getElements(codeTokens, template)
+            return `
+              <div>
+                ${getElements(codeTokens, template)}
+                <div class="hidden">
+            `
           }
           return '</div></div>\n'
         }

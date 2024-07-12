@@ -2,7 +2,7 @@
   <div v-if="result">
     <h3 class="text-xs font-semibold">{{ title }}</h3>
     <div
-      class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4"
+      class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4"
     >
       <div v-for="[code, item] of Object.entries(result)">
         <div
@@ -33,12 +33,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import classnames from 'classnames'
 import { useData } from 'vitepress'
 import VueJsonPretty from 'vue-json-pretty'
-import 'vue-json-pretty/lib/styles.css'
-import type { Data } from './List.vue'
-import { computed } from 'vue'
+import type { Data } from './Param/index.vue'
 
 const props = defineProps<{
   title: string
@@ -47,8 +46,12 @@ const props = defineProps<{
 
 const { isDark } = useData()
 
-const result = computed(() => {
+const result = computed<Record<string, Data>>(() => {
   if (typeof props.data !== 'string') return props.data
   return JSON.parse(decodeURIComponent(props.data))
 })
 </script>
+
+<style>
+@import url('vue-json-pretty/lib/styles.css');
+</style>
