@@ -95,6 +95,22 @@ export const shared = defineConfig({
         }, '<div>')
         return result + '<div class="hidden">'
       }
+      md.use(Container, 'headers', {
+        validate: (params) => params.trim().match(/^headers$/),
+        render: (tokens, idx) => {
+          if (tokens[idx].nesting === 1) {
+            const codeTokens = getTokens(tokens, 'headers', idx)
+            const template = ({ title, content }) => `
+              <api-headers
+                title="${title}"
+                data="${encodeURIComponent(content)}"
+              />
+            `
+            return getElements(codeTokens, template)
+          }
+          return '</div></div>\n'
+        }
+      })
       md.use(Container, 'params', {
         validate: (params) => params.trim().match(/^params$/),
         render: (tokens, idx) => {

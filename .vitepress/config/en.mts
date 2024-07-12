@@ -51,10 +51,15 @@ export const en = defineConfig({
       {
         text: 'PROJECTS',
         items: [
+          getApiConfig('/projects/create-folder'),
           getApiConfig('/projects/create-project'),
           getApiConfig('/projects/list-project'),
           getApiConfig('/projects/get-project-info')
         ]
+      },
+      {
+        text: 'DATASETS',
+        items: [getApiConfig('/datasets/sync-upload')]
       },
       {
         text: 'TASKS',
