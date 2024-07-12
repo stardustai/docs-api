@@ -40,16 +40,17 @@ const handleToggle = (e) => {
 }
 
 const curlSnippet = computed(() => {
+  const { path, query, body, headers } = props.data || {}
   const options = {
     url: `${base}${frontmatter.value.api?.url}`,
     headers: {
       'Content-Type': 'application/json',
-      ...authorization
+      ...authorization,
+      ...headers
     },
     method: frontmatter.value.api?.method,
     body: {}
   }
-  const { path, query, body } = props.data || {}
   if (path) {
     options.url = options.url.replace(
       /\{([^}]+)\}/g,
