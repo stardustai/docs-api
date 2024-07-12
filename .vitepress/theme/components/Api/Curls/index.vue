@@ -57,9 +57,11 @@ const curlSnippet = computed(() => {
     )
   }
   if (query) {
-    options.url += `?${Object.entries(query)
+    const queryStr = `${Object.entries(query)
+      .filter(([, val]) => val !== undefined)
       .map(([key, val]) => `${key}=${val}`)
       .join('&')}`
+    if (queryStr) options.url += `?${queryStr}`
   }
   options.body = body || undefined
   return CurlGenerator(options).replace(/\\$/, '')
