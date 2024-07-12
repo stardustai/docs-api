@@ -6,7 +6,6 @@ import Params from './components/Params/index.vue'
 import Glossary from './components/Glossary.vue'
 import { redirectRouteMap } from '../config/routes.mts'
 import Layout from './components/Layout.vue'
-import APIHeaders from './components/Params/List.vue'
 import APIParams from './components/Params/List.vue'
 import APIResults from './components/Params/Result.vue'
 import './style.css'
@@ -17,7 +16,6 @@ export default {
   enhanceApp({ app, router }) {
     app.component('Params', Params)
     app.component('Glossary', Glossary)
-    app.component('ApiHeaders', APIHeaders)
     app.component('ApiParams', APIParams)
     app.component('ApiResults', APIResults)
 

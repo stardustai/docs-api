@@ -1,6 +1,6 @@
 <template>
   <div v-if="result">
-    <h3 class="text-xs font-semibold">{{ title }}</h3>
+    <h3 class="text-xs font-semibold uppercase">{{ title }}</h3>
     <div
       class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-3"
     >
@@ -13,7 +13,7 @@
           })
         "
       >
-        <div class="flex items-baseline -mt-1">
+        <div class="flex items-baseline">
           <span
             v-if="item.required !== false"
             class="text-red-500 absolute -ml-1.5 mt-0.5 text-xs"
@@ -25,7 +25,9 @@
             >Defaults to {{ item.default }}</span
           >
         </div>
-        <div class="text-xs mt-1">{{ item.description }}</div>
+        <div v-if="item.description" class="text-xs mt-1">
+          {{ item.description }}
+        </div>
       </div>
     </div>
   </div>

@@ -6,17 +6,13 @@ api:
   url: /dataset/upload/sync
 ---
 
-::: headers
+::: params
 
-```json [header]
+```json [headers]
 {
   "Content-Type": { "type": "multipart/form-data" }
 }
 ```
-
-:::
-
-::: params
 
 ```json [form]
 {
