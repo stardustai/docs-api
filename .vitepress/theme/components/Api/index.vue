@@ -6,12 +6,13 @@
     <Results title="RESPONSES" :data="results" />
 
     <Params
-      v-for="[title, data] of params"
-      :key="title + ' PARAMS'"
-      :title="title"
+      v-for="[key, type, data] of params"
+      :key="key"
+      :type="type"
+      :title="key + (paramKeys.includes(key) ? ' params' : '')"
       :data="data"
       :input="showInput"
-      @change="(val) => handleChange(title, val)"
+      @change="(val) => handleChange(key, val)"
     />
 
     <div class="mt-8">
@@ -38,7 +39,7 @@ const props = defineProps<{
   path?: Record<string, Data>
   query?: Record<string, Data>
   results?: Record<string, any>
-  params?: string | [string, Record<string, Data>][]
+  params?: string | [string, string, Record<string, Data>][]
 }>()
 
 const data = reactive({})
@@ -50,6 +51,8 @@ const params = computed<[string, Record<string, Data>][]>(() => {
   }
   return JSON.parse(decodeURIComponent(props.params))
 })
+
+const paramKeys = ['body', 'query', 'path', 'form']
 
 const handleToggle = (open) => {
   showInput.value = open

@@ -13,7 +13,12 @@
 import { computed, ref } from 'vue'
 import { useData } from 'vitepress'
 import { CurlGenerator } from 'curl-generator'
-import { toPython, toJava, toGo, toNode } from 'curlconverter'
+import {
+  toPythonHttp as toPython,
+  toJavaOkHttp as toJava,
+  toGo,
+  toNodeAxios as toNode
+} from 'curlconverter'
 import Wrapper from './Wrapper.vue'
 import { createMarkdownRenderer } from '../../../utils'
 

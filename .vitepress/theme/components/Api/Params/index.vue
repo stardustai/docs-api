@@ -1,6 +1,9 @@
 <template>
   <div v-if="result">
-    <h3 class="text-xs font-semibold uppercase">{{ title }}</h3>
+    <h3 class="text-xs font-semibold uppercase">
+      {{ title }}
+      <span v-if="type" class="opacity-60 ml-0.5">[{{ type }}]</span>
+    </h3>
     <div
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-3"
     >
@@ -61,6 +64,7 @@ export interface Data {
     | 'object'
     | 'array'
     | 'null'
+    | 'file'
   description?: string
   required?: boolean
   default?: string
@@ -74,6 +78,7 @@ const props = defineProps<{
   title: string
   data?: string | Record<string, Data>
   input?: boolean
+  type?: 'form' | 'json'
 }>()
 
 const result = computed<Record<string, Data>>(() => {
@@ -81,16 +86,44 @@ const result = computed<Record<string, Data>>(() => {
   return JSON.parse(decodeURIComponent(props.data))
 })
 
-const data = reactive(
+const getDefaultValue = (data: Data) => {
+  if (data.type !== 'file' || !data.default) {
+    return data.default
+  }
+  return {
+    type: 'file',
+    fileName: data.default
+  }
+}
+
+const formData = reactive(
   Object.entries(result.value || {}).reduce((rst, [key, val]) => {
-    return { ...rst, [key]: val?.default }
+    return { ...rst, [key]: getDefaultValue(val) }
   }, {})
 )
 
-const handleChange = (key, val) => {
-  data[key] = val
-  emit('change', data)
+const handleEmitData = (value) => {
+  const content = Object.entries(value).reduce((rst, [key, val]) => {
+    if (val === undefined) return rst
+    return { ...rst, [key]: val }
+  }, {})
+  if (props.type !== 'form') {
+    emit('change', content)
+    return
+  }
+  Object.entries(value).forEach(([key, val]) => {
+    if (typeof val === 'number') content[key] = String(val)
+  })
+  emit('change', {
+    type: 'form',
+    content
+  })
 }
 
-emit('change', data)
+const handleChange = (key, val) => {
+  formData[key] = val
+  handleEmitData(formData)
+}
+
+handleEmitData(formData)
 </script>
