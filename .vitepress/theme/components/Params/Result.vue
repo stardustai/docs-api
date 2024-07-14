@@ -1,6 +1,6 @@
 <template>
   <div v-if="result">
-    <h3 class="text-xs font-semibold">{{ title }}</h3>
+    <h3 class="text-xs font-semibold uppercase">{{ title }}</h3>
     <div
       class="bg-gray-100 dark:bg-[#161618] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4"
     >

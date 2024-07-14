@@ -90,7 +90,7 @@ export const shared = defineConfig({
           const { info, content } = token
           token.content = ''
           token.hidden = true
-          const title = info.match(/\[(.*)\]/)?.[1]?.toUpperCase() || ''
+          const title = info.match(/\[(.*)\]/)?.[1] || ''
           return rst + template({ title, content })
         }, '<div>')
         return result + '<div class="hidden">'
@@ -100,9 +100,10 @@ export const shared = defineConfig({
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'params', idx)
+            const paramKeys = ['body', 'query', 'path', 'form']
             const template = ({ title, content }) => `
               <api-params
-                title="${title + ' PARAMS'}"
+                title="${title + (paramKeys.includes(title) ? ' params' : '')}"
                 data="${encodeURIComponent(content)}"
               />
             `
