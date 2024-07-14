@@ -1,10 +1,10 @@
 <template>
-  <div v-if="result">
+  <div v-if="results">
     <h3 class="text-xs font-semibold uppercase">{{ title }}</h3>
     <div
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4"
     >
-      <div v-for="[code, item] of Object.entries(result)">
+      <div v-for="[code, item] of Object.entries(results)">
         <div
           class="bg-gray-200 dark:bg-[#161618] px-2 flex items-center text-sm"
         >
@@ -37,16 +37,15 @@ import { computed } from 'vue'
 import classnames from 'classnames'
 import { useData } from 'vitepress'
 import VueJsonPretty from 'vue-json-pretty'
-import type { Data } from './Param/index.vue'
 
 const props = defineProps<{
   title: string
-  data?: string | Record<string, Data>
+  data?: string | Record<string, any>
 }>()
 
 const { isDark } = useData()
 
-const result = computed<Record<string, Data>>(() => {
+const results = computed<Record<string, any>>(() => {
   if (typeof props.data !== 'string') return props.data
   return JSON.parse(decodeURIComponent(props.data))
 })

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="result">
+  <div v-if="params">
     <h3 class="text-xs font-semibold uppercase">
       {{ title }}
       <span v-if="type" class="opacity-60 ml-0.5">[{{ type }}]</span>
@@ -8,7 +8,7 @@
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-3"
     >
       <div
-        v-for="([key, item], index) of Object.entries(result)"
+        v-for="([key, item], index) of Object.entries(params)"
         :class="
           classnames('py-2.5', {
             'border-t border-solid border-gray-300 dark:border-[#2e2e32] ':
@@ -53,22 +53,7 @@
 import classnames from 'classnames'
 import { computed, reactive } from 'vue'
 import Input from './Input.vue'
-
-export interface Data {
-  type:
-    | 'string'
-    | 'integer'
-    | 'long'
-    | 'number'
-    | 'boolean'
-    | 'object'
-    | 'array'
-    | 'null'
-    | 'file'
-  description?: string
-  required?: boolean
-  default?: string
-}
+import type { Data } from '../../../../types'
 
 const emit = defineEmits<{
   (e: 'change', value: Record<string, any>): void
@@ -81,7 +66,7 @@ const props = defineProps<{
   type?: 'form' | 'json'
 }>()
 
-const result = computed<Record<string, Data>>(() => {
+const params = computed<Record<string, Data>>(() => {
   if (typeof props.data !== 'string') return props.data
   return JSON.parse(decodeURIComponent(props.data))
 })
@@ -97,7 +82,7 @@ const getDefaultValue = (data: Data) => {
 }
 
 const formData = reactive(
-  Object.entries(result.value || {}).reduce((rst, [key, val]) => {
+  Object.entries(params.value || {}).reduce((rst, [key, val]) => {
     return { ...rst, [key]: getDefaultValue(val) }
   }, {})
 )

@@ -3,62 +3,24 @@
     <Params title="Query PARAMS" :data="query" />
     <Params title="BODY PARAMS" :data="body" />
     <Params title="PATH PARAMS" :data="path" />
+
+    <Request :data="request" />
+
     <Results title="RESPONSES" :data="results" />
-
-    <Params
-      v-for="[key, type, data] of params"
-      :key="key"
-      :type="type"
-      :title="key + (paramKeys.includes(key) ? ' params' : '')"
-      :data="data"
-      :input="showInput"
-      @change="(val) => handleChange(key, val)"
-    />
-
-    <div class="mt-8">
-      <Suspense>
-        <Curls :data="data" @toggle="handleToggle" />
-        <template #fallback>
-          <Wrapper :options="['Shell']" />
-        </template>
-      </Suspense>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, reactive } from 'vue'
-import Params from './Params/index.vue'
-import type { Data } from './Params/index.vue'
+import Request from './Request/index.vue'
+import Params from './Request/Params/index.vue'
 import Results from './Results.vue'
-import Curls from './Curls/index.vue'
-import Wrapper from './Curls/Wrapper.vue'
+import type { Data } from '../../types'
 
-const props = defineProps<{
+defineProps<{
   body?: Record<string, Data>
   path?: Record<string, Data>
   query?: Record<string, Data>
+  request?: string | [string, string, Record<string, Data>][]
   results?: Record<string, any>
-  params?: string | [string, string, Record<string, Data>][]
 }>()
-
-const data = reactive({})
-const showInput = ref(false)
-
-const params = computed<[string, Record<string, Data>][]>(() => {
-  if (!props.params || typeof props.params !== 'string') {
-    return params || []
-  }
-  return JSON.parse(decodeURIComponent(props.params))
-})
-
-const paramKeys = ['body', 'query', 'path', 'form']
-
-const handleToggle = (open) => {
-  showInput.value = open
-}
-
-const handleChange = (key, val) => {
-  data[key.toLowerCase()] = val
-}
 </script>

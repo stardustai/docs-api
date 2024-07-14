@@ -20,7 +20,7 @@ import {
   toNodeAxios as toNode
 } from 'curlconverter'
 import Wrapper from './Wrapper.vue'
-import { createMarkdownRenderer } from '../../../utils'
+import { createMarkdownRenderer } from '../../../../utils'
 
 const emit = defineEmits(['toggle'])
 

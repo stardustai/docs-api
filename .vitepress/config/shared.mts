@@ -150,7 +150,7 @@ export const shared = defineConfig({
             ]`
             return `
               <div>
-                <API params=${encodeURIComponent(dataStr)} />
+                <api-request data=${encodeURIComponent(dataStr)} />
                 <div class="hidden">
             `
           }
