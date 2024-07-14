@@ -1,6 +1,6 @@
 <template>
   <div v-if="result">
-    <h3 class="text-xs font-semibold">{{ title }}</h3>
+    <h3 class="text-xs font-semibold uppercase">{{ title }}</h3>
     <div
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4 px-3"
     >
@@ -13,7 +13,7 @@
           })
         "
       >
-        <div class="flex justify-between -mt-1">
+        <div class="flex justify-between">
           <div class="flex items-baseline">
             <span
               v-if="item.required !== false"
@@ -38,7 +38,9 @@
             @change="(val) => handleChange(key, val)"
           />
         </div>
-        <div class="text-xs mt-1">{{ item.description }}</div>
+        <div v-if="item.description" class="text-xs mt-1">
+          {{ item.description }}
+        </div>
       </div>
     </div>
   </div>

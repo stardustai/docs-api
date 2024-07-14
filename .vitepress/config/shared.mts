@@ -128,7 +128,7 @@ export const shared = defineConfig({
           const { info, content } = token
           token.content = ''
           token.hidden = true
-          const title = info.match(/\[(.*)\]/)?.[1]?.toUpperCase() || ''
+          const title = info.match(/\[(.*)\]/)?.[1] || ''
           return rst + template({ title, content })
         }, '')
       }
@@ -137,8 +137,9 @@ export const shared = defineConfig({
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'params', idx)
+            const paramKeys = ['body', 'query', 'path', 'form']
             const template = ({ title, content }) => `
-              ["${title}",${content}],
+              ["${title + (paramKeys.includes(title) ? ' params' : '')}",${content}],
             `
             const dataStr = `[
               ${getElements(codeTokens, template).trim().replace(/\,$/, '')}
