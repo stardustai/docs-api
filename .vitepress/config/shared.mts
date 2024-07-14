@@ -103,7 +103,7 @@ export const shared = defineConfig({
             const paramKeys = ['body', 'query', 'path', 'form']
             const template = ({ title, content }) => `
               <api-params
-                title="${title + (paramKeys.includes(title) ? ' PARAMS' : '')}"
+                title="${title + (paramKeys.includes(title) ? ' params' : '')}"
                 data="${encodeURIComponent(content)}"
               />
             `
