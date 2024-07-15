@@ -129,11 +129,11 @@ export const shared = defineConfig({
         }) => string
       ) => {
         return tokens.reduce((rst, token) => {
-          const { info, content } = token
+          const content = token.content.replace(/\'/g, '\\"')
+          const name = token.info.match(/\[(.*)\]/)?.[1] || ''
+          const [key, type] = name.split(':')
           token.content = ''
           token.hidden = true
-          const name = info.match(/\[(.*)\]/)?.[1] || ''
-          const [key, type] = name.split(':')
           return rst + template({ key, type, content })
         }, '')
       }

@@ -10,16 +10,20 @@ api:
 
 ```json [headers]
 {
-  "Content-Type": { "type": "multipart/form-data" }
+  "Content-Type": { "type": "string", "default": "multipart/form-data" }
 }
 ```
 
-```json [form]
+```json [body:form]
 {
-  "uploadFile": { "type": "string", "description": "Local zip file path" },
+  "uploadFile": {
+    "type": "file",
+    "description": "Local zip file path",
+    "default": "files.zip"
+  },
   "filetreeType": {
     "type": "string",
-    "description": "Type of the <a href='/projects/list-project'>filetree</a> in zip file, 0 or 1"
+    "description": "Type of the [filetree](/projects/list-project) in zip file, 0 or 1"
   }
 }
 ```

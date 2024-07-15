@@ -41,9 +41,11 @@
             @change="(val) => handleChange(key, val)"
           />
         </div>
-        <div v-if="item.description" class="text-xs mt-1">
-          {{ item.description }}
-        </div>
+        <div
+          v-if="item.description"
+          class="text-xs mt-1"
+          v-html="md.renderInline(item.description)"
+        />
       </div>
     </div>
   </div>
@@ -53,7 +55,12 @@
 import classnames from 'classnames'
 import { computed, reactive } from 'vue'
 import Input from './Input.vue'
+import markdownit from 'markdown-it'
 import type { Data } from '../../../../types'
+
+const md = markdownit({
+  html: true
+})
 
 const emit = defineEmits<{
   (e: 'change', value?: Record<string, any>): void
