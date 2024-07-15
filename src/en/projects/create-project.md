@@ -25,7 +25,22 @@ api:
     "type": "string",
     "description": "deadline, a date for system notification, such as 2024-06-01"
   },
-  "operators": { "type": "object[]", "description": "label tool config" }
+  "operators": {
+    "type": "object[]",
+    "description": "label tool config"
+  },
+  "folderId": {
+    "type": "integer"
+  },
+  "projectManager": {
+    "type": "string"
+  },
+  "teamNames": {
+    "type": "string[]"
+  },
+  "workflow": {
+    "type": "object"
+  }
 }
 ```
 

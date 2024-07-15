@@ -12,4 +12,5 @@ export interface Data {
   description?: string
   required?: boolean
   default?: string
+  children?: object
 }

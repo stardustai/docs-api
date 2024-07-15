@@ -19,7 +19,7 @@ api:
   "uploadFile": {
     "type": "file",
     "description": "Local zip file path",
-    "default": "files.zip"
+    "default": "dataset.zip"
   },
   "filetreeType": {
     "type": "string",
