@@ -18,7 +18,7 @@ If you'd like to authenticate our callbacks, we use the same method which introd
 | :------- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | taskId   | string | The taskId is the unique identifier for the task. It is identical to task.taskId                                                                                  |
 | status   | string | The status of the task when it was completed. Normally completed, but can also be error in the case that a task failed to process. It is identical to task.status |
-| task     | object | The [full Task Object](/en/tasks/get-task) for reference and convenience, include annotations                                                                     |
+| task     | object | The [full Task Object](/tasks/get-task) for reference and convenience, include annotations                                                                        |
 
 ## Events that trigger a Callback
 

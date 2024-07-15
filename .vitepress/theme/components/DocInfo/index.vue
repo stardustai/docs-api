@@ -30,8 +30,8 @@ const md = markdownit({
   html: true
 })
 
-const { page, frontmatter } = useData()
+const { page, site, frontmatter } = useData()
 
-const base = 'https://portal-prod.rosettalab.top/rosetta-open'
 const api = computed(() => frontmatter.value.api)
+const base = site.value.themeConfig.api?.base || ''
 </script>

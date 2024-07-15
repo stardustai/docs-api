@@ -1,5 +1,5 @@
 <template>
-  <div v-if="versions.length" className="daisy-dropdown daisy-dropdown-hover">
+  <div v-if="versions.length" class="daisy-dropdown daisy-dropdown-hover">
     <div class="daisy-menu">
       <li>
         <details>
@@ -8,7 +8,7 @@
       </li>
     </div>
     <ul
-      className="daisy-dropdown-content daisy-menu bg-base-100 rounded-box z-[1] w-36 p-2 shadow"
+      class="daisy-dropdown-content daisy-menu bg-base-100 rounded-box z-[1] w-36 p-2 shadow"
     >
       <li
         v-for="{ version, link } of versions"
