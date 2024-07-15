@@ -2,7 +2,7 @@
 title: 'Create Workflow'
 api:
   method: POST
-  url: /workflow/create
+  url: /annotation/workflow/create
 ---
 
 ::: params

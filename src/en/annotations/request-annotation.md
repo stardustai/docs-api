@@ -3,7 +3,7 @@ title: 'Annotation Request'
 description: This page will help you get started with send annotation tasks to a project's workflow.
 api:
   method: POST
-  url: /workflow/annotation/request
+  url: /annotation/request
 ---
 
 ::: params

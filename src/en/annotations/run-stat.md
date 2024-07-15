@@ -2,7 +2,7 @@
 title: 'Run Statistics'
 api:
   method: POST
-  url: /workflow/stat
+  url: /annotation/stat
 ---
 
 ::: params
