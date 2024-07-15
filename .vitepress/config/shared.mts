@@ -143,7 +143,7 @@ export const shared = defineConfig({
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'params', idx)
             const template = ({ key, type, content }) => `
-              ["${key}","${type}",${content}],
+              [${JSON.stringify(key)}, ${JSON.stringify(type || null)}, ${content}],
             `
             const dataStr = `[
               ${getElements(codeTokens, template).trim().replace(/\,$/, '')}
