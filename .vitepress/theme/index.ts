@@ -21,10 +21,17 @@ export default {
 
     if (import.meta.env.SSR) return
 
-    const pathname = location.pathname.replace(/^\/|\/$/g, '')
-    if (redirectRouteMap[pathname]) {
-      const target = withBase(`/${redirectRouteMap[pathname]}`)
+    const redirectTo = (path: string) => {
+      const { search, hash } = location
+      const target = withBase(`${path}${search}${hash}`)
       router.go(target), location.replace(target)
+    }
+
+    const pathname = location.pathname.replace(/\/$/g, '')
+    if (redirectRouteMap[pathname]) {
+      redirectTo(redirectRouteMap[pathname])
+    } else if (pathname.startsWith('/en/')) {
+      redirectTo(pathname.replace('/en/', '/'))
     }
   }
 } satisfies Theme
