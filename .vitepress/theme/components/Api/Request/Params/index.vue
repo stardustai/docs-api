@@ -56,7 +56,7 @@ import Input from './Input.vue'
 import type { Data } from '../../../../types'
 
 const emit = defineEmits<{
-  (e: 'change', value: Record<string, any>): void
+  (e: 'change', value?: Record<string, any>): void
 }>()
 
 const props = defineProps<{
@@ -92,6 +92,10 @@ const handleEmitData = (value) => {
     if (val === undefined) return rst
     return { ...rst, [key]: val }
   }, {})
+  if (!Object.keys(content).length) {
+    emit('change', undefined)
+    return
+  }
   if (props.type !== 'form') {
     emit('change', content)
     return
