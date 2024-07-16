@@ -3,6 +3,9 @@
     <template #doc-before>
       <DocInfo />
     </template>
+    <template #not-found>
+      <NotFound />
+    </template>
   </Layout>
 </template>
 
@@ -11,6 +14,7 @@ import { watch } from 'vue'
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import DocInfo from './DocInfo/index.vue'
+import NotFound from './NotFound.vue'
 
 const { isDark } = useData()
 const { Layout } = DefaultTheme

@@ -18,10 +18,11 @@
           />
           {{ code }}
         </div>
-        <div class="p-2 max-h-[500px] overflow-auto">
+        <div class="p-2 max-h-[320px] overflow-auto">
           <ClientOnly>
             <vue-json-pretty
               showIcon
+              :deep="1"
               :data="item"
               :theme="isDark ? 'dark' : 'light'"
             />

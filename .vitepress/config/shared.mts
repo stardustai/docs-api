@@ -90,6 +90,9 @@ export const shared = defineConfig({
     ]
   },
   transformPageData(pageData) {
+    if (process.env.NODE_ENV !== 'production') {
+      return
+    }
     pageData.frontmatter.head ??= []
     pageData.frontmatter.head.push([
       'script',
