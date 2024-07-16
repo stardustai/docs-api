@@ -30,7 +30,6 @@ const target = computed(() => {
 })
 
 if (!import.meta.env.SSR) {
-  document.title = 'Redirecting...'
   redirectTo(target.value)
 }
 </script>
