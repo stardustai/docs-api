@@ -50,7 +50,7 @@ api:
   },
   "workflow": {
     "type": "object",
-    "description": "Workflow of the annotation pipeline, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-confg). If not set, the platform will give the project a default config.",
+    "description": "Workflow of the annotation pipeline, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-config). If not set, the platform will give the project a default config.",
     "required": false
   }
 }

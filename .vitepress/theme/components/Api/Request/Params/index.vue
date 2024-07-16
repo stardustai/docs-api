@@ -71,9 +71,9 @@
             </div>
           </summary>
           <div v-if="isComplex(item)" class="daisy-collapse-content -mb-6 px-3">
-            <api-params v-if="item.type === 'object'" :data="item.properties" />
+            <api-params v-if="isObject(item)" :data="item.properties" />
             <api-params
-              v-else-if="item.type === 'array' && item.items.type === 'object'"
+              v-else-if="isArray(item) && isObject(item.items)"
               :data="item.items.properties"
             />
           </div>
@@ -91,10 +91,10 @@ export default {
 
 <script setup lang="ts">
 import classnames from 'classnames'
+import markdownit from 'markdown-it'
 import { computed, reactive } from 'vue'
 import Input from './Input.vue'
-import markdownit from 'markdown-it'
-import type { Data } from '../../../../types'
+import type { ArrayData, Data, ObjectData } from '../../../../types'
 
 const md = markdownit({
   html: true
@@ -116,9 +116,14 @@ const params = computed<Record<string, Data>>(() => {
   return JSON.parse(decodeURIComponent(props.data))
 })
 
-const isComplex = (item: Data) =>
-  item.type === 'object' ||
-  (item.type === 'array' && item.items.type === 'object')
+const isObject = (item: Data): item is ObjectData => {
+  return item.type === 'object' && !!item.properties
+}
+const isArray = (item: Data): item is ArrayData => item.type === 'array'
+
+const isComplex = (item: Data): item is ObjectData | ArrayData => {
+  return isObject(item) || (isArray(item) && isObject(item.items))
+}
 
 const getDefaultValue = (data: Data) => {
   if (data.type !== 'file' || !data.default) {
