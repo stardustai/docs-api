@@ -1,5 +1,6 @@
 ---
 title: 'Create Workflow'
+description: This page will help you get started with creating a specific workflow for annotation request, you can create multiple workflows in one project for different annotation targets, the structure refer to [Workflow config](/projects/create-project#workflow-config).
 api:
   method: POST
   url: /annotation/workflow/create

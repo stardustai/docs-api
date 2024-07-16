@@ -1,6 +1,6 @@
 ---
 title: 'Upload Dataset'
-description: 'This page will help you get started with uploading a dataset zip file to Rosetta, TODO.'
+description: This page will help you get started with uploading a local dataset zip file to Rosetta synchronously, the file size should be less than 100MB, and you need to put the files according to [File tree](#file-tree).
 api:
   method: POST
   url: /dataset/upload/sync
@@ -23,7 +23,7 @@ api:
   },
   "filetreeType": {
     "type": "string",
-    "description": "Type of the [filetree](/projects/list-project) in zip file, 0 or 1"
+    "description": "[File tree](#file-tree) in zip file: 0 represents sensor oriented, 1 represents scene oriented."
   }
 }
 ```
@@ -64,5 +64,84 @@ api:
   }
 }
 ```
+
+:::
+
+## File tree
+
+::: code-group
+
+```[filetreeType=0]
+
+├── lidar-#name_l0#-left
+│   ├── #scene_id_1234#
+│   │   ├── #timestamp0#.pcd
+│   │   └── #timestamp1#.pcd
+│   └── #scene_id_2345#
+│       ├── #timestamp0#.pcd
+│       └── #timestamp1#.pcd
+├── lidar-#name_l1#-right
+│   ├── #scene_id_1234#
+│   │   ├── #timestamp0#.pcd
+│   │   └── #timestamp1#.pcd
+│   └── #scene_id_2345#
+│       ├── #timestamp0#.pcd
+│       └── #timestamp1#.pcd
+├── camera-#name_c0#-left
+│   ├── #scene_id_1234#
+│   │   ├── #timestamp0#.jpg
+│   │   └── #timestamp1#.jpg
+│   └── #scene_id_2345#
+│       ├── #timestamp0#.jpg
+│       └── #timestamp1#.jpg
+├── camera-#name_c1#-right
+│   ├── #scene_id_1234#
+│   │   ├── #timestamp0#.jpg
+│   │   └── #timestamp1#.jpg
+│   └── #scene_id_2345#
+│       ├── #timestamp0#.jpg
+│       └── #timestamp1#.jpg
+└── metadata.json
+
+```
+
+````[filetreeType=1]
+
+├── #scene_id_1234#
+│   ├── lidar-#name_l0#-left
+│   │   ├── #timestamp0#.pcd
+│   │   └── #timestamp1#.pcd
+│   ├── lidar-#name_l1#-right
+│   │   ├── #timestamp0#.pcd
+│   │   └── #timestamp1#.pcd
+│   ├── camera-#name_c0#-left
+│   │   ├── #timestamp0#.jpg
+│   │   └── #timestamp1#.jpg
+│   └── camera-#name_c1#-right
+│       ├── #timestamp0#.jpg
+│       └── #timestamp1#.jpg
+├── #scene_id_2345#
+│   ├── lidar-#name_l0#-left
+│   │   ├── #timestamp0#.pcd
+│   │   └── #timestamp1#.pcd
+│   ├── lidar-#name_l1#-right
+│   │   ├── #timestamp0#.pcd
+│   │   └── #timestamp1#.pcd
+│   ├── camera-#name_c0#-left
+│   │   ├── #timestamp0#.jpg
+│   │   └── #timestamp1#.jpg
+│   └── camera-#name_c1#-right
+│       ├── #timestamp0#.jpg
+│       └── #timestamp1#.jpg
+└── metadata.json
+
+:::
+
+::: results
+``` json [metadata SAMPLES]
+{
+
+}
+````
 
 :::

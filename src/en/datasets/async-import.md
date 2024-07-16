@@ -1,6 +1,6 @@
 ---
 title: Import Dataset
-description: ''
+description: This page will help you get started with importing a dataset from cloud storage asynchronously, you need to put the files according to a specific file tree structure, refer to [File tree](/datasets/sync-upload#file-tree). You can use the cloud storage of the platform, or your own storage which follow the S3 protocol, in second case, you need to pass the relevant authentication parameters, such as AccessKey, SecreteKey, Endpoint, VendorType.
 api:
   method: POST
   url: /dataset/import/async
@@ -16,7 +16,7 @@ api:
   },
   "filetreeType": {
     "type": "string",
-    "description": "Type of the [filetree](/projects/list-project) in zip file, 0 or 1"
+    "description": "[File tree](/datasets/sync-upload/#file-tree) in storage: 0 represents sensor oriented, 1 represents scene oriented."
   },
   "externalStorage": {
     "type": "object",
@@ -76,7 +76,7 @@ api:
     "code": 5710,
     "data": null,
     "date": "",
-    "message": "File tree misalignment. Refer to API doc for correction.",
+    "message": "File tree misalignment, refer to API doc for correction",
     "requestId": "",
     "success": false
   }

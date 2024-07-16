@@ -1,5 +1,6 @@
 ---
 title: 'Run Statistics'
+description: This page will help you get started with running statistics synchronously on a workflow.
 api:
   method: POST
   url: /annotation/stat
@@ -15,7 +16,11 @@ api:
   },
   "workflowId": {
     "type": "long",
-    "description": "Workflow Id, which returned by API [Create Workflow](/annotations/create-workflow)"
+    "description": "Workflow Id which returned by API [Create Workflow](/annotations/create-workflow)"
+  },
+  "metrics": {
+    "type": "string[]",
+    "description": "Now support [efficiency, efforts, autolabeling], you can set 1 or more of them."
   }
 }
 ```

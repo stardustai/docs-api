@@ -10,10 +10,14 @@ api:
 
 ```json [body]
 {
-  "name": { "type": "string", "description": "Folder name" },
+  "name": {
+    "type": "string",
+    "description": "Folder name, must be distinct"
+  },
   "externalId": {
     "type": "string",
-    "description": "The mapping ID in your platform"
+    "description": "The mapping ID in your platform",
+    "required": false
   }
 }
 ```
@@ -34,11 +38,11 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "400": {
-    "code": 400,
+  "5836": {
+    "code": 5836,
     "data": null,
     "date": "",
-    "message": "Illegal Parameter",
+    "message": "Folder name already exists",
     "requestId": "",
     "success": false
   }

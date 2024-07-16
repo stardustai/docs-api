@@ -10,36 +10,48 @@ api:
 
 ```json [body]
 {
-  "name": { "type": "string", "description": "project name" },
+  "name": {
+    "type": "string",
+    "description": "Project name, must be distinct."
+  },
   "dataType": {
     "type": "integer",
-    "description": "project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D"
+    "description": "Project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D."
   },
   "description": {
     "type": "string",
-    "default": "project description",
-    "description": "description",
+    "description": "Project description",
     "required": false
   },
   "deadline": {
     "type": "string",
-    "description": "deadline, a date for system notification, such as 2024-06-01"
+    "description": "A date for system notification, such as 2024-06-01."
   },
   "operators": {
     "type": "object[]",
-    "description": "label tool config"
+    "description": "Label tool config, refer to [Operators Samples](#labeling-tool-config)."
   },
   "folderId": {
-    "type": "integer"
+    "type": "integer",
+    "default": "0",
+    "description": "Folder ID which returned by API [Create Folder](/projects/create-folder)",
+    "required": false
   },
   "projectManager": {
-    "type": "string"
+    "type": "string",
+    "default": "'Owner of the AK'",
+    "description": "Name of the account you want to appoint to project manager.",
+    "required": false
   },
   "teamNames": {
-    "type": "string[]"
+    "type": "string[]",
+    "description": "Name of the teams you want to authorize access to the project, you can edit these later on the web platform.",
+    "required": false
   },
   "workflow": {
-    "type": "object"
+    "type": "object",
+    "description": "Workflow of the annotation pipeline, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-confg). If not set, the platform will give the project a default config.",
+    "required": false
   }
 }
 ```
@@ -53,16 +65,19 @@ api:
   "200": {
     "code": 200,
     "message": "Success",
-    "data": 12,
+    "data": {
+      "projectId": 12,
+      "workflowId": 10
+    },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "400": {
-    "code": 400,
+  "5801": {
+    "code": 5801,
     "data": null,
     "date": "",
-    "message": "Illegal Parameter",
+    "message": "Project name already exists",
     "requestId": "",
     "success": false
   }
@@ -279,6 +294,128 @@ api:
     "type": "input"
   }
 ]
+```
+
+:::
+
+## Workflow config
+
+::: code-group
+
+```json [Complex Sample]
+{
+  "edge": [
+    {
+      "status": 1,
+      "endUuid": "2b7e78f4-da10-4198-b920-ab88884f9577",
+      "startUuid": "74495e23-64e4-4246-a67f-f41d4ff2d4ab"
+    },
+    {
+      "status": 1,
+      "startUuid": "2b7e78f4-da10-4198-b920-ab88884f9577"
+    },
+    {
+      "status": 1,
+      "endUuid": "fc96712a-9706-40cd-9b2c-d55867c589ee",
+      "startUuid": "f266e629-5886-41b7-bd48-a46360269ee2"
+    },
+    {
+      "status": 1,
+      "endUuid": "64e20822-a0ba-4482-ba10-06c1f425fe44",
+      "startUuid": "fc96712a-9706-40cd-9b2c-d55867c589ee"
+    }
+  ],
+  "vertex": [
+    {
+      "name": "Distribution pool",
+      "poolUuid": "74495e23-64e4-4246-a67f-f41d4ff2d4ab",
+      "position": {
+        "top": 260,
+        "left": 210
+      },
+      "status": 1,
+      "runMode": 0,
+      "type": 0,
+      "workers": []
+    },
+    {
+      "name": "Labeling pool",
+      "poolUuid": "2b7e78f4-da10-4198-b920-ab88884f9577",
+      "position": {
+        "top": 238,
+        "left": 523
+      },
+      "status": 1,
+      "taskMaximum": 5,
+      "peopleMaximum": 5,
+      "taskDeadline": null,
+      "rejectDeadline": null,
+      "isAutoRecycling": true,
+      "disclaimerLimit": 3,
+      "autoRecyclingLimit": 5,
+      "preAnnotationOwnership": false,
+      "isTimeSequence": false,
+      "type": 1,
+      "workers": [],
+      "disableOperationItem": []
+    },
+    {
+      "name": "Inspection pool",
+      "poolUuid": "f266e629-5886-41b7-bd48-a46360269ee2",
+      "position": {
+        "top": 450,
+        "left": 204
+      },
+      "status": 1,
+      "taskMaximum": 5,
+      "peopleMaximum": 5,
+      "taskDeadline": null,
+      "rejectDeadline": null,
+      "isAutoRecycling": true,
+      "disclaimerLimit": 3,
+      "autoRecyclingLimit": 5,
+      "isTimeSequence": false,
+      "reverseType": 2,
+      "type": 2,
+      "workers": [],
+      "disableOperationItem": []
+    },
+    {
+      "name": "Spot check pool",
+      "poolUuid": "fc96712a-9706-40cd-9b2c-d55867c589ee",
+      "position": {
+        "top": 450,
+        "left": 430
+      },
+      "status": 1,
+      "taskMaximum": 5,
+      "taskDeadline": null,
+      "rejectDeadline": null,
+      "isAutoRecycling": true,
+      "disclaimerLimit": 3,
+      "autoRecyclingLimit": 5,
+      "isTimeSequence": false,
+      "reverseType": 1,
+      "type": 3,
+      "workers": []
+    },
+    {
+      "name": "Completion pool",
+      "poolUuid": "64e20822-a0ba-4482-ba10-06c1f425fe44",
+      "position": {
+        "top": 440,
+        "left": 670
+      },
+      "status": 1,
+      "type": 5,
+      "workers": []
+    }
+  ]
+}
+```
+
+```json [Default Sample]
+{}
 ```
 
 :::

@@ -1,6 +1,6 @@
 ---
 title: 'Annotation Request'
-description: This page will help you get started with send annotation tasks to a project's workflow.
+description: This page will help you get started with sending annotation tasks to a project's workflow.
 api:
   method: POST
   url: /annotation/request
@@ -12,11 +12,16 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "project id"
+    "description": "Project id returned by API [Create Project](/projects/create-project)"
+  },
+  "workflowId": {
+    "type": "long",
+    "description": "Workflow id returned by API [Create Workflow](/datasets/create-workflow) or [Create Project](/projects/create-project), if not set or set to 0, the platform will choose the default workflow which created alongside the project.",
+    "required": false
   },
   "dataIds": {
     "type": "string[]",
-    "description": ""
+    "description": "Data ids of scenes which returned by API [Upload Dataset](/datasets/sync-upload) or [Dataset Status](/datasets/get-status)"
   }
 }
 ```

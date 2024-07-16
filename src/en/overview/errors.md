@@ -120,7 +120,7 @@ Stardust's API uses the following HTTP codes and business-specific codes:
 }
 ```
 
-```json [500 Example]
+```json [5836 Example]
 {
   "code": 500,
   "data": null,

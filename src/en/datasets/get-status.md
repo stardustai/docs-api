@@ -1,6 +1,6 @@
 ---
 title: 'Get Status'
-description: ''
+description: This page will help you get the status of a dataset.
 api:
   method: GET
   url: /dataset/status
@@ -10,7 +10,10 @@ api:
 
 ```json [query]
 {
-  "datasetId": { "type": "string", "description": "dataset id" }
+  "datasetId": {
+    "type": "string",
+    "description": "Dataset id which returned by the API [Upload Dataset](/datasets/sync-upload) or [Import Dataset](/datasets/async-import)."
+  }
 }
 ```
 
