@@ -47,9 +47,9 @@
                     class="text-xs text-gray-500"
                     >[{{ item.items.type }}]</span
                   >
-                  <span v-if="item.default" class="ml-2 text-xs text-gray-500"
-                    >Defaults to {{ item.default }}</span
-                  >
+                  <span v-if="item.default" class="ml-2 text-xs text-gray-500">
+                    Defaults to {{ item.default }}
+                  </span>
                 </div>
                 <Input
                   :type="item.type"
@@ -72,7 +72,10 @@
           </summary>
           <div v-if="isComplex(item)" class="daisy-collapse-content -mb-6 px-3">
             <api-params v-if="item.type === 'object'" :data="item.properties" />
-            <api-params v-else :data="item.items.properties" />
+            <api-params
+              v-else-if="item.type === 'array' && item.items.type === 'object'"
+              :data="item.items.properties"
+            />
           </div>
         </details>
       </div>
