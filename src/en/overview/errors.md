@@ -40,7 +40,11 @@ Stardust's API uses the following HTTP codes and business-specific codes:
   </tr>
   <tr>
     <td>5801</td>
-    <td rowspan="2">The project name already exists</td>
+    <td>Project name already exists</td>
+  </tr>
+  <tr>
+    <td>5802</td>
+    <td>Project not exists</td>
   </tr>
 </table>
 
