@@ -59,6 +59,10 @@ Stardust's API uses the following HTTP codes and business-specific codes:
     <td>Project name already exists</td>
   </tr>
   <tr>
+    <td>5802</td>
+    <td>Project not exists</td>
+  </tr>
+  <tr>
     <td>5836</td>
     <td>Folder name already exists</td>
   </tr>
@@ -120,7 +124,7 @@ Stardust's API uses the following HTTP codes and business-specific codes:
 }
 ```
 
-```json [5836 Example]
+```json [500 Example]
 {
   "code": 500,
   "data": null,
