@@ -9,7 +9,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@swc/core": "^1.6.13",
+    "@swc/core": "~1.6.0",
     "@types/node": "^20.14.9",
     "daisyui": "^4.12.10",
     "husky": "^9.0.11",
