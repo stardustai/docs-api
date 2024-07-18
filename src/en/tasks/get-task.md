@@ -11,11 +11,11 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "project id"
+    "description": "Project id which returned by [Create Project](/projects/)"
   },
   "taskId": {
     "type": "string",
-    "description": "Task Id"
+    "description": "Task id which provided by callback or returned by [List task](/projects/list-task)."
   }
 }
 ```

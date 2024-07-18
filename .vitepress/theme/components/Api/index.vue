@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import Request from './Request/index.vue'
 import Params from './Request/Params/index.vue'
-import Results from './Results.vue'
+import Results from './Response/Results.vue'
 import type { Data } from '../../types'
 
 defineProps<{

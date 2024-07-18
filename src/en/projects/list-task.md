@@ -12,10 +12,11 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "project id"
+    "description": "Project id which returned by [Create Project](/projects/create-project)"
   },
   "status": {
     "type": "integer",
+    "hidden": true,
     "description": "status, generally 1"
   },
   "startTime": {

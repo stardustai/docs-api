@@ -12,7 +12,7 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "Project id returned by API [Create Project](/projects/create-project)"
+    "description": "Project id returned by [Create Project](/projects/create-project)"
   },
   "workflowId": {
     "type": "long",
@@ -46,7 +46,7 @@ api:
           "dataId": "9782"
         }
       ],
-      "errors": ["98902", "1234"]
+      "failedDataIds": ["98902", "1234"]
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464e",

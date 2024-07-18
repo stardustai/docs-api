@@ -21,13 +21,13 @@ api:
   "offset": {
     "type": "integer",
     "default": 1,
-    "description": "Start page number",
+    "description": "Start postion of the page",
     "required": false
   },
   "limit": {
     "type": "integer",
     "default": 10,
-    "description": "Number of posts per page",
+    "description": "Number of items per page",
     "required": false
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: 'Send Tasks'
-description: 'This page will help you get started with send annotation tasks to a project.'
+description: 'This page will help you get started with send annotation tasks to a project. It should be noted that within a project, only one task can be created for the same data.'
 api:
   method: POST
   url: /task/send
@@ -12,7 +12,7 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "project id"
+    "description": "Project id which returned by [Create Project](/projects/create-project)"
   },
   "resourceUrl": {
     "type": "string",

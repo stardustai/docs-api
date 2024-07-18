@@ -32,7 +32,7 @@ api:
     "description": "Label tool config, refer to [Operators Samples](#labeling-tool-config)."
   },
   "folderId": {
-    "type": "integer",
+    "type": "long",
     "default": "0",
     "description": "Folder ID which returned by API [Create Folder](/projects/create-folder)",
     "required": false
@@ -50,7 +50,58 @@ api:
   },
   "workflow": {
     "type": "object",
-    "description": "Workflow of the annotation pipeline, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-config). If not set, the platform will give the project a default config.",
+    "description": "Workflow of the annotation pipeline, which is composed of a set of pools, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-config). If not set, the platform will give the project a default config.",
+    "required": false,
+    "properties": {
+      "pools": {
+        "type": "object[]",
+        "description": "Set of pools, the type of the first pool must be 0, means distribution pool, and the type of the last pool must be 5, means completion pool.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": ""
+          },
+          "runMode": {
+            "type": "integer",
+            "description": ""
+          },
+          "type": {
+            "type": "integer",
+            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2, 3, 4 represents algorithm, 5 represents completion."
+          },
+          "workers": {
+            "type": "string[]",
+            "description": "Name list of accounts assigned to the pool"
+          },
+          "algorithmList": {
+            "type": "string[]",
+            "required": false,
+            "description": "When type is 4"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+:::
+
+::: params
+
+```json [response data]
+{
+  "projectId": {
+    "type": "long",
+    "required": false
+  },
+  "status": {
+    "type": "integer",
+    "description": "0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE",
+    "required": false
+  },
+  "workflowId": {
+    "type": "long",
     "required": false
   }
 }
@@ -60,13 +111,14 @@ api:
 
 ::: results
 
-```json [responses]
+```json [examples]
 {
   "200": {
     "code": 200,
     "message": "Success",
     "data": {
       "projectId": 12,
+      "status": 1,
       "workflowId": 10
     },
     "date": "2024-05-16 19:03:34",
@@ -94,7 +146,7 @@ api:
 {
   "key": "box3d-[1cbd2]",
   "type": "slotChildren",
-  "label": "1",
+  "label": "Box3D",
   "slotSpecification": {
     "type": "box3d"
   },
@@ -102,7 +154,7 @@ api:
     {
       "key": "box2d-[d14a6]",
       "type": "slot",
-      "label": "1",
+      "label": "Box2D",
       "slotSpecification": {
         "type": "box2d",
         "restrictInsideCanvasBoundary": true,
@@ -114,11 +166,29 @@ api:
       }
     },
     {
-      "key": "text-[b02fe]",
-      "label": "1",
+      "key": "select-[c1283]",
+      "label": "Class3D",
       "type": "input",
       "inputSpecification": {
-        "type": "text"
+        "type": "select",
+        "items": [
+          {
+            "label": "Vehicle",
+            "value": "Vehicle"
+          },
+          {
+            "label": "Pedestrian",
+            "value": "Pedestrian"
+          },
+          {
+            "label": "Cyclist",
+            "value": "Cyclist"
+          }
+        ],
+        "renderConfig": {
+          "selectionWidgetType": "Segment"
+        },
+        "continuousFrameSync": false
       }
     }
   ]
@@ -302,111 +372,40 @@ api:
 
 ::: code-group
 
-```json [Complex Sample]
+```json [Algorithm Sample]
 {
-  "edge": [
-    {
-      "status": 1,
-      "endUuid": "2b7e78f4-da10-4198-b920-ab88884f9577",
-      "startUuid": "74495e23-64e4-4246-a67f-f41d4ff2d4ab"
-    },
-    {
-      "status": 1,
-      "startUuid": "2b7e78f4-da10-4198-b920-ab88884f9577"
-    },
-    {
-      "status": 1,
-      "endUuid": "fc96712a-9706-40cd-9b2c-d55867c589ee",
-      "startUuid": "f266e629-5886-41b7-bd48-a46360269ee2"
-    },
-    {
-      "status": 1,
-      "endUuid": "64e20822-a0ba-4482-ba10-06c1f425fe44",
-      "startUuid": "fc96712a-9706-40cd-9b2c-d55867c589ee"
-    }
-  ],
-  "vertex": [
+  "pools": [
     {
       "name": "Distribution pool",
-      "poolUuid": "74495e23-64e4-4246-a67f-f41d4ff2d4ab",
-      "position": {
-        "top": 260,
-        "left": 210
-      },
-      "status": 1,
       "runMode": 0,
       "type": 0,
       "workers": []
     },
     {
+      "name": "Algorithm pool",
+      "algorithmList": ["3D-MOT-V1"],
+      "runMode": 1,
+      "type": 4
+    },
+    {
       "name": "Labeling pool",
-      "poolUuid": "2b7e78f4-da10-4198-b920-ab88884f9577",
-      "position": {
-        "top": 238,
-        "left": 523
-      },
-      "status": 1,
-      "taskMaximum": 5,
-      "peopleMaximum": 5,
-      "taskDeadline": null,
-      "rejectDeadline": null,
-      "isAutoRecycling": true,
-      "disclaimerLimit": 3,
-      "autoRecyclingLimit": 5,
-      "preAnnotationOwnership": false,
-      "isTimeSequence": false,
       "type": 1,
       "workers": [],
       "disableOperationItem": []
     },
     {
       "name": "Inspection pool",
-      "poolUuid": "f266e629-5886-41b7-bd48-a46360269ee2",
-      "position": {
-        "top": 450,
-        "left": 204
-      },
-      "status": 1,
-      "taskMaximum": 5,
-      "peopleMaximum": 5,
-      "taskDeadline": null,
-      "rejectDeadline": null,
-      "isAutoRecycling": true,
-      "disclaimerLimit": 3,
-      "autoRecyclingLimit": 5,
-      "isTimeSequence": false,
-      "reverseType": 2,
       "type": 2,
       "workers": [],
       "disableOperationItem": []
     },
     {
       "name": "Spot check pool",
-      "poolUuid": "fc96712a-9706-40cd-9b2c-d55867c589ee",
-      "position": {
-        "top": 450,
-        "left": 430
-      },
-      "status": 1,
-      "taskMaximum": 5,
-      "taskDeadline": null,
-      "rejectDeadline": null,
-      "isAutoRecycling": true,
-      "disclaimerLimit": 3,
-      "autoRecyclingLimit": 5,
-      "isTimeSequence": false,
-      "reverseType": 1,
       "type": 3,
       "workers": []
     },
     {
       "name": "Completion pool",
-      "poolUuid": "64e20822-a0ba-4482-ba10-06c1f425fe44",
-      "position": {
-        "top": 440,
-        "left": 670
-      },
-      "status": 1,
       "type": 5,
       "workers": []
     }
@@ -415,7 +414,33 @@ api:
 ```
 
 ```json [Default Sample]
-{}
+{
+  "pools": [
+    {
+      "name": "Distribution pool",
+      "runMode": 0,
+      "type": 0,
+      "workers": []
+    },
+    {
+      "name": "Labeling pool",
+      "type": 1,
+      "workers": [],
+      "disableOperationItem": []
+    },
+    {
+      "name": "Inspection pool",
+      "type": 2,
+      "workers": [],
+      "disableOperationItem": []
+    },
+    {
+      "name": "Completion pool",
+      "type": 5,
+      "workers": []
+    }
+  ]
+}
 ```
 
 :::

@@ -12,7 +12,7 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "project id"
+    "description": "Project id returned by [Create Project](/projects/create-project)"
   },
   "workflowId": {
     "type": "long",

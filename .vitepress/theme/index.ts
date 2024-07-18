@@ -5,7 +5,7 @@ import Glossary from './components/Glossary.vue'
 import Layout from './components/Layout.vue'
 import API from './components/Api/index.vue'
 import APIRequest from './components/Api/Request/index.vue'
-import APIResults from './components/Api/Results.vue'
+import APIResults from './components/Api/Response/Results.vue'
 import './style.css'
 
 export default {

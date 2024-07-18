@@ -119,7 +119,7 @@ const params = computed<Record<string, Data>>(() => {
 })
 
 const isObject = (item: Data): item is ObjectData => {
-  return item.type === 'object' && !!item.properties
+  return item.type.startsWith('object') && !!item.properties
 }
 const isArray = (item: Data): item is ArrayData => item.type === 'array'
 

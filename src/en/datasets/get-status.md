@@ -12,7 +12,26 @@ api:
 {
   "datasetId": {
     "type": "string",
-    "description": "Dataset id which returned by the API [Upload Dataset](/datasets/sync-upload) or [Import Dataset](/datasets/async-import)."
+    "description": "Dataset id which returned by [Upload Dataset](/datasets/sync-upload) or [Import Dataset](/datasets/async-import)."
+  }
+}
+```
+
+:::
+
+::: params
+
+```json [response data]
+{
+  "status": {
+    "type": "integer",
+    "description": "1 represents BUILDING, 2 represents READY, -1 represents ERROR",
+    "required": false
+  },
+  "idMapping": {
+    "type": "object[]",
+    "description": "Mapping list between data id and scene id",
+    "required": false
   }
 }
 ```
@@ -21,7 +40,7 @@ api:
 
 ::: results
 
-```json [responses]
+```json [examples]
 {
   "200": {
     "code": 200,

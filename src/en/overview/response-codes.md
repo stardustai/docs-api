@@ -1,15 +1,18 @@
 ---
-title: 'Errors'
+title: 'Response Codes'
+description: Stardust's API uses the following HTTP codes and business-specific codes.
 ---
 
-## API error code
-
-Stardust's API uses the following HTTP codes and business-specific codes:
+##
 
 <table>
   <tr>
-    <th>Error Code</th>
+    <th>Code</th>
     <th>Description</th>
+  </tr>
+  <tr>
+    <td>200</td>
+    <td>Success</td>
   </tr>
   <tr>
     <td>400</td>
@@ -43,6 +46,10 @@ Stardust's API uses the following HTTP codes and business-specific codes:
     <td>Dataset not exists</td>
   </tr>
   <tr>
+    <td>5707</td>
+    <td>File cannot be empty</td>
+  </tr>
+  <tr>
     <td>5708</td>
     <td>File size exceeds 100MB limit</td>
   </tr>
@@ -52,7 +59,7 @@ Stardust's API uses the following HTTP codes and business-specific codes:
   </tr>
   <tr>
     <td>5710</td>
-    <td>File tree misalignment, refer to API doc for correction</td>
+    <td>File tree misalignment, refer to API docs for correction</td>
   </tr>
   <tr>
     <td>5801</td>
@@ -84,7 +91,7 @@ Stardust's API uses the following HTTP codes and business-specific codes:
   </tr>
   <tr>
     <td>5843</td>
-    <td>Algorithm is not available</td>
+    <td>Algorithm not available</td>
   </tr>
   <tr>
     <td>5844</td>

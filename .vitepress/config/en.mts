@@ -44,7 +44,7 @@ export const en = defineConfig({
             text: 'Authentication',
             link: '/overview/authentication'
           },
-          { text: 'Errors', link: '/overview/errors' },
+          { text: 'Response Codes', link: '/overview/response-codes' },
           { text: 'Data Structure', link: '/overview/data-structure' }
         ]
       },

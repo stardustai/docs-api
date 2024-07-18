@@ -10,7 +10,10 @@ api:
 
 ```json [body]
 {
-  "projectId": { "type": "long", "description": "project id" },
+  "projectId": {
+    "type": "long",
+    "description": "Project id returned by [Create Project](/projects/create-project)"
+  },
   "completeTimeAfter": {
     "type": "string",
     "description": "Complete time of task after the date, include the day, such as 2024-05-01"
