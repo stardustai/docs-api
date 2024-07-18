@@ -1,8 +1,9 @@
 interface Common {
-  description?: string
-  required?: boolean
+  hidden?: boolean
   default?: string
+  required?: boolean
   children?: object
+  description?: string
 }
 
 interface BaseData extends Common {

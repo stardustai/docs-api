@@ -8,7 +8,9 @@
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-[#2e2e32] border-solid my-4 px-2"
     >
       <div
-        v-for="([key, item], index) of Object.entries(params)"
+        v-for="([key, item], index) of Object.entries(params).filter(
+          ([, item]) => !item.hidden
+        )"
         :class="
           classnames(
             'py-2.5',
