@@ -16,7 +16,7 @@ api:
   },
   "dataType": {
     "type": "integer",
-    "description": "Project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D."
+    "description": "Project data type: 2 represents 2D, 3 represents 3D."
   },
   "description": {
     "type": "string",
@@ -40,7 +40,7 @@ api:
   "projectManager": {
     "type": "string",
     "default": "'Owner of the AK'",
-    "description": "Name of the account you want to appoint to project manager.",
+    "description": "Account name you want to appoint to project manager.",
     "required": false
   },
   "teamNames": {

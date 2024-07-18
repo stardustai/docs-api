@@ -12,11 +12,11 @@ api:
 {
   "name": {
     "type": "string",
-    "description": "Folder name, must be distinct"
+    "description": "Folder name, must be distinct and the maximum length limit is 60 bytes."
   },
   "externalId": {
     "type": "string",
-    "description": "The mapping ID in your platform",
+    "description": "The mapping ID in your platform, the maximum length limit is 60 bytes.",
     "required": false
   }
 }

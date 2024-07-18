@@ -12,11 +12,11 @@ api:
 {
   "status": {
     "type": "integer",
-    "description": "status: 0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE"
+    "description": "0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE"
   },
   "dataType": {
     "type": "integer",
-    "description": "project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D"
+    "description": "Project data type: 2 represents 2D, 3 represents 3D"
   },
   "offset": {
     "type": "integer",

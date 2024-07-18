@@ -1,10 +1,13 @@
 ---
 title: Import Dataset
-description: This page will help you get started with importing a dataset from cloud storage asynchronously, you need to put the files according to a specific file tree structure, refer to [File tree](/datasets/sync-upload#file-tree). You can use the cloud storage of the platform, or your own storage which follow the S3 protocol, in second case, you need to pass the relevant authentication parameters, such as AccessKey, SecreteKey, Endpoint, VendorType.
+description: This page will help you get started with importing a dataset from cloud storage asynchronously, you need to put the files according to a specific file tree structure, refer to [File tree](/datasets/sync-upload#file-tree).
 api:
   method: POST
   url: /dataset/import/async
 ---
+
+<!-- You can use the cloud storage of the platform, or your own storage which follow the S3 protocol, in second case, you need to pass the relevant authentication parameters, such as AccessKey, SecreteKey, Endpoint, VendorType.
+-->
 
 ::: params
 
@@ -12,45 +15,38 @@ api:
 {
   "resourceUrl": {
     "type": "string",
-    "description": "the resource url on cloud storage, "
+    "description": "The resource url on cloud storage, start with gos://bucket-name/"
   },
-  "filetreeType": {
+  "fileTreeType": {
     "type": "string",
-    "description": "[File tree](/datasets/sync-upload/#file-tree) in storage: 0 represents sensor oriented, 1 represents scene oriented."
+    "description": "[File tree](/datasets/sync-upload/#file-tree) in storage: 0 represents sensor oriented."
+  },
+  "dataType": {
+    "type": "integer",
+    "description": "Data type: 2 represents 2D, 3 represents 3D."
   },
   "externalStorage": {
     "type": "object",
-    "children": {
+    "hidden": true,
+    "required": false,
+    "properties": {
       "accessKey": {
-        "type": "string"
+        "type": "string",
+        "description": ""
+      },
+      "secreteKey": {
+        "type": "string",
+        "description": ""
+      },
+      "endpoint": {
+        "type": "string",
+        "description": ""
+      },
+      "vendorType": {
+        "type": "string",
+        "description": ""
       }
     }
-  },
-  "isExternalStorage": {
-    "type": "int",
-    "description": "",
-    "default": "0",
-    "required": false
-  },
-  "accessKey": {
-    "type": "string",
-    "required": false
-  },
-  "secreteKey": {
-    "type": "string",
-    "required": false
-  },
-  "endpoint": {
-    "type": "string",
-    "required": false
-  },
-  "secreteKey": {
-    "type": "string",
-    "required": false
-  },
-  "vendorType": {
-    "type": "string",
-    "required": false
   }
 }
 ```

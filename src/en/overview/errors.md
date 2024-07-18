@@ -83,10 +83,6 @@ Stardust's API uses the following HTTP codes and business-specific codes:
     <td>Workflow structure error</td>
   </tr>
   <tr>
-    <td>5842</td>
-    <td>Project not exists</td>
-  </tr>
-  <tr>
     <td>5843</td>
     <td>Algorithm is not available</td>
   </tr>
