@@ -4,7 +4,11 @@
     <div
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-gray-900 border-solid my-4"
     >
-      <div v-for="[code, item] of Object.entries(results)">
+      <div
+        v-for="[code, item] of Object.entries(results).filter(
+          ([, item]) => !item.hidden
+        )"
+      >
         <div
           class="bg-gray-200 dark:bg-[#161618] px-2 flex items-center text-sm"
         >
