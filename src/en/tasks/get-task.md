@@ -24,7 +24,17 @@ api:
 
 ::: result
 
-```json [responses]
+```json [response data:schema]
+{
+  "status": {
+    "type": "integer",
+    "required": false,
+    "description": "<table><tr><th>Value</th><th>Description</th><th>Value</th><th>Description</th></tr><tr><td>1</td><td>Waiting for Distribution</td><td>2</td><td>Distributed</td></tr><tr><td>3</td><td>Working</td><td>4</td><td>Waiting for Submission</td></tr><tr><td>5</td><td>Pause</td><td>6</td><td>Error</td></tr><tr><td>7</td><td>Suspend</td><td>8</td><td>Submission Failed</td></tr><tr><td>9</td><td>Complete</td><td>10</td><td>Invalid</td></tr></table>"
+  }
+}
+```
+
+```json [examples]
 {
   "200": {
     "code": 200,

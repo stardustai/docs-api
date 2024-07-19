@@ -6,5 +6,6 @@ export const redirectRouteMap = {
   '/reference/send-task': '/tasks/send-task',
   '/reference/data-structure': '/overview/data-structure',
   '/reference/authentication': '/overview/authentication',
-  '/reference/create-project': '/projects/create-project'
+  '/reference/create-project': '/projects/create-project',
+  '/overview/errors': '/overview/response-codes'
 }

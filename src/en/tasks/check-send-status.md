@@ -20,7 +20,11 @@ api:
 
 ::: result
 
-```json [responses]
+```json [response data:schema]
+{}
+```
+
+```json [examples]
 {
   "200": {
     "code": 200,

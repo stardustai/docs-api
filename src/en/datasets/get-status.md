@@ -19,9 +19,9 @@ api:
 
 :::
 
-::: request
+::: result
 
-```json [response data]
+```json [response data:schema]
 {
   "status": {
     "type": "integer",
@@ -35,10 +35,6 @@ api:
   }
 }
 ```
-
-:::
-
-::: result
 
 ```json [examples]
 {
