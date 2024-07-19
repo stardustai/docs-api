@@ -1,6 +1,6 @@
 ---
 title: Import Dataset
-description: This page will help you get started with importing a dataset from cloud storage asynchronously, you need to put the files according to a specific file tree structure, refer to [File tree](/datasets/sync-upload#file-tree).
+description: This page will help you get started with importing a dataset from cloud storage asynchronously, you need to put the files according to a specific file tree structure, refer to [File tree](#file-tree).
 api:
   method: POST
   url: /dataset/import/async
@@ -24,6 +24,10 @@ api:
   "dataType": {
     "type": "integer",
     "description": "Data type: 2 represents 2D, 3 represents 3D."
+  },
+  "name": {
+    "type": "string",
+    "description": "Dataset name, the maximum length limit is 60 bytes."
   },
   "externalStorage": {
     "type": "object",
@@ -80,3 +84,7 @@ api:
 ```
 
 :::
+
+## File tree
+
+<!--@include: filetree.md-->

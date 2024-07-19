@@ -17,10 +17,6 @@ api:
   "workflowId": {
     "type": "long",
     "description": "Workflow Id which returned by API [Create Workflow](/annotations/create-workflow)"
-  },
-  "metrics": {
-    "type": "string[]",
-    "description": "Now support [efficiency, efforts, autolabeling], you can set 1 or more of them."
   }
 }
 ```

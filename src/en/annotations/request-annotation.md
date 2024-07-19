@@ -36,7 +36,7 @@ api:
     "code": 200,
     "message": "Success",
     "data": {
-      "tasks": [
+      "successTaskList": [
         {
           "taskId": "23412341235234234",
           "dataId": "2392"
@@ -46,7 +46,7 @@ api:
           "dataId": "9782"
         }
       ],
-      "failedDataIds": ["98902", "1234"]
+      "errorDataIdList": ["98902", "1234"]
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464e",
