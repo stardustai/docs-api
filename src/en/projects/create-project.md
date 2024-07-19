@@ -6,7 +6,7 @@ api:
   url: /project/create
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -31,7 +31,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

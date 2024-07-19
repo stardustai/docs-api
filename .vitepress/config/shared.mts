@@ -138,11 +138,11 @@ export const shared = defineConfig({
           return rst + template({ key, type, content })
         }, '')
       }
-      md.use(Container, 'params', {
-        validate: (params) => params.trim().match(/^params$/),
+      md.use(Container, 'request', {
+        validate: (params) => params.trim().match(/^request$/),
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
-            const codeTokens = getTokens(tokens, 'params', idx)
+            const codeTokens = getTokens(tokens, 'request', idx)
             const template = ({ key, type, content }) => `
               [${JSON.stringify(key)}, ${JSON.stringify(type || null)}, ${content}],
             `
@@ -150,7 +150,7 @@ export const shared = defineConfig({
               ${getElements(codeTokens, template).trim().replace(/\,$/, '')}
             ]`
             return `
-              <div>
+              <div class="api-request">
                 <api-request data=${encodeURIComponent(dataStr)} />
                 <div class="hidden">
             `
@@ -158,19 +158,19 @@ export const shared = defineConfig({
           return '</div></div>\n'
         }
       })
-      md.use(Container, 'results', {
-        validate: (params) => params.trim().match(/^results$/),
+      md.use(Container, 'result', {
+        validate: (params) => params.trim().match(/^result$/),
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
-            const codeTokens = getTokens(tokens, 'results', idx)
-            const template = ({ key, content }) => `
-              <api-results
-                title="${key}"
-                data="${encodeURIComponent(content)}"
-              />
-            `
+            const codeTokens = getTokens(tokens, 'result', idx)
+            const template = ({ key, type, content }) => {
+              const dataStr = `[
+                ${JSON.stringify(key)}, ${JSON.stringify(type || null)}, ${content}
+              ]`
+              return `<api-result data="${encodeURIComponent(dataStr)}" />`
+            }
             return `
-              <div>
+              <div class="api-result">
                 ${getElements(codeTokens, template)}
                 <div class="hidden">
             `
