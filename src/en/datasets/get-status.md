@@ -6,7 +6,7 @@ api:
   url: /dataset/status
 ---
 
-::: params
+::: request
 
 ```json [query]
 {
@@ -19,7 +19,7 @@ api:
 
 :::
 
-::: params
+::: request
 
 ```json [response data]
 {
@@ -38,7 +38,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [examples]
 {

@@ -6,7 +6,7 @@ api:
   url: /project/get
 ---
 
-::: params
+::: request
 
 ```json [query]
 {
@@ -19,7 +19,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

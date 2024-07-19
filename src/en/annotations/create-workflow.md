@@ -6,7 +6,7 @@ api:
   url: /annotation/workflow/create
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -52,7 +52,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

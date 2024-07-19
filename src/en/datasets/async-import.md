@@ -9,7 +9,7 @@ api:
 <!-- You can use the cloud storage of the platform, or your own storage which follow the S3 protocol, in second case, you need to pass the relevant authentication parameters, such as AccessKey, SecreteKey, Endpoint, VendorType.
 -->
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -53,7 +53,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

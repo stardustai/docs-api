@@ -6,7 +6,7 @@ api:
   url: /annotation/stat
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -27,7 +27,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

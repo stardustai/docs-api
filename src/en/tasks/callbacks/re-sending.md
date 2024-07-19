@@ -5,7 +5,7 @@ api:
   url: /task/{taskId}/callback
 ---
 
-::: params
+::: request
 
 ```json [path]
 {
@@ -18,7 +18,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

@@ -6,7 +6,7 @@ api:
   url: /annotation/request
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -28,7 +28,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

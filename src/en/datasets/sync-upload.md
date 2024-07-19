@@ -6,7 +6,7 @@ api:
   url: /dataset/upload/sync
 ---
 
-::: params
+::: request
 
 ```json [headers]
 {
@@ -34,7 +34,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

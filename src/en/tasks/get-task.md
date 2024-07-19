@@ -5,7 +5,7 @@ api:
   url: /task/get
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -22,7 +22,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {
