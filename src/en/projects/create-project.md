@@ -87,9 +87,9 @@ api:
 
 :::
 
-::: params
+::: results
 
-```json [response data]
+```json [response data:schema]
 {
   "projectId": {
     "type": "long",
@@ -106,10 +106,6 @@ api:
   }
 }
 ```
-
-:::
-
-::: results
 
 ```json [examples]
 {

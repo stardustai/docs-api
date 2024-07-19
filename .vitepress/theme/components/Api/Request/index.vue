@@ -2,7 +2,7 @@
   <Params
     v-for="[key, type, params] of request"
     :key="key"
-    :type="type"
+    :type="type as 'form' | 'json'"
     :title="key + (paramKeys.includes(key) ? ' params' : '')"
     :data="params"
     :input="showInput"

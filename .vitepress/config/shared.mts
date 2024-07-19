@@ -163,12 +163,12 @@ export const shared = defineConfig({
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
             const codeTokens = getTokens(tokens, 'results', idx)
-            const template = ({ key, content }) => `
-              <api-results
-                title="${key}"
-                data="${encodeURIComponent(content)}"
-              />
-            `
+            const template = ({ key, type, content }) => {
+              const dataStr = `[
+                ${JSON.stringify(key)}, ${JSON.stringify(type || null)}, ${content}
+              ]`
+              return `<api-result data="${encodeURIComponent(dataStr)}" />`
+            }
             return `
               <div>
                 ${getElements(codeTokens, template)}
