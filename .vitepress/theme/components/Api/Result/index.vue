@@ -1,8 +1,8 @@
 <template>
-  <div v-for="[title, type, data] of [result]">
+  <template v-for="[title, type, data] of [result]">
     <Params v-if="type === 'schema'" :title="title" :data="data" />
     <Example v-else :title="title" :data="data" />
-  </div>
+  </template>
 </template>
 
 <script setup lang="ts">

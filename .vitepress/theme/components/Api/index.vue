@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <Request :data="request" />
-    <Result :data="result" />
-  </div>
+  <Request :data="request" />
+  <Result :data="result" />
 </template>
 
 <script setup lang="ts">
