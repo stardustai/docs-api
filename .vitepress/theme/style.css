@@ -10,3 +10,8 @@ html.dark {
   max-height: 500px;
   overflow: auto;
 }
+
+.api-request ~ .api-result {
+  margin-top: 36px;
+  border-top: 1px solid var(--vp-c-divider);
+}

@@ -150,7 +150,7 @@ export const shared = defineConfig({
               ${getElements(codeTokens, template).trim().replace(/\,$/, '')}
             ]`
             return `
-              <div>
+              <div class="api-request">
                 <api-request data=${encodeURIComponent(dataStr)} />
                 <div class="hidden">
             `
@@ -170,7 +170,7 @@ export const shared = defineConfig({
               return `<api-result data="${encodeURIComponent(dataStr)}" />`
             }
             return `
-              <div>
+              <div class="api-result">
                 ${getElements(codeTokens, template)}
                 <div class="hidden">
             `
