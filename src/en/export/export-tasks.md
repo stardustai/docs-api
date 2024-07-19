@@ -6,7 +6,7 @@ api:
   url: /tasks/export
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -25,7 +25,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

@@ -5,7 +5,7 @@ api:
   url: /task/send/status
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -18,7 +18,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {

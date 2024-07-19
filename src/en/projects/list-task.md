@@ -6,7 +6,7 @@ api:
   url: /project/tasks
 ---
 
-::: params
+::: request
 
 ```json [body]
 {
@@ -43,7 +43,7 @@ api:
 
 :::
 
-::: results
+::: result
 
 ```json [responses]
 {
