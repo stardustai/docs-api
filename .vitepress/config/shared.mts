@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 import Container from 'markdown-it-container'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 interface SidebarItem {
   text: string
@@ -70,7 +71,36 @@ export const shared = defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/stardustai' }]
   },
   vite: {
+    resolve: {
+      alias: [
+        {
+          find: 'src/utils',
+          replacement: 'vue-json-pretty/src/utils'
+        },
+        {
+          find: 'src/components/TreeNode',
+          replacement: 'vue-json-pretty/src/components/TreeNode'
+        },
+        {
+          find: 'src/components/Brackets',
+          replacement: 'vue-json-pretty/src/components/Brackets'
+        },
+        {
+          find: 'src/components/CheckController',
+          replacement: 'vue-json-pretty/src/components/CheckController'
+        },
+        {
+          find: 'src/components/Carets',
+          replacement: 'vue-json-pretty/src/components/Carets'
+        },
+        {
+          find: '~src/themes.less',
+          replacement: 'vue-json-pretty/src/themes.less'
+        }
+      ]
+    },
     plugins: [
+      vueJsx(),
       topLevelAwait({
         promiseExportName: '__tla',
         promiseImportName: (i) => `__tla_${i}`

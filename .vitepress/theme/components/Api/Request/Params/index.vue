@@ -1,7 +1,7 @@
 <template>
   <div v-if="params">
     <h3 v-if="title" class="text-xs font-semibold uppercase">
-      {{ title }}
+      {{ title.replaceAll('_', ' ') }}
       <span v-if="type" class="opacity-60 ml-0.5">[{{ type }}]</span>
     </h3>
     <div
