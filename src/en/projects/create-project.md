@@ -12,7 +12,7 @@ api:
 {
   "name": {
     "type": "string",
-    "description": "Project name, must be distinct."
+    "description": "Project name, must be distinct, the maximum length limit is 60 bytes."
   },
   "dataType": {
     "type": "integer",
@@ -20,7 +20,7 @@ api:
   },
   "description": {
     "type": "string",
-    "description": "Project description",
+    "description": "Project description, the maximum length limit is 200 bytes.",
     "required": false
   },
   "deadline": {
@@ -53,30 +53,31 @@ api:
     "description": "Workflow of the annotation pipeline, which is composed of a set of pools, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-config). If not set, the platform will give the project a default config.",
     "required": false,
     "properties": {
-      "pools": {
+      "vertex": {
         "type": "object[]",
         "description": "Set of pools, the type of the first pool must be 0, means distribution pool, and the type of the last pool must be 5, means completion pool.",
         "properties": {
           "name": {
             "type": "string",
-            "description": ""
+            "description": "Name of the pool, the maximum length limit is 60 bytes."
           },
           "runMode": {
             "type": "integer",
-            "description": ""
+            "description": "Running mode of the pool: 0 represents manually, 1 represents automatically."
           },
           "type": {
             "type": "integer",
-            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2, 3, 4 represents algorithm, 5 represents completion."
+            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2 represents inspection, 3 represents spot check, 4 represents algorithm, 5 represents completion."
           },
           "workers": {
             "type": "string[]",
-            "description": "Name list of accounts assigned to the pool"
+            "description": "Name list of accounts assigned to the pool, which is used in labeling pool, inspection pool, spot check pool."
           },
           "algorithmList": {
             "type": "string[]",
             "required": false,
-            "description": "When type is 4"
+            "hidden": true,
+            "description": "When type is 4 "
           }
         }
       }

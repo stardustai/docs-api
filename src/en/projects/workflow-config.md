@@ -2,16 +2,14 @@
 
 ```json [Algorithm Sample]
 {
-  "pools": [
+  "vertex": [
     {
       "name": "Distribution pool",
       "runMode": 0,
-      "type": 0,
-      "workers": []
+      "type": 0
     },
     {
       "name": "Algorithm pool",
-      "algorithmList": ["3D-MOT-V1"],
       "runMode": 1,
       "type": 4
     },
@@ -34,8 +32,7 @@
     },
     {
       "name": "Completion pool",
-      "type": 5,
-      "workers": []
+      "type": 5
     }
   ]
 }
@@ -43,12 +40,11 @@
 
 ```json [Default Sample]
 {
-  "pools": [
+  "vertex": [
     {
       "name": "Distribution pool",
       "runMode": 0,
-      "type": 0,
-      "workers": []
+      "type": 0
     },
     {
       "name": "Labeling pool",
@@ -64,8 +60,7 @@
     },
     {
       "name": "Completion pool",
-      "type": 5,
-      "workers": []
+      "type": 5
     }
   ]
 }

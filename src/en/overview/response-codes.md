@@ -46,6 +46,10 @@ description: Stardust's API uses the following HTTP codes and business-specific 
     <td>Dataset not exists</td>
   </tr>
   <tr>
+    <td>5509</td>
+    <td>First pool is not distribution</td>
+  </tr>
+  <tr>
     <td>5707</td>
     <td>File cannot be empty</td>
   </tr>
