@@ -11,8 +11,10 @@
   "devDependencies": {
     "@swc/core": "~1.6.0",
     "@types/node": "^20.14.9",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
     "daisyui": "^4.12.10",
     "husky": "^9.0.11",
+    "less": "^4.2.0",
     "lint-staged": "^15.2.7",
     "markdown-it-container": "^4.0.0",
     "postcss-preset-env": "^9.5.14",
@@ -31,7 +33,7 @@
     "markdown-it": "^14.1.0",
     "shiki": "^1.10.3",
     "vue": "^3.4.30",
-    "vue-json-pretty": "^2.4.0",
+    "vue-json-pretty": "github:leezng/vue-json-pretty",
     "web-tree-sitter": "^0.22.6"
   },
   "lint-staged": {

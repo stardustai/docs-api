@@ -89,7 +89,7 @@ api:
 
 ::: result
 
-```json [response data:schema]
+```json [response_data:schema]
 {
   "projectId": {
     "type": "long",
