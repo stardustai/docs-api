@@ -47,7 +47,11 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   </tr>
   <tr>
     <td>5509</td>
-    <td>First pool is not distribution</td>
+    <td>First pool must be distribution</td>
+  </tr>
+  <tr>
+    <td>5523</td>
+    <td>Last pool must be completion</td>
   </tr>
   <tr>
     <td>5707</td>
