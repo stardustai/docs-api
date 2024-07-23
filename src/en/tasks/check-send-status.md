@@ -65,9 +65,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Invalid Parameter",
-    "requestId": "",
+    "date": "2024-05-20 18:43:48",
+    "requestId": "bd07bc67171620187827410441afb4",
     "success": false
   }
 }

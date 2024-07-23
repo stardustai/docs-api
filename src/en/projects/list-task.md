@@ -90,9 +90,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Illegal Parameter",
-    "requestId": "",
+    "date": "2024-05-17 16:15:23",
+    "requestId": "140178c0171593377590610051afb4",
     "success": false
   }
 }

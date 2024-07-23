@@ -15,11 +15,11 @@ api:
 {
   "resourceUrl": {
     "type": "string",
-    "description": "The resource url on cloud storage, start with gos://bucket-name/"
+    "description": "The resource url on cloud storage, start with gs://bucket-name/"
   },
   "fileTreeType": {
     "type": "string",
-    "description": "[File tree](/datasets/sync-upload/#file-tree) in storage: 0 represents sensor oriented."
+    "description": "[File tree](#file-tree) in storage: 0 represents sensor oriented."
   },
   "dataType": {
     "type": "integer",

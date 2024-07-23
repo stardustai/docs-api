@@ -82,6 +82,9 @@ description: Stardust's API uses the following HTTP codes and business-specific 
     <td>Folder name already exists</td>
   </tr>
   <tr>
+    <td>5837</td>
+    <td>Not authority to access project</td>
+  <tr>
     <td>5838</td>
     <td>Wrong data type</td>
   </tr>

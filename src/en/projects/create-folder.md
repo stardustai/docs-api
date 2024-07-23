@@ -41,9 +41,9 @@ api:
   "5836": {
     "code": 5836,
     "data": null,
-    "date": "",
     "message": "Folder name already exists",
-    "requestId": "",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   }
 }

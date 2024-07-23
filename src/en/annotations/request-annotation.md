@@ -19,9 +19,13 @@ api:
     "description": "Workflow id returned by API [Create Workflow](/datasets/create-workflow) or [Create Project](/projects/create-project), if not set or set to 0, the platform will choose the default workflow which created alongside the project.",
     "required": false
   },
+  "datasetId": {
+    "type": "string",
+    "description": "Dataset id of scenes which returned by [Upload Dataset](/datasets/sync-upload) or [Import Dataset](/datasets/async-import)"
+  },
   "dataIds": {
     "type": "string[]",
-    "description": "Data ids of scenes which returned by API [Upload Dataset](/datasets/sync-upload) or [Dataset Status](/datasets/get-status)"
+    "description": "Data ids of scenes which returned by [Upload Dataset](/datasets/sync-upload) or [Dataset Status](/datasets/get-status)"
   }
 }
 ```
@@ -55,9 +59,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
+    "date": "2024-05-16 19:03:34",
     "message": "Illegal Parameter",
-    "requestId": "",
+    "requestId": "864b70706a7349ea83e177a49800464e",
     "success": false
   }
 }

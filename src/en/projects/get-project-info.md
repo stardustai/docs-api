@@ -37,9 +37,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Illegal Parameter",
-    "requestId": "",
+    "date": "2024-05-17 16:04:53",
+    "requestId": "71c3ddd6171593314607810011afb4",
     "success": false
   }
 }

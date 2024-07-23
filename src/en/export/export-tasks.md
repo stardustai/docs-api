@@ -142,7 +142,7 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
+    "date": "2024-05-17 17:45:50",
     "message": "Invalid Parameter",
     "requestId": "77bdf4cd171593981208210031afbv",
     "success": false

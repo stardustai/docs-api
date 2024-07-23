@@ -314,9 +314,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Invalid Parameter",
-    "requestId": "",
+    "date": "2024-05-17 17:22:21",
+    "requestId": "c597b2ac171593779390810011afb4",
     "success": false
   }
 }
