@@ -33,7 +33,7 @@
     "markdown-it": "^14.1.0",
     "shiki": "^1.10.3",
     "vue": "^3.4.30",
-    "vue-json-pretty": "github:leezng/vue-json-pretty",
+    "vue-json-pretty": "github:F-loat/vue-json-pretty",
     "web-tree-sitter": "^0.22.6"
   },
   "lint-staged": {
