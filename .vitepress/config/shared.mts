@@ -99,6 +99,9 @@ export const shared = defineConfig({
         }
       ]
     },
+    optimizeDeps: {
+      exclude: ['vue-json-pretty']
+    },
     plugins: [
       vueJsx(),
       topLevelAwait({
