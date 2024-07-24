@@ -84,6 +84,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr>
     <td>5837</td>
     <td>Not authority to access project</td>
+  </tr>
   <tr>
     <td>5838</td>
     <td>Wrong data type</td>
