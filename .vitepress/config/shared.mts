@@ -127,13 +127,21 @@ export const shared = defineConfig({
       [
         'script',
         { type: 'text/javascript' },
+        `(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.setAttribute("data-theme", "dark")})();`
+      ],
+      [
+        'script',
+        { type: 'text/javascript' },
         `(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "n5nncu2bkk");`
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n5nncu2bkk");`
       ]
     ]
+  },
+  transformHtml(code) {
+    return code.replace('<html', '<html data-theme="light"')
   },
   markdown: {
     config: (md) => {
