@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 import Container from 'markdown-it-container'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 interface SidebarItem {
   text: string
@@ -70,7 +71,39 @@ export const shared = defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/stardustai' }]
   },
   vite: {
+    resolve: {
+      alias: [
+        {
+          find: 'src/utils',
+          replacement: 'vue-json-pretty/src/utils'
+        },
+        {
+          find: 'src/components/TreeNode',
+          replacement: 'vue-json-pretty/src/components/TreeNode'
+        },
+        {
+          find: 'src/components/Brackets',
+          replacement: 'vue-json-pretty/src/components/Brackets'
+        },
+        {
+          find: 'src/components/CheckController',
+          replacement: 'vue-json-pretty/src/components/CheckController'
+        },
+        {
+          find: 'src/components/Carets',
+          replacement: 'vue-json-pretty/src/components/Carets'
+        },
+        {
+          find: '~src/themes.less',
+          replacement: 'vue-json-pretty/src/themes.less'
+        }
+      ]
+    },
+    optimizeDeps: {
+      exclude: ['vue-json-pretty']
+    },
     plugins: [
+      vueJsx(),
       topLevelAwait({
         promiseExportName: '__tla',
         promiseImportName: (i) => `__tla_${i}`
@@ -94,13 +127,21 @@ export const shared = defineConfig({
       [
         'script',
         { type: 'text/javascript' },
+        `(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.setAttribute("data-theme", "dark")})();`
+      ],
+      [
+        'script',
+        { type: 'text/javascript' },
         `(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "n5nncu2bkk");`
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "n5nncu2bkk");`
       ]
     ]
+  },
+  transformHtml(code) {
+    return code.replace('<html', '<html data-theme="light"')
   },
   markdown: {
     config: (md) => {
@@ -130,11 +171,11 @@ export const shared = defineConfig({
         }) => string
       ) => {
         return tokens.reduce((rst, token) => {
-          const { info, content } = token
+          const content = token.content.replace(/\'/g, '\\"')
+          const name = token.info.match(/\[(.*)\]/)?.[1] || ''
+          const [key, type] = name.split(':')
           token.content = ''
           token.hidden = true
-          const name = info.match(/\[(.*)\]/)?.[1] || ''
-          const [key, type] = name.split(':')
           return rst + template({ key, type, content })
         }, '')
       }

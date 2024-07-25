@@ -1,7 +1,8 @@
 interface Common {
-  description?: string
-  required?: boolean
+  hidden?: boolean
   default?: string
+  required?: boolean
+  description?: string
 }
 
 interface BaseData extends Common {
@@ -9,7 +10,7 @@ interface BaseData extends Common {
 }
 
 export interface ObjectData extends Common {
-  type: 'object'
+  type: 'object | object[]'
   properties: {
     [key: string]: Data
   }

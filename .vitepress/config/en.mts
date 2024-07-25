@@ -44,16 +44,33 @@ export const en = defineConfig({
             text: 'Authentication',
             link: '/overview/authentication'
           },
-          { text: 'Errors', link: '/overview/errors' },
+          { text: 'Response Codes', link: '/overview/response-codes' },
           { text: 'Data Structure', link: '/overview/data-structure' }
         ]
       },
       {
         text: 'PROJECTS',
         items: [
+          getApiConfig('/projects/create-folder'),
           getApiConfig('/projects/create-project'),
           getApiConfig('/projects/list-project'),
           getApiConfig('/projects/get-project-info')
+        ]
+      },
+      {
+        text: 'DATASETS',
+        items: [
+          getApiConfig('/datasets/sync-upload'),
+          getApiConfig('/datasets/async-import'),
+          getApiConfig('/datasets/get-status')
+        ]
+      },
+      {
+        text: 'ANNOTATIONS',
+        items: [
+          getApiConfig('/annotations/create-workflow'),
+          getApiConfig('/annotations/request-annotation'),
+          getApiConfig('/annotations/run-stat')
         ]
       },
       {

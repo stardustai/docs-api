@@ -1,14 +1,16 @@
 <template>
   <div v-if="params">
     <h3 v-if="title" class="text-xs font-semibold uppercase">
-      {{ title }}
+      {{ title.replaceAll('_', ' ') }}
       <span v-if="type" class="opacity-60 ml-0.5">[{{ type }}]</span>
     </h3>
     <div
       class="bg-[var(--vp-sidebar-bg-color)] rounded-lg border border-gray-200 dark:border-[#2e2e32] border-solid my-4 px-2"
     >
       <div
-        v-for="([key, item], index) of Object.entries(params)"
+        v-for="([key, item], index) of Object.entries(params).filter(
+          ([, item]) => !item.hidden
+        )"
         :class="
           classnames(
             'py-2.5',
@@ -47,9 +49,9 @@
                     class="text-xs text-gray-500"
                     >[{{ item.items.type }}]</span
                   >
-                  <span v-if="item.default" class="ml-2 text-xs text-gray-500"
-                    >Defaults to {{ item.default }}</span
-                  >
+                  <span v-if="item.default" class="ml-2 text-xs text-gray-500">
+                    Defaults to {{ item.default }}
+                  </span>
                 </div>
                 <Input
                   :type="item.type"
@@ -63,14 +65,19 @@
                   @change="(val) => handleChange(key, val)"
                 />
               </div>
-              <div v-if="item.description" class="text-xs mt-1">
-                {{ item.description }}
-              </div>
+              <div
+                v-if="item.description"
+                class="text-xs mt-1"
+                v-html="md.renderInline(item.description)"
+              />
             </div>
           </summary>
           <div v-if="isComplex(item)" class="daisy-collapse-content -mb-6 px-3">
-            <api-params v-if="item.type === 'object'" :data="item.properties" />
-            <api-params v-else :data="item.items.properties" />
+            <api-params v-if="isObject(item)" :data="item.properties" />
+            <api-params
+              v-else-if="isArray(item) && isObject(item.items)"
+              :data="item.items.properties"
+            />
           </div>
         </details>
       </div>
@@ -86,16 +93,21 @@ export default {
 
 <script setup lang="ts">
 import classnames from 'classnames'
+import markdownit from 'markdown-it'
 import { computed, reactive } from 'vue'
 import Input from './Input.vue'
-import type { Data } from '../../../../types'
+import type { ArrayData, Data, ObjectData } from '../../../../types'
+
+const md = markdownit({
+  html: true
+})
 
 const emit = defineEmits<{
   (e: 'change', value?: Record<string, any>): void
 }>()
 
 const props = defineProps<{
-  title: string
+  title?: string
   data?: string | Record<string, Data>
   input?: boolean
   type?: 'form' | 'json'
@@ -106,9 +118,14 @@ const params = computed<Record<string, Data>>(() => {
   return JSON.parse(decodeURIComponent(props.data))
 })
 
-const isComplex = (item: Data) =>
-  item.type === 'object' ||
-  (item.type === 'array' && item.items.type === 'object')
+const isObject = (item: Data): item is ObjectData => {
+  return item.type.startsWith('object') && !!item.properties
+}
+const isArray = (item: Data): item is ArrayData => item.type === 'array'
+
+const isComplex = (item: Data): item is ObjectData | ArrayData => {
+  return isObject(item) || (isArray(item) && isObject(item.items))
+}
 
 const getDefaultValue = (data: Data) => {
   if (data.type !== 'file' || !data.default) {

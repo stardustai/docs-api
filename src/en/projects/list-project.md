@@ -12,22 +12,22 @@ api:
 {
   "status": {
     "type": "integer",
-    "description": "status: 0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE"
+    "description": "0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE"
   },
   "dataType": {
     "type": "integer",
-    "description": "project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D"
+    "description": "Project data type: 2 represents 2D, 3 represents 3D"
   },
   "offset": {
     "type": "integer",
     "default": 1,
-    "description": "Start page number",
+    "description": "Start postion of the page",
     "required": false
   },
   "limit": {
     "type": "integer",
     "default": 10,
-    "description": "Number of posts per page",
+    "description": "Number of items per page",
     "required": false
   }
 }
@@ -40,7 +40,7 @@ api:
 ```json [responses]
 {
   "200": {
-    "code": 2000,
+    "code": 200,
     "message": "Success",
     "data": {
       "count": 608,
@@ -111,9 +111,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Illegal Parameter",
-    "requestId": "",
+    "date": "2024-05-17 16:04:53",
+    "requestId": "71c3ddd6171593314607810011afb4",
     "success": false
   }
 }

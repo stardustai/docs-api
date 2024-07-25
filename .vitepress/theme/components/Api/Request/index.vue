@@ -32,7 +32,7 @@ const props = defineProps<{
 
 const data = reactive({})
 const showInput = ref(false)
-const paramKeys = ['body', 'query', 'path', 'form']
+const paramKeys = ['path', 'query', 'body']
 
 const handleToggle = (open) => {
   showInput.value = open

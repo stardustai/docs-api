@@ -11,11 +11,11 @@ api:
 {
   "projectId": {
     "type": "long",
-    "description": "project id"
+    "description": "Project id which returned by [Create Project](/projects/)"
   },
   "taskId": {
     "type": "string",
-    "description": "Task Id"
+    "description": "Task id which provided by callback or returned by [List task](/projects/list-task)."
   }
 }
 ```
@@ -24,10 +24,20 @@ api:
 
 ::: result
 
-```json [responses]
+```json [response data:schema]
+{
+  "status": {
+    "type": "integer",
+    "required": false,
+    "description": "<table><tr><th>Value</th><th>Description</th><th>Value</th><th>Description</th></tr><tr><td>1</td><td>Waiting for Distribution</td><td>2</td><td>Distributed</td></tr><tr><td>3</td><td>Working</td><td>4</td><td>Waiting for Submission</td></tr><tr><td>5</td><td>Pause</td><td>6</td><td>Error</td></tr><tr><td>7</td><td>Suspend</td><td>8</td><td>Submission Failed</td></tr><tr><td>9</td><td>Complete</td><td>10</td><td>Invalid</td></tr></table>"
+  }
+}
+```
+
+```json [examples]
 {
   "200": {
-    "code": 2000,
+    "code": 200,
     "message": "Succeed",
     "data": {
       "taskId": "358183635595169792",
@@ -304,9 +314,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Invalid Parameter",
-    "requestId": "",
+    "date": "2024-05-17 17:22:21",
+    "requestId": "c597b2ac171593779390810011afb4",
     "success": false
   }
 }

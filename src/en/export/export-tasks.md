@@ -10,7 +10,10 @@ api:
 
 ```json [body]
 {
-  "projectId": { "type": "long", "description": "project id" },
+  "projectId": {
+    "type": "long",
+    "description": "Project id returned by [Create Project](/projects/create-project)"
+  },
   "completeTimeAfter": {
     "type": "string",
     "description": "Complete time of task after the date, include the day, such as 2024-05-01"
@@ -139,7 +142,7 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
+    "date": "2024-05-17 17:45:50",
     "message": "Invalid Parameter",
     "requestId": "77bdf4cd171593981208210031afbv",
     "success": false

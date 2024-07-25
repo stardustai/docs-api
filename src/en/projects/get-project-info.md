@@ -1,6 +1,6 @@
 ---
 title: 'Get Project'
-description: 'This page will help you get started with retrieve project information.'
+description: This page will help you get started with retrieve project information.
 api:
   method: GET
   url: /project/get
@@ -10,7 +10,10 @@ api:
 
 ```json [query]
 {
-  "projectId": { "type": "long", "description": "project id" }
+  "projectId": {
+    "type": "long",
+    "description": "Project id which returned by [Create Project](/projects/create-project)"
+  }
 }
 ```
 
@@ -34,9 +37,9 @@ api:
   "400": {
     "code": 400,
     "data": null,
-    "date": "",
     "message": "Illegal Parameter",
-    "requestId": "",
+    "date": "2024-05-17 16:04:53",
+    "requestId": "71c3ddd6171593314607810011afb4",
     "success": false
   }
 }

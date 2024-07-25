@@ -1,6 +1,6 @@
 ---
 title: 'Create Project'
-description: 'This page will help you get started with creating a project on Rosetta, and set the status to 1 which represents [START](/projects/list-project).'
+description: 'This page will help you get started with creating a project on Rosetta, and set the status to 1 which represents START.'
 api:
   method: POST
   url: /project/create
@@ -10,22 +10,79 @@ api:
 
 ```json [body]
 {
-  "name": { "type": "string", "description": "project name" },
+  "name": {
+    "type": "string",
+    "description": "Project name, must be distinct, the maximum length limit is 60 bytes."
+  },
   "dataType": {
     "type": "integer",
-    "description": "project data type: 1 represents TEXT, 2 represents 2D, 3 represents 3D"
+    "description": "Project data type: 2 represents 2D, 3 represents 3D."
   },
   "description": {
     "type": "string",
-    "default": "project description",
-    "description": "description",
+    "description": "Project description, the maximum length limit is 200 bytes.",
     "required": false
   },
   "deadline": {
     "type": "string",
-    "description": "deadline, a date for system notification, such as 2024-06-01"
+    "description": "A date for system notification, such as 2024-06-01."
   },
-  "operators": { "type": "object[]", "description": "label tool config" }
+  "operators": {
+    "type": "object[]",
+    "description": "Label tool config, refer to [Operators Samples](#labeling-tool-config)."
+  },
+  "folderId": {
+    "type": "long",
+    "default": "0",
+    "description": "Folder ID which returned by API [Create Folder](/projects/create-folder)",
+    "required": false
+  },
+  "projectManager": {
+    "type": "string",
+    "default": "'Owner of the AK'",
+    "description": "Account name you want to appoint to project manager.",
+    "required": false
+  },
+  "teamNames": {
+    "type": "string[]",
+    "description": "Name of the teams you want to authorize access to the project, you can edit these later on the web platform.",
+    "required": false
+  },
+  "workflow": {
+    "type": "object",
+    "description": "Workflow of the annotation pipeline, which is composed of a set of pools, you can edit it later on the web platform, refer to [Workflow Samples](#workflow-config). If not set, the platform will give the project a default config.",
+    "required": false,
+    "properties": {
+      "vertex": {
+        "type": "object[]",
+        "description": "Set of pools, the type of the first pool must be 0, means distribution pool, and the type of the last pool must be 5, means completion pool.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the pool, the maximum length limit is 60 bytes."
+          },
+          "runMode": {
+            "type": "integer",
+            "description": "Running mode of the pool: 0 represents manually, 1 represents automatically."
+          },
+          "type": {
+            "type": "integer",
+            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2 represents inspection, 3 represents spot check, 4 represents algorithm, 5 represents completion."
+          },
+          "workers": {
+            "type": "string[]",
+            "description": "Name list of accounts assigned to the pool, which is used in labeling pool, inspection pool, spot check pool."
+          },
+          "algorithmList": {
+            "type": "string[]",
+            "required": false,
+            "hidden": true,
+            "description": "When type is 4 "
+          }
+        }
+      }
+    }
+  }
 }
 ```
 
@@ -33,22 +90,44 @@ api:
 
 ::: result
 
-```json [responses]
+```json [response_data:schema]
+{
+  "projectId": {
+    "type": "long",
+    "required": false
+  },
+  "status": {
+    "type": "integer",
+    "description": "0 represents DRAFT, 1 represents START, 2 represents PAUSE, 3 represents DONE",
+    "required": false
+  },
+  "workflowId": {
+    "type": "long",
+    "required": false
+  }
+}
+```
+
+```json [examples]
 {
   "200": {
     "code": 200,
     "message": "Success",
-    "data": 12,
+    "data": {
+      "projectId": 12,
+      "status": 1,
+      "workflowId": 10
+    },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "400": {
-    "code": 400,
+  "5801": {
+    "code": 5801,
     "data": null,
-    "date": "",
-    "message": "Illegal Parameter",
-    "requestId": "",
+    "message": "Project name already exists",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   }
 }
@@ -64,7 +143,7 @@ api:
 {
   "key": "box3d-[1cbd2]",
   "type": "slotChildren",
-  "label": "1",
+  "label": "Box3D",
   "slotSpecification": {
     "type": "box3d"
   },
@@ -72,7 +151,7 @@ api:
     {
       "key": "box2d-[d14a6]",
       "type": "slot",
-      "label": "1",
+      "label": "Box2D",
       "slotSpecification": {
         "type": "box2d",
         "restrictInsideCanvasBoundary": true,
@@ -84,11 +163,29 @@ api:
       }
     },
     {
-      "key": "text-[b02fe]",
-      "label": "1",
+      "key": "select-[c1283]",
+      "label": "Class3D",
       "type": "input",
       "inputSpecification": {
-        "type": "text"
+        "type": "select",
+        "items": [
+          {
+            "label": "Vehicle",
+            "value": "Vehicle"
+          },
+          {
+            "label": "Pedestrian",
+            "value": "Pedestrian"
+          },
+          {
+            "label": "Cyclist",
+            "value": "Cyclist"
+          }
+        ],
+        "renderConfig": {
+          "selectionWidgetType": "Segment"
+        },
+        "continuousFrameSync": false
       }
     }
   ]
@@ -267,3 +364,7 @@ api:
 ```
 
 :::
+
+## Workflow config
+
+<!--@include: workflow-config.md-->
