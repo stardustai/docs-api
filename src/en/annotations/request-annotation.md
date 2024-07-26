@@ -20,7 +20,7 @@ api:
     "required": false
   },
   "datasetId": {
-    "type": "string",
+    "type": "long",
     "description": "Dataset id of scenes which returned by [Upload Dataset](/datasets/sync-upload) or [Import Dataset](/datasets/async-import)"
   },
   "dataIds": {
