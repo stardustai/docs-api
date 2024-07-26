@@ -67,7 +67,7 @@ api:
           },
           "type": {
             "type": "integer",
-            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2 represents inspection, 3 represents spot check, 4 represents algorithm, 5 represents completion."
+            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2 represents inspection, 3 represents spot check, 4 represents algorithm (Now we primarily support 3D pre-labeling, and plan to introduce more flexible configurations in the future), 5 represents completion."
           },
           "workers": {
             "type": "string[]",

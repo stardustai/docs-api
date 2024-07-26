@@ -3,7 +3,7 @@ title: 'Create Workflow'
 description: This page will help you get started with creating a specific workflow for annotation request, you can create multiple workflows in one project for different annotation targets, the structure refer to [Workflow config](#workflow-config).
 api:
   method: POST
-  url: /annotation/workflow/create
+  url: /workflow/create
 ---
 
 ::: request
@@ -32,7 +32,7 @@ api:
           },
           "type": {
             "type": "integer",
-            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2 represents inspection, 3 represents spot check, 4 represents algorithm, 5 represents completion."
+            "description": "Type of the pool, 0 represents distribution, 1 represents labeling, 2 represents inspection, 3 represents spot check, 4 represents algorithm (Now we primarily support 3D pre-labeling, and plan to introduce more flexible configurations in the future), 5 represents completion."
           },
           "workers": {
             "type": "string[]",
