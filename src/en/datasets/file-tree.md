@@ -1,10 +1,10 @@
 ::: code-group
 
 ```[fileTreeType=0]
-
-├── lidar-name_l0               // "name_l0" refers to your lidar name
-│   ├── scene_id_1234           // "scene_id_1234" refers to unique identifier of your scene data
-│   │   ├── timestamp0.pcd      // "timestamp0" refers to sampling time, typically an integer in milliseconds
+top_folder                    // top folder name which is same as the zip file
+├── lidar-name_l0             // "name_l0" refers to your lidar name, the prefix "lidar-" is necessary
+│   ├── scene_id_1234         // "scene_id_1234" refers to unique identifier of your scene data
+│   │   ├── timestamp0.pcd    // "timestamp0" refers to sampling time, typically an integer in milliseconds
 │   │   └── timestamp1.pcd
 │   └── scene_id_2345
 │       ├── timestamp0.pcd
@@ -16,7 +16,7 @@
 │   └── scene_id_2345
 │       ├── timestamp0.pcd
 │       └── timestamp1.pcd
-├── camera-name_c0              // "name_c0" refers to your camera name
+├── camera-name_c0            // "name_c0" refers to your camera name, the prefix "camera-" is necessary
 │   ├── scene_id_1234
 │   │   ├── timestamp0.jpg
 │   │   └── timestamp1.jpg
