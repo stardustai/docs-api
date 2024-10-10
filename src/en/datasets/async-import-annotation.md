@@ -70,7 +70,18 @@ api:
     "message": "Success",
     "data": {
       "datasetId": "1",
-      "status": 1
+      "status": 1,
+      "successTaskList": [
+        {
+          "taskId": "23412341235234234",
+          "dataId": "2392"
+        },
+        {
+          "taskId": "9182748910723984",
+          "dataId": "9782"
+        }
+      ],
+      "errorDataIdList": ["98902", "1234"]
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
