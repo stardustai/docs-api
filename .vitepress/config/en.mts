@@ -62,8 +62,6 @@ export const en = defineConfig({
         items: [
           getApiConfig('/datasets/sync-upload'),
           getApiConfig('/datasets/async-import'),
-          getApiConfig('/datasets/async-import-annotation'),
-          getApiConfig('/datasets/sync-upload-annotation'),
           getApiConfig('/datasets/get-status')
         ]
       },
