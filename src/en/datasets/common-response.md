@@ -26,6 +26,26 @@
         "description": "Data Entry Id from your file"
       }
     }
+  },
+  "successTaskList": {
+    "type": "object[]",
+    "description": "Mapping list between task id and data id",
+    "required": false,
+    "properties": {
+      "taskId": {
+        "type": "string",
+        "description": "Data Entry Id from task"
+      },
+      "dataId": {
+        "type": "string",
+        "description": "Data Entry Id in our platform"
+      }
+    }
+  },
+  "errorDataIdList": {
+    "type": "object[]",
+    "description": "Mapping list error annotation task id",
+    "required": false
   }
 }
 ```
@@ -47,7 +67,18 @@
           "dataId": "111",
           "sceneId": "111112"
         }
-      ]
+      ],
+      "successTaskList": [
+        {
+          "taskId": "23412341235234234",
+          "dataId": "2392"
+        },
+        {
+          "taskId": "9182748910723984",
+          "dataId": "9782"
+        }
+      ],
+      "errorDataIdList": ["98902", "1234"]
     },
     "date": "2024-05-17 16:04:53",
     "requestId": "71c3ddd6171593314607810011afb4",
