@@ -8,13 +8,12 @@ const docsMap = docs.reduce(
   new Map<string, ContentData>()
 )
 
-const getVersionLink = (link: string) => {
-  return `/1.0.0${link}`
-}
+const VERSION = '1.0.0'
+const getVersionLink = (link: string) => `/${VERSION}${link}`
 
 const getApiConfig = (link: string) => {
   const vlink = getVersionLink(link)
-  const frontmatter = docsMap.get(vlink)?.frontmatter
+  const frontmatter = docsMap.get(`/${VERSION}${link}`)?.frontmatter
   if (!frontmatter || !frontmatter.api?.method) {
     return { text: frontmatter?.title || link, link: vlink }
   }
