@@ -23,8 +23,8 @@ const target = computed(() => {
   if (redirectRouteMap[pathname]) {
     return redirectRouteMap[pathname]
   }
-  if (pathname.startsWith('/en/')) {
-    return pathname.replace('/en/', '/')
+  if (pathname.startsWith('/latest/')) {
+    return pathname.replace('/latest/', '/')
   }
   return '/'
 })

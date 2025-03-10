@@ -5,6 +5,7 @@ import Container from 'markdown-it-container'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { fileURLToPath } from 'url'
 
 interface SidebarItem {
   text: string
@@ -45,7 +46,7 @@ export const shared = defineConfig({
   title: 'API Docs',
   description: 'Stardust API',
   rewrites: {
-    'en/:rest*': ':rest*'
+    'latest/:rest*': ':rest*'
   },
   ignoreDeadLinks: [/get-task/],
   themeConfig: {
@@ -96,6 +97,15 @@ export const shared = defineConfig({
         {
           find: '~src/themes.less',
           replacement: 'vue-json-pretty/src/themes.less'
+        },
+        {
+          find: /^.*\/VPNavBarTranslations\.vue$/,
+          replacement: fileURLToPath(
+            new URL(
+              '../theme/components/VPNavBarTranslations.vue',
+              import.meta.url
+            )
+          )
         }
       ]
     },
