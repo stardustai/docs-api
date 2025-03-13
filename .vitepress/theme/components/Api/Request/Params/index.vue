@@ -58,7 +58,7 @@
                   :value="item.default"
                   :class="
                     classnames(
-                      'transition-opacity',
+                      'transition-opacity mr-1 mt-1',
                       input ? 'opacity-100' : 'opacity-0'
                     )
                   "
@@ -67,7 +67,7 @@
               </div>
               <div
                 v-if="item.description"
-                class="text-xs mt-1"
+                class="text-xs"
                 v-html="md.renderInline(item.description)"
               />
             </div>
