@@ -13,11 +13,12 @@ api:
   "helixProjectId": {
     "type": "string",
     "description": "Helix Project Id. The maximum length limit is 100 bytes.",
-    "required": false
+    "default": "helixProjectIdTest"
   },
   "name": {
     "type": "string",
-    "description": "Helix Project Name. The maximum length limit is 100 bytes."
+    "description": "Helix Project Name. The maximum length limit is 100 bytes.",
+    "default": "helixProjectNameTest"
   }
 }
 ```
@@ -28,19 +29,29 @@ api:
 
 ```json [responses]
 {
-  "200": {
-    "code": 200,
-    "message": "Success",
-    "data": null,
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": true
-  },
+  "200": [
+    {
+      "code": 200,
+      "message": "Success",
+      "data": null,
+      "date": "2024-05-16 19:03:34",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": true
+    },
+    {
+      "code": 12003,
+      "data": null,
+      "message": "Helix Project already exists",
+      "date": "2024-05-16 19:03:34",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    }
+  ],
   "500": {
-    "code": 12003,
+    "code": 5000,
     "data": null,
-    "message": "Helix Project already exists",
-    "date": "2025-03-13 20:00:00",
+    "message": "Service hiccuped, please try again later.",
+    "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   }
