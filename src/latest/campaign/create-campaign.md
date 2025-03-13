@@ -12,15 +12,18 @@ api:
 {
   "campaignId": {
     "type": "string",
-    "description": "Unique identifier for the campaign, with a maximum length of 160 bytes."
+    "description": "Unique identifier for the campaign, with a maximum length of 160 bytes.",
+    "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   "campaignName": {
     "type": "string",
-    "description": "Unique name for the campaign, with a maximum length of 160 bytes."
+    "description": "Unique name for the campaign, with a maximum length of 160 bytes.",
+    "default": "Helix 3D Campaign"
   },
   "workflowType": {
     "type": "string",
-    "description": "Type of workflow, must be one of ['Manual', 'PreLabeling']."
+    "description": "Type of workflow, must be one of ['Manual', 'PreLabeling'].",
+    "default": "Manual"
   },
   "taxonomyVersion": {
     "type": "Integer",
@@ -34,11 +37,13 @@ api:
   },
   "folderId": {
     "type": "string",
-    "description": "Unique identifier for the Helix folder."
+    "description": "Unique identifier for the Helix folder.",
+    "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   "campaignType": {
     "type": "string",
-    "description": "Type of campaign, must be one of ['Test', 'Formal']."
+    "description": "Type of campaign, must be one of ['Test', 'Formal'].",
+    "default": "Test"
   }
 }
 ```
