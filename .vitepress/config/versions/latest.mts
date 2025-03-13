@@ -98,6 +98,13 @@ export const config_latest = defineConfig({
       {
         text: 'EXPORT',
         items: [getApiConfig('/export/export-tasks')]
+      },
+      {
+        text: 'FOLDER',
+        items: [
+          getApiConfig('/folder/create-folder'),
+          getApiConfig('/folder/get-folder')
+        ]
       }
     ]
   }
