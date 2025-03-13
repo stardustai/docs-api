@@ -1,0 +1,76 @@
+---
+title: 'Create Campaign'
+description: 'Guidelines for creating a campaign on Rosetta.'
+api:
+  method: POST
+  url: /campaign/create
+---
+
+::: request
+
+```json [body]
+{
+  "campaignId": {
+    "type": "string",
+    "description": "Unique identifier for the campaign, with a maximum length of 160 bytes.",
+    "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
+  },
+  "campaignName": {
+    "type": "string",
+    "description": "Unique name for the campaign, with a maximum length of 160 bytes.",
+    "default": "Helix 3D Campaign"
+  },
+  "workflowType": {
+    "type": "string",
+    "description": "Type of workflow, must be one of ['Manual', 'PreLabeling'].",
+    "default": "Manual"
+  },
+  "taxonomyVersion": {
+    "type": "Integer",
+    "description": "Version number of the Helix taxonomy.",
+    "required": false
+  },
+  "taxonomyInfo": {
+    "type": "string",
+    "description": "Additional information about the Helix taxonomy.",
+    "required": false
+  },
+  "folderId": {
+    "type": "string",
+    "description": "Unique identifier for the Helix folder, with a maximum length of 160 bytes",
+    "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
+  },
+  "campaignType": {
+    "type": "string",
+    "description": "Type of campaign, must be one of ['POC', 'Formal'].",
+    "default": "Test"
+  }
+}
+```
+
+:::
+
+::: result
+
+```json [responses]
+{
+  "200": {
+    "code": 200,
+    "message": "Success",
+    "data": null,
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": true
+  },
+  "5836": {
+    "code": 5836,
+    "data": null,
+    "message": "Campaign already exists",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
+}
+```
+
+:::

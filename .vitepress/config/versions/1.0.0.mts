@@ -1,5 +1,5 @@
 import { ContentData, createContentLoader, defineConfig } from 'vitepress'
-import { getApiTitle } from './shared.mts'
+import { getApiTitle } from '../shared.mts'
 
 const docs = await createContentLoader('**/*.md').load()
 
@@ -8,24 +8,28 @@ const docsMap = docs.reduce(
   new Map<string, ContentData>()
 )
 
+const VERSION = '1.0.0'
+const getVersionLink = (link: string) => `/${VERSION}${link}`
+
 const getApiConfig = (link: string) => {
-  const frontmatter = docsMap.get(`/en${link}`)?.frontmatter
+  const vlink = getVersionLink(link)
+  const frontmatter = docsMap.get(`/${VERSION}${link}`)?.frontmatter
   if (!frontmatter || !frontmatter.api?.method) {
-    return { text: frontmatter?.title || link, link }
+    return { text: frontmatter?.title || link, link: vlink }
   }
   return {
     text: getApiTitle(frontmatter.title, frontmatter.api.method),
-    link
+    link: vlink
   }
 }
 
-export const en = defineConfig({
+export const config_v1 = defineConfig({
   lang: 'en-US',
 
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'API', link: '/projects/create-project' }
+      { text: 'Home', link: getVersionLink('/') },
+      { text: 'API', link: getVersionLink('/projects/create-project') }
     ],
 
     sidebar: [
@@ -34,18 +38,24 @@ export const en = defineConfig({
         items: [
           {
             text: 'Main Features',
-            link: '/overview/main-features'
+            link: getVersionLink('/overview/main-features')
           },
           {
             text: 'Design Concepts',
-            link: '/overview/design-concepts'
+            link: getVersionLink('/overview/design-concepts')
           },
           {
             text: 'Authentication',
-            link: '/overview/authentication'
+            link: getVersionLink('/overview/authentication')
           },
-          { text: 'Response Codes', link: '/overview/response-codes' },
-          { text: 'Data Structure', link: '/overview/data-structure' }
+          {
+            text: 'Response Codes',
+            link: getVersionLink('/overview/response-codes')
+          },
+          {
+            text: 'Data Structure',
+            link: getVersionLink('/overview/data-structure')
+          }
         ]
       },
       {

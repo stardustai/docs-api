@@ -23,10 +23,11 @@ const target = computed(() => {
   if (redirectRouteMap[pathname]) {
     return redirectRouteMap[pathname]
   }
-  if (pathname.startsWith('/en/')) {
-    return pathname.replace('/en/', '/')
+  if (pathname.startsWith('/latest/')) {
+    return pathname.replace('/latest/', '/')
   }
-  return '/'
+  const version = pathname.match(/\/(\w+(\.\w+)+)\//)?.[1]
+  return version ? `/${version}/` : '/'
 })
 
 if (!import.meta.env.SSR) {
