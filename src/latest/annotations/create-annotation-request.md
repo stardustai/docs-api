@@ -33,6 +33,11 @@ api:
       "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://marry-me-scene/test/B.yaml"
     }
   },
+  "taxonomyInfo": {
+    "type": "string",
+    "description": "Additional information about the Helix taxonomy.",
+    "required": false
+  },
   "annotationRequestCallback": {
     "type": "string",
     "description": "Callback URL for receiving updates on annotation request status.",
