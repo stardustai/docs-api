@@ -37,12 +37,12 @@ api:
   },
   "folderId": {
     "type": "string",
-    "description": "Unique identifier for the Helix folder.",
+    "description": "Unique identifier for the Helix folder, with a maximum length of 160 bytes",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   "campaignType": {
     "type": "string",
-    "description": "Type of campaign, must be one of ['Test', 'Formal'].",
+    "description": "Type of campaign, must be one of ['POC', 'Formal'].",
     "default": "Test"
   }
 }
