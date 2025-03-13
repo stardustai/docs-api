@@ -59,51 +59,23 @@ export const config_latest = defineConfig({
         ]
       },
       {
-        text: 'PROJECTS',
+        text: 'FOLDER',
         items: [
-          getApiConfig('/projects/create-folder'),
-          getApiConfig('/projects/create-project'),
-          getApiConfig('/projects/list-project'),
-          getApiConfig('/projects/get-project-info')
+          getApiConfig('/folder/create-folder'),
+          getApiConfig('/folder/get-folder')
         ]
       },
       {
-        text: 'DATASETS',
+        text: 'CAMPAIGN',
         items: [
-          getApiConfig('/datasets/sync-upload'),
-          getApiConfig('/datasets/async-import'),
-          getApiConfig('/datasets/get-status')
+          getApiConfig('/campaign/create')
         ]
       },
       {
         text: 'ANNOTATIONS',
         items: [
-          getApiConfig('/annotations/create-workflow'),
-          getApiConfig('/annotations/request-annotation'),
-          getApiConfig('/annotations/run-stat')
-        ]
-      },
-      {
-        text: 'TASKS',
-        items: [
-          getApiConfig('/projects/list-task'),
-          getApiConfig('/tasks/send-task'),
-          {
-            ...getApiConfig('/tasks/callbacks/'),
-            items: [getApiConfig('/tasks/callbacks/re-sending')]
-          },
-          getApiConfig('/tasks/get-task')
-        ]
-      },
-      {
-        text: 'EXPORT',
-        items: [getApiConfig('/export/export-tasks')]
-      },
-      {
-        text: 'FOLDER',
-        items: [
-          getApiConfig('/folder/create-folder'),
-          getApiConfig('/folder/get-folder')
+          getApiConfig('/annotations-request'),
+          getApiConfig('/annotations-request')
         ]
       }
     ]
