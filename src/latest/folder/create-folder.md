@@ -29,16 +29,14 @@ api:
 
 ```json [responses]
 {
-  "200": [
-    {
-      "code": 200,
-      "message": "Success",
-      "data": null,
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": true
-    }
-  ],
+  "200": {
+    "code": 200,
+    "message": "Success",
+    "data": null,
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": true
+  },
   "500": {
     "code": 5000,
     "data": null,
