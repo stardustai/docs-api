@@ -8,7 +8,7 @@ const docsMap = docs.reduce(
   new Map<string, ContentData>()
 )
 
-const VERSION = '1.0.0'
+const VERSION = 'poc'
 const getVersionLink = (link: string) => `/${VERSION}${link}`
 
 const getApiConfig = (link: string) => {
@@ -23,7 +23,7 @@ const getApiConfig = (link: string) => {
   }
 }
 
-export const config_v1 = defineConfig({
+export const config_poc = defineConfig({
   lang: 'en-US',
 
   themeConfig: {

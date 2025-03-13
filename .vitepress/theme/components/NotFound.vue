@@ -26,8 +26,7 @@ const target = computed(() => {
   if (pathname.startsWith('/latest/')) {
     return pathname.replace('/latest/', '/')
   }
-  const version = pathname.match(/\/(\w+(\.\w+)+)\//)?.[1]
-  return version ? `/${version}/` : '/'
+  return pathname.startsWith('/poc') ? '/poc/' : '/'
 })
 
 if (!import.meta.env.SSR) {
