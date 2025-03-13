@@ -37,18 +37,10 @@ api:
       "date": "2024-05-16 19:03:34",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": true
-    },
-    {
-      "code": 12003,
-      "data": null,
-      "message": "Helix Project already exists",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
     }
   ],
   "500": {
-    "code": 5000,
+    "code": 500,
     "data": null,
     "message": "Service hiccuped, please try again later.",
     "date": "2024-05-16 19:03:34",

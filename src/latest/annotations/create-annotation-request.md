@@ -34,7 +34,7 @@ api:
     }
   },
   "taxonomyInfo": {
-    "type": "string",
+    "type": "json",
     "description": "Additional information about the Helix taxonomy.",
     "required": false
   },
@@ -65,10 +65,10 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "5836": {
-    "code": 5836,
+  "500": {
+    "code": 500,
     "data": null,
-    "message": "Do not create annotation request repeatedly.",
+    "message": "Service hiccuped, please try again later.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
