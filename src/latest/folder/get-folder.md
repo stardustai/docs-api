@@ -1,5 +1,5 @@
 ---
-title: 'Create Folder'
+title: 'Get RS Folder'
 description: 'We will provide a GET API for get the RS folder Info.'
 api:
   method: GET
@@ -16,9 +16,9 @@ api:
 {
   "200": {
     "code": 2000,
-    "message": "请求成功",
+    "message": "Success",
     "data": {
-      "helixProjectId": "123",
+      "helixProjectId": "helixProjectId",
       "name": "helixProjectName"
     },
     "date": "2026-02-06",

@@ -36,7 +36,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "12003": {
+  "500": {
     "code": 12003,
     "data": null,
     "message": "Helix Project already exists",
