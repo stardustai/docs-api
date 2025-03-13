@@ -6,6 +6,9 @@ api:
   url: /campaign/create
 ---
 
+> [!WARNING]
+> The 'taxonomyInfo', 'taxonomyVersion' field is not used in the current version.
+
 ::: request
 
 ```json [body]
@@ -31,7 +34,7 @@ api:
     "required": false
   },
   "taxonomyInfo": {
-    "type": "string",
+    "type": "json",
     "description": "Additional information about the Helix taxonomy.",
     "required": false
   },
@@ -62,10 +65,10 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "5836": {
-    "code": 5836,
+  "500": {
+    "code": 5000,
     "data": null,
-    "message": "Campaign already exists",
+    "message": "Service hiccuped, please try again later.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false

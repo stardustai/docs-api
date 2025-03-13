@@ -6,6 +6,9 @@ api:
   url: /annotation-request
 ---
 
+> [!WARNING]
+> The 'taxonomyInfo' field is not used in the current version.
+
 ::: request
 
 ```json [body]
@@ -65,8 +68,8 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "5836": {
-    "code": 5836,
+  "500": {
+    "code": 5000,
     "data": null,
     "message": "Do not create annotation request repeatedly.",
     "date": "2025-03-13 20:00:00",
