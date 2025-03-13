@@ -26,7 +26,6 @@ const target = computed(() => {
   if (pathname.startsWith('/latest/')) {
     return pathname.replace('/latest/', '/')
   }
-  console.log(pathname)
   const version = pathname.match(/\/(\w+(\.\w+)+)\//)?.[1]
   return version ? `/${version}/` : '/'
 })
