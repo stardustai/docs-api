@@ -46,7 +46,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
 
 ```json [500 Example]
 {
-  "code": 500,
+  "code": 5000,
   "data": null,
   "date": "",
   "message": "Service hiccuped, please try again later",
