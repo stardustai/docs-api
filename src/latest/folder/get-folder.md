@@ -1,6 +1,6 @@
 ---
-title: 'Get RS Folder'
-description: 'We will provide a GET API for get the RS folder Info.'
+title: 'Get Folder'
+description: 'We will provide a GET API for get the folder Info.'
 api:
   method: GET
   url: /folder/{helixProjectId}

@@ -48,18 +48,16 @@ api:
   "200": {
     "code": 200,
     "message": "Success",
-    "data": {
-      "folderId": 1
-    },
-    "date": "2024-05-16 19:03:34",
+    "data": null,
+    "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
   "5836": {
     "code": 5836,
     "data": null,
-    "message": "Folder name already exists",
-    "date": "2024-05-16 19:03:34",
+    "message": "Do not create annotation request repeatedly.",
+    "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   }

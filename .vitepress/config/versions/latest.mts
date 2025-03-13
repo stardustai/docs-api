@@ -29,7 +29,7 @@ export const config_latest = defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: getVersionLink('/') },
-      { text: 'API', link: getVersionLink('/projects/create-project') }
+      { text: 'API', link: getVersionLink('/folder/create-folder') }
     ],
 
     sidebar: [
@@ -67,15 +67,13 @@ export const config_latest = defineConfig({
       },
       {
         text: 'CAMPAIGN',
-        items: [
-          getApiConfig('/campaign/create')
-        ]
+        items: [getApiConfig('/campaign/create-campaign')]
       },
       {
         text: 'ANNOTATIONS',
         items: [
-          getApiConfig('/annotations-request'),
-          getApiConfig('/annotations-request')
+          getApiConfig('/annotations/create-annotation-request'),
+          getApiConfig('/annotations/get-annotation-request')
         ]
       }
     ]
