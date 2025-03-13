@@ -1,23 +1,18 @@
 ---
-title: 'Create Folder'
-description: 'This page will help you get started with creating a folder on Rosetta, which is a set of projects, and return the folder id.'
+title: 'Create Annotation Request'
+description: 'Guidelines for creating an annotation request on Rosetta.'
 api:
-  method: POST
-  url: /folder/create
+  method: GET
+  url: /annotation-request
 ---
 
 ::: request
 
-```json [body]
+```json [param]
 {
-  "name": {
+  "annotationRequestId": {
     "type": "string",
-    "description": "Folder name, must be distinct and the maximum length limit is 60 bytes."
-  },
-  "externalId": {
-    "type": "string",
-    "description": "The mapping ID in your platform, the maximum length limit is 60 bytes.",
-    "required": false
+    "description": "Unique identifier for the annotation request, with a maximum length of 160 bytes."
   }
 }
 ```
