@@ -50,7 +50,7 @@ api:
   "500": {
     "code": 5000,
     "data": null,
-    "message": "Annotation request has not exists.",
+    "message": "Service hiccuped, please try again later.",
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
