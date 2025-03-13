@@ -67,7 +67,7 @@
               </div>
               <div
                 v-if="item.description"
-                class="text-xs"
+                class="text-xs w-4/5"
                 v-html="md.renderInline(item.description)"
               />
             </div>
