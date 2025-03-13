@@ -15,7 +15,7 @@ api:
 ```json [responses]
 {
   "200": {
-    "code": 2000,
+    "code": 200,
     "message": "Success",
     "data": {
       "helixProjectId": "helixProjectId",
