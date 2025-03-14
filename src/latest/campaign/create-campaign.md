@@ -46,7 +46,7 @@ api:
   "campaignType": {
     "type": "string",
     "description": "Type of campaign, must be one of ['POC', 'Formal'].",
-    "default": "Test"
+    "default": "POC"
   }
 }
 ```
@@ -58,21 +58,79 @@ api:
 ```json [responses]
 {
   "200": {
-    "code": 200,
+    "code": 2000,
     "message": "Success",
     "data": null,
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": {
-    "code": 5000,
-    "data": null,
-    "message": "Service hiccuped, please try again later.",
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": false
-  }
+  "500": [
+    {
+      "code": 5000,
+      "data": null,
+      "message": "Service hiccuped, please try again later.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5100,
+      "data": null,
+      "message": "field : xxx can't be empty.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5101,
+      "data": null,
+      "message": "Do not create campaigns repeatedly.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5102,
+      "data": null,
+      "message": "Unknown annotation type.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5103,
+      "data": null,
+      "message": "Campaigns is already exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5104,
+      "data": null,
+      "message": "Campaigns create has error.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5105,
+      "data": null,
+      "message": "Campaigns not exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 5106,
+      "data": null,
+      "message": "Campaigns workflow type error.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    }
+  ]
 }
 ```
 
