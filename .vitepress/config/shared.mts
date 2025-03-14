@@ -53,7 +53,7 @@ export const shared = defineConfig({
     logo: '/favicon.ico',
 
     api: {
-      base: 'https://portal-prod.rosettalab.top/rosetta-open',
+      base: 'https://${domain}/rosetta-open',
       authorization: {
         'X-STARDUST-KEY': '<X-STARDUST-KEY>',
         'X-TS': '<X-TS>',
@@ -162,6 +162,7 @@ export const shared = defineConfig({
         content: string
         hidden: boolean
       }
+
       const getTokens = (tokens: Token[], name: string, start: number) => {
         let end = false
         return tokens.filter((token, i) => {
