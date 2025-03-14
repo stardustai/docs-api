@@ -46,7 +46,7 @@ api:
   "campaignType": {
     "type": "string",
     "description": "Type of campaign, must be one of ['POC', 'Formal'].",
-    "default": "Test"
+    "default": "POC"
   }
 }
 ```
