@@ -61,7 +61,7 @@ api:
 ```json [responses]
 {
   "200": {
-    "code": 200,
+    "code": 2000,
     "message": "Success",
     "data": null,
     "date": "2025-03-13 20:00:00",
