@@ -75,7 +75,7 @@ api:
       "success": false
     },
     {
-      "code": 5100,
+      "code": 51000,
       "data": null,
       "message": "field : xxx can't be empty.",
       "date": "2025-03-13 20:00:00",
@@ -83,7 +83,7 @@ api:
       "success": false
     },
     {
-      "code": 5101,
+      "code": 51001,
       "data": null,
       "message": "Do not create campaigns repeatedly.",
       "date": "2025-03-13 20:00:00",
@@ -91,7 +91,7 @@ api:
       "success": false
     },
     {
-      "code": 5102,
+      "code": 51002,
       "data": null,
       "message": "Unknown annotation type.",
       "date": "2025-03-13 20:00:00",
@@ -99,7 +99,7 @@ api:
       "success": false
     },
     {
-      "code": 5103,
+      "code": 51003,
       "data": null,
       "message": "Campaigns is already exists.",
       "date": "2025-03-13 20:00:00",
@@ -107,7 +107,7 @@ api:
       "success": false
     },
     {
-      "code": 5104,
+      "code": 51004,
       "data": null,
       "message": "Campaigns create has error.",
       "date": "2025-03-13 20:00:00",
@@ -115,7 +115,7 @@ api:
       "success": false
     },
     {
-      "code": 5105,
+      "code": 51005,
       "data": null,
       "message": "Campaigns not exists.",
       "date": "2025-03-13 20:00:00",
@@ -123,7 +123,7 @@ api:
       "success": false
     },
     {
-      "code": 5106,
+      "code": 51006,
       "data": null,
       "message": "Campaigns workflow type error.",
       "date": "2025-03-13 20:00:00",
