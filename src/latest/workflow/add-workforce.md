@@ -6,6 +6,9 @@ api:
   url: /workflow/addWorkforce
 ---
 
+> [!WARNING]
+> The 'annotationRequestId' field is not used in the current version.
+
 ::: request
 
 ```json [body]
@@ -17,12 +20,12 @@ api:
   },
   "poolName": {
     "type": "string",
-    "description": "poolName min size is 1",
+    "description": "Name of the corresponding pool; The poolName is checked to see if it matches the campaignId or annotationRequestId.",
     "default": "Distribution Pool"
   },
   "aliceNameList": {
     "type": "string[]",
-    "description": "provide at least one aliceName."
+    "description": "The alice user name collection to be added to the pool."
   },
   "annotationRequestId": {
     "type": "string",
