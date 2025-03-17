@@ -101,7 +101,7 @@ api:
     {
       "code": 51003,
       "data": null,
-      "message": "Campaigns is already exists.",
+      "message": "Campaign id is already exists.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false
@@ -109,7 +109,7 @@ api:
     {
       "code": 51004,
       "data": null,
-      "message": "Campaigns create has error.",
+      "message": "Campaign name is already exists.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false
@@ -117,13 +117,21 @@ api:
     {
       "code": 51005,
       "data": null,
-      "message": "Campaigns not exists.",
+      "message": "Campaigns create has error.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false
     },
     {
       "code": 51006,
+      "data": null,
+      "message": "Campaigns not exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 51007,
       "data": null,
       "message": "Campaigns workflow type error.",
       "date": "2025-03-13 20:00:00",

@@ -52,38 +52,40 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": {
-    "code": 500,
-    "data": null,
-    "message": "Service hiccuped, please try again later.",
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": false
-  },
-  "51005": {
-    "code": 51005,
-    "data": null,
-    "message": "Campaign not exists.",
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": false
-  },
-  "55003": {
-    "code": 55003,
-    "data": null,
-    "message": "Pools are not the type of work",
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": false
-  },
-  "55004": {
-    "code": 55004,
-    "data": null,
-    "message": "The AR pool subtype must match the campaign type",
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": false
-  }
+  "500": [
+    {
+      "code": 500,
+      "data": null,
+      "message": "Service hiccuped, please try again later.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 51005,
+      "data": null,
+      "message": "Campaign not exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 55003,
+      "data": null,
+      "message": "Pools are not the type of work",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 55004,
+      "data": null,
+      "message": "The AR pool subtype must match the campaign type",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    }
+  ]
 }
 ```
 
