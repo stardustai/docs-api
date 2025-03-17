@@ -70,6 +70,10 @@ export const config_latest = defineConfig({
         items: [getApiConfig('/campaign/create-campaign')]
       },
       {
+        text: 'WORKFLOW',
+        items: [getApiConfig('/workflow/add-workforce')]
+      },
+      {
         text: 'ANNOTATIONS',
         items: [
           getApiConfig('/annotations/create-annotation-request'),
