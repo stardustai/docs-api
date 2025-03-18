@@ -19,7 +19,8 @@ api:
     "message": "Success",
     "data": {
       "helixProjectId": "helixProjectId",
-      "name": "helixProjectName"
+      "name": "helixProjectName",
+      "helixBucketName": "helixBucketName"
     },
     "date": "2025-03-13 20:00:00",
     "requestId": "7610aa38c0fc409d98c827a879d9cae5",
