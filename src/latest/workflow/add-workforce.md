@@ -3,7 +3,7 @@ title: 'Add Workforce'
 description: 'Guidelines for add workforce on Rosetta.'
 api:
   method: POST
-  url: /workflow/addWorkforce
+  url: /campaign/workflow/addWorkforce
 ---
 
 > [!WARNING]
