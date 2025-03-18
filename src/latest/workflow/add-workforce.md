@@ -68,6 +68,14 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
+  "53003": {
+    "code": 53003,
+    "data": null,
+    "message": "Annotation request has not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
   "55003": {
     "code": 55003,
     "data": null,
