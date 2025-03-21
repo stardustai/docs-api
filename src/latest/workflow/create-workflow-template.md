@@ -1,5 +1,5 @@
 ---
-title: 'Create Workflow Template'
+title: '[WIP]Create Workflow Template'
 description: 'Helix calls to create a custom workflow template and returns the workflow template ID, which can be used when creating a Campaign '
 api:
   method: POST
@@ -13,12 +13,12 @@ api:
   "nodes": {
     "type": "map[]",
     "description": "workflow pool nodes",
-    "default": [{"name":"disttribution","type":"DISTRIBUTION"}]
+    "default": [{ "name": "disttribution", "type": "DISTRIBUTION" }]
   },
   "edges": {
     "type": "map[]",
     "description": "workflow pool edges.",
-    "default": [{"from":"annotation","to":"check"}]
+    "default": [{ "from": "annotation", "to": "check" }]
   },
   "name": {
     "type": "string",
