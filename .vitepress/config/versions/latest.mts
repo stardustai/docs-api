@@ -71,7 +71,10 @@ export const config_latest = defineConfig({
       },
       {
         text: 'WORKFLOW',
-        items: [getApiConfig('/workflow/add-workforce')]
+        items: [
+          getApiConfig('/workflow/add-workforce'),
+          getApiConfig('/workflow/create-workflow-template')
+        ]
       }
       // ,
       // {
