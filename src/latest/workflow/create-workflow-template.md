@@ -6,22 +6,19 @@ api:
   url: /workflow/template/create
 ---
 
-> [!WARNING]
-> The 'annotationRequestId' field is not used in the current version.
-
 ::: request
 
 ```json [body]
 {
   "nodes": {
-    "type": "json",
+    "type": "map[]",
     "description": "workflow pool nodes",
-    "default": "[{'name':'annotation','type':1}]"
+    "default": [{"name":"disttribution","type":"DISTRIBUTION"}]
   },
   "edges": {
-    "type": "json",
+    "type": "map[]",
     "description": "workflow pool edges.",
-    "default": "[{'from':'annotation','to':'check'}]"
+    "default": [{"from":"annotation","to":"check"}]
   },
   "name": {
     "type": "string",
