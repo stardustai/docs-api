@@ -67,9 +67,7 @@ export const shared = defineConfig({
 
     search: {
       provider: 'local'
-    },
-
-    socialLinks: [{ icon: 'github', link: 'https://github.com/stardustai' }]
+    }
   },
   vite: {
     resolve: {
