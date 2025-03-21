@@ -75,3 +75,19 @@ api:
 ```
 
 :::
+
+Status Enum
+
+| Value | Description                                                                 |
+| ----- | --------------------------------------------------------------------------- |
+| 0     | Task creation failed                                                        |
+| 1     | Task creation successful (Task in Rosetta Distribution Pool)                |
+| 2     | Waiting for annotation (Task in Rosetta Annotation Pool)                    |
+| 3     | Annotation in progress (Task in Rosetta Annotation Pool)                    |
+| 4     | Annotation completed (Task in Rosetta Annotation Pool)                      |
+| 5     | Waiting for review (Task in Rosetta Review Pool)                            |
+| 6     | Review in progress (Task in Rosetta Review Pool)                            |
+| 8     | Waiting for QC (Task in Rosetta Sampling Pool)                              |
+| 9     | QC in progress (Task in Rosetta Sampling Pool)                              |
+| 10    | QC completed (Task in Rosetta Sampling Pool) -> Generate QC report on batch |
+| 11    | Labels approved (Move the batch of tasks to Completion Pool)                |
