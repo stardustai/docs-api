@@ -79,6 +79,10 @@ export const config_latest = defineConfig({
           getApiConfig('/annotations/create-annotation-request'),
           getApiConfig('/annotations/get-annotation-request')
         ]
+      },
+      {
+        text: 'TASK',
+        items: [getApiConfig('/task/get-task')]
       }
     ]
   }
