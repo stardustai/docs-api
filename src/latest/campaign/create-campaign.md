@@ -25,7 +25,7 @@ api:
   },
   "workflowType": {
     "type": "string",
-    "description": "Type of workflow, must be one of ['Manual', 'PreLabeling'].",
+    "description": "Type of workflow, must be one of ['Manual Template', 'PreLabeling Template'].",
     "default": "Manual"
   },
   "taxonomyVersion": {
@@ -117,7 +117,7 @@ api:
     {
       "code": 51005,
       "data": null,
-      "message": "Campaigns create has error.",
+      "message": "Campaign create has error.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false
@@ -125,7 +125,7 @@ api:
     {
       "code": 51006,
       "data": null,
-      "message": "Campaigns not exists.",
+      "message": "Campaign not exists.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false
@@ -133,7 +133,7 @@ api:
     {
       "code": 51007,
       "data": null,
-      "message": "Campaigns workflow type error.",
+      "message": "Campaign workflow type error.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false

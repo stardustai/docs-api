@@ -33,7 +33,7 @@ api:
     "description": "Mapping of scene IDs relevant to the annotation request.",
     "default": {
       "550e8400-e29b-41d4-a716-446655440000": "gs://marry-me-scene/test/A.yaml",
-      "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://marry-me-scene/test/B.yaml"
+      "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://marry-me-scene/test/B.json"
     }
   },
   "taxonomyInfo": {
