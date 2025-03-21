@@ -38,10 +38,7 @@ api:
       },
       "errorSceneIdMap": {
         "550e8400-e29b-41d4-a716-446655440000": "Data type mismatch",
-        "f47ac10b-58cc-4372-a567-0e02b2c3d479": "Data type mismatch",
-        "6fa459ea-ee8a-3ca4-894e-db77e160355e": "Data type mismatch",
-        "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b": "Data type mismatch",
-        "3b241101-e2bb-4255-8caf-4136c566a962": "Data type mismatch"
+        "f47ac10b-58cc-4372-a567-0e02b2c3d479": "Scene id already exists"
       }
     },
     "date": "2024-05-16 19:03:34",
@@ -60,3 +57,12 @@ api:
 ```
 
 :::
+
+### Status Enum
+
+| Value         | Description                              |
+| ------------- | ---------------------------------------- |
+| ID_NOT_EXISTS | Annotation request does not exist        |
+| PROCESSING    | Annotation task is in progress           |
+| FINISHED      | Annotation task has been completed       |
+| FAILED        | An error occurred in the annotation task |
