@@ -13,17 +13,17 @@ api:
   "campaignId": {
     "type": "string",
     "description": "Helix Campaign ID, with a maximum length of 160 bytes.",
-    "default": "campaignIdTest"
+    "default": "a3f8b6e4-9c1d-4d8a-93b2-7f7e8f3a1d5e"
   },
   "annotationRequestId": {
     "type": "string",
     "description": "Helix Annotation Request ID, with a maximum length of 160 bytes.",
-    "default": "annotationRequestIdTest"
+    "default": "f29c4d8e-6a3b-42e8-bd3f-8e1a9d6c2b7f"
   },
   "sceneId": {
     "type": "string",
     "description": "Helix Scene ID, RS taskId will align with the sceneId.",
-    "default": "sceneIdTest"
+    "default": "d7a8c3f9-4b2e-4e6d-a1b9-3f7c8d5e2a6f"
   }
 }
 ```
@@ -38,8 +38,8 @@ api:
     "code": 2000,
     "message": "Success",
     "data": {
-      "viewUrl": "https://xxx/task/1234/234234123133374715904/viewOnly",
-      "status": "helixProjectName"
+      "viewUrl": "https:/${domain}/rosetta-open/task/1234/234234123133374715904/viewOnly",
+      "status": 1
     },
     "date": "2025-03-13 20:00:00",
     "requestId": "7610aa38c0fc409d98c827a879d9cae5",
