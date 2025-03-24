@@ -1,5 +1,5 @@
 ---
-title: 'Create Annotation Request'
+title: '[WIP] Create Annotation Request'
 description: 'Guidelines for creating an annotation request on Rosetta.'
 api:
   method: POST
@@ -33,7 +33,7 @@ api:
     "description": "Mapping of scene IDs relevant to the annotation request.",
     "default": {
       "550e8400-e29b-41d4-a716-446655440000": "gs://marry-me-scene/test/A.yaml",
-      "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://marry-me-scene/test/B.yaml"
+      "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://marry-me-scene/test/B.json"
     }
   },
   "taxonomyInfo": {
@@ -68,14 +68,48 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": {
-    "code": 5000,
-    "data": null,
-    "message": "Service hiccuped, please try again later.",
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
-    "success": false
-  }
+  "500": [
+    {
+      "code": 5000,
+      "data": null,
+      "message": "Service hiccuped, please try again later.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 53001,
+      "data": null,
+      "message": "Do not create annotation request repeatedly.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 51008,
+      "data": null,
+      "message": "Campaign not exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 52001,
+      "data": null,
+      "message": "Create workflow failed.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 52002,
+      "data": null,
+      "message": "Workflow pool is empty.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    }
+  ]
 }
 ```
 
