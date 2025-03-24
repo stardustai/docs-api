@@ -6,6 +6,9 @@ api:
   url: /annotation-request
 ---
 
+> [!WARNING]
+> The fields 'successSchedule' and 'errorSchedule' are not included in the response of the current version.
+
 ::: request
 
 ```json [query]
@@ -30,16 +33,14 @@ api:
     "data": {
       "status": "FINISHED",
       "successTaskMap": {
-        "466917967054114816": "550e8400-e29b-41d4-a716-446655440000",
-        "466917967054114817": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-        "466917967054114818": "6fa459ea-ee8a-3ca4-894e-db77e160355e",
-        "466917967054114819": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b",
-        "466917967054114820": "3b241101-e2bb-4255-8caf-4136c566a962"
+        "466917967054114816": "550e8400-e29b-41d4-a716-446655440000"
       },
       "errorSceneIdMap": {
         "550e8400-e29b-41d4-a716-446655440000": "Data type mismatch",
         "f47ac10b-58cc-4372-a567-0e02b2c3d479": "Scene id already exists"
-      }
+      },
+      "successSchedule": 33.33,
+      "errorSchedule": 66.67
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
