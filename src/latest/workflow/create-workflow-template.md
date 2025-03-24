@@ -1,5 +1,5 @@
 ---
-title: '[WIP]Create Workflow Template'
+title: '[WIP] Create Workflow Template'
 description: 'Helix calls to create a custom workflow template and returns the workflow template ID, which can be used when creating a Campaign '
 api:
   method: POST
