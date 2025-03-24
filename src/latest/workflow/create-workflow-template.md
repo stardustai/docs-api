@@ -37,7 +37,7 @@ api:
   },
   "type": {
     "type": "string",
-    "description": "DISTRIBUTION ANNOTATION CHECK SAMPLING ALGORITHM COMPLETE",
+    "description": "The enumeration is as follows: DISTRIBUTION ANNOTATION CHECK SAMPLING ALGORITHM COMPLETE",
     "default": "DISTRIBUTION"
   }
 }
