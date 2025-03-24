@@ -15,7 +15,7 @@ api:
     "description": "workflow pool nodes",
     "default": [
       {
-        "name": "disttribution",
+        "name": "distribution",
         "type": "DISTRIBUTION"
       }
     ]
