@@ -86,6 +86,22 @@ api:
       "success": false
     },
     {
+      "code": 53004,
+      "data": null,
+      "message": "annotationRequestId is already exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 53005,
+      "data": null,
+      "message": "annotationRequestName is already exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
       "code": 51008,
       "data": null,
       "message": "Campaign not exists.",
