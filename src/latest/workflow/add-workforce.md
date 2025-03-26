@@ -6,9 +6,6 @@ api:
   url: /add-workforce
 ---
 
-> [!WARNING]
-> The 'annotationRequestId' field is not used in the current version.
-
 ::: request
 
 ```json [body]
