@@ -68,7 +68,7 @@ api:
     "code": 2000,
     "message": "Success",
     "data": {
-      "id": "21221"
+      "name": "template name"
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
@@ -140,6 +140,95 @@ api:
   }
 }
 
+```
+
+:::
+
+::: code-group
+
+```ts [Slot]
+interface Slot {
+  key: '${uuid}'
+  type: 'slot'
+  label: 'label'
+  slotSpecification: {
+    type:
+      | 'box3d'
+      | 'line3d'
+      | 'polygon3d'
+      | 'point3d'
+      | 'box2d'
+      | 'ellipse'
+      | 'polygon'
+      | 'point'
+  }
+}
+```
+
+```ts [Input]
+interface Input {
+  key: '${uuid}'
+  type: 'input'
+  label: 'label'
+  inputSpecification: {
+    type:
+      | 'text'
+      | 'boolean'
+      | 'select'
+      | 'multiple-select'
+      | 'nested-select'
+      | 'multiple-nested-select'
+    default: 'value1'
+    items?: [
+      {
+        label: 'label'
+        value: 'value1'
+        children: [
+          {
+            label: 'label'
+            value: 'value2'
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+```ts [SlotChildren]
+interface SlotChildren {
+  key: '${uuid}'
+  type: 'slotChildren'
+  label: 'label'
+  slotSpecification: {
+    imageSourceMapping: ['box2d-[73c98]']
+    type: Slot['type']
+  }
+  children: [
+    {
+      key: 'box2d-[73c98]'
+      type: 'slot'
+      label: 'label'
+      slotSpecification: {
+        type: Slot['type']
+      }
+    },
+    {
+      key: 'select-[7a8cb]'
+      type: 'input'
+      label: 'label'
+      inputSpecification: {
+        type: Input['type']
+        items: [
+          {
+            label: 'label'
+            value: 'value'
+          }
+        ]
+      }
+    }
+  ]
+}
 ```
 
 :::
