@@ -12,12 +12,12 @@ api:
 {
   "campaignId": {
     "type": "string",
-    "description": "Helix Campaign ID, with a maximum length of 160 bytes.",
+    "description": "Helix Campaign ID",
     "default": "a3f8b6e4-9c1d-4d8a-93b2-7f7e8f3a1d5e"
   },
   "annotationRequestId": {
     "type": "string",
-    "description": "Helix Annotation Request ID, with a maximum length of 160 bytes.",
+    "description": "Helix Annotation Request ID",
     "default": "f29c4d8e-6a3b-42e8-bd3f-8e1a9d6c2b7f"
   },
   "sceneId": {
@@ -66,6 +66,14 @@ api:
       "code": 56001,
       "data": null,
       "message": "SceneId is not exists.",
+      "date": "2025-03-13 20:00:00",
+      "requestId": "864b70706a7349ea83e177a49800464f",
+      "success": false
+    },
+    {
+      "code": 51008,
+      "data": null,
+      "message": "Campaign not exists.",
       "date": "2025-03-13 20:00:00",
       "requestId": "864b70706a7349ea83e177a49800464f",
       "success": false
