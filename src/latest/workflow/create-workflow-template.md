@@ -1,9 +1,9 @@
 ---
 title: '[WIP]Create Workflow Template'
-description: 'Helix calls to create a custom workflow template and returns the workflow template ID, which can be used when creating a Campaign '
+description: 'Helix calls to create a custom workflow template and returns the workflow template anme, which can be used when creating a Campaign '
 api:
   method: POST
-  url: /workflow/template/create
+  url: /workflow-template
 ---
 
 ::: request
@@ -67,9 +67,7 @@ api:
   "2000": {
     "code": 2000,
     "message": "Success",
-    "data": {
-      "name": "template name"
-    },
+    "data": "template name",
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
@@ -137,98 +135,17 @@ api:
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
+  },
+   "50529": {
+    "code": 50529,
+    "data": null,
+    "message": "TemplateName is already exists.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
   }
 }
 
-```
-
-:::
-
-::: code-group
-
-```ts [Slot]
-interface Slot {
-  key: '${uuid}'
-  type: 'slot'
-  label: 'label'
-  slotSpecification: {
-    type:
-      | 'box3d'
-      | 'line3d'
-      | 'polygon3d'
-      | 'point3d'
-      | 'box2d'
-      | 'ellipse'
-      | 'polygon'
-      | 'point'
-  }
-}
-```
-
-```ts [Input]
-interface Input {
-  key: '${uuid}'
-  type: 'input'
-  label: 'label'
-  inputSpecification: {
-    type:
-      | 'text'
-      | 'boolean'
-      | 'select'
-      | 'multiple-select'
-      | 'nested-select'
-      | 'multiple-nested-select'
-    default: 'value1'
-    items?: [
-      {
-        label: 'label'
-        value: 'value1'
-        children: [
-          {
-            label: 'label'
-            value: 'value2'
-          }
-        ]
-      }
-    ]
-  }
-}
-```
-
-```ts [SlotChildren]
-interface SlotChildren {
-  key: '${uuid}'
-  type: 'slotChildren'
-  label: 'label'
-  slotSpecification: {
-    imageSourceMapping: ['box2d-[73c98]']
-    type: Slot['type']
-  }
-  children: [
-    {
-      key: 'box2d-[73c98]'
-      type: 'slot'
-      label: 'label'
-      slotSpecification: {
-        type: Slot['type']
-      }
-    },
-    {
-      key: 'select-[7a8cb]'
-      type: 'input'
-      label: 'label'
-      inputSpecification: {
-        type: Input['type']
-        items: [
-          {
-            label: 'label'
-            value: 'value'
-          }
-        ]
-      }
-    }
-  ]
-}
 ```
 
 :::

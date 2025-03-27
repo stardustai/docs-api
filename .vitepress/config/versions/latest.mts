@@ -73,12 +73,13 @@ export const config_latest = defineConfig({
         text: 'WORKFLOW',
         items: [
           getApiConfig('/workflow/add-workforce'),
-          getApiConfig('/workflow/create-workflow-template')
+          getApiConfig('/workflow/create-workflow-template'),
+          getApiConfig('/workflow/get-workflow-template')
         ]
       },
       {
-        text: 'ANNOTATIONS TOOL',
-        items: [getApiConfig('/annotations-tool/campaign-bind')]
+        text: 'ANNOTATIONSTOOL',
+        items: [getApiConfig('/annotationTool/bind-annotaion-tool')]
       }
     ]
   }
