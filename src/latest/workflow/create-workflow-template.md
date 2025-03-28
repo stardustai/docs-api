@@ -1,9 +1,9 @@
 ---
-title: '[WIP] Create Workflow Template'
-description: 'Helix calls to create a custom workflow template and returns the workflow template ID, which can be used when creating a Campaign '
+title: '[WIP]Create Workflow Template'
+description: 'Helix calls to create a custom workflow template and returns the workflow template anme, which can be used when creating a Campaign '
 api:
   method: POST
-  url: /workflow/template/create
+  url: /workflow-template
 ---
 
 ::: request
@@ -13,22 +13,12 @@ api:
   "nodes": {
     "type": "map[]",
     "description": "workflow pool nodes",
-    "default": [
-      {
-        "name": "distribution",
-        "type": "DISTRIBUTION"
-      }
-    ]
+    "default": [{ "name": "disttribution", "type": "DISTRIBUTION" }]
   },
   "edges": {
     "type": "map[]",
     "description": "workflow pool edges.",
-    "default": [
-      {
-        "from": "annotation",
-        "to": "check"
-      }
-    ]
+    "default": [{ "from": "annotation", "to": "check" }]
   },
   "name": {
     "type": "string",
@@ -72,85 +62,90 @@ api:
 
 ::: result
 
-```json [responses]
+```json[responses]
 {
-  "200": {
+  "2000": {
     "code": 2000,
     "message": "Success",
-    "data": {
-      "id": "21221"
-    },
+    "data": "template name",
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": [
-    {
-      "code": 5000,
-      "data": null,
-      "message": "Service hiccuped, please try  again later.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50522,
-      "data": null,
-      "message": "The pool vertex information is incorrect",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50523,
-      "data": null,
-      "message": "The last pool is not the finish pool.",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50524,
-      "data": null,
-      "message": "The workflow template name already exists.",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50525,
-      "data": null,
-      "message": "The pool name in the workflow template is the same.",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50526,
-      "data": null,
-      "message": "There are some pools that have no edges.",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50527,
-      "data": null,
-      "message": "The annotaion/check/sampling/algorithm  pool can output only one edge.",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 50528,
-      "data": null,
-      "message": "The number of pools exceeds the limit of 20.",
-      "date": "2024-05-16 19:03:34",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    }
-  ]
+    "5000": {
+    "code": 5000,
+    "data": null,
+    "message": "Service hiccuped, please try  again later.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "50522": {
+    "code": 50522,
+    "data": null,
+    "message": "The pool vertex information is incorrect",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "50523": {
+    "code": 50523,
+    "data": null,
+    "message": "The last pool is not the finish pool.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+   "50524": {
+    "code": 50524,
+    "data": null,
+    "message": "The workflow template name already exists.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+   "50525": {
+    "code": 50525,
+    "data": null,
+    "message": "The pool name in the workflow template is the same.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+    "50526": {
+    "code": 50526,
+    "data": null,
+    "message": "There are some pools that have no edges.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+    "50527": {
+    "code": 50527,
+    "data": null,
+    "message": "The annotaion/check/sampling/algorithm  pool can output only one edge.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+   "50528": {
+    "code": 50528,
+    "data": null,
+    "message": "The number of pools exceeds the limit of 20.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+   "50529": {
+    "code": 50529,
+    "data": null,
+    "message": "TemplateName is already exists.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
 }
+
 ```
 
 :::

@@ -73,7 +73,8 @@ export const config_latest = defineConfig({
         text: 'WORKFLOW',
         items: [
           getApiConfig('/workflow/add-workforce'),
-          getApiConfig('/workflow/create-workflow-template')
+          getApiConfig('/workflow/create-workflow-template'),
+          getApiConfig('/workflow/get-workflow-template')
         ]
       },
       {
@@ -86,6 +87,10 @@ export const config_latest = defineConfig({
       {
         text: 'TASK',
         items: [getApiConfig('/task/get-task')]
+      },
+      {
+        text: 'ANNOTATIONSTOOL',
+        items: [getApiConfig('/annotationTool/bind-annotaion-tool')]
       }
     ]
   }
