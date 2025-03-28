@@ -1,9 +1,9 @@
 ---
-title: '[WIP]CREATE ANNOTATIONS TOOL'
-description: 'Guidelines for create annotations tool info on Rosetta.'
+title: '[WIP]Create Taxonomy'
+description: 'Guidelines for create taxonomy info on Rosetta.'
 api:
   method: POST
-  url: /annotations-tool
+  url: /taxonomy
 ---
 
 ::: request
