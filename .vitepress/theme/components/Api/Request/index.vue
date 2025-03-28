@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import JSON5 from 'json5'
 import { computed, ref, reactive } from 'vue'
 import Params from './Params/index.vue'
 import Curls from './Curls/index.vue'
@@ -46,6 +47,6 @@ const request = computed<[string, string, Record<string, Data>][]>(() => {
   if (!props.data || typeof props.data !== 'string') {
     return props.data || []
   }
-  return JSON.parse(decodeURIComponent(props.data))
+  return JSON5.parse(decodeURIComponent(props.data))
 })
 </script>
