@@ -30,6 +30,7 @@
     "classnames": "~2.5.1",
     "curl-generator": "~0.4.0",
     "curlconverter": "~4.10.1",
+    "json5": "^2.2.3",
     "markdown-it": "~14.1.0",
     "shiki": "~1.10.3",
     "vue": "~3.4.30",

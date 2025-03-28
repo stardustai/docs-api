@@ -92,6 +92,7 @@ export default {
 </script>
 
 <script setup lang="ts">
+import JSON5 from 'json5'
 import classnames from 'classnames'
 import markdownit from 'markdown-it'
 import { computed, reactive } from 'vue'
@@ -115,7 +116,7 @@ const props = defineProps<{
 
 const params = computed<Record<string, Data>>(() => {
   if (typeof props.data !== 'string') return props.data
-  return JSON.parse(decodeURIComponent(props.data))
+  return JSON5.parse(decodeURIComponent(props.data))
 })
 
 const isObject = (item: Data): item is ObjectData => {

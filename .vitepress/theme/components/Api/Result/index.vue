@@ -6,6 +6,7 @@
 </template>
 
 <script setup lang="ts">
+import JSON5 from 'json5'
 import { computed } from 'vue'
 import Example from './Example.vue'
 import Params from '../Request/Params/index.vue'
@@ -16,6 +17,6 @@ const props = defineProps<{
 
 const result = computed<[string, string, Record<string, any>]>(() => {
   if (typeof props.data !== 'string') return props.data
-  return JSON.parse(decodeURIComponent(props.data))
+  return JSON5.parse(decodeURIComponent(props.data))
 })
 </script>
