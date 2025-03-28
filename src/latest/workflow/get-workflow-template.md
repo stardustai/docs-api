@@ -1,5 +1,5 @@
 ---
-title: '[WIP]Create Workflow Template'
+title: '[WIP]Get Workflow Template'
 description: 'Helix calls to get a custom workflow by template name, which can be used when creating a Campaign '
 api:
   method: GET
@@ -24,15 +24,14 @@ api:
 
 ```json[responses]
 {
-  "2000": {
+   "2000":{
     "code": 2000,
     "message": "Success",
-    "data": "{"edges":[ { "from": "Disribution Pool", "to": "Annotation Pool" },{ "from": "Annotation Pool", "to": "Review Pool" } ,{ "from": "Review Pool", "to": "Sampling Pool" },{ "from": "Sampling Pool", "to": "Completion Pool" }],
-"nodes":[ { "name": "Disribution Pool", "type": "DISTRIBUTION" }, { "name": "Annotation Pool", "type": "ANNOTATION" } , { "name": "Review Pool", "type": "CHECK" },{ "name": "Sampling Pool", "type": "SAMPLING" },{ "name": "Sampling Pool", "type": "SAMPLING" },{ "name": "Completion Pool", "type": "COMPLETE" } ]}",
-    "date": "2024-05-16 19:03:34",
-    "requestId": "864b70706a7349ea83e177a49800464f",
+    "data": "{\"nodes\":[{\"name\":\"Disribution Pool\",\"type\":\"DISTRIBUTION\"},{\"name\":\"Annotation Pool\",\"type\":\"ANNOTATION\"},{\"name\":\"Review Pool\",\"type\":\"CHECK\"},{\"name\":\"Sampling Pool\",\"type\":\"SAMPLING\"},{\"name\":\"Completion Pool\",\"type\":\"COMPLETE\"}],\"edges\":[{\"from\":\"Disribution Pool\",\"to\":\"Annotation Pool\"},{\"from\":\"Annotation Pool\",\"to\":\"Review Pool\"},{\"from\":\"Review Pool\",\"to\":\"Sampling Pool\"},{\"from\":\"Sampling Pool\",\"to\":\"Completion Pool\"}]}",
+    "date": "2025-03-28 15:33:41",
+    "requestId": "d32d4438f6db423dacf17392a1ccd312",
     "success": true
-  },
+},
     "5000": {
     "code": 5000,
     "data": null,
@@ -49,7 +48,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   }
-
+}
 ```
 
 :::
