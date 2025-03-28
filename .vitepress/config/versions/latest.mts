@@ -78,7 +78,7 @@ export const config_latest = defineConfig({
         ]
       },
       {
-        text: 'ANNOTATIONS',
+        text: 'TAXONOMY',
         items: [
           getApiConfig('/annotations/create-annotation-request'),
           getApiConfig('/annotations/get-annotation-request')
