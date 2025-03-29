@@ -11,11 +11,11 @@ description: Stardust's API uses the following HTTP codes and business-specific 
     <th>Description</th>
   </tr>
   <tr>
-    <td>200</td>
+    <td>2000</td>
     <td>Success</td>
   </tr>
   <tr>
-    <td>500</td>
+    <td>5000</td>
     <td>Service hiccuped, please try again later</td>
   </tr>
 </table>

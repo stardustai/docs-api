@@ -60,7 +60,7 @@ api:
 
 ```json [responses]
 {
-  "200": {
+  "2000": {
     "code": 2000,
     "message": "Success",
     "data": null,
@@ -68,64 +68,62 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": [
-    {
-      "code": 5000,
-      "data": null,
-      "message": "Service hiccuped, please try again later.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 53001,
-      "data": null,
-      "message": "Do not create annotation request repeatedly.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 53004,
-      "data": null,
-      "message": "annotationRequestId is already exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 53005,
-      "data": null,
-      "message": "annotationRequestName is already exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 51008,
-      "data": null,
-      "message": "Campaign not exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 52001,
-      "data": null,
-      "message": "Create workflow failed.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 52002,
-      "data": null,
-      "message": "Workflow pool is empty.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    }
-  ]
+  "5000": {
+    "code": 5000,
+    "data": null,
+    "message": "Service hiccuped, please try again later.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "53001": {
+    "code": 53001,
+    "data": null,
+    "message": "Do not create annotation request repeatedly.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "53004": {
+    "code": 53004,
+    "data": null,
+    "message": "annotationRequestId is already exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "53005": {
+    "code": 53005,
+    "data": null,
+    "message": "annotationRequestName is already exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "51008": {
+    "code": 51008,
+    "data": null,
+    "message": "Campaign not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "52001": {
+    "code": 52001,
+    "data": null,
+    "message": "Create workflow failed.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "52002": {
+    "code": 52002,
+    "data": null,
+    "message": "Workflow pool is empty.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
 }
 ```
 

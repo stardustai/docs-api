@@ -34,7 +34,7 @@ api:
 
 ```json [responses]
 {
-  "200": {
+  "2000": {
     "code": 2000,
     "message": "Success",
     "data": null,
@@ -42,56 +42,54 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": [
-    {
-      "code": 5000,
-      "data": null,
-      "message": "Service hiccuped, please try again later.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 54001,
-      "data": null,
-      "message": "Helix project already exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 54002,
-      "data": null,
-      "message": "HelixProjectId already exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 54003,
-      "data": null,
-      "message": "Name already exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 54005,
-      "data": null,
-      "message": "Create folder failed.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 54006,
-      "data": null,
-      "message": "HelixBucketName already exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    }
-  ]
+  "5000": {
+    "code": 5000,
+    "data": null,
+    "message": "Service hiccuped, please try again later.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "54001": {
+    "code": 54001,
+    "data": null,
+    "message": "Helix project already exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "54002": {
+    "code": 54002,
+    "data": null,
+    "message": "HelixProjectId already exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "54003": {
+    "code": 54003,
+    "data": null,
+    "message": "Name already exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "54005": {
+    "code": 54005,
+    "data": null,
+    "message": "Create folder failed.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "54006": {
+    "code": 54006,
+    "data": null,
+    "message": "HelixBucketName already exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
 }
 ```
 

@@ -34,7 +34,7 @@ api:
 
 ```json [responses]
 {
-  "200": {
+  "2000": {
     "code": 2000,
     "message": "Success",
     "data": {
@@ -45,40 +45,38 @@ api:
     "requestId": "7610aa38c0fc409d98c827a879d9cae5",
     "success": true
   },
-  "500": [
-    {
-      "code": 5000,
-      "data": null,
-      "message": "Service hiccuped, please try again later.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 53003,
-      "data": null,
-      "message": "Annotation request has not exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 56001,
-      "data": null,
-      "message": "SceneId is not exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 51008,
-      "data": null,
-      "message": "Campaign not exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    }
-  ]
+  "5000": {
+    "code": 5000,
+    "data": null,
+    "message": "Service hiccuped, please try again later.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "53003": {
+    "code": 53003,
+    "data": null,
+    "message": "Annotation request has not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "56001": {
+    "code": 56001,
+    "data": null,
+    "message": "SceneId is not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "51008": {
+    "code": 51008,
+    "data": null,
+    "message": "Campaign not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
 }
 ```
 

@@ -39,7 +39,7 @@ api:
 
 ```json [responses]
 {
-  "200": {
+  "2000": {
     "code": 2000,
     "message": "Success",
     "data": {
@@ -49,56 +49,54 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": [
-    {
-      "code": 5000,
-      "data": null,
-      "message": "Service hiccuped, please try again later.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 51006,
-      "data": null,
-      "message": "CampaignId not exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 53003,
-      "data": null,
-      "message": "Annotation request has not exists.",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 55003,
-      "data": null,
-      "message": "Pools are not the type of work",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 55004,
-      "data": null,
-      "message": "The AR pool subtype must match the campaign type",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    },
-    {
-      "code": 55005,
-      "data": null,
-      "message": "Pool not found",
-      "date": "2025-03-13 20:00:00",
-      "requestId": "864b70706a7349ea83e177a49800464f",
-      "success": false
-    }
-  ]
+  "5000": {
+    "code": 5000,
+    "data": null,
+    "message": "Service hiccuped, please try again later.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "51006": {
+    "code": 51006,
+    "data": null,
+    "message": "CampaignId not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "53003": {
+    "code": 53003,
+    "data": null,
+    "message": "Annotation request has not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "55003": {
+    "code": 55003,
+    "data": null,
+    "message": "Pools are not the type of work",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "55004": {
+    "code": 55004,
+    "data": null,
+    "message": "The AR pool subtype must match the campaign type",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "55005": {
+    "code": 55005,
+    "data": null,
+    "message": "Pool not found",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
 }
 ```
 

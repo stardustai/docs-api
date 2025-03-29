@@ -85,7 +85,7 @@ api:
 
 ```json [responses]
 {
-  "200": {
+  "2000": {
     "code": 2000,
     "message": "Success",
     "data": "taxonomyVersionName",
@@ -93,7 +93,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": true
   },
-  "500": {
+  "5000": {
     "code": 5000,
     "data": null,
     "message": "Service hiccuped, please try again later.",
