@@ -37,7 +37,7 @@ api:
   "54004": {
     "code": 54004,
     "data": null,
-    "message": "HelixProjectId is not exists.",
+    "message": "folderId is not exists.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
