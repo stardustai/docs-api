@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Create Campaign'
+title: 'Create Campaign'
 description: 'Guidelines for creating a campaign on Rosetta.'
 api:
   method: POST

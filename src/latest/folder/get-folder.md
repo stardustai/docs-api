@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Get Folder'
+title: 'Get Folder'
 description: 'We will provide a GET API for get the folder Info.'
 api:
   method: GET

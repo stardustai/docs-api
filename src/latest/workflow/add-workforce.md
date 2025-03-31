@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Add Workforce'
+title: 'Add Workforce'
 description: 'Guidelines for add workforce on Rosetta.'
 api:
   method: POST
