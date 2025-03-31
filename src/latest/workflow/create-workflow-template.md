@@ -3,7 +3,7 @@ title: '[WIP]Create Workflow Template'
 description: 'Helix calls to create a custom workflow template and returns the workflow template anme, which can be used when creating a Campaign '
 api:
   method: POST
-  url: /workflow-template
+  url: /workflow/template
 ---
 
 ::: request

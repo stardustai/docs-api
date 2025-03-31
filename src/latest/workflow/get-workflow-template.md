@@ -3,7 +3,7 @@ title: '[WIP]Get Workflow Template'
 description: 'Helix calls to get a custom workflow by template name, which can be used when creating a Campaign '
 api:
   method: GET
-  url: /workflow-template
+  url: /workflow/template
 ---
 
 ::: request
