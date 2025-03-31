@@ -53,7 +53,7 @@ api:
   "54001": {
     "code": 54001,
     "data": null,
-    "message": "Helix project already exists.",
+    "message": "folder already exists.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
@@ -61,7 +61,7 @@ api:
   "54002": {
     "code": 54002,
     "data": null,
-    "message": "HelixProjectId already exists.",
+    "message": "folderId already exists.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
