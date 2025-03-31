@@ -1,5 +1,5 @@
 ---
-title: 'Get Annotation Request'
+title: '[WIP] Get Annotation Request'
 description: 'Guidelines for retrieving an annotation request on Rosetta.'
 api:
   method: GET
