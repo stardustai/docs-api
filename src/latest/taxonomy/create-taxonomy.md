@@ -123,7 +123,7 @@ api:
 - The nesting structure of Input is implemented through items.children.
 - All nested levels need to be uniquely identified by key.
 
-3. Data Format
+3. Text Data Format
 
 - The value of the single-selection type is a string.
 - The value of the multiple-selection type is an array.
@@ -142,7 +142,7 @@ api:
 | key                    | string       | Unique identifier，The format is ${uuid}                                                                                                                                                                                                                                                                                               |
 | type                   | string(Enum) | Is fixed as "slot"                                                                                                                                                                                                                                                                                                                     |
 | label                  | string       | Display name                                                                                                                                                                                                                                                                                                                           |
-| slotSpecification.type | string       | Type enumeration and mapped Helix Annotation Types "polygon3d" mapping "HLX-3D-Polygon","box3d" mapping "HLX-3D-BoundingBox","line3d" mapping "HLX-3D- Polyline", "polygon3d" mapping, "box2d" mapping "HLX-2D-BoundingBox", "line" mapping "HLX-2D-Polyline ", "polygon" mapping "HLX-2D-Polygon" , "point" mapping "HLX-2D-KeyPoint" |
+| slotSpecification.type | string(Enum) | Type enumeration and mapped Helix Annotation Types "polygon3d" mapping "HLX-3D-Polygon","box3d" mapping "HLX-3D-BoundingBox","line3d" mapping "HLX-3D- Polyline", "polygon3d" mapping, "box2d" mapping "HLX-2D-BoundingBox", "line" mapping "HLX-2D-Polyline ", "polygon" mapping "HLX-2D-Polygon" , "point" mapping "HLX-2D-KeyPoint" |
 
 ## Input (Input Configuration Item)
 
