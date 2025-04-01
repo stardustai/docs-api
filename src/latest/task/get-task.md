@@ -1,5 +1,5 @@
 ---
-title: 'Get Task'
+title: '[WIP] Get Task'
 description: 'We will provide a GET API for get task info.'
 api:
   method: POST
