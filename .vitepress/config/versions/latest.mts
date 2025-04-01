@@ -81,7 +81,8 @@ export const config_latest = defineConfig({
         text: 'ANNOTATIONS',
         items: [
           getApiConfig('/annotations/create-annotation-request'),
-          getApiConfig('/annotations/get-annotation-request')
+          getApiConfig('/annotations/get-annotation-request'),
+          getApiConfig('/annotations/get-task-schedule')
         ]
       },
       {
