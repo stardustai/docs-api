@@ -114,7 +114,7 @@ api:
 1. Type System
 
 - The slot type is used for geometric annotation.
-- The input type is used for parameter configuration.
+- The input type is used for parameter configuration.When input has no parent, it describes the task itself. When input is in the Children of SlotChildren, it describes the upper slot.
 - The slotChildren is used for combining complex tasks.
 
 2. Nesting Rules
@@ -137,42 +137,70 @@ api:
 
 ## Slot (Single-layer Annotation Item)
 
-| Attribute              | Type         | Description                                                                                                                                                                                                                                                                                                                            |
-| ---------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key                    | string       | Unique identifier，The format is ${uuid}                                                                                                                                                                                                                                                                                               |
-| type                   | string(Enum) | Is fixed as "slot"                                                                                                                                                                                                                                                                                                                     |
-| label                  | string       | Display name                                                                                                                                                                                                                                                                                                                           |
-| slotSpecification.type | string(Enum) | Type enumeration and mapped Helix Annotation Types "polygon3d" mapping "HLX-3D-Polygon","box3d" mapping "HLX-3D-BoundingBox","line3d" mapping "HLX-3D- Polyline", "polygon3d" mapping, "box2d" mapping "HLX-2D-BoundingBox", "line" mapping "HLX-2D-Polyline ", "polygon" mapping "HLX-2D-Polygon" , "point" mapping "HLX-2D-KeyPoint" |
+| Attribute                                      | Required | Type                                                                           | Description                                                                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------- | -------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| key                                            | true     | string                                                                         | Unique identifier，The format is ${uuid}                                                                                                                                                                                                                                                                                               |
+| type                                           | true     | string(Enum)                                                                   | Is fixed as "slot"                                                                                                                                                                                                                                                                                                                     |
+| label                                          | true     | string                                                                         | Display name                                                                                                                                                                                                                                                                                                                           |
+| slotSpecification.type                         | true     | string(Enum)                                                                   | Type enumeration and mapped Helix Annotation Types "polygon3d" mapping "HLX-3D-Polygon","box3d" mapping "HLX-3D-BoundingBox","line3d" mapping "HLX-3D- Polyline", "polygon3d" mapping, "box2d" mapping "HLX-2D-BoundingBox", "line" mapping "HLX-2D-Polyline ", "polygon" mapping "HLX-2D-Polygon" , "point" mapping "HLX-2D-KeyPoint" |
+| slotSpecification.name                         | false    | string                                                                         | Name for 2D/3D geometric shapes (e.g., for 2D Box, 2D Square, etc.)                                                                                                                                                                                                                                                                    |
+| slotSpecification.instanceColor                | false    | string                                                                         | Instance color for the annotation                                                                                                                                                                                                                                                                                                      |
+| slotSpecification.hint                         | false    | string                                                                         | Hint information for the annotation                                                                                                                                                                                                                                                                                                    |
+| slotSpecification.minMaxQuantity               | false    | { min: number; max: number }                                                   | Min/Max quantity (AQC) for the annotation                                                                                                                                                                                                                                                                                              |
+| slotSpecification.minSize                      | false    | { width?: number; height?: number; depth?: number }                            | Min size (AQC) for relevant geometric shapes (e.g., for 2D Box, 3D Box)                                                                                                                                                                                                                                                                |
+| slotSpecification.dimensionalVerification      | false    | boolean                                                                        | Dimensional verification flag (AQC)                                                                                                                                                                                                                                                                                                    |
+| slotSpecification.vertexLabel                  | false    | string[]                                                                       | Array of vertex labels for shapes like 2D Box, 2D Polygon (if applicable)                                                                                                                                                                                                                                                              |
+| slotSpecification.annotateWithinCanvas         | false    | boolean                                                                        | Flag indicating whether to annotate within the canvas                                                                                                                                                                                                                                                                                  |
+| slotSpecification.minMaxVertices               | false    | { min: number; max: number }                                                   | Min/max vertices (AQC) for shapes like 2D Polyline, 2D Polygon, 3D Polygon, 3D Polyline                                                                                                                                                                                                                                                |
+| slotSpecification.presetSize                   | false    | { name: string; geometry: { width: number; height: number; depth: number } }[] | Preset size configuration for 3D Box                                                                                                                                                                                                                                                                                                   |
+| slotSpecification.borderDistanceFromPointCloud | false    | number                                                                         | Border distance from point cloud (AQC) for 3D Box                                                                                                                                                                                                                                                                                      |
+| slotSpecification.minMaxPointsIn3DBox          | false    | { min: number; max: number }                                                   | Min/max points in a 3D Box (AQC)                                                                                                                                                                                                                                                                                                       |
+| slotSpecification.childSourceMapping           | false    | string[]                                                                       | Child source mapping for 3D shapes (e.g., 3D Box, 3D Polygon, 3D Polyline, 3D Point)                                                                                                                                                                                                                                                   |
+| slotSpecification.mapRange                     | false    | string                                                                         | Map range for 3D shapes (e.g., 3D Box, 3D Polygon, 3D Polyline, 3D Point)                                                                                                                                                                                                                                                              |
 
 ## Input (Input Configuration Item)
 
-| Attribute                  | Type         | Description                                                                                                                                                           |
-| -------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key                        | string       | Unique identifier, in the format of ${uuid}                                                                                                                           |
-| type                       | string(Enum) | Fixed as "input"                                                                                                                                                      |
-| label                      | string       | Display name                                                                                                                                                          |
-| inputSpecification.type    | string(Enum) | "select":Single choice question, "multiple-select"：Multiple choice question ,"nested-select"：Nested multiple choice,"multiple-nested-select":Nested multiple choice |
-| inputSpecification.default | string       | Default value                                                                                                                                                         |
-| inputSpecification.items   | InputItem[]  | Option list (required only for select type)                                                                                                                           |
+| Required | Attribute                                   | Type         | Description                                                                                                                                                           |
+| -------- | ------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| true     | key                                         | string       | Unique identifier, in the format of ${uuid}                                                                                                                           |
+| true     | type                                        | string(Enum) | Fixed as "input"                                                                                                                                                      |
+| true     | label                                       | string       | Display name                                                                                                                                                          |
+| true     | inputSpecification.type                     | string(Enum) | "select":Single choice question, "multiple-select"：Multiple choice question ,"nested-select"：Nested multiple choice,"multiple-nested-select":Nested multiple choice |
+| false    | inputSpecification.default                  | string       | Default value                                                                                                                                                         |
+| false    | inputSpecification.items                    | InputItem[]  | Option list (required only for select type)                                                                                                                           |
+| false    | inputSpecification.name                     | string       | Name for input types like Single&multiple Choice, Text Input                                                                                                          |
+| false    | inputSpecification.hint                     | string       | Hint information for the input                                                                                                                                        |
+| false    | inputSpecification.nestable                 | boolean      | Whether to nest (for Single&multiple Choice)                                                                                                                          |
+| false    | inputSpecification.style                    | string       | Style for the input (for Single&multiple Choice)                                                                                                                      |
+| false    | inputSpecification.option                   | any[]        | Array of options (for Single&multiple Choice)                                                                                                                         |
+| false    | inputSpecification.required                 | boolean      | Whether the input is required                                                                                                                                         |
+| false    | inputSpecification.otherOptions             | any          | Other options related to the input (for Single&multiple Choice)                                                                                                       |
+| false    | inputSpecification.attributeSynchronization | boolean      | Attribute synchronization flag                                                                                                                                        |
+| false    | inputSpecification.dataType                 | string       | Data type for Text Input (e.g., number, string)                                                                                                                       |
+| false    | inputSpecification.latexPreview             | boolean      | Flag indicating whether to show Latex preview for Text Input                                                                                                          |
+| false    | inputSpecification.dataValidation           | any          | Data validation rules for Text Input                                                                                                                                  |
 
 ### InputItem
 
-| Attribute | Type        | Description                                  |
-| --------- | ----------- | -------------------------------------------- |
-| label     | string      | Option display name                          |
-| value     | string      | Option value                                 |
-| children  | InputItem[] | Sub-options (required only for nested types) |
+| Attribute | Required | Type        | Description                                  |
+| --------- | -------- | ----------- | -------------------------------------------- |
+| label     | true     | string      | Option display name                          |
+| value     | true     | string      | Option value                                 |
+| children  | false    | InputItem[] | Sub-options (required only for nested types) |
 
 ## SlotChildren (Nested Annotation Group)
 
-| Attribute                            | Type         | Description                                 |
-| ------------------------------------ | ------------ | ------------------------------------------- |
-| key                                  | string       | Unique identifier, in the format of ${uuid} |
-| type                                 | string(Enum) | Fixed as "slotChildren"                     |
-| label                                | string       | Display name                                |
-| slotSpecification.imageSourceMapping | string[]     | List of keys associated with sub-items      |
-| slotSpecification.type               | string(Enum) | All Slot.type are available                 |
-| children                             | operator[]   | Set of nested operation items               |
+| Attribute                            | Required | Type         | Description                                 |
+| ------------------------------------ | -------- | ------------ | ------------------------------------------- |
+| key                                  | true     | string       | Unique identifier, in the format of ${uuid} |
+| type                                 | true     | string(Enum) | Fixed as "slotChildren"                     |
+| label                                | true     | string       | Display name                                |
+| slotSpecification.imageSourceMapping | false    | string[]     | List of keys associated with sub-items      |
+| slotSpecification.type               | true     | string(Enum) | All Slot.type are available                 |
+| children                             | true     | operator[]   | Set of nested operation items               |
+| metadata.hint                        | false    | string       | Hint information at the SlotChildren level  |
+| instanceOption.minQuantity           | false    | number       | Minimum quantity of instances               |
+| instanceOption.maxQuantity           | false    | number       | Maximum quantity of instances               |
 
 ## Visualization Example of the Nesting Structure
 
@@ -196,97 +224,209 @@ SlotChildren (Root)
 
 ### 3D Annotation Combination
 
-```json [body]
+````json [body]
+### Example of 2D Box + 3D Box + multiple Choice
+```json
 [
-  {
-    "label": "car",
-    "slotSpecification": {
-      "minVertices": 20,
-      "maxVertices": 50,
-      "imageSourceMapping": ["box2d-[1570d]"],
-      "mappingScope": "inside",
-      "type": "box3d"
-    },
-    "instanceOption": {
-      "minQuantity": 1,
-      "maxQuantity": 5
-    },
-    "key": "box3d-[70692]",
-    "type": "slotChildren",
-    "children": [
-      {
-        "label": "color",
-        "inputSpecification": {
-          "type": "select",
-          "items": [
-            {
-              "label": "red",
-              "value": "Red"
-            },
-            {
-              "label": "white",
-              "value": "White"
-            },
-            {
-              "label": "black",
-              "value": "Black"
-            }
-          ],
-          "default": "Red"
+    // Top - level nested annotation group, representing a combination of multiple annotations and input items
+    {
+        "key": "box3d-[70692]", // Unique identifier used to identify this nested annotation group
+        "label": "car", // Display name of the annotation group
+        "exportLabel": "This is the export name ", // Name used for export
+        "type": "slotChildren", // Type is multi - layer nested annotation group
+        "metadata": {
+            "hint": "This is the prompt text " // Prompt text to guide user operations
         },
-        "key": "select-[94e49]",
-        "type": "input"
-      },
-      {
-        "label": "tyre ",
         "slotSpecification": {
-          "minWidth": 200,
-          "minHeight": 500,
-          "type": "box2d"
+            "customColor": "#C200F2", // Custom color for the 3D box
+            "type": "box3d", // Annotation type is 3D box
+            "presetSizes": [
+                {
+                    "name": "3",
+                    "geometry": {
+                        "width": 5,
+                        "height": 4,
+                        "depth": 6
+                    }
+                }
+            ], // Preset size configuration
+            "minVertices": 8, // Minimum number of vertices for the 3D box
+            "maxVertices": 9, // Maximum number of vertices for the 3D box
+            "maxPadding": 7, // Maximum padding
+            "imageSourceMapping": ["box2d-[1570d]"], // Unique identifier of the associated 2D box
+            "mappingScope": "inside" // Mapping scope is inside
         },
         "instanceOption": {
-          "minQuantity": 1,
-          "maxQuantity": 5
+            "minQuantity": 1, // Minimum number of instances of this type
+            "maxQuantity": 2 // Maximum number of instances of this type
         },
-        "key": "box2d-[1570d]",
-        "type": "slot"
-      }
-    ]
-  }
+        "children": [
+            {
+                "label": "color", // Display name of the input item
+                "exportLabel": "color of car", // Name used for export
+                "metadata": {
+                    "hint": "color of car" // Prompt text, indicating that this input item is for selecting the color of the car
+                },
+                "inputSpecification": {
+                    "type": "multiple-nested-select", // Input type is multi - layer nested multiple - selection
+                    "items": [
+                        {
+                            "label": "Pedestrian",
+                            "value": "People"
+                        },
+                        {
+                            "label": "Car",
+                            "value": "Car",
+                            "children": [
+                                {
+                                    "label": "Ferrari",
+                                    "value": "Ferrari"
+                                },
+                                {
+                                    "label": "Benz",
+                                    "value": "Benz"
+                                },
+                                {
+                                    "label": "Volkswagen",
+                                    "value": "Volkswagen"
+                                }
+                            ]
+                        }
+                    ],
+                    "continuousFrameSync": true, // Whether to enable continuous frame synchronization
+                    "default": ["Car", "Ferrari"], // Default selected options
+                    "renderConfig": {
+                        "selectionWidgetType": "Segment"
+                    }, // Rendering configuration, selection widget type is segmented
+                    "allowArbitraryInput": false // Whether to allow arbitrary input
+                },
+                "inputOption": {
+                    "required": true // This input item is required
+                },
+                "key": "select-[94e49]", // Unique identifier used to identify this input item
+                "type": "input" // Type is input item
+            },
+            {
+                "key": "box2d-[1570d]", // Unique identifier used to identify this 2D box annotation
+                "label": "tyre ", // Display name of the annotation
+                "exportLabel": "This is the export name ", // Name used for export
+                "type": "slot", // Type is single - layer annotation item
+                "metadata": {
+                    "hint": "tyre of car in 2D" // Prompt text, indicating that this annotation is for a 2D car tire
+                },
+                "slotSpecification": {
+                    "type": "box2d", // Annotation type is 2D box
+                    "minHeight": 4, // Minimum height of the 2D box
+                    "minWidth": 3, // Minimum width of the 2D box
+                    "sizeCheckSwitch": true, // Whether to enable size checking
+                    "restrictInsideCanvasBoundary": true, // Whether to restrict within the canvas boundary
+                    "topLeftMark": "5", // Top - left mark
+                    "topRightMark": "6", // Top - right mark
+                    "bottomRightMark": "8", // Bottom - right mark
+                    "bottomLeftMark": "7" // Bottom - left mark
+                },
+                "instanceOption": {
+                    "minQuantity": 1, // Minimum number of instances of this type
+                    "maxQuantity": 2 // Maximum number of instances of this type
+                }
+            }
+        ]
+    }
 ]
-```
+````
 
 ### Multi-level Classification Selection
 
 ```json [body]
-{
-  "type": "input",
-  "inputSpecification": {
-    "type": "multiple-nested-select",
-    "items": [
+[
+  // Represents a nested annotation group centered around text selection
+  {
+    "label": "text select", // Display name for this group
+    "exportLabel": "text select", // Name used during export
+    "slotSpecification": {
+      "minLength": 1, // Minimum length for text - related operations
+      "maxLength": 2, // Maximum length for text - related operations
+      "type": "text" // Type of text - related operation
+    },
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text to guide user interaction
+    },
+    "instanceOption": {
+      "minQuantity": 2, // Minimum number of instances allowed
+      "maxQuantity": 5 // Maximum number of instances allowed
+    },
+    "key": "text-[e481a]", // Unique identifier for this nested annotation group
+    "type": "slotChildren", // Indicates it's a nested annotation group
+    "children": [
       {
-        "label": "Fruits",
-        "children": [
-          {
-            "label": "Apple",
-            "value": "apple"
+        "label": "select option", // Display name for the input item
+        "exportLabel": "This is the export name ", // Name used during export
+        "metadata": {
+          "hint": "This is the prompt text " // Prompt text for the input item
+        },
+        "inputSpecification": {
+          "type": "select", // Input type is a single - select dropdown
+          "renderConfig": {
+            "selectionWidgetType": "Dropdown" // Render as a dropdown widget
           },
-          {
-            "label": "Banana",
-            "value": "banana"
-          }
-        ]
-      },
-      {
-        "label": "Vegetables",
-        "children": [
-          {
-            "label": "Carrot",
-            "value": "carrot"
-          }
-        ]
+          "items": [
+            {
+              "label": "Car",
+              "value": "Car"
+            },
+            {
+              "label": "Truck",
+              "value": "Truck"
+            },
+            {
+              "label": "Bicycle",
+              "value": "Bicycle"
+            }
+          ], // List of available options
+          "allowArbitraryInput": true, // Allow users to enter arbitrary values
+          "continuousFrameSync": false, // Does not enable continuous frame synchronization
+          "default": "Car" // Default selected option
+        },
+        "inputOption": {
+          "required": true // This input item is mandatory
+        },
+        "key": "select-[5ec8b]", // Unique identifier for this input item
+        "type": "input" // Indicates it's an input item
       }
     ]
+  },
+  {
+    "label": "Boolean select", // Display name for the input item
+    "exportLabel": "This is the export name ", // Name used during export
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text for the input item
+    },
+    "inputSpecification": {
+      "default": true, // Default value is true
+      "type": "boolean" // Input type is boolean
+    },
+    "inputOption": {}, // No additional input options
+    "key": "boolean-[a8a1f]", // Unique identifier for this input item
+    "type": "input" // Indicates it's an input item
+  },
+  {
+    "label": "text input", // Display name for the input item
+    "exportLabel": "This is the export name ", // Name used during export
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text for the input item
+    },
+    "inputSpecification": {
+      "type": "text", // Input type is text
+      "latex": true, // Supports LaTeX rendering
+      "continuousFrameSync": false, // Does not enable continuous frame synchronization
+      "default": "defult value", // Default input value
+      "regex": "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$" // Regular expression for input validation
+    },
+    "inputOption": {
+      "required": true // This input item is mandatory
+    },
+    "key": "text-[60ed5]", // Unique identifier for this input item
+    "type": "input" // Indicates it's an input item
   }
-}
+]
 ```
