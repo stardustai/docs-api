@@ -155,6 +155,14 @@ api:
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
+  },
+  "50531": {
+    "code": 50531,
+    "data": null,
+    "message": "The completion pool cannot be connected to other pools.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
   }
 }
 
