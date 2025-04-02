@@ -152,13 +152,13 @@ url: /taxonomy
 | slotSpecification.minWidth/minHeight                                      | false    | number       | Min size (AQC) for relevant geometric 2D shapes(eg:2D Box,2D Square,2D Oval,2D Polyline,2D Polygon,2D 3points Polygon)                                                                                                                                                                                                                 |
 | slotSpecification.sizeCheckSwitch                                         | false    | boolean      | Dimensional verification flag (AQC) for 2D shapes                                                                                                                                                                                                                                                                                      |
 | slotSpecification.topLeftMark/topRightMark/bottomLeftMark/bottomRightMark | false    | string       | vertex labels for box2D an cuboid                                                                                                                                                                                                                                                                                                      |
-| slotSpecification.restrictInsideCanvasBoundary                            | false    | boolean      | Flag indicating whether to annotate within the canvas                                                                                                                                                                                                                                                                                  |
-| slotSpecification.minVertices/maxVertices                                 | false    | number       | 3D box contains minimum/maximum points. (eg:polygon3d,box3d)                                                                                                                                                                                                                                                                           |
+| slotSpecification.restrictInsideCanvasBoundary                            | false    | boolean      | Only 2D graphics work in 3D layers. Flag indicating whether to annotate within the canvas for 2D shapes.                                                                                                                                                                                                                               |
+| slotSpecification.minVertices/maxVertices                                 | false    | number       | Box3d or polygon3d contains minimum/maximum points.                                                                                                                                                                                                                                                                                    |
 | slotSpecification.presetSizes.name                                        | false    | string       | The name of Preset size for box3d.Multiple sets can be configured                                                                                                                                                                                                                                                                      |
 | slotSpecification.presetSizes.geometry.width/height/depth                 | false    | number       | Depend on the configuration "slotSpecification.presetSize.name". The length, width and height need to be specified separately                                                                                                                                                                                                          |
 | slotSpecification.maxPadding                                              | false    | number       | Border distance from point cloud (AQC) for box3d                                                                                                                                                                                                                                                                                       |
-| slotSpecification.imageSourceMapping                                      | false    | string[]     | Child source mapping for 3D shapes.The value is child key(Unique identifier)                                                                                                                                                                                                                                                           |
-| slotSpecification.mappingScope                                            | false    | string(Enum) | The way 3D maps the range to 2D.The enumeration includes: outside, inside, both.                                                                                                                                                                                                                                                       |
+| slotSpecification.imageSourceMapping                                      | false    | string[]     | Child source mapping for 3D shapes（except esemantic segmentation）.The value is child key(Unique identifier)                                                                                                                                                                                                                          |
+| slotSpecification.mappingScope                                            | false    | string(Enum) | The way 3D（except esemantic segmentation） maps the range to 2D.The enumeration includes: outside, inside, both.                                                                                                                                                                                                                      |
 
 ## Input (Input Configuration Item)
 
@@ -186,17 +186,17 @@ url: /taxonomy
 
 ## SlotChildren (Nested Annotation Group)
 
-| Attribute                            | Required | Type         | Description                                 |
-| ------------------------------------ | -------- | ------------ | ------------------------------------------- |
-| key                                  | true     | string       | Unique identifier, in the format of ${uuid} |
-| type                                 | true     | string(Enum) | Fixed as "slotChildren"                     |
-| label                                | true     | string       | Display name                                |
-| slotSpecification.imageSourceMapping | false    | string[]     | List of keys associated with sub-items      |
-| slotSpecification.type               | true     | string(Enum) | All Slot.type are available                 |
-| children                             | true     | taxonomy[]   | Set of nested taxonomy items                |
-| metadata.hint                        | false    | string       | Hint information at the SlotChildren level  |
-| instanceOption.minQuantity           | false    | number       | Minimum quantity of instances               |
-| instanceOption.maxQuantity           | false    | number       | Maximum quantity of instances               |
+| Attribute                  | Required | Type                   | Description                                                               |
+| -------------------------- | -------- | ---------------------- | ------------------------------------------------------------------------- |
+| key                        | true     | string                 | Unique identifier, in the format of ${uuid}                               |
+| type                       | true     | string(Enum)           | Fixed as "slotChildren"                                                   |
+| label                      | true     | string                 | Display name                                                              |
+| slotSpecification          | true     | Slot.slotSpecification | This is exactly the same as the slotSpecification in the slot table above |
+| slotSpecification.type     | true     | string(Enum)           | All Slot.type are available                                               |
+| children                   | true     | taxonomy[]             | Set of nested taxonomy items                                              |
+| metadata.hint              | false    | string                 | Hint information at the SlotChildren level                                |
+| instanceOption.minQuantity | false    | number                 | Minimum quantity of instances                                             |
+| instanceOption.maxQuantity | false    | number                 | Maximum quantity of instances                                             |
 
 ## Visualization Example of the Nesting Structure
 
@@ -211,7 +211,6 @@ SlotChildren (Root)
 │        └─ children
 │           └─ label: Second-level option
 └─ SlotChildren (key: group-[12345])
-└─ children
 ├─ Slot (key: point3d-[67890])
 └─ Input (key: boolean-[abcd])
 ```
@@ -220,9 +219,8 @@ SlotChildren (Root)
 
 ### 3D Annotation Combination
 
-````json [body]
+```json [body]
 ### Example of 2D Box + 3D Box + multiple Choice
-```json
 [
     // Top - level nested annotation group, representing a combination of multiple annotations and input items
     {
@@ -329,7 +327,7 @@ SlotChildren (Root)
         ]
     }
 ]
-````
+```
 
 ### Multi-level Classification Selection
 
