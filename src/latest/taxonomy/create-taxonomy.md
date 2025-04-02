@@ -2,8 +2,8 @@
 title: '[WIP]Create Taxonomy'
 description: 'Guidelines for create taxonomy info on Rosetta.'
 api:
-method: POST
-url: /taxonomy
+  method: POST
+  url: /taxonomy
 ---
 
 ::: request
