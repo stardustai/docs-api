@@ -10,7 +10,7 @@ api:
 
 1. The name of the work pool must be unique
 2. There is only one allocation pool and it must be at the head node
-3. The end of each branch must be the completion pool
+3. The end of each branch must be the completion pool.And the completion pool cannot be connected after the pool.
 4. No isolated nodes
 5. The maximum number of nodes in the working pool template is 20
 6. A work pool other than the assignment pool can have only one subordinate work pool
