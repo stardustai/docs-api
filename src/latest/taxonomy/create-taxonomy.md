@@ -12,7 +12,7 @@ api:
 {
   "taxonomyVersionName": {
     "type": "string",
-    "description": "Unique identifier for the annotation request, with a maximum length of 160 bytes.",
+    "description": "Unique identifier for the taxonomy, with a maximum length of 160 bytes.",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   " taxonomyDetails": {
@@ -317,7 +317,17 @@ SlotChildren (Root)
                 }
             }
         ]
-    }
+    },
+          {
+          "key": "group-[7b152]", // Unique identifier for this slot, following a naming convention
+          "label": "Instance Group", // Display name for this slot
+          "type": "slot", // Indicates that this is a single - layer annotation slot
+          "metadata": {}, // Currently, there's no metadata information
+          "slotSpecification": {
+              "type": "group" // Specifies the type of the annotation as a group
+          },
+          "instanceOption": {} // No specific instance - related options are set
+      }
 ]
 ```
 
@@ -325,67 +335,105 @@ SlotChildren (Root)
 
 ```json [body]
 [
-  // Represents a nested annotation group centered around text selection
+  // An input item for boolean selection
   {
-    "label": "text select", // Display name for this group
-    "slotSpecification": {
-      "minLength": 1, // Minimum length for text - related taxonomy
-      "maxLength": 2, // Maximum length for text - related taxonomy
-      "type": "text" // Type of text - related taxonomy
-    },
+    "label": "Boolean select", // Display name for this input item
     "metadata": {
-      "hint": "This is the prompt text " // Prompt text to guide user interaction
-    },
-    "instanceOption": {
-      "minQuantity": 2, // Minimum number of instances allowed
-      "maxQuantity": 5 // Maximum number of instances allowed
-    },
-    "key": "text-[e481a]", // Unique identifier for this nested annotation group
-    "type": "slotChildren", // Indicates it's a nested annotation group
-    "children": [
-      {
-        "label": "select option", // Display name for the input item
-        "metadata": {
-          "hint": "This is the prompt text " // Prompt text for the input item
-        },
-        "inputSpecification": {
-          "type": "select", // Input type is a single - select dropdown
-          "items": [
-            {
-              "label": "Car",
-              "value": "Car"
-            },
-            {
-              "label": "Truck",
-              "value": "Truck"
-            },
-            {
-              "label": "Bicycle",
-              "value": "Bicycle"
-            }
-          ], // List of available options
-          "default": "Car" // Default selected option
-        },
-        "inputOption": {
-          "required": true // This input item is mandatory
-        },
-        "key": "select-[5ec8b]", // Unique identifier for this input item
-        "type": "input" // Indicates it's an input item
-      }
-    ]
-  },
-  {
-    "label": "Boolean select", // Display name for the input item
-    "metadata": {
-      "hint": "This is the prompt text " // Prompt text for the input item
+      "hint": "This is the prompt text " // Prompt text to guide user operation
     },
     "inputSpecification": {
       "default": true, // Default value is true
       "type": "boolean" // Input type is boolean
     },
-    "inputOption": {}, // No additional input options
+    "inputOption": {
+      "required": true // This input is mandatory
+    },
     "key": "boolean-[a8a1f]", // Unique identifier for this input item
     "type": "input" // Indicates it's an input item
+  },
+  // An input item for text input
+  {
+    "label": "text input", // Display name for this input item
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text for user guidance
+    },
+    "inputSpecification": {
+      "type": "text", // Input type is text
+      "default": "defult value" // Default input value
+    },
+    "inputOption": {
+      "required": true // This input is required
+    },
+    "key": "text-[60ed5]", // Unique identifier for this input item
+    "type": "input" // Type of this item is input
+  },
+  // An input item for nested multiple - choice selection
+  {
+    "label": "nested multiple Choice", // Display name for this input item
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text for user interaction
+    },
+    "inputSpecification": {
+      "type": "multiple-nested-select", // Input type is nested multiple - select
+      "items": [
+        {
+          "label": "Pedestrian",
+          "value": "People"
+        },
+        {
+          "label": "Car",
+          "value": "Car",
+          "children": [
+            {
+              "label": "Ferrari",
+              "value": "Ferrari"
+            },
+            {
+              "label": "Benz",
+              "value": "Benz"
+            },
+            {
+              "label": "Volkswagen",
+              "value": "Volkswagen"
+            }
+          ]
+        }
+      ], // List of available options with nested structure
+      "default": ["Car", "[\"People\"]"] // Default selected values
+    },
+    "inputOption": {
+      "required": true // This input is mandatory
+    },
+    "key": "select-[5ec8b]", // Unique identifier for this input item
+    "type": "input" // Indicates it's an input item
+  },
+  // An input item for single - choice question
+  {
+    "label": "Single choice question", // Display name for this input item
+    "metadata": {}, // No metadata information
+    "inputSpecification": {
+      "type": "select", // Input type is single - select
+      "renderConfig": {
+        "selectionWidgetType": "Segment"
+      }, // Render as segment - style selection widget
+      "items": [
+        {
+          "label": "Car",
+          "value": "Car"
+        },
+        {
+          "label": "Truck",
+          "value": "Truck"
+        },
+        {
+          "label": "Bicycle",
+          "value": "Bicycle"
+        }
+      ] // List of available single - select options
+    },
+    "inputOption": {}, // No specific input options
+    "key": "select-[0cba9]", // Unique identifier for this input item
+    "type": "input" // Type of this item is input
   }
 ]
 ```
