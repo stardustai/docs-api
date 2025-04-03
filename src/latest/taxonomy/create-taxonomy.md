@@ -125,22 +125,22 @@ api:
 
 ## Mapping of Annotation types
 
-| Rosetta Annotation types | Helix Annotation Types                                         |
-| ------------------------ | -------------------------------------------------------------- |
-| box2d                    | HLX-2D-BoundingBox                                             |
-| square                   | HLX-2D-BoundingBox.Square                                      |
-| ellipse                  | HLX-2D-BoundingBox.Oval                                        |
-| triangle                 | HLX-2D-BoundingBox.3point-polygon                              |
-| line                     | HLX-2D-Polyline                                                |
-| polygon                  | HLX-2D-Polygon                                                 |
-| point                    | HLX-2D-KeyPoint                                                |
-| box3d                    | HLX-3D-BoundingBox                                             |
-| 3D Polygon               | HLX-3D-BoundingBox.Oval/3point-polygon/Square +4D Map Labeling |
-| 3D Polyline              | HLX-3D-Polyline +4D Map Labeling                               |
-| semantic-segmentation3d  | HLX-3D-Polygon.SemSeg/InstanceSeg                              |
-| Single&multiple Choice   | HLX-2D-EventTagging                                            |
-| Text Input               | HLX-Text-TextDescription                                       |
-| group                    | 4D Map Labeling                                                |
+| Rosetta Annotation types | Helix Annotation Types                                                                                           |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| box2d                    | HLX-2D-BoundingBox                                                                                               |
+| square                   | HLX-2D-BoundingBox.Square                                                                                        |
+| ellipse                  | HLX-2D-BoundingBox.Oval                                                                                          |
+| triangle                 | HLX-2D-BoundingBox.3point-polygon                                                                                |
+| line                     | HLX-2D-Polyline                                                                                                  |
+| polygon                  | HLX-2D-Polygon                                                                                                   |
+| point                    | HLX-2D-KeyPoint                                                                                                  |
+| box3d                    | HLX-3D-BoundingBox                                                                                               |
+| polygon3d                | HLX-3D-BoundingBox.Oval<br/>HLX-3D-BoundingBox.3point-polygon<br/>HLX-3D-BoundingBox.Square <br/>4D Map Labeling |
+| line3d                   | HLX-3D-Polyline <br/>4D Map Labeling                                                                             |
+| semantic-segmentation3d  | HLX-3D-Polygon.SemSeg<br/>HLX-3D-Polygon.InstanceSeg                                                             |
+| select                   | HLX-2D-EventTagging                                                                                              |
+| text                     | HLX-Text-TextDescription                                                                                         |
+| group                    | 4D Map Labeling                                                                                                  |
 
 ## Slot (Single-layer Annotation Item)
 
@@ -170,7 +170,7 @@ api:
 | type                       | true     | string(Enum) | Fixed as "input"                                                                                                                                                                                                                                                                   |
 | label                      | true     | string       | Operator name                                                                                                                                                                                                                                                                      |
 | inputSpecification.type    | true     | string(Enum) | **select**:Single choice question<br/>**multiple-select**：Multiple choice question<br/>**nested-select**：Nested multiple choice<br/>**multiple-nested-select**:Nested multiple choice<br/> **number**:Input digit <br/>**boolean**:Input true/false<br/> **text**:Input any text |
-| inputSpecification.default | false    | string       | Default value.If it is multiple choice, it must be in the choices.                                                                                                                                                                                                                 |
+| inputSpecification.default | false    | string       | Default value.If it is multiple choice, it must be one or more values in the option list.                                                                                                                                                                                          |
 | inputSpecification.items   | false    | InputItem[]  | Items is an option list.<br/>The item.children field is only applicable when the input’s inputSpecification.type is set to either "nested-select" or "multiple-nested-select".And it is used to define multi-level sub-options within an item.                                     |
 | metadata.hint              | false    | string       | Hint information for the input                                                                                                                                                                                                                                                     |
 | inputOption.required       | false    | boolean      | Whether the input is required                                                                                                                                                                                                                                                      |
@@ -335,105 +335,68 @@ SlotChildren (Root)
 
 ```json [body]
 [
-  // An input item for boolean selection
   {
-    "label": "Boolean select", // Display name for this input item
+    "key": "select-[94e49]", // Unique identifier for this input item
+    "label": "Event", // Display name for this input
+    "exportLabel": "", // Export label is left empty
+    "type": "input", // Indicates this is an input type item
     "metadata": {
-      "hint": "This is the prompt text " // Prompt text to guide user operation
+      "hint": "Event of car" // Hint message to guide users, providing context about the input
     },
     "inputSpecification": {
-      "default": true, // Default value is true
-      "type": "boolean" // Input type is boolean
-    },
-    "inputOption": {
-      "required": true // This input is mandatory
-    },
-    "key": "boolean-[a8a1f]", // Unique identifier for this input item
-    "type": "input" // Indicates it's an input item
-  },
-  // An input item for text input
-  {
-    "label": "text input", // Display name for this input item
-    "metadata": {
-      "hint": "This is the prompt text " // Prompt text for user guidance
-    },
-    "inputSpecification": {
-      "type": "text", // Input type is text
-      "default": "defult value" // Default input value
-    },
-    "inputOption": {
-      "required": true // This input is required
-    },
-    "key": "text-[60ed5]", // Unique identifier for this input item
-    "type": "input" // Type of this item is input
-  },
-  // An input item for nested multiple - choice selection
-  {
-    "label": "nested multiple Choice", // Display name for this input item
-    "metadata": {
-      "hint": "This is the prompt text " // Prompt text for user interaction
-    },
-    "inputSpecification": {
-      "type": "multiple-nested-select", // Input type is nested multiple - select
+      "type": "multiple-nested-select", // Input type is multiple nested selection
       "items": [
         {
-          "label": "Pedestrian",
-          "value": "People"
-        },
-        {
-          "label": "Car",
-          "value": "Car",
+          "label": "Turning", // Label for the option
+          "value": "1", // Value associated with the option
           "children": [
             {
-              "label": "Ferrari",
-              "value": "Ferrari"
+              "label": "Left turning",
+              "value": "1-1"
             },
             {
-              "label": "Benz",
-              "value": "Benz"
+              "label": "Right turning",
+              "value": "1-2"
             },
             {
-              "label": "Volkswagen",
-              "value": "Volkswagen"
+              "label": "U-turn",
+              "value": "1-3"
             }
-          ]
+          ] // Nested children options for "Turning"
+        },
+        {
+          "label": "Going straight",
+          "value": "2"
+        },
+        {
+          "label": "Applying the brakes",
+          "value": "3"
+        },
+        {
+          "label": "Overtaking",
+          "value": "4",
+          "children": [
+            {
+              "label": "Overtaking on the left",
+              "value": "4-1"
+            },
+            {
+              "label": "Overtaking on the right",
+              "value": "4-2"
+            }
+          ] // Nested children options for "Overtaking"
         }
-      ], // List of available options with nested structure
-      "default": ["Car", "[\"People\"]"] // Default selected values
-    },
-    "inputOption": {
-      "required": true // This input is mandatory
-    },
-    "key": "select-[5ec8b]", // Unique identifier for this input item
-    "type": "input" // Indicates it's an input item
-  },
-  // An input item for single - choice question
-  {
-    "label": "Single choice question", // Display name for this input item
-    "metadata": {}, // No metadata information
-    "inputSpecification": {
-      "type": "select", // Input type is single - select
+      ],
+      "allowArbitraryInput": false, // Disallows users from entering arbitrary input
       "renderConfig": {
         "selectionWidgetType": "Segment"
-      }, // Render as segment - style selection widget
-      "items": [
-        {
-          "label": "Car",
-          "value": "Car"
-        },
-        {
-          "label": "Truck",
-          "value": "Truck"
-        },
-        {
-          "label": "Bicycle",
-          "value": "Bicycle"
-        }
-      ] // List of available single - select options
+      }, // Configuration for rendering the selection widget as a segment
+      "continuousFrameSync": true, // Enables continuous frame synchronization
+      "default": [] // Default selected values are empty
     },
-    "inputOption": {}, // No specific input options
-    "key": "select-[0cba9]", // Unique identifier for this input item
-    "type": "input" // Type of this item is input
+    "inputOption": {
+      "required": true // This input item is marked as required
+    }
   }
 ]
 ```
