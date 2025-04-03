@@ -338,7 +338,6 @@ SlotChildren (Root)
   {
     "key": "select-[94e49]", // Unique identifier for this input item
     "label": "Event", // Display name for this input
-    "exportLabel": "", // Export label is left empty
     "type": "input", // Indicates this is an input type item
     "metadata": {
       "hint": "Event of car" // Hint message to guide users, providing context about the input
@@ -387,11 +386,6 @@ SlotChildren (Root)
           ] // Nested children options for "Overtaking"
         }
       ],
-      "allowArbitraryInput": false, // Disallows users from entering arbitrary input
-      "renderConfig": {
-        "selectionWidgetType": "Segment"
-      }, // Configuration for rendering the selection widget as a segment
-      "continuousFrameSync": true, // Enables continuous frame synchronization
       "default": [] // Default selected values are empty
     },
     "inputOption": {
