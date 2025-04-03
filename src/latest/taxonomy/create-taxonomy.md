@@ -233,7 +233,7 @@ SlotChildren (Root)
             "type": "box3d", // Annotation type is 3D box
             "presetSizes": [
                 {
-                    "name": "3",
+                    "name": "preset Size group name",
                     "geometry": {
                         "width": 5,
                         "height": 4,
@@ -252,47 +252,64 @@ SlotChildren (Root)
             "maxQuantity": 2 // Maximum number of instances of this type
         },
         "children": [
-            {
-                "label": "color", // Display name of the input item
-                "metadata": {
-                    "hint": "color of car" // Prompt text, indicating that this input item is for selecting the color of the car
-                },
-                "inputSpecification": {
-                    "type": "multiple-nested-select", // Input type is multi - layer nested multiple - selection
-                    "items": [
-                        {
-                            "label": "Pedestrian",
-                            "value": "People"
-                        },
-                        {
-                            "label": "Car",
-                            "value": "Car",
-                            "children": [
-                                {
-                                    "label": "Ferrari",
-                                    "value": "Ferrari"
-                                },
-                                {
-                                    "label": "Benz",
-                                    "value": "Benz"
-                                },
-                                {
-                                    "label": "Volkswagen",
-                                    "value": "Volkswagen"
-                                }
-                            ]
-                        }
-                    ],
+           {
+               "key": "select-[94e49]", // Unique identifier for this input item
+               "label": "Event", // Display name for this input
+               "type": "input", // Indicates this is an input type item
+               "metadata": {
+                   "hint": "Event of car" // Hint message to guide users, providing context about the input
+               },
+               "inputSpecification": {
+                   "type": "multiple-nested-select", // Input type is multiple nested selection
+                   "items": [
+                       {
+                           "label": "Turning", // Label for the option
+                           "value": "1", // Value associated with the option
+                           "children": [
+                               {
+                                   "label": "Left turning",
+                                   "value": "1-1"
+                               },
+                               {
+                                   "label": "Right turning",
+                                   "value": "1-2"
+                               },
+                               {
+                                   "label": "U-turn",
+                                   "value": "1-3"
+                               }
+                           ] // Nested children options for "Turning"
+                       },
+                       {
+                           "label": "Going straight",
+                           "value": "2"
+                       },
+                       {
+                           "label": "Applying the brakes",
+                           "value": "3"
+                       },
+                       {
+                           "label": "Overtaking",
+                           "value": "4",
+                           "children": [
+                               {
+                                   "label": "Overtaking on the left",
+                                   "value": "4-1"
+                               },
+                               {
+                                   "label": "Overtaking on the right",
+                                   "value": "4-2"
+                               }
+                           ] // Nested children options for "Overtaking"
+                       }
+                   ],
 
-                    "default": ["Car", "Ferrari"] // Default selected options
-
-                },
-                "inputOption": {
-                    "required": true // This input item is required
-                },
-                "key": "select-[94e49]", // Unique identifier used to identify this input item
-                "type": "input" // Type is input item
-            },
+                   "default": [] // Default selected values are empty
+               },
+               "inputOption": {
+                   "required": true // This input item is marked as required
+               }
+           },
             {
                 "key": "box2d-[1570d]", // Unique identifier used to identify this 2D box annotation
                 "label": "tyre ", // Display name of the annotation
@@ -304,7 +321,6 @@ SlotChildren (Root)
                     "type": "box2d", // Annotation type is 2D box
                     "minHeight": 4, // Minimum height of the 2D box
                     "minWidth": 3, // Minimum width of the 2D box
-                    "sizeCheckSwitch": true, // Whether to enable size checking
                     "restrictInsideCanvasBoundary": true, // Whether to restrict within the canvas boundary
                     "topLeftMark": "5", // Top - left mark
                     "topRightMark": "6", // Top - right mark
@@ -335,62 +351,105 @@ SlotChildren (Root)
 
 ```json [body]
 [
+  // An input item for boolean selection
   {
-    "key": "select-[94e49]", // Unique identifier for this input item
-    "label": "Event", // Display name for this input
-    "type": "input", // Indicates this is an input type item
+    "label": "Boolean select", // Display name for this input item
     "metadata": {
-      "hint": "Event of car" // Hint message to guide users, providing context about the input
+      "hint": "This is the prompt text " // Prompt text to guide user operation
     },
     "inputSpecification": {
-      "type": "multiple-nested-select", // Input type is multiple nested selection
-      "items": [
-        {
-          "label": "Turning", // Label for the option
-          "value": "1", // Value associated with the option
-          "children": [
-            {
-              "label": "Left turning",
-              "value": "1-1"
-            },
-            {
-              "label": "Right turning",
-              "value": "1-2"
-            },
-            {
-              "label": "U-turn",
-              "value": "1-3"
-            }
-          ] // Nested children options for "Turning"
-        },
-        {
-          "label": "Going straight",
-          "value": "2"
-        },
-        {
-          "label": "Applying the brakes",
-          "value": "3"
-        },
-        {
-          "label": "Overtaking",
-          "value": "4",
-          "children": [
-            {
-              "label": "Overtaking on the left",
-              "value": "4-1"
-            },
-            {
-              "label": "Overtaking on the right",
-              "value": "4-2"
-            }
-          ] // Nested children options for "Overtaking"
-        }
-      ],
-      "default": [] // Default selected values are empty
+      "default": true, // Default value is true
+      "type": "boolean" // Input type is boolean
     },
     "inputOption": {
-      "required": true // This input item is marked as required
-    }
+      "required": true // This input is mandatory
+    },
+    "key": "boolean-[a8a1f]", // Unique identifier for this input item
+    "type": "input" // Indicates it's an input item
+  },
+  // An input item for text input
+  {
+    "label": "text input", // Display name for this input item
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text for user guidance
+    },
+    "inputSpecification": {
+      "type": "text", // Input type is text
+      "default": "defult value" // Default input value
+    },
+    "inputOption": {
+      "required": true // This input is required
+    },
+    "key": "text-[60ed5]", // Unique identifier for this input item
+    "type": "input" // Type of this item is input
+  },
+  // An input item for nested multiple - choice selection
+  {
+    "label": "nested multiple Choice", // Display name for this input item
+    "metadata": {
+      "hint": "This is the prompt text " // Prompt text for user interaction
+    },
+    "inputSpecification": {
+      "type": "multiple-nested-select", // Input type is nested multiple - select
+      "items": [
+        {
+          "label": "Pedestrian",
+          "value": "People"
+        },
+        {
+          "label": "Car",
+          "value": "Car",
+          "children": [
+            {
+              "label": "Ferrari",
+              "value": "Ferrari"
+            },
+            {
+              "label": "Benz",
+              "value": "Benz"
+            },
+            {
+              "label": "Volkswagen",
+              "value": "Volkswagen"
+            }
+          ]
+        }
+      ], // List of available options with nested structure
+      "default": ["Car", "[\"People\"]"] // Default selected values
+    },
+    "inputOption": {
+      "required": true // This input is mandatory
+    },
+    "key": "select-[5ec8b]", // Unique identifier for this input item
+    "type": "input" // Indicates it's an input item
+  },
+  // An input item for single - choice question
+  {
+    "label": "Single choice question", // Display name for this input item
+    "metadata": {}, // No metadata information
+    "inputSpecification": {
+      "type": "select", // Input type is single - select
+      "renderConfig": {
+        "selectionWidgetType": "Segment"
+      }, // Render as segment - style selection widget
+      "items": [
+        {
+          "label": "Car",
+          "value": "Car"
+        },
+        {
+          "label": "Truck",
+          "value": "Truck"
+        },
+        {
+          "label": "Bicycle",
+          "value": "Bicycle"
+        }
+      ] // List of available single - select options
+    },
+    "inputOption": {}, // No specific input options
+    "key": "select-[0cba9]", // Unique identifier for this input item
+    "type": "input" // Type of this item is input
   }
 ]
 ```
