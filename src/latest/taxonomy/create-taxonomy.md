@@ -336,7 +336,7 @@ SlotChildren (Root)
     },
           {
           "key": "group-[7b152]", // Unique identifier for this slot, following a naming convention
-          "label": "Instance Group", // Display name for this slot
+          "label": "Instance relation", // Display name for this slot
           "type": "slot", // Indicates that this is a single - layer annotation slot
           "metadata": {}, // Currently, there's no metadata information
           "slotSpecification": {
