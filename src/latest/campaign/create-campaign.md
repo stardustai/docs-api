@@ -25,7 +25,7 @@ api:
   },
   "workflowType": {
     "type": "string",
-    "description": "Type of workflow, must be one of ['Manual Template', 'PreLabeling Template'].",
+    "description": "Type of workflow, must be one of ['Manual Template', 'Prelabeling Template'].",
     "default": "Manual"
   },
   "taxonomyVersion": {
