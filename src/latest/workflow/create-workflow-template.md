@@ -10,7 +10,7 @@ api:
 
 1. The name of the work pool must be unique
 2. There is only one allocation pool and it must be at the head node
-3. The end of each branch must be the completion pool
+3. The end of each branch must be the completion pool.And the completion pool cannot be connected after the pool.
 4. No isolated nodes
 5. The maximum number of nodes in the working pool template is 20
 6. A work pool other than the assignment pool can have only one subordinate work pool
@@ -144,6 +144,22 @@ api:
     "code": 50529,
     "data": null,
     "message": "TemplateName is already exists.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+   "50530": {
+    "code": 50530,
+    "data": null,
+    "message": "The pool type has not exists.",
+    "date": "2024-05-16 19:03:34",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "50531": {
+    "code": 50531,
+    "data": null,
+    "message": "The completion pool cannot be connected to other pools.",
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
