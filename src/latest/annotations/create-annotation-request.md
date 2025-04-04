@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Create Annotation Request'
+title: 'Create Annotation Request'
 description: 'Guidelines for creating an annotation request on Rosetta.'
 api:
   method: POST
