@@ -15,12 +15,12 @@ api:
 {
   "campaignId": {
     "type": "string",
-    "description": "Unique identifier for the campaign, with a maximum length of 160 bytes.",
+    "description": "Unique identifier for the campaign, with a maximum length of 255 bytes.",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   "campaignName": {
     "type": "string",
-    "description": "Unique name for the campaign, with a maximum length of 160 bytes.",
+    "description": "Unique name for the campaign, with a maximum length of 255 bytes.",
     "default": "Helix 3D Campaign"
   },
   "workflowType": {
@@ -40,7 +40,7 @@ api:
   },
   "folderName": {
     "type": "string",
-    "description": "Unique name for the Helix folder, with a maximum length of 160 bytes",
+    "description": "Unique name for the Helix folder, with a maximum length of 255 bytes",
     "default": "helix-folder-001"
   },
   "campaignType": {

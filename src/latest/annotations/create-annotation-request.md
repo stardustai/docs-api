@@ -15,12 +15,12 @@ api:
 {
   "annotationRequestId": {
     "type": "string",
-    "description": "Unique identifier for the annotation request, with a maximum length of 160 bytes.",
+    "description": "Unique identifier for the annotation request, with a maximum length of 255 bytes.",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   "annotationRequestName": {
     "type": "string",
-    "description": "Name of the annotation request, must be unique with a maximum length of 160 bytes.",
+    "description": "Name of the annotation request, must be unique with a maximum length of 255 bytes.",
     "default": "Helix 3D Annotation Request"
   },
   "campaignId": {

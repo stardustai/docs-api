@@ -12,7 +12,7 @@ api:
 {
   "campaignId": {
     "type": "string",
-    "description": "Unique identifier for the campaign, with a maximum length of 160 bytes.",
+    "description": "Unique identifier for the campaign, with a maximum length of 255 bytes.",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
   "poolName": {

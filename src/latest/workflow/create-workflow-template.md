@@ -34,7 +34,7 @@ api:
   },
   "name": {
     "type": "string",
-    "description": "workflow template name.with a maximum length of 160 bytes.for unique check.",
+    "description": "workflow template name.with a maximum length of 255 bytes.for unique check.",
     "default": "template name"
   }
 }
@@ -44,7 +44,7 @@ api:
 {
   "name": {
     "type": "string",
-    "description": "annotation node name. with a maximum length of 160 bytes.",
+    "description": "annotation node name. with a maximum length of 255 bytes.",
     "default": "annotation"
   },
   "type": {

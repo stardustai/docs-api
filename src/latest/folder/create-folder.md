@@ -12,17 +12,17 @@ api:
 {
   "helixProjectId": {
     "type": "string",
-    "description": "Helix Project Id. The maximum length limit is 160 bytes.",
+    "description": "Helix Project Id. The maximum length limit is 255 bytes.",
     "default": "helixProjectIdTest"
   },
   "name": {
     "type": "string",
-    "description": "Helix Project Name. The maximum length limit is 160 bytes.",
+    "description": "Helix Project Name. The maximum length limit is 255 bytes.",
     "default": "helixProjectNameTest"
   },
   "helixBucketName": {
     "type": "string",
-    "description": "Helix Bucket Name. The maximum length limit is 160 bytes.",
+    "description": "Helix Bucket Name. The maximum length limit is 255 bytes.",
     "default": "helixBucketNameTest"
   }
 }
