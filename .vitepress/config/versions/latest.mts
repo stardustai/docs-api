@@ -33,31 +33,32 @@ export const config_latest = defineConfig({
     ],
 
     sidebar: [
-      // {
-      //   text: 'OVERVIEW',
-      //   items: [
-      //     {
-      //       text: 'Main Features',
-      //       link: getVersionLink('/overview/main-features')
-      //     },
-      //     {
-      //       text: 'Design Concepts',
-      //       link: getVersionLink('/overview/design-concepts')
-      //     },
-      //     {
-      //       text: 'Authentication',
-      //       link: getVersionLink('/overview/authentication')
-      //     },
-      //     {
-      //       text: 'Response Codes',
-      //       link: getVersionLink('/overview/response-codes')
-      //     },
-      //     {
-      //       text: 'Data Structure',
-      //       link: getVersionLink('/overview/data-structure')
-      //     }
-      //   ]
-      // },
+      {
+        text: 'OVERVIEW',
+        items: [
+          // {
+          //   text: 'Main Features',
+          //   link: getVersionLink('/overview/main-features')
+          // },
+          // {
+          //   text: 'Design Concepts',
+          //   link: getVersionLink('/overview/design-concepts')
+          // },
+          // {
+          //   text: 'Authentication',
+          //   link: getVersionLink('/overview/authentication')
+          // },
+          {
+            text: 'Response Codes',
+            link: getVersionLink('/overview/response-codes')
+          }
+          // ,
+          // {
+          //   text: 'Data Structure',
+          //   link: getVersionLink('/overview/data-structure')
+          // }
+        ]
+      },
       {
         text: 'FOLDER',
         items: [

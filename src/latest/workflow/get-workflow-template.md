@@ -1,5 +1,5 @@
 ---
-title: '[WIP]Get Workflow Template'
+title: 'Get Workflow Template'
 description: 'Helix calls to get a custom workflow by template name, which can be used when creating a Campaign '
 api:
   method: GET
@@ -12,7 +12,7 @@ api:
 {
   "templateName": {
     "type": "string",
-    "description": "Unique identifier for the template name, with a maximum length of 160 bytes.",
+    "description": "Unique identifier for the template name, with a maximum length of 255 bytes.",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   }
 }
