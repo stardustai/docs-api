@@ -60,6 +60,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   "code": 2000,
   "data": null,
   "date": "2025-03-13 20:00:00",
+  "message": "",
   "requestId": "7610aa38c0fc409d98c827a879d9cae5",
   "success": true
 }
@@ -71,7 +72,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   "data": null,
   "date": "2025-03-13 20:00:00",
   "message": "Service hiccuped, please try again later",
-  "requestId": "",
+  "requestId": "7610aa38c0fc409d98c827a879d9cae5",
   "success": false
 }
 ```
