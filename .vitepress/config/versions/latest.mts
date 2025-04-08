@@ -93,6 +93,13 @@ export const config_latest = defineConfig({
       {
         text: 'TAXONOMY',
         items: [getApiConfig('/taxonomy/create-taxonomy')]
+      },
+      {
+        text: 'STATISTICS',
+        items: [
+          getApiConfig('/statistics/get-statistics'),
+          getApiConfig('/statistics/get-statistics-record')
+        ]
       }
     ]
   }
