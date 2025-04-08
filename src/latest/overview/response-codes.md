@@ -10,9 +10,9 @@ description: Stardust's API uses the following HTTP codes and business-specific 
     <th>Code</th>
     <th>Description</th>
   </tr>
-  <tr><td>50522</td><td>The pool vertex information is incorrect</td></tr>
-  <tr><td>50523</td><td>The last pool is not the finish pool</td></tr>
-  <tr><td>50524</td><td>The workflow template name already exists</td></tr>
+  <tr><td>50522</td><td>The pool vertex information is incorrect.</td></tr>
+  <tr><td>50523</td><td>The last pool is not the finish pool.</td></tr>
+  <tr><td>50524</td><td>The workflow template name already exists.</td></tr>
   <tr><td>50525</td><td>The pool name in the workflow template is the same.</td></tr>
   <tr><td>50526</td><td>There are some pools that have no edges.</td></tr>
   <tr><td>50527</td><td>The annotaion/check/sampling/algorithm pool can output only one edge.</td></tr>
@@ -45,11 +45,11 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>54004</td><td>folderName is not exists.</td></tr>
   <tr><td>54005</td><td>Create folder failed.</td></tr>
   <tr><td>54006</td><td>HelixBucketName already exists.</td></tr>
-  <tr><td>55001</td><td>Description Failed to create a pool</td></tr>
-  <tr><td>55002</td><td>Workflow not found</td></tr>
-  <tr><td>55003</td><td>Pools are not the type of work</td></tr>
-  <tr><td>55004</td><td>The AR pool subtype must match the campaign type</td></tr>
-  <tr><td>55005</td><td>Pool not found</td></tr>
+  <tr><td>55001</td><td>Description Failed to create a pool.</td></tr>
+  <tr><td>55002</td><td>Workflow not found.</td></tr>
+  <tr><td>55003</td><td>Pools are not the type of work.</td></tr>
+  <tr><td>55004</td><td>The AR pool subtype must match the campaign type.</td></tr>
+  <tr><td>55005</td><td>Pool not found.</td></tr>
   <tr><td>56001</td><td>SceneId is not exists.</td></tr>
 </table>
 
