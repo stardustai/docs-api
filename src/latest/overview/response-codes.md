@@ -69,7 +69,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
 {
   "code": 5000,
   "data": null,
-  "date": "",
+  "date": "2025-03-13 20:00:00",
   "message": "Service hiccuped, please try again later",
   "requestId": "",
   "success": false
