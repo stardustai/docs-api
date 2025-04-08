@@ -58,14 +58,14 @@ api:
 ### TaskActionEnum Table
 
 | Value | Description           |
-| ----- | --------------------- | ----------- |
+| ----- | --------------------- |
 | 0     | Initialization        |
 | 1     | Pause                 |
 | 2     | Release               |
 | 3     | Resume                |
-| 4     | ERROR                 | Solve error |
+| 4     | ERROR                 |
 | 5     | Distribute            |
-| 6     | COMPLETE              | Back        |
+| 6     | COMPLETE              |
 | 7     | Submit annotation     |
 | 8     | Check                 |
 | 9     | Sampling              |
