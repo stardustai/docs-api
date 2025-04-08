@@ -55,6 +55,29 @@ api:
 | requestId        | string                            | Unique identifier for the request.                                                       |
 | success          | boolean                           | Indicates whether the request is successful.                                             |
 
+### TaskActionEnum Table
+
+| Value | Description           |
+| ----- | --------------------- | ----------- |
+| 0     | Initialization        |
+| 1     | Pause                 |
+| 2     | Release               |
+| 3     | Resume                |
+| 4     | ERROR                 | Solve error |
+| 5     | Distribute            |
+| 6     | COMPLETE              | Back        |
+| 7     | Submit annotation     |
+| 8     | Check                 |
+| 9     | Sampling              |
+| 10    | Reject                |
+| 11    | Suspend               |
+| 12    | Recycle               |
+| 13    | Send task             |
+| 14    | Dissolve              |
+| 15    | Invalid               |
+| 16    | Manual recycle        |
+| 17    | Return from work pool |
+
 ::: result
 
 ```json[responses]
