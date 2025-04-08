@@ -429,9 +429,6 @@ SlotChildren (Root)
     "metadata": {}, // No metadata information
     "inputSpecification": {
       "type": "select", // Input type is single - select
-      "renderConfig": {
-        "selectionWidgetType": "Segment"
-      }, // Render as segment - style selection widget
       "items": [
         {
           "label": "Car",
