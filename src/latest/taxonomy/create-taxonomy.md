@@ -99,7 +99,7 @@ api:
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
-  }，
+  },
   "57001": {
     "code": 57001,
     "data": null,
@@ -116,7 +116,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
-    "57003": {
+  "57003": {
     "code": 57003,
     "data": null,
     "message": "TaxonomyVersionNam  was repeated.",
@@ -124,7 +124,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
-    "57004": {
+  "57004": {
     "code": 57004,
     "data": null,
     "message": "'imageSourceMapping' value  is not the key of the suboperation.",
@@ -132,7 +132,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
-    "57005": {
+  "57005": {
     "code": 57005,
     "data": null,
     "message": "The minimum attribute is larger than the maximum attribute.",
@@ -140,7 +140,7 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
-    "57006": {
+  "57006": {
     "code": 57006,
     "data": null,
     "message": "The default value is not in the items selection range.",
