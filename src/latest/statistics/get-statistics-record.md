@@ -1,5 +1,5 @@
 ---
-title: '[WIP]Get Statistics Record'
+title: '[WIP] Get Statistics Record'
 description: 'Helix calls to get the statistics record by providing an array of annotationRequestId and pagination information, which can be used to workload statistics and query the relevant annotation records..'
 api:
   method: GET
