@@ -45,6 +45,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>54004</td><td>folderName is not exists.</td></tr>
   <tr><td>54005</td><td>Create folder failed.</td></tr>
   <tr><td>54006</td><td>HelixBucketName already exists.</td></tr>
+  <tr><td>54007</td><td>Bucket connection failed. Check whether the bucket exists.</td></tr>
   <tr><td>55001</td><td>Description Failed to create a pool.</td></tr>
   <tr><td>55002</td><td>Workflow not found.</td></tr>
   <tr><td>55003</td><td>Pools are not the type of work.</td></tr>
