@@ -99,6 +99,54 @@ api:
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
+  },
+  "57001": {
+    "code": 57001,
+    "data": null,
+    "message": "Taxonomy json has error: The value 123 of field key cannot be converted to type number. Please check the value of this field.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "57002": {
+    "code": 57002,
+    "data": null,
+    "message": "The key for Taxonomy was repeated.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "57003": {
+    "code": 57003,
+    "data": null,
+    "message": "TaxonomyVersionNam  was repeated.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "57004": {
+    "code": 57004,
+    "data": null,
+    "message": "'imageSourceMapping' value  is not the key of the suboperation.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "57005": {
+    "code": 57005,
+    "data": null,
+    "message": "The minimum attribute is larger than the maximum attribute.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "57006": {
+    "code": 57006,
+    "data": null,
+    "message": "The default value is not in the items selection range.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
   }
 }
 ```
@@ -429,9 +477,6 @@ SlotChildren (Root)
     "metadata": {}, // No metadata information
     "inputSpecification": {
       "type": "select", // Input type is single - select
-      "renderConfig": {
-        "selectionWidgetType": "Segment"
-      }, // Render as segment - style selection widget
       "items": [
         {
           "label": "Car",
