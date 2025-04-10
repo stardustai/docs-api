@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Get Task Schedule'
+title: 'Get Task Schedule'
 description: 'Query the proportion of the completed pool according to ar.'
 api:
   method: GET
