@@ -36,9 +36,9 @@ api:
       "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://marry-me-scene/test/B.json"
     }
   },
-  "taxonomyInfo": {
-    "type": "string",
-    "description": "Additional information about the Helix taxonomy.",
+  "operatorKeys": {
+    "type": "List<string>",
+    "description": "The pool requires additional filtered taxonomy key of items.",
     "required": false
   },
   "annotationRequestCallback": {

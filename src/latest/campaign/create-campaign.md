@@ -28,14 +28,9 @@ api:
     "description": "Type of workflow, must be one of ['Manual Template', 'Prelabeling Template'] or workflow template name.",
     "default": "Manual"
   },
-  "taxonomyVersion": {
-    "type": "Integer",
-    "description": "Version number of the Helix taxonomy.",
-    "required": false
-  },
-  "taxonomyInfo": {
-    "type": "json",
-    "description": "Additional information about the Helix taxonomy.",
+  "taxonomyVersionName": {
+    "type": "string",
+    "description": "Version name of the Helix taxonomy.",
     "required": false
   },
   "folderName": {
