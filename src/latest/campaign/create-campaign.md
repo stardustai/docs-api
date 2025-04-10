@@ -7,7 +7,7 @@ api:
 ---
 
 > [!WARNING]
-> The 'taxonomyInfo', 'taxonomyVersion' field is not used in the current version.
+> The 'taxonomyVersionName' field is not used in the current version.
 
 ::: request
 
