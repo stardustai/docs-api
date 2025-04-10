@@ -7,7 +7,7 @@ api:
 ---
 
 > [!WARNING]
-> The 'taxonomyInfo' field is not used in the current version.
+> The 'operatorKeys' field is not used in the current version.
 
 ::: request
 
