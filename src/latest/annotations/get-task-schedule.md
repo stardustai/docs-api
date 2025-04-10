@@ -6,9 +6,6 @@ api:
   url: /annotation-request/task/schedule
 ---
 
-> [!WARNING]
-> Currently, the Callback interface is unavailable.
-
 ::: request
 
 ```json [query]
@@ -32,7 +29,10 @@ api:
     "message": "Success",
     "data": {
       "status": "In Progress",
-      "completionPoolSchedule": 33.33
+      "completionPoolSchedule": 33.33,
+      "completionSceneMap": {
+        "65dd2d8a-adff-4a81-8591-bce63a9f9c86": "gs://rosetta-data/test AR009999/test007654/65dd2d8a-adff-4a81-8591-bce63a9f9c86.json"
+      }
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
