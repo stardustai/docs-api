@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Get Statistics'
+title: '[WIP] Get Statistics Result'
 description: 'Helix calls to get the statistics  by providing an array of annotationRequestId and pagination information, which can be used to deliver statistics and query the relevant annotation result.'
 api:
   method: GET
@@ -15,14 +15,14 @@ api:
     "description": "Unique identifier for the annotation request, with a maximum length of 255 bytes.",
     "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
   },
-  "pageNumber": {
+  "offset": {
     "type": "number",
     "description": "The page number for pagination, starting from 1.",
     "default": 1
   },
-  "pageSize": {
+  "limit": {
     "type": "number",
-    "description": "The number of records per page, a positive integer.",
+    "description": "The number of records per page, a positive integer.By default, protect the maximum value of the server is 100. ",
     "default": 10
   }
 }
@@ -36,10 +36,10 @@ api:
 | ------------ | ------ | ---------------------------------------------------------------------------------------- |
 | id           | number | Unique identifier of the task.                                                           |
 | status       | number | Status of the task. Possible values and their meanings are described in the Status Enum. |
-| project_id   | number | ID of the project the task belongs to.                                                   |
-| pool_id      | number | ID of the pool.                                                                          |
-| pool_type    | number | Type of the pool.                                                                        |
-| instance_num | number | The number of instances of each operation.                                               |
+| campaignId   | string | Unique identifier for the campaign.                                                      |
+| poolId       | number | ID of the pool.                                                                          |
+| poolType     | number | Type of the pool.                                                                        |
+| instanceInfo | Json   | The number of instances of each operation.                                               |
 
 ### TaskStatusEnum Table
 
@@ -79,13 +79,13 @@ api:
             {
              "id": 1, // Unique identifier of the annotation history record, type number
              "status": 1, // Status of the task, type number
-             "project_id": 1001, // ID of the project the task belongs to, type number
-             "pool_id": 3001, // ID of the pool, type number
-             "pool_type": 1, // Type of the pool, type number
-             "instance_info": {
+             "campaignId": 1001, // ID of the project the task belongs to, type number
+             "poolId":3001,//IDofthepool,typenumber
+            "poolType":1,//Typeofthepool,typenumber
+             "instanceInfo": {
                 "select-[e000f]": 44,
                 "0e767bcb-7480-4e85-bbe8-439fe7871104": 11
-             } // The number of instances of each operation
+             }
              }
         ],
         "date": "2025-04-08 14:20:00",
@@ -100,14 +100,14 @@ api:
         "requestId": "864b70706a7349ea83e177a49800464f",
         "success": false
     },
-    "4005": {
-        "code": 4005,
-        "data": null,
-        "message": "Invalid parameter",
-        "date": "2024-05-16 19:03:34",
-        "requestId": "864b70706a7349ea83e177a49800464f",
-        "success": false
-    }
+ "53003": {
+    "code": 53003,
+    "data": null,
+    "message": "Annotation request has not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  }
 }
 ```
 
