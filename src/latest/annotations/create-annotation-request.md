@@ -40,16 +40,6 @@ api:
     "type": "List<string>",
     "description": "The pool requires additional filtered taxonomy key of items.",
     "required": false
-  },
-  "annotationRequestCallback": {
-    "type": "string",
-    "description": "Callback URL for receiving updates on annotation request status.",
-    "required": false
-  },
-  "annotationResultCallback": {
-    "type": "Map",
-    "description": "Mapping of callback URLs for annotation result notifications.",
-    "required": false
   }
 }
 ```
