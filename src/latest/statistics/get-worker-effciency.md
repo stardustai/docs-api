@@ -2,9 +2,13 @@
 title: '[WIP]Get Labeler Working Duration and Efficiency'
 description: 'We will provide a POST API for calculating labeler working duration and efficiency in a Campaign on a specific day.'
 api:
-  method: POST
+  method: GET
   url: /statistics/effciency
 ---
+
+::: tip
+efficiency = workingDuration /total annotation instance.
+:::
 
 ::: request
 

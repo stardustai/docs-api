@@ -2,7 +2,7 @@
 title: '[WIP]Get Annotation Frames'
 description: 'We will provide a POST API for calculating the number of manual and auto annotation frames in a Campaign.'
 api:
-  method: POST
+  method: GET
   url: /statistics/frames
 ---
 

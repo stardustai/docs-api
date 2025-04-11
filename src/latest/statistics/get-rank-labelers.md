@@ -1,8 +1,8 @@
 ---
-title: 'Rank Labelers by Delivery Quantity'
+title: '[WIP]Rank Labelers by Delivery Quantity'
 description: 'We will provide a POST API for ranking labelers by the quantity of instance delivery in a Campaign.'
 api:
-  method: POST
+  method: GET
   url: /statistics/labeler/rank/delivery_quantity
 ---
 

@@ -98,7 +98,10 @@ export const config_latest = defineConfig({
         text: 'STATISTICS',
         items: [
           getApiConfig('/statistics/get-statistics'),
-          getApiConfig('/statistics/get-statistics-record')
+          getApiConfig('/statistics/get-statistics-record'),
+          getApiConfig('/statistics/get-frames'),
+          getApiConfig('/statistics/get-rank-labelers'),
+          getApiConfig('/statistics/get-worker-effciency')
         ]
       }
     ]

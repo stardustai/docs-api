@@ -131,6 +131,14 @@ api:
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
+  },
+  "50524": {
+    "code": 50524,
+    "data": null,
+    "message": "The workflow template not exists.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
   }
 }
 ```
