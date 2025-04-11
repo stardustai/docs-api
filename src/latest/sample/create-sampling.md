@@ -22,23 +22,26 @@ api:
   },
   "interceptionMode": {
     "type": "number",
-    "description": "Interception method value",
+    "description": "Interception method value, Parameter range is 1:random continuity, 2:positive, 3:reversed, 4:system random, 5:custom, 6:sequencelength",
     "default": "1"
   },
   "interceptionFrame": {
     "type": "number",
-    "description": "Required when your interceptionMode parameter is not SEQUENCELENGTH.",
-    "default": "1"
+    "description": "Required when your interceptionMode parameter is not sequencelength.",
+    "default": "1",
+    "required": false
   },
   "sequenceLength": {
     "type": "number",
-    "description": "Required when your interceptionMode selects SEQUENCELENGTH.",
-    "default": "1"
+    "description": "Required when your interceptionMode selects sequencelength.",
+    "default": "1",
+    "required": false
   },
   "interceptionBoundary": {
     "type": "Array",
-    "description": "Required when your interceptionMode type is CUSTOM.",
-    "default": "1"
+    "description": "Required when your interceptionMode type is custom.",
+    "default": "1",
+    "required": false
   }
 }
 ```
