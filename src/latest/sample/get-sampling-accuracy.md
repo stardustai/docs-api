@@ -30,7 +30,7 @@ api:
     "message": "Success",
     "data": {
       "frameAccuracyRate": 50.2,
-      "accuracyRate": 30
+      "instanceAccuracyRate": 30
     },
     "date": "2025-03-13 20:00:00",
     "requestId": "7610aa38c0fc409d98c827a879d9cae5",
