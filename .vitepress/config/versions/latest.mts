@@ -103,6 +103,13 @@ export const config_latest = defineConfig({
           getApiConfig('/statistics/get-rank-labelers'),
           getApiConfig('/statistics/get-worker-effciency')
         ]
+      },
+      {
+        text: 'SAMPLE',
+        items: [
+          getApiConfig('/sample/create-sampling'),
+          getApiConfig('/sample/get-sampling-accuracy')
+        ]
       }
     ]
   }
