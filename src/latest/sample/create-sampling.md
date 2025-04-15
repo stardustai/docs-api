@@ -20,6 +20,11 @@ api:
     "description": "Rosetta Pool Name",
     "default": "a3f8b6e4-9c1d-4d8a-93b2-7f7e8f3a1d5e-SamplingPool"
   },
+  "samplingRatio": {
+    "type": "number",
+    "description": "Sampling ratio",
+    "default": "1.0"
+  },
   "interceptionMode": {
     "type": "number",
     "description": "Interception method value, Please see the enumeration values defined below. They are not intercepted by default",
