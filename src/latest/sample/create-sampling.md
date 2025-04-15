@@ -31,12 +31,12 @@ api:
     "default": "1",
     "required": false,
     "enum": {
-      "random continuity": "1",
-      "positive": "2",
-      "reversed": "3",
-      "system random": "4",
-      "custom": "5",
-      "sequencelength": "6"
+      "random continuity": 1,
+      "positive": 2,
+      "reversed": 3,
+      "system random": 4,
+      "custom": 5,
+      "sequencelength": 6
     }
   },
   "interceptionFrame": {
