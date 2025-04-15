@@ -63,7 +63,9 @@ export const config_latest = defineConfig({
         text: 'FOLDER',
         items: [
           getApiConfig('/folder/create-folder'),
-          getApiConfig('/folder/get-folder')
+          getApiConfig('/folder/get-folder'),
+          getApiConfig('/folder/update-folder'),
+          getApiConfig('/folder/get-all-folder')
         ]
       },
       {
