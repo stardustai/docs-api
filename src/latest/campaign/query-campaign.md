@@ -1,6 +1,6 @@
 ---
 title: '[WIP] Query Campaign'
-description: 'Guidelines for query campaign on Rosetta.'
+description: 'Query Campaign creation information.'
 api:
   method: GET
   url: /campaign/{campaignName}
