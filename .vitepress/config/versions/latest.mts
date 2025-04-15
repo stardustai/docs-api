@@ -70,7 +70,10 @@ export const config_latest = defineConfig({
       },
       {
         text: 'CAMPAIGN',
-        items: [getApiConfig('/campaign/create-campaign')]
+        items: [
+          getApiConfig('/campaign/create-campaign'),
+          getApiConfig('/campaign/query-campaign')
+        ]
       },
       {
         text: 'WORKFLOW',

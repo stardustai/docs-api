@@ -29,6 +29,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>51006</td><td>CampaignId not exists.</td></tr>
   <tr><td>51007</td><td>workflowType error.</td></tr>
   <tr><td>51008</td><td>Campaign not exists.</td></tr>
+  <tr><td>51009</td><td>campaignName not exists.</td></tr>
   <tr><td>52001</td><td>Create workflow failed.</td></tr>
   <tr><td>52002</td><td>Workflow pool is empty.</td></tr>
   <tr><td>53001</td><td>Do not create annotation request repeatedly.</td></tr>
