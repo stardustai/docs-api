@@ -16,10 +16,17 @@ api:
 {
   "2000": {
     "code": 2000,
-    "message": "Success",
-    "data": null,
-    "date": "2025-03-13 20:00:00",
-    "requestId": "864b70706a7349ea83e177a49800464f",
+    "message": "请求成功",
+    "data": {
+      "campaignId": "stardust helix test",
+      "campaignName": "stardust helix test",
+      "workflowType": "Manual Template",
+      "taxonomyVersionName": "test taxonomyVersionName",
+      "folderName": "Stardust",
+      "campaignType": "POC"
+    },
+    "date": "2025-04-15 11:42:54",
+    "requestId": "449d7b0df77d44e7bb54038becc72c45",
     "success": true
   },
   "5000": {
