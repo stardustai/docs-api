@@ -38,7 +38,7 @@ api:
   },
   "operatorKeys": {
     "type": "List<string>",
-    "description": "The pool requires additional filtered taxonomy key of items.",
+    "description": "If the AR needs to specify the taxonomy item, here pass the taxonomy key array; If the value is null, do not filter taxonomy items.",
     "required": false
   }
 }
