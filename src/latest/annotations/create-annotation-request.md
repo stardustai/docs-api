@@ -38,7 +38,7 @@ api:
   },
   "operatorKeys": {
     "type": "List<string>",
-    "description": "If the AR needs to specify the taxonomy item, here pass the taxonomy key array; If the value is null, do not filter taxonomy items.",
+    "description": "If the AR needs to specify the taxonomy item, here pass the taxonomy key array (whitelist); If the value is null, do not filter taxonomy items.",
     "required": false
   }
 }
@@ -110,6 +110,14 @@ api:
     "code": 52002,
     "data": null,
     "message": "Workflow pool is empty.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "52003": {
+    "code": 52003,
+    "data": null,
+    "message": "operatorKeys are outside the scope of campaign taxonomy.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false

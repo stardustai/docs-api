@@ -116,6 +116,14 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
+  "57012": {
+    "code": 57012,
+    "data": null,
+    "message": "The label for Taxonomy was repeated.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
   "57003": {
     "code": 57003,
     "data": null,

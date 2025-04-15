@@ -31,7 +31,7 @@ api:
   "taxonomyVersionName": {
     "type": "string",
     "description": "Version name of the Helix taxonomy.",
-    "required": false
+    "default": "3D"
   },
   "folderName": {
     "type": "string",
