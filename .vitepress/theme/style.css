@@ -6,6 +6,18 @@ html.dark {
   background-color: var(--vp-c-bg);
 }
 
+body {
+  --vp-layout-max-width: 1920px;
+}
+
+body .VPDoc.has-aside .content .content-container {
+  max-width: 1168px;
+}
+
+.VPLocalNavOutlineDropdown .outline {
+  @apply truncate;
+}
+
 .vp-code {
   max-height: 500px;
   overflow: auto;
