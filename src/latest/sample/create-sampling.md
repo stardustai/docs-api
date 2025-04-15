@@ -22,8 +22,9 @@ api:
   },
   "interceptionMode": {
     "type": "number",
-    "description": "Interception method value, Parameter range is 1:random continuity, 2:positive, 3:reversed, 4:system random, 5:custom, 6:sequencelength",
-    "default": "1"
+    "description": "Interception method value, Please see the enumeration values defined below. They are not intercepted by default",
+    "required": false,
+    "enum": ["1":"random continuity", "2":"positive", "3":"reversed", "4":"system random", "5":"custom", "6":"sequencelength"]
   },
   "interceptionFrame": {
     "type": "number",
