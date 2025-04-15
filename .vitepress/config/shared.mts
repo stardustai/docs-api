@@ -26,7 +26,7 @@ export const getApiTitle = (title: string, method: 'GET' | 'POST') => {
   return `
 <span class="flex justify-between items-center">
   <span>${title}</span>
-  <span class="text-[8px] w-9 h-4 rounded-xl text-white text-center leading-4 ${bg}">${method}</span>
+  <span class="text-[8px] w-9 h-4 rounded-xl text-white text-center flex-shrink-0 leading-4 ${bg}">${method}</span>
 </span>`
 }
 
