@@ -6,16 +6,18 @@ html.dark {
   background-color: var(--vp-c-bg);
 }
 
-body {
-  --vp-layout-max-width: 1920px;
-}
+@media screen and (min-width: 1920px) {
+  body {
+    --vp-layout-max-width: 1920px;
+  }
 
-body .VPDoc.has-aside .content .content-container {
-  max-width: 1168px;
-}
+  body .VPDoc.has-aside .content .content-container {
+    max-width: 1168px;
+  }
 
-.VPLocalNavOutlineDropdown .outline {
-  @apply truncate;
+  .VPLocalNavOutlineDropdown .outline {
+    @apply truncate;
+  }
 }
 
 .vp-code {
