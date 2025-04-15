@@ -3,6 +3,7 @@ interface Common {
   default?: string
   required?: boolean
   description?: string
+  enum?: object
 }
 
 interface BaseData extends Common {

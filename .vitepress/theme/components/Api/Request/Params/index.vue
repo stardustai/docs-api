@@ -70,6 +70,20 @@
                 class="text-xs w-4/5"
                 v-html="md.renderInline(item.description)"
               />
+              <div v-if="item.enum">
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                  </tr>
+                  <tr
+                    v-for="(value, index) in Object.entries(item.enum)"
+                    :key="index"
+                  >
+                    <td v-for="v of value">{{ v }}</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </summary>
           <div v-if="isComplex(item)" class="daisy-collapse-content -mb-6 px-3">

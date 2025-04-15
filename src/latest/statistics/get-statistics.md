@@ -8,7 +8,7 @@ api:
 
 ::: request
 
-```json [body]
+```json [query]
 {
   "annotationRequestId": {
     "type": "string",
