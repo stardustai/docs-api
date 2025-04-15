@@ -20,10 +20,24 @@ api:
     "description": "Rosetta Pool Name",
     "default": "a3f8b6e4-9c1d-4d8a-93b2-7f7e8f3a1d5e-SamplingPool"
   },
+  "samplingRatio": {
+    "type": "number",
+    "description": "Sampling ratio",
+    "default": "1.0"
+  },
   "interceptionMode": {
     "type": "number",
-    "description": "Interception method value, Parameter range is 1:random continuity, 2:positive, 3:reversed, 4:system random, 5:custom, 6:sequencelength",
-    "default": "1"
+    "description": "Interception method value, Please see the enumeration values defined below. They are not intercepted by default",
+    "default": "1",
+    "required": false,
+    "enum": {
+      "random continuity": 1,
+      "positive": 2,
+      "reversed": 3,
+      "system random": 4,
+      "custom": 5,
+      "sequencelength": 6
+    }
   },
   "interceptionFrame": {
     "type": "number",

@@ -73,14 +73,15 @@
               <div v-if="item.enum">
                 <table>
                   <tr>
-                    <th>Name</th>
                     <th>Value</th>
+                    <th>Description</th>
                   </tr>
                   <tr
-                    v-for="(value, index) in Object.entries(item.enum)"
+                    v-for="([desc, val], index) in Object.entries(item.enum)"
                     :key="index"
                   >
-                    <td v-for="v of value">{{ v }}</td>
+                    <td>{{ val }}</td>
+                    <td>{{ desc }}</td>
                   </tr>
                 </table>
               </div>

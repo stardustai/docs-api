@@ -63,12 +63,17 @@ export const config_latest = defineConfig({
         text: 'FOLDER',
         items: [
           getApiConfig('/folder/create-folder'),
-          getApiConfig('/folder/get-folder')
+          getApiConfig('/folder/get-folder'),
+          getApiConfig('/folder/update-folder'),
+          getApiConfig('/folder/get-all-folder')
         ]
       },
       {
         text: 'CAMPAIGN',
-        items: [getApiConfig('/campaign/create-campaign')]
+        items: [
+          getApiConfig('/campaign/create-campaign'),
+          getApiConfig('/campaign/query-campaign')
+        ]
       },
       {
         text: 'WORKFLOW',

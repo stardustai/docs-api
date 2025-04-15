@@ -29,6 +29,7 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>51006</td><td>CampaignId not exists.</td></tr>
   <tr><td>51007</td><td>workflowType error.</td></tr>
   <tr><td>51008</td><td>Campaign not exists.</td></tr>
+  <tr><td>51009</td><td>campaignName not exists.</td></tr>
   <tr><td>52001</td><td>Create workflow failed.</td></tr>
   <tr><td>52002</td><td>Workflow pool is empty.</td></tr>
   <tr><td>53001</td><td>Do not create annotation request repeatedly.</td></tr>
@@ -46,6 +47,8 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>54005</td><td>Create folder failed.</td></tr>
   <tr><td>54006</td><td>HelixBucketName already exists.</td></tr>
   <tr><td>54007</td><td>Bucket connection failed. Check whether the bucket exists.</td></tr>
+  <tr><td>54008</td><td>Folder status has not exists.</td></tr>
+  <tr><td>54009</td><td>Update folder failed.</td></tr>
   <tr><td>55001</td><td>Description Failed to create a pool.</td></tr>
   <tr><td>55002</td><td>Workflow not found.</td></tr>
   <tr><td>55003</td><td>Pools are not the type of work.</td></tr>
