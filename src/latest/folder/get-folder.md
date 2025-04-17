@@ -20,7 +20,8 @@ api:
     "data": {
       "helixProjectId": "helixProjectId",
       "name": "helixProjectName",
-      "helixBucketName": "helixBucketName"
+      "helixBucketName": "helixBucketName",
+      "helixStatus": "active"
     },
     "date": "2025-03-13 20:00:00",
     "requestId": "7610aa38c0fc409d98c827a879d9cae5",
