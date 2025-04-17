@@ -6,9 +6,6 @@ api:
   url: /campaign/create
 ---
 
-> [!WARNING]
-> The 'taxonomyVersionName' field is not used in the current version.
-
 ::: request
 
 ```json [body]

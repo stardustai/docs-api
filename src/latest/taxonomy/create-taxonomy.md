@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Create Taxonomy'
+title: 'Create Taxonomy'
 description: 'Guidelines for create taxonomy info on Rosetta.'
 api:
   method: POST

@@ -6,9 +6,6 @@ api:
   url: /annotation-request
 ---
 
-> [!WARNING]
-> The 'operatorKeys' field is not used in the current version.
-
 ::: request
 
 ```json [body]

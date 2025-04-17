@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Update Folder'
+title: 'Update Folder'
 description: 'We will provide a POST API for update the folder status.'
 api:
   method: POST
