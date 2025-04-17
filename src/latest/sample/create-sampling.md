@@ -20,10 +20,33 @@ api:
     "description": "Rosetta Pool Name",
     "default": "a3f8b6e4-9c1d-4d8a-93b2-7f7e8f3a1d5e-SamplingPool"
   },
+  "sampleType": {
+    "type": "number",
+    "description": "Sampling type value, Please see the enumeration values defined below. ",
+    "default": "1",
+    "required": false,
+    "enum": {
+      "Sequential sampling": "1",
+      "Random sampling": "2"
+    }
+  },
+  "sampleCount": {
+    "type": "number",
+    "description": "Sampling count, If you do not fill it in, all tasks in the pool will default",
+    "default": "1",
+    "required": false
+  },
   "samplingRatio": {
     "type": "number",
-    "description": "Sampling ratio",
-    "default": "1.0"
+    "description": "Sampling ratio(Choose one of sampleRatio and samplingQuantity)",
+    "default": "1.0",
+    "required": false
+  },
+  "samplingQuantity": {
+    "type": "number",
+    "description": "Sampling quantity(Choose one of sampleRatio and samplingQuantity),If you do not fill it in, all tasks in the pool will default",
+    "default": "1",
+    "required": false
   },
   "interceptionMode": {
     "type": "number",
