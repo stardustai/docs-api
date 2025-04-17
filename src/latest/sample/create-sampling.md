@@ -75,10 +75,25 @@ api:
     "required": false
   },
   "interceptionBoundary": {
-    "type": "Array",
+    "type": "array",
     "description": "Required when your interceptionMode type is custom.",
     "default": "1",
-    "required": false
+    "required": false,
+    "items": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "number",
+          "description": "Start position",
+          "default": "1"
+        },
+        "end": {
+          "type": "number",
+          "description": "End position",
+          "default": "2"
+        }
+      }
+    }
   }
 }
 ```
