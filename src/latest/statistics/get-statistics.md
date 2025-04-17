@@ -41,21 +41,6 @@ api:
 | poolType     | number | Type of the pool.                                                                        |
 | instanceInfo | Json   | The number of instances of each operation.                                               |
 
-### TaskStatusEnum Table
-
-| Value | Description            |
-| ----- | ---------------------- |
-| 1     | Waiting for allocation |
-| 2     | Assigned               |
-| 3     | At work                |
-| 4     | Waiting for submission |
-| 5     | Pause                  |
-| 6     | Error                  |
-| 7     | Suspend                |
-| 8     | Submission failed      |
-| 9     | Accomplish             |
-| 10    | Invalid                |
-
 ### PoolTypeEnum Table
 
 | Value | Description       |
