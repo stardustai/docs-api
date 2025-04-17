@@ -20,10 +20,33 @@ api:
     "description": "Rosetta Pool Name",
     "default": "a3f8b6e4-9c1d-4d8a-93b2-7f7e8f3a1d5e-SamplingPool"
   },
+  "sampleType": {
+    "type": "number",
+    "description": "Sampling type value, Please see the enumeration values defined below. ",
+    "default": "1",
+    "required": false,
+    "enum": {
+      "Sequential sampling": "1",
+      "Random sampling": "2"
+    }
+  },
+  "sampleCount": {
+    "type": "number",
+    "description": "Sampling count, If you do not fill it in, all tasks in the pool will default",
+    "default": "1",
+    "required": false
+  },
   "samplingRatio": {
     "type": "number",
-    "description": "Sampling ratio",
-    "default": "1.0"
+    "description": "Sampling ratio(Choose one of sampleRatio and samplingQuantity)",
+    "default": "1.0",
+    "required": false
+  },
+  "samplingQuantity": {
+    "type": "number",
+    "description": "Sampling quantity(Choose one of sampleRatio and samplingQuantity),If you do not fill it in, all tasks in the pool will default",
+    "default": "1",
+    "required": false
   },
   "interceptionMode": {
     "type": "number",
@@ -105,6 +128,14 @@ api:
     "code": 5606,
     "data": null,
     "message": "The remaining tasks in the current working pool are 0 and cannot be assigned",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "57015": {
+    "code": 57015,
+    "data": null,
+    "message": "Choose one of sampleRatio and samplingQuantity",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
