@@ -11,9 +11,9 @@ api:
 ```json [query]
 {
   "annotationRequestId": {
-    "type": "string",
+    "type": "string[]",
     "description": "Unique identifier for the annotation request, with a maximum length of 255 bytes.",
-    "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
+    "default": ["7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"]
   },
   "offset": {
     "type": "number",
@@ -37,7 +37,7 @@ api:
 | id           | number | Unique identifier of the task.                                                           |
 | status       | number | Status of the task. Possible values and their meanings are described in the Status Enum. |
 | campaignId   | string | Unique identifier for the campaign.                                                      |
-| poolId       | number | ID of the pool.                                                                          |
+| poolName     | number | ID of the pool.                                                                          |
 | poolType     | number | Type of the pool.                                                                        |
 | instanceInfo | Json   | The number of instances of each operation.                                               |
 

@@ -11,9 +11,9 @@ api:
 ```json [query]
 {
   "annotationRequestId": {
-    "type": "string",
+    "type": "string[]",
     "description": "Unique identifier for the annotation request, with a maximum length of 255 bytes.",
-    "default": "7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"
+    "default": ["7d44b43b-3bbd-4f53-9f95-b7c0217d8d5b"]
   },
   "offset": {
     "type": "number",
@@ -38,7 +38,7 @@ api:
 | status              | number                            | Status of the task. Possible values and their meanings are described in the Status Enum.                                  |
 | campaignId          | string                            | Unique identifier for the campaign.                                                                                       |
 | taskId              | number                            | ID of the task.                                                                                                           |
-| poolId              | number                            | ID of the pool.                                                                                                           |
+| poolName            | String                            | ID of the pool.                                                                                                           |
 | poolType            | number                            | Type of the pool.                                                                                                         |
 | folderId            | number                            | ID of the team.                                                                                                           |
 | creatorId           | number                            | ID of the creator of the record.                                                                                          |
@@ -49,7 +49,6 @@ api:
 | modifyAttributesNum | number                            | Number of submitted annotation attributes. Only this manual modification and the new instance will be in the count range. |
 | instanceSum         | number                            | Total number of instances at that time.                                                                                   |
 | attributesSum       | number                            | Total number of task attributes at that time.                                                                             |
-| frameCount          | number                            | Number of frames of the task.                                                                                             |
 
 ### TaskActionEnum Table
 

@@ -22,8 +22,6 @@ api:
       {
         "label": "car",
         "slotSpecification": {
-          "minVertices": 20,
-          "maxVertices": 50,
           "imageSourceMapping": ["box2d-[1570d]"],
           "type": "box3d"
         },
@@ -200,23 +198,24 @@ api:
 
 ## Slot (Single-layer Annotation Item)
 
-| Attribute                                                                      | Required | Type         | Description                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------ | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| key                                                                            | true     | string       | Unique identifier ,in the format of ${uuid}                                                                                                                                                                                    |
-| type                                                                           | true     | string(Enum) | Is fixed as "slot"                                                                                                                                                                                                             |
-| label                                                                          | true     | string       | Operator name                                                                                                                                                                                                                  |
-| slotSpecification.type                                                         | true     | string(Enum) | [rosetta annotation type](#mapping-of-annotation-types)                                                                                                                                                                        |
-| slotSpecification.customColor                                                  | false    | string       | Instance color for the annotation(Color notation in hexadecimal)                                                                                                                                                               |
-| metadata.hint                                                                  | false    | string       | Hint information for the annotation                                                                                                                                                                                            |
-| instanceOption.minQuantity/maxQuantity                                         | false    | number       | (AQC) Min/Max quantity for the annotation                                                                                                                                                                                      |
-| slotSpecification.minWidth/minHeight                                           | false    | number       | (AQC)Min size for relevant geometric 2D shapes(eg:2D Box,2D Square,2D Oval,2D Polygon,2D 3points Polygon)                                                                                                                      |
-| slotSpecification.<br/>topLeftMark/topRightMark/bottomLeftMark/bottomRightMark | false    | string       | vertex labels for box2D                                                                                                                                                                                                        |
-| slotSpecification.restrictInsideCanvasBoundary                                 | false    | boolean      | Drawing instances is limited to the image area only.If set to true, drawing instances is limited to the image area only.                                                                                                       |
-| slotSpecification.minVertices/maxVertices                                      | false    | number       | (AQC) polygon/3D Polygon/line/3D Polyline contains minimum/maximum points.                                                                                                                                                     |
-| slotSpecification.presetSizes.name                                             | false    | string       | The name of preset size for box3d. name refers to the group name for each set of preset dimensions (length, width, and height).                                                                                                |
-| slotSpecification.presetSizes.geometry.width/height/depth                      | false    | number       | Depend on the configuration "slotSpecification.presetSize.name". Preset the length, width, and height of the 3D bounding box.                                                                                                  |
-| slotSpecification.maxPadding                                                   | false    | number       | (AQC) Border distance from point cloud for box3d                                                                                                                                                                               |
-| slotSpecification.imageSourceMapping                                           | false    | string[]     | It is used to automatically generate 2D instances on 2D images that follow a spatial mapping relationship with the corresponding 3D instance. (except semantic segmentation）.The value is child slot key(Unique identifier) . |
+| Attribute                                                                      | Required | Type         | Description                                                                                                              |
+| ------------------------------------------------------------------------------ | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| key                                                                            | true     | string       | Unique identifier ,in the format of ${uuid}                                                                              |
+| type                                                                           | true     | string(Enum) | Is fixed as "slot"                                                                                                       |
+| label                                                                          | true     | string       | Operator name                                                                                                            |
+| slotSpecification.type                                                         | true     | string(Enum) | [rosetta annotation type](#mapping-of-annotation-types)                                                                  |
+| slotSpecification.customColor                                                  | false    | string       | Instance color for the annotation(Color notation in hexadecimal)                                                         |
+| metadata.hint                                                                  | false    | string       | Hint information for the annotation                                                                                      |
+| instanceOption.minQuantity/maxQuantity                                         | false    | number       | (AQC) Min/Max quantity for the annotation                                                                                |
+| slotSpecification.minWidth/minHeight                                           | false    | number       | (AQC)Min size for relevant geometric 2D shapes(eg:2D Box,2D Square,2D Oval,2D Polygon,2D 3points Polygon)                |
+| slotSpecification.<br/>topLeftMark/topRightMark/bottomLeftMark/bottomRightMark | false    | string       | vertex labels for box2D                                                                                                  |
+| slotSpecification.restrictInsideCanvasBoundary                                 | false    | boolean      | Drawing instances is limited to the image area only.If set to true, drawing instances is limited to the image area only. |
+
+[[]]
+| slotSpecification.presetSizes.name | false | string | The name of preset size for box3d. name refers to the group name for each set of preset dimensions (length, width, and height). |
+| slotSpecification.presetSizes.geometry.width/height/depth | false | number | Depend on the configuration "slotSpecification.presetSize.name". Preset the length, width, and height of the 3D bounding box. |
+| slotSpecification.maxPadding | false | number | (AQC) Border distance from point cloud for box3d |
+| slotSpecification.imageSourceMapping | false | string[] | It is used to automatically generate 2D instances on 2D images that follow a spatial mapping relationship with the corresponding 3D instance. (except semantic segmentation）.The value is child slot key(Unique identifier) . |
 
 ## Input (Input Configuration Item)
 
