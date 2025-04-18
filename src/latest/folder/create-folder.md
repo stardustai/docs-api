@@ -20,10 +20,15 @@ api:
     "description": "Helix Project Name. The maximum length limit is 255 bytes.",
     "default": "helixProjectNameTest"
   },
-  "helixBucketName": {
-    "type": "string",
-    "description": "Helix Bucket Name. The maximum length limit is 255 bytes.",
-    "default": "helixBucketNameTest"
+  "helixBucketNameList": {
+    "type": "array",
+    "description": "Helix Bucket Name List. Each item has a max length of 255 bytes. Max 100 items.",
+    "items": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "maxItems": 100,
+    "default": ["helixBucketNameTest1", "helixBucketNameTest2"]
   }
 }
 ```
@@ -82,18 +87,26 @@ api:
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
-  "54007": {
-    "code": 54007,
+  "54010": {
+    "code": 54010,
     "data": null,
-    "message": "Bucket connection failed. Check whether the bucket exists.",
+    "message": "helixBucketName:[%s] provide bucket name, can not use bucket path.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
   },
-  "54010": {
-    "code": 54010,
+  "54011": {
+    "code": 54011,
     "data": null,
-    "message": "Provide bucket name, can not use bucket path.",
+    "message": "helixBucketName:[%s] max size is 255.",
+    "date": "2025-03-13 20:00:00",
+    "requestId": "864b70706a7349ea83e177a49800464f",
+    "success": false
+  },
+  "54013": {
+    "code": 54013,
+    "data": null,
+    "message": "helixBucketName:[%s] connection failed. Check whether the bucket exists.",
     "date": "2025-03-13 20:00:00",
     "requestId": "864b70706a7349ea83e177a49800464f",
     "success": false
