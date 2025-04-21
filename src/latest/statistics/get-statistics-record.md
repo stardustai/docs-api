@@ -38,7 +38,7 @@ api:
 | status              | number                            | Status of the task. Possible values and their meanings are described in the Status Enum.                                  |
 | campaignId          | string                            | Unique identifier for the campaign.                                                                                       |
 | taskId              | number                            | ID of the task.                                                                                                           |
-| poolName            | String                            | ID of the pool.                                                                                                           |
+| poolName            | String                            | Name of the pool.                                                                                                         |
 | poolType            | number                            | Type of the pool.                                                                                                         |
 | folderId            | number                            | ID of the team.                                                                                                           |
 | creatorId           | number                            | ID of the creator of the record.                                                                                          |
@@ -86,7 +86,7 @@ api:
              "status": 1, // Status of the task, type number
              "campaignId": 1001, // ID of the project the task belongs to, type number
              "taskId": 2001, // ID of the task, type number
-             "poolId": 3001, // ID of the pool, type number
+             "poolName": "CO 041401CO2-Completion Pool", // ID of the pool, type number
              "poolType": 1, // Type of the pool, type number
              "folderId": 4001, // ID of the team, type number
              "creatorId": 6001, // ID of the creator of the record, type number
