@@ -56,6 +56,13 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>55004</td><td>The AR pool subtype must match the campaign type.</td></tr>
   <tr><td>55005</td><td>Pool not found.</td></tr>
   <tr><td>56001</td><td>SceneId is not exists.</td></tr>
+  <tr><td>57001</td><td>Taxonomy json has error: The value 123 of field key cannot be converted to type number. Please check the value of this field.</td></tr>
+  <tr><td>57002</td><td>The key for Taxonomy was repeated.</td></tr>
+  <tr><td>57003</td><td>TaxonomyVersionName was repeated.</td></tr>
+  <tr><td>57004</td><td>'imageSourceMapping' value is not the key of the suboperation.</td></tr>
+  <tr><td>57005</td><td>The minimum attribute is larger than the maximum attribute.</td></tr>
+  <tr><td>57006</td><td>The default value is not in the items selection range.</td></tr>
+  <tr><td>57012</td><td>The label for Taxonomy was repeated.</td></tr>
 </table>
 
 ::: code-group
