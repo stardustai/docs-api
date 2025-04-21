@@ -43,18 +43,26 @@ description: Stardust's API uses the following HTTP codes and business-specific 
   <tr><td>54002</td><td>folderId already exists.</td></tr>
   <tr><td>54003</td><td>Name already exists.</td></tr>
   <tr><td>54004</td><td>folderId is not exists.</td></tr>
-  <tr><td>54004</td><td>folderName is not exists.</td></tr>
   <tr><td>54005</td><td>Create folder failed.</td></tr>
-  <tr><td>54007</td><td>Bucket connection failed. Check whether the bucket exists.</td></tr>
+  <tr><td>54006</td><td>folderName is not exists.</td></tr>
   <tr><td>54008</td><td>Folder status has not exists.</td></tr>
   <tr><td>54009</td><td>Update folder failed.</td></tr>
   <tr><td>54010</td><td>Provide bucket name, can not use bucket path.</td></tr>
+  <tr><td>54011</td><td>helixBucketName:[%s] max size is 255.</td></tr>
+  <tr><td>54013</td><td>helixBucketName:[%s] connection failed. Check whether the bucket exists.</td></tr>
   <tr><td>55001</td><td>Description Failed to create a pool.</td></tr>
   <tr><td>55002</td><td>Workflow not found.</td></tr>
   <tr><td>55003</td><td>Pools are not the type of work.</td></tr>
   <tr><td>55004</td><td>The AR pool subtype must match the campaign type.</td></tr>
   <tr><td>55005</td><td>Pool not found.</td></tr>
   <tr><td>56001</td><td>SceneId is not exists.</td></tr>
+  <tr><td>57001</td><td>Taxonomy json has error: The value 123 of field key cannot be converted to type number. Please check the value of this field.</td></tr>
+  <tr><td>57002</td><td>The key for Taxonomy was repeated.</td></tr>
+  <tr><td>57003</td><td>TaxonomyVersionName was repeated.</td></tr>
+  <tr><td>57004</td><td>'imageSourceMapping' value is not the key of the suboperation.</td></tr>
+  <tr><td>57005</td><td>The minimum attribute is larger than the maximum attribute.</td></tr>
+  <tr><td>57006</td><td>The default value is not in the items selection range.</td></tr>
+  <tr><td>57012</td><td>The label for Taxonomy was repeated.</td></tr>
 </table>
 
 ::: code-group

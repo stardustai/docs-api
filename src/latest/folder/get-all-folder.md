@@ -22,7 +22,7 @@ api:
         {
           "helixProjectId": "folder_test1",
           "name": "folder_test1",
-          "helixBucketName": "sample-mb-data11",
+          "helixBucketNameList": ["sample-mb-data11", "bucket-02"],
           "helixStatus": "inactive"
         }
       ],
@@ -30,7 +30,7 @@ api:
         {
           "helixProjectId": "STARDUST_HELIX_PROJECT_ID",
           "name": "Stardust",
-          "helixBucketName": "test01",
+          "helixBucketNameList": ["test01", "test02"],
           "helixStatus": "active"
         }
       ]
