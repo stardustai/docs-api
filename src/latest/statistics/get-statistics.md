@@ -32,14 +32,14 @@ api:
 
 ### Response Field Descriptions
 
-| Field Name   | Type   | Description                                                                              |
-| ------------ | ------ | ---------------------------------------------------------------------------------------- |
-| id           | number | Unique identifier of the task.                                                           |
-| status       | number | Status of the task. Possible values and their meanings are described in the Status Enum. |
-| campaignId   | string | Unique identifier for the campaign.                                                      |
-| poolName     | number | ID of the pool.                                                                          |
-| poolType     | number | Type of the pool.                                                                        |
-| instanceInfo | Json   | The number of instances of each operation.                                               |
+| Field Name   | Type   | Description                                                                  |
+| ------------ | ------ | ---------------------------------------------------------------------------- |
+| id           | number | Unique identifier of the task.                                               |
+| status       | number | [Status of the task](https://docs-api.stardust.ai/task/get-task#status-enum) |
+| campaignId   | string | Unique identifier for the campaign.                                          |
+| poolName     | number | Name of the pool.                                                            |
+| poolType     | number | [Type of the pool](#pooltypeenum-table)                                      |
+| instanceInfo | Json   | The number of instances of each operation.                                   |
 
 ### PoolTypeEnum Table
 
@@ -51,7 +51,6 @@ api:
 | 3     | Sampling Pool     |
 | 4     | Algorithm Pool    |
 | 5     | Complete Pool     |
-| 6     | Common            |
 
 ::: result
 

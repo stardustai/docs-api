@@ -39,7 +39,7 @@ api:
 | campaignId          | string                            | Unique identifier for the campaign.                                                                                       |
 | taskId              | number                            | ID of the task.                                                                                                           |
 | poolName            | String                            | Name of the pool.                                                                                                         |
-| poolType            | number                            | Type of the pool.                                                                                                         |
+| poolType            | number                            | [Type of the pool](https://docs-api.stardust.ai/statistics/get-statistics#pooltypeenum-table)                             |
 | folderId            | number                            | ID of the team.                                                                                                           |
 | aliceName           | string                            | The alice user name.                                                                                                      |
 | createdTime         | string (representing a timestamp) | Creation time of the record.                                                                                              |
