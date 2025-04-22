@@ -41,7 +41,7 @@ api:
 | poolName            | String                            | Name of the pool.                                                                                                         |
 | poolType            | number                            | Type of the pool.                                                                                                         |
 | folderId            | number                            | ID of the team.                                                                                                           |
-| creatorId           | number                            | ID of the creator of the record.                                                                                          |
+| aliceName           | string                            | The alice user name.                                                                                                      |
 | createdTime         | string (representing a timestamp) | Creation time of the record.                                                                                              |
 | actionType          | number                            | Action code.                                                                                                              |
 | instanceInfo        | Json                              | The sum of the values of how many instances of each action was modified is the same as that of instance_num               |
@@ -58,9 +58,9 @@ api:
 | 1     | Pause                 |
 | 2     | Release               |
 | 3     | Resume                |
-| 4     | ERROR                 |
+| 4     | SOLVE                 |
 | 5     | Distribute            |
-| 6     | COMPLETE              |
+| 6     | BACK task             |
 | 7     | Submit annotation     |
 | 8     | Check                 |
 | 9     | Sampling              |
