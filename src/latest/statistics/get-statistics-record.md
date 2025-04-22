@@ -35,7 +35,7 @@ api:
 | Field Name          | Type                              | Description                                                                                                               |
 | ------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | id                  | number                            | Unique identifier of the annotation history record.                                                                       |
-| status              | number                            | Status of the task. Possible values and their meanings are described in the Status Enum.                                  |
+| status              | number                            | [Status of the task](https://docs-api.stardust.ai/task/get-task#status-enum)                                              |
 | campaignId          | string                            | Unique identifier for the campaign.                                                                                       |
 | taskId              | number                            | ID of the task.                                                                                                           |
 | poolName            | String                            | Name of the pool.                                                                                                         |
@@ -43,7 +43,7 @@ api:
 | folderId            | number                            | ID of the team.                                                                                                           |
 | aliceName           | string                            | The alice user name.                                                                                                      |
 | createdTime         | string (representing a timestamp) | Creation time of the record.                                                                                              |
-| actionType          | number                            | Action code.                                                                                                              |
+| actionType          | number                            | [Record action classification type.](#taskactionenum-table)                                                               |
 | instanceInfo        | Json                              | The sum of the values of how many instances of each action was modified is the same as that of instance_num               |
 | modifyInstanceNum   | number                            | Number of submitted annotation instances. Only this manual modification and the new instance will be in the count range.  |
 | modifyAttributesNum | number                            | Number of submitted annotation attributes. Only this manual modification and the new instance will be in the count range. |
@@ -72,33 +72,37 @@ api:
     "2000": {
         "code": 2000,
         "message": "Success",
-        "data": [
-            {
-             "id": 1, // Unique identifier of the annotation history record, type number
-             "status": 1, // Status of the task, type number
-             "campaignId": 1001, // ID of the project the task belongs to, type number
-             "taskId": 2001, // ID of the task, type number
-             "poolName": "CO 041401CO2-Completion Pool", // Name of the pool
-             "poolType": 1, // Type of the pool, type number
-             "folderId": 4001, // ID of the team, type number
-             "aliceName": "daf", // Name of the creator of the record
-             "createdTime": "2025-04-01 10:00:00", // Creation time of the record, type string representing a timestamp
-             "actionType": 0, // Action code, type number
-             "instanceInfo": {
-                "select-[e000f]": 44,
-                "0e767bcb-7480-4e85-bbe8-439fe7871104": 11
-             },
-             "modifyInstanceNum": 10, // （Include attributes）, type number
-             "modifyAttributesNum": 5, // Number of first-level task attributes, type number
-             "instanceSum": 20, // Total number of instances in the current version（Include attributes）, type number
-             "attributesSum": 10, // Total number of task attributes at that time, type number
-             "frameCount": 1 // Number of frames of the task, type number
-            }
-        ],
-        "date": "2025-04-08 14:20:00",
-        "requestId": "9876543210abcdef9876543210abcdef",
-        "success": true
-    },
+        "data": {
+            "count": 1930,
+            "data": [
+                {
+                    "id": 1, // Unique identifier of the annotation history record, type number
+                    "status": 1, // Status of the task, type number
+                    "campaignId": 1001, // ID of the project the task belongs to, type number
+                    "taskId": 2001, // ID of the task, type number
+                    "poolName": "CO 041401CO2-Completion Pool", // Name of the pool
+                    "poolType": 1, // Type of the pool, type number
+                    "folderId": 4001, // ID of the team, type number
+                    "aliceName": "daf", // Name of the creator of the record
+                    "createdTime": "2025-04-01 10:00:00", // Creation time of the record, type string representing a timestamp
+                    "actionType": 0, // Action code, type number
+                    "instanceInfo": {
+                        "select-[e000f]": 44,
+                        "0e767bcb-7480-4e85-bbe8-439fe7871104": 11
+                    },
+                    "modifyInstanceNum": 10, // （Include attributes）, type number
+                    "modifyAttributesNum": 5, // Number of first-level task attributes, type number
+                    "instanceSum": 20, // Total number of instances in the current version（Include attributes）, type number
+                    "attributesSum": 10, // Total number of task attributes at that time, type number
+                    "frameCount": 1 // Number of frames of the task, type number
+                }
+            ]
+        }
+    ,
+    "date": "2025-04-08 14:20:00",
+    "requestId": "9876543210abcdef9876543210abcdef",
+    "success": true
+},
     "5000": {
         "code": 5000,
         "data": null,
