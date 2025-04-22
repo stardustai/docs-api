@@ -40,7 +40,7 @@ api:
 | taskId              | number                            | ID of the task.                                                                                                           |
 | poolName            | String                            | Name of the pool.                                                                                                         |
 | poolType            | number                            | [Type of the pool](https://docs-api.stardust.ai/statistics/get-statistics#pooltypeenum-table)                             |
-| folderId            | number                            | ID of the team.                                                                                                           |
+| folderId            | number                            | ID of the folder.                                                                                                         |
 | aliceName           | string                            | The alice user name.                                                                                                      |
 | createdTime         | string (representing a timestamp) | Creation time of the record.                                                                                              |
 | actionType          | number                            | [Record action classification type.](#taskactionenum-table)                                                               |
@@ -93,8 +93,7 @@ api:
                     "modifyInstanceNum": 10, // （Include attributes）, type number
                     "modifyAttributesNum": 5, // Number of first-level task attributes, type number
                     "instanceSum": 20, // Total number of instances in the current version（Include attributes）, type number
-                    "attributesSum": 10, // Total number of task attributes at that time, type number
-                    "frameCount": 1 // Number of frames of the task, type number
+                    "attributesSum": 10 // Total number of task attributes at that time, type number
                 }
             ]
         }
