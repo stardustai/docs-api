@@ -32,23 +32,23 @@ api:
 
 ### Response Field Descriptions
 
-| Field Name          | Type                              | Description                                                                                                               |
-| ------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| id                  | number                            | Unique identifier of the annotation history record.                                                                       |
-| status              | number                            | [Status of the task](https://docs-api.stardust.ai/task/get-task#status-enum)                                              |
-| campaignId          | string                            | Unique identifier for the campaign.                                                                                       |
-| taskId              | number                            | ID of the task.                                                                                                           |
-| poolName            | String                            | Name of the pool.                                                                                                         |
-| poolType            | number                            | [Type of the pool](https://docs-api.stardust.ai/statistics/get-statistics#pooltypeenum-table)                             |
-| folderId            | number                            | ID of the folder.                                                                                                         |
-| aliceName           | string                            | The alice user name.                                                                                                      |
-| createdTime         | string (representing a timestamp) | Creation time of the record.                                                                                              |
-| actionType          | number                            | [Record action classification type.](#taskactionenum-table)                                                               |
-| instanceInfo        | Json                              | The sum of the values of how many instances of each action was modified is the same as that of instance_num               |
-| modifyInstanceNum   | number                            | Number of submitted annotation instances. Only this manual modification and the new instance will be in the count range.  |
-| modifyAttributesNum | number                            | Number of submitted annotation attributes. Only this manual modification and the new instance will be in the count range. |
-| instanceSum         | number                            | Total number of instances at that time.                                                                                   |
-| attributesSum       | number                            | Total number of task attributes at that time.                                                                             |
+| Field Name          | Type                              | Description                                                                                                                                                                                |
+| ------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id                  | number                            | Unique identifier of the annotation history record.                                                                                                                                        |
+| status              | number                            | [Status of the task](https://docs-api.stardust.ai/task/get-task#status-enum)                                                                                                               |
+| campaignId          | string                            | Unique identifier for the campaign.                                                                                                                                                        |
+| taskId              | number                            | ID of the task.                                                                                                                                                                            |
+| poolName            | String                            | Name of the pool.                                                                                                                                                                          |
+| poolType            | number                            | [Type of the pool](https://docs-api.stardust.ai/statistics/get-statistics#pooltypeenum-table)                                                                                              |
+| folderId            | number                            | ID of the folder.                                                                                                                                                                          |
+| aliceName           | string                            | The alice user name.                                                                                                                                                                       |
+| createdTime         | string (representing a timestamp) | Creation time of the record.                                                                                                                                                               |
+| actionType          | number                            | [Record action classification type.](#taskactionenum-table)                                                                                                                                |
+| instanceInfo        | Json                              | The modification quantity of each operation item. This is a detailed explanation of modifyInstanceNum+modifyAttributesNum. If modifyInstanceNum+modifyAttributesNum is 0, it is empty here |
+| modifyInstanceNum   | number                            | Number of submitted annotation instances. Only this manual modification and the new instance will be in the count range.                                                                   |
+| modifyAttributesNum | number                            | Number of submitted annotation attributes. Only this manual modification and the new instance will be in the count range.                                                                  |
+| instanceSum         | number                            | Total number of instances at that time.                                                                                                                                                    |
+| attributesSum       | number                            | Total number of task attributes at that time.                                                                                                                                              |
 
 ### TaskActionEnum Table
 
