@@ -40,7 +40,18 @@ api:
         "f47ac10b-58cc-4372-a567-0e02b2c3d479": "Scene id already exists"
       },
       "successSchedule": 33.33,
-      "errorSchedule": 66.67
+      "errorSchedule": 66.67,
+      "annotationRequestInfo": {
+        "annotationRequestId": "test annotation request",
+        "annotationRequestName": "test annotation request",
+        "campaignId": "test campaign",
+        "sceneIdMap": {
+          "550e8400-e29b-41d4-a716-446655440999": "gs://test/json/000.yml",
+          "550e8400-e29b-41d4-a716-446655440000": "gs://test/json/111.yml",
+          "f47ac10b-58cc-4372-a567-0e02b2c3d479": "gs://test/json/222.yml"
+        },
+        "operatorKeys": ["KEY1", "KEY2", "KEY3"]
+      }
     },
     "date": "2024-05-16 19:03:34",
     "requestId": "864b70706a7349ea83e177a49800464f",
