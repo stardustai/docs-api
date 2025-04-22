@@ -56,12 +56,12 @@ api:
 | ----- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0     | Initialization        | Task is successfully created                                                                                                                                      |
 | 5     | Distribute            | Task is assigned from a distribution pool to a downstream work pool.For example, in the workflow, assign tasks from the distribution pool to the Annotation pool. |
-| 6     | BACK task             | The action of a task moving from another work pool to the completion pool, such as from the sampling pool to the completion pool.                                 |
+| 6     | Back task             | The action of a task moving from another work pool to the completion pool, such as from the sampling pool to the completion pool.                                 |
 | 7     | Submit annotation     | Submitting Tasks from annotation pool                                                                                                                             |
 | 8     | Check                 | The action of a task being checked in the review pool                                                                                                             |
 | 9     | Sampling              | The action of a task being quality checked in the sampling pool                                                                                                   |
 | 10    | Reject                | Task is rejected from sampling pool to review pool or annotation pool                                                                                             |
-| 13    | Send task             | Tasks are picked up by the labeler or quality analyst.That is, start working in the work pool.                                                                    |
+| 13    | Accept the task       | Tasks are picked up by the labeler or quality analyst.That is, start working in the work pool.                                                                    |
 | 14    | Dissolve              | The task is disbanded from the sampling package of the sampling pool and released back to the sampling pool                                                       |
 | 17    | Return from work pool | Task is returned from the review pool to the annotation pool                                                                                                      |
 
