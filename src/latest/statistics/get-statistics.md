@@ -60,19 +60,22 @@ api:
     "2000": {
         "code": 2000,
         "message": "Success",
-        "data": [
-            {
-             "id": 1, // Unique identifier of the annotation history record, type number
-             "status": 1, // Status of the task, type number
-             "campaignId": 1001, // ID of the project the task belongs to, type number
-             "poolId":3001,//IDofthepool,typenumber
-            "poolType":1,//Typeofthepool,typenumber
-             "instanceInfo": {
-                "select-[e000f]": 44,
-                "0e767bcb-7480-4e85-bbe8-439fe7871104": 11
-             }
-             }
-        ],
+        "data": {
+            "count": 1930,
+            "data": [
+                {
+                    "id": 1, // Unique identifier of the annotation history record, type number
+                    "status": 1, // Status of the task, type number
+                    "campaignId": 1001, // ID of the project the task belongs to, type number
+                    "poolName": "ar annotation pool name", //IDofthepool,typenumber
+                    "poolType": 1, //Typeofthepool,typenumber
+                    "instanceInfo": {
+                        "select-[e000f]": 44,
+                        "0e767bcb-7480-4e85-bbe8-439fe7871104": 11
+                    }
+                }
+            ]
+        },
         "date": "2025-04-08 14:20:00",
         "requestId": "9876543210abcdef9876543210abcdef",
         "success": true
