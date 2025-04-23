@@ -215,6 +215,7 @@ api:
 | slotSpecification.presetSizes.geometry.width/height/depth                      | false    | number       | Depend on the configuration "slotSpecification.presetSize.name". Preset the length, width, and height of the 3D bounding box.                                                                                                  |
 | slotSpecification.maxPadding                                                   | false    | number       | (AQC) Border distance from point cloud for box3d                                                                                                                                                                               |
 | slotSpecification.imageSourceMapping                                           | false    | string[]     | It is used to automatically generate 2D instances on 2D images that follow a spatial mapping relationship with the corresponding 3D instance. (except semantic segmentation）.The value is child slot key(Unique identifier) . |
+| slotSpecification.arrowMark                                                    | false    | boolean      | Whether to display the direction of the 2D box.                                                                                                                                                                                |
 
 ## Input (Input Configuration Item)
 
