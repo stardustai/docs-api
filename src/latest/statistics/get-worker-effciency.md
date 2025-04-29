@@ -24,10 +24,11 @@ efficiency = workingDuration /total annotation instance.
     "description": "Helix alice Name",
     "default": "1234567890abcdef"
   },
-  "date": {
+  "statisticsDate": {
     "type": "string",
     "description": "The specific date in format of YYYY-MM-DD, e.g: 2025-03-13 .If the value is empty, the total date is calculated.",
-    "default": "2025-03-13"
+    "default": "2025-03-13",
+    "required": false
   }
 }
 ```
