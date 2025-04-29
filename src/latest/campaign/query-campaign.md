@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Query Campaign'
+title: 'Query Campaign'
 description: 'Query Campaign creation information.'
 api:
   method: GET
@@ -16,7 +16,7 @@ api:
 {
   "2000": {
     "code": 2000,
-    "message": "请求成功",
+    "message": "Success",
     "data": {
       "campaignId": "stardust helix test",
       "campaignName": "stardust helix test",

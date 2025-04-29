@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Create sampling package'
+title: 'Create sampling package'
 description: 'We will provide a POST API for create a sampling package.'
 api:
   method: POST

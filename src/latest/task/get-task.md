@@ -97,4 +97,5 @@ api:
 | 9     | QC in progress (Task in Rosetta Sampling Pool)                              |
 | 10    | QC completed (Task in Rosetta Sampling Pool) -> Generate QC report on batch |
 | 11    | Labels approved (Move the batch of tasks to Completion Pool)                |
-| 12    | OpenLabel Format conversion completed                                       |
+| 16    | OpenLabel Format conversion completed                                       |
+| 17    | OpenLabel Format conversion failed                                          |

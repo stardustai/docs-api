@@ -1,5 +1,5 @@
 ---
-title: '[WIP] Get Sampling Accuracy'
+title: 'Get Sampling Accuracy'
 description: 'We will provide a POST API for retrieving the sampling accuracy.'
 api:
   method: GET
