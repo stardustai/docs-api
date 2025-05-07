@@ -52,18 +52,21 @@ api:
 
 ### TaskActionEnum Table
 
-| Value | Description           | Explanation                                                                                                                                                       |
-| ----- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0     | Initialization        | Task is successfully created                                                                                                                                      |
-| 5     | Distribute            | Task is assigned from a distribution pool to a downstream work pool.For example, in the workflow, assign tasks from the distribution pool to the Annotation pool. |
-| 6     | Back task             | The task is returned from the completion pool to the last pool                                                                                                    |
-| 7     | Submit annotation     | Submitting Tasks from annotation pool                                                                                                                             |
-| 8     | Check                 | The action of a task being checked in the review pool                                                                                                             |
-| 9     | Sampling              | The action of a task being quality checked in the sampling pool                                                                                                   |
-| 10    | Reject                | Task is rejected from sampling pool to review pool or annotation pool                                                                                             |
-| 13    | Accept the task       | Tasks are picked up by the labeler or quality analyst.That is, start working in the work pool.                                                                    |
-| 14    | Dissolve              | The task is disbanded from the sampling package of the sampling pool and released back to the sampling pool                                                       |
-| 17    | Return from work pool | Task is returned from the review pool to the annotation pool                                                                                                      |
+| Value | Description           | Explanation                                                                                                                                                                                                               |
+| ----- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0     | Initialization        | Task is successfully created                                                                                                                                                                                              |
+| 5     | Distribute            | Task is assigned from a distribution pool to a downstream work pool.For example, in the workflow, assign tasks from the distribution pool to the Annotation pool.                                                         |
+| 1     | Pause                 | The action of clicking Pause button to pause the task.The paused task cannot be allocated, labeled, checked, or spot-checked. If the task has already been claimed, it will be released at the same time as it is paused. |
+| 2     | Release               | The action of clicking Release button to free the tasks from the current user to the work pool for other users to claim                                                                                                   |
+| 3     | Resume                | Resume task from paused state to normal                                                                                                                                                                                   |
+| 6     | Back task             | The task is returned from the completion pool to the last pool                                                                                                                                                            |
+| 7     | Submit annotation     | Submitting Tasks from annotation pool                                                                                                                                                                                     |
+| 8     | Check                 | The action of a task being checked in the review pool                                                                                                                                                                     |
+| 9     | Sampling              | The action of a task being quality checked in the sampling pool                                                                                                                                                           |
+| 10    | Reject                | Task is rejected from sampling pool to review pool or annotation pool                                                                                                                                                     |
+| 13    | Accept the task       | Tasks are picked up by the labeler or quality analyst.That is, start working in the work pool.                                                                                                                            |
+| 14    | Dissolve              | The task is disbanded from the sampling package of the sampling pool and released back to the sampling pool                                                                                                               |
+| 17    | Return from work pool | Task is returned from the review pool to the annotation pool                                                                                                                                                              |
 
 ::: result
 
