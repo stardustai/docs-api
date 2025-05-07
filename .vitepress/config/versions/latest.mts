@@ -115,15 +115,14 @@ export const config_latest = defineConfig({
           getApiConfig('/sample/create-sampling'),
           getApiConfig('/sample/get-sampling-accuracy')
         ]
+      },
+      {
+        text: 'INCIDENT',
+        items: [
+          getApiConfig('/incident/get-past-incidents'),
+          getApiConfig('/incident/get-system-status')
+        ]
       }
-      // ,
-      // {
-      //   text: 'INCIDENT',
-      //   items: [
-      //     getApiConfig('/incident/get-past-incidents'),
-      //     getApiConfig('/incident/get-system-status')
-      //   ]
-      // }
     ]
   }
 })
