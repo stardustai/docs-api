@@ -24,6 +24,7 @@ efficiency = workingDuration /total annotation instance.
     "description": "Helix alice Name",
     "default": "1234567890abcdef"
   }
+}
 ```
 
 :::
