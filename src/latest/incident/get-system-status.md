@@ -10,6 +10,12 @@ api:
 
 :::
 
+### Response Field Descriptions
+
+| Field Name | Type  | Description                                   |
+| ---------- | ----- | --------------------------------------------- |
+| data       | array | The current incident situation of the system. |
+
 ::: result
 
 ```json [responses]

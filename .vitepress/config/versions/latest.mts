@@ -117,7 +117,7 @@ export const config_latest = defineConfig({
         ]
       },
       {
-        text: 'INCIDENT',
+        text: 'SLA',
         items: [
           getApiConfig('/incident/get-past-incidents'),
           getApiConfig('/incident/get-system-status')
