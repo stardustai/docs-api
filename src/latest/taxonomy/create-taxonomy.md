@@ -2,8 +2,8 @@
 title: 'Create Taxonomy'
 description: 'Guidelines for create taxonomy info on Rosetta.'
 api:
-  method: POST
-  url: /taxonomy
+method: POST
+url: /taxonomy
 ---
 
 ::: request
@@ -162,16 +162,19 @@ api:
 > [!NOTE]
 > The "operator" exists as a configuration item for the Rosetta platform annotation tool and supports the use of
 > combined JSON data as input parameters. The overall design is based on the "type" as the basic classification and
-> supports both single-layer and multi-layer nested annotation table configurations, as well as input box configurations.
+> supports both single-layer and multi-layer nested annotation table configurations, as well as input box
+> configurations.
 
 ## Key Feature Explanation
 
 1. Operator Type
 
 - "**slot**"：The slot is used for geometric annotation.
-- "**input**"：The input is used for parameter configuration.When input has no parent, it describes the task itself. When input
+- "**input**"：The input is used for parameter configuration.When input has no parent, it describes the task itself. When
+  input
   is in the Children of SlotChildren, it describes the upper slot.
-- "**slotChildren**"：slotChildren is a special type of slot that can contain slot , input and even another slotChildren inside it.
+- "**slotChildren**"：slotChildren is a special type of slot that can contain slot , input and even another slotChildren
+  inside it.
 
 2. The nesting structure of Input is implemented through items.children.
 
@@ -203,6 +206,7 @@ api:
 | key                                                                            | true     | string       | Unique identifier ,in the format of ${uuid}                                                                                                                                                                                    | The key for Taxonomy can't repeated.               |
 | type                                                                           | true     | string(Enum) | Is fixed as "slot"                                                                                                                                                                                                             |                                                    |
 | label                                                                          | true     | string       | Operator name                                                                                                                                                                                                                  |                                                    |
+| exportLabel                                                                    | false    | string       | Export Label name                                                                                                                                                                                                              |                                                    |
 | slotSpecification.type                                                         | true     | string(Enum) | [rosetta annotation type](#mapping-of-annotation-types)                                                                                                                                                                        |                                                    |
 | slotSpecification.customColor                                                  | false    | string       | Instance color for the annotation(Color notation in hexadecimal)                                                                                                                                                               |                                                    |
 | metadata.hint                                                                  | false    | string       | Hint information for the annotation                                                                                                                                                                                            |                                                    |
@@ -224,6 +228,7 @@ api:
 | key                        | true     | string       | Unique identifier, in the format of ${uuid}                                                                                                                                                                                                                                        |
 | type                       | true     | string(Enum) | Fixed as "input"                                                                                                                                                                                                                                                                   |
 | label                      | true     | string       | Operator name                                                                                                                                                                                                                                                                      |
+| exportLabel                | false    | string       | Export Label name                                                                                                                                                                                                                                                                  |
 | inputSpecification.type    | true     | string(Enum) | **select**:Single choice question<br/>**multiple-select**：Multiple choice question<br/>**nested-select**：Nested multiple choice<br/>**multiple-nested-select**:Nested multiple choice<br/> **number**:Input digit <br/>**boolean**:Input true/false<br/> **text**:Input any text |
 | inputSpecification.default | false    | string       | Default value.If it is multiple choice, it must be one or more values in the option list.                                                                                                                                                                                          |
 | inputSpecification.items   | false    | InputItem[]  | Items is an option list.<br/>The item.children field is only applicable when the input’s inputSpecification.type is set to either "nested-select" or "multiple-nested-select".And it is used to define multi-level sub-options within an item.                                     |
@@ -245,6 +250,7 @@ api:
 | key                                    | true     | string                 | Unique identifier, in the format of ${uuid}                                             |
 | type                                   | true     | string(Enum)           | Fixed as "slotChildren"                                                                 |
 | label                                  | true     | string                 | Operator name                                                                           |
+| exportLabel                            | false    | string                 | Export Label name                                                                       |
 | slotSpecification                      | true     | Slot.slotSpecification | [This is exactly the same as the slotSpecification](#slot-single-layer-annotation-item) |
 | slotSpecification.type                 | true     | string(Enum)           | All Slot.type are available                                                             |
 | children                               | true     | taxonomy[]             | Set of nested taxonomy items                                                            |
