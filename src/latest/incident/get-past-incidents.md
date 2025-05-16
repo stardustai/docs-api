@@ -10,6 +10,18 @@ api:
 
 :::
 
+### Response Field Descriptions
+
+| Field Name      | Type   | Description                                   |
+| --------------- | ------ | --------------------------------------------- |
+| id              | number | Unique identifier of the incident fix record. |
+| incidentFixDesc | string | Incident Description                          |
+| reportedTime    | number | Incident reported time (timestamp).           |
+| fixedTime       | number | Incident fixed time (timestamp).              |
+| incidentLevel   | string | Incident impact level (High/Medium).          |
+| dataIntegrity   | string | Categories of Data Export Issues.             |
+| downtime        | number | Downtime caused by incident.                  |
+
 ::: result
 
 ```json [responses]

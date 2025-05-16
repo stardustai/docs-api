@@ -72,7 +72,8 @@ export const config_latest = defineConfig({
         text: 'CAMPAIGN',
         items: [
           getApiConfig('/campaign/create-campaign'),
-          getApiConfig('/campaign/query-campaign')
+          getApiConfig('/campaign/query-campaign'),
+          getApiConfig('/campaign/query-campaign-by-folder')
         ]
       },
       {
@@ -113,11 +114,12 @@ export const config_latest = defineConfig({
         text: 'SAMPLE',
         items: [
           getApiConfig('/sample/create-sampling'),
-          getApiConfig('/sample/get-sampling-accuracy')
+          getApiConfig('/sample/get-sampling-accuracy'),
+          getApiConfig('/sample/sampling-processing')
         ]
       },
       {
-        text: 'INCIDENT',
+        text: 'SLA',
         items: [
           getApiConfig('/incident/get-past-incidents'),
           getApiConfig('/incident/get-system-status')
