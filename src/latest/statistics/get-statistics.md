@@ -78,7 +78,7 @@ api:
                     },
                     "attributeNum":44,
                     "instanceNum":12,
-                    "frameNum":11,
+                    "frameNum":11
                 }
             ]
         },
