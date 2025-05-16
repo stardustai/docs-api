@@ -39,7 +39,10 @@ api:
 | campaignId   | string | Unique identifier for the campaign.                                          |
 | poolName     | number | Name of the pool.                                                            |
 | poolType     | number | [Type of the pool](#pooltypeenum-table)                                      |
-| instanceInfo | Json   | The number of instances of each operation.                                   |
+| instanceInfo | Json   | The number of instances of each operation item, including attributes         |
+| instanceNum  | number | The number of instances.                                                     |
+| attributeNum | number | The number of attribute.                                                     |
+| frameNum     | number | The number of frames.                                                        |
 
 ### PoolTypeEnum Table
 
