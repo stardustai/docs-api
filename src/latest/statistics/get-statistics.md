@@ -73,8 +73,12 @@ api:
                     "poolType": 1, //Typeofthepool,typenumber
                     "instanceInfo": {
                         "select-[e000f]": 44,
-                        "0e767bcb-7480-4e85-bbe8-439fe7871104": 11
-                    }
+                        "0e767bcb-7480-4e85-bbe8-439fe7871104": 11,
+                        "c22zebcb-7480-4e85-bbe8-439fe7871105": 1
+                    },
+                    "attributeNum":44,
+                    "instanceNum":12,
+                    "frameNum":11,
                 }
             ]
         },
