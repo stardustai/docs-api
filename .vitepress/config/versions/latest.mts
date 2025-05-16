@@ -113,7 +113,8 @@ export const config_latest = defineConfig({
         text: 'SAMPLE',
         items: [
           getApiConfig('/sample/create-sampling'),
-          getApiConfig('/sample/get-sampling-accuracy')
+          getApiConfig('/sample/get-sampling-accuracy'),
+          getApiConfig('/sample/sampling-processing')
         ]
       },
       {
